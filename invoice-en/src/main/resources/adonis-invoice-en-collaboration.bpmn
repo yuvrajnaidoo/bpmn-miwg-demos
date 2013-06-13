@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:signavio="http://www.signavio.com"
+             xmlns:activiti="http://activiti.org/bpmn"
+             xmlns:adonis="http://www.boc-group.com"
+             xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             exporter="ADONIS 5.1 DE"
+             exporterVersion="5.1.1.0"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.omg.org/bpmn20"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"
+             name="adonis-invoice-en-collaboration">
+   <message id="messageEventDefinition_obj.266987" name="messageEventDefinition_obj.266987"/>
+   <message id="messageEventDefinition_obj.266992" name="messageEventDefinition_obj.266992"/>
+   <message id="messageEventDefinition_obj.267007" name="messageEventDefinition_obj.267007"/>
+   <collaboration id="mod.266950_Collaboration">
+      <extensionElements>
+         <adonis:modelstate>In Bearbeitung</adonis:modelstate>
+         <adonis:modelversion/>
+         <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+         <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+         <adonis:ATTRIBUTE name="Name" type="STRING">adonis-invoice-en-collaboration</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="ist vollständig" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Name (english)" type="STRING">English model name not set</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Description" type="STRING"/>
+         <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+         <adonis:ATTRIBUTE name="Verantwortliche Rolle" type="INTEGER">0</adonis:ATTRIBUTE>
+      </extensionElements>
+      <participant processRef="obj.266952_process" id="obj.266952" name="Team-Assistant"/>
+      <participant processRef="obj.266955_process" id="obj.266955"
+                   name="Process Engine - Invoice Receipt"/>
+   </collaboration>
+   <process id="obj.266952_process" name="Team-Assistant" isExecutable="false">
+      <extensionElements>
+         <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+         <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+         <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+         <adonis:ATTRIBUTE name="Orientierung" type="ENUMERATION">horizontal</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Farbe" type="STRING">white</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Sichtbarer Rand" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+         <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Description" type="STRING"/>
+         <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+         <adonis:ATTRIBUTE name="Schriftfarbe" type="EXPRESSION">EXPR val:"black"</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Name (english)" type="STRING">Pool</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Minimum" type="INTEGER">0</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Maximum" type="INTEGER">1</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="ist vollständig" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Keiner</adonis:ATTRIBUTE>
+         <adonis:INTERREF name="Referenzierter Partner (Entität)"/>
+         <adonis:INTERREF name="Referenzierter Partner (Rolle)"/>
+         <adonis:INTERREF name="Referenzierte Schnittstelle"/>
+      </extensionElements>
+      <startEvent id="obj.266958" name="Invoice received">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Prozeßkalender" type="LONGSTRING">D@Werktag@b@32400-43200@U900;1800@45000-59400@U900;1800@Frei@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Menge" type="EXPRESSION">EXPR expr:(20
+) val:20</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bezugszeitraum" type="ENUMERATION">Pro Tag</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Abbruch nach Toleranzwartezeit" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Toleranzwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Durchlaufzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kostentreiber" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kostentreibermenge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Start Event</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kritische Erfolgsfaktoren" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Referenzierte Dokumente"/>
+            <adonis:INTERREF name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF name="Referenzierte Produkte"/>
+            <adonis:INTERREF name="Input"/>
+            <adonis:INTERREF name="Output"/>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Datenstatus"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Aktivität"/>
+            <adonis:RECORD name="Prozeßverantwortung"/>
+            <adonis:RECORD name="Prozeßkennzahlen"/>
+         </extensionElements>
+         <messageEventDefinition id="messageEventDefinition_obj.266958"/>
+      </startEvent>
+      <task id="obj.266962" name="Scan invoice" isForCompensation="false">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := "Durchführungsverantwortung",
+  s := "",
+  c := tokcnt(aval(sAttrName), "\n"),
+  for(i, 0, c - 1) {
+    (cond (s &lt;&gt; "", (s := s + " ODER " + "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")"), (s := "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")")))
+  }, 
+  s
+) val:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bearbeitungszeit" type="TIME">00:000:00:00:05</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Erledigt durch" type="STRING"/>
+            <adonis:ATTRIBUTE name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kosten" type="DOUBLE">0.5</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kennzeichen anzeigen (&#34;i&#34;), wenn eine Beschreibung eingegeben ist"
+                              type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen"
+                              type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Verantwortliche Rolle"/>
+            <adonis:INTERREF name="Referenzierte Anwendungsfälle"/>
+            <adonis:INTERREF name="Referenzierte Dokumente"/>
+            <adonis:INTERREF name="Input"/>
+            <adonis:INTERREF name="Output"/>
+            <adonis:INTERREF name="Durchführungsverantwortung"/>
+            <adonis:INTERREF name="Ergebnisverantwortung"/>
+            <adonis:INTERREF name="Mitarbeit/Mitwirkung"/>
+            <adonis:INTERREF name="Zu informieren"/>
+            <adonis:INTERREF name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF name="Referenzierte Produkte"/>
+            <adonis:INTERREF name="Referenzierter Dateninput"/>
+            <adonis:INTERREF name="Referenzierter Datenoutput"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Ressource"/>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenziertes Ereignis (Verhalten = Eines)"/>
+            <adonis:INTERREF name="Referenziertes Ereignis (Verhalten = Keines)"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Referenzierte Schnittstellen"/>
+            <adonis:RECORD name="Risiko-/Kontrollzuordnung"/>
+            <adonis:RECORD name="Verhaltensdefinition (Verhalten = Komplex)"/>
+         </extensionElements>
+      </task>
+      <task id="obj.266967" name="Archive original" isForCompensation="false">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := "Durchführungsverantwortung",
+  s := "",
+  c := tokcnt(aval(sAttrName), "\n"),
+  for(i, 0, c - 1) {
+    (cond (s &lt;&gt; "", (s := s + " ODER " + "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")"), (s := "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")")))
+  }, 
+  s
+) val:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bearbeitungszeit" type="TIME">00:000:00:00:10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Erledigt durch" type="STRING"/>
+            <adonis:ATTRIBUTE name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kennzeichen anzeigen (&#34;i&#34;), wenn eine Beschreibung eingegeben ist"
+                              type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen"
+                              type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Verantwortliche Rolle"/>
+            <adonis:INTERREF name="Referenzierte Anwendungsfälle"/>
+            <adonis:INTERREF name="Referenzierte Dokumente"/>
+            <adonis:INTERREF name="Input"/>
+            <adonis:INTERREF name="Output"/>
+            <adonis:INTERREF name="Durchführungsverantwortung"/>
+            <adonis:INTERREF name="Ergebnisverantwortung"/>
+            <adonis:INTERREF name="Mitarbeit/Mitwirkung"/>
+            <adonis:INTERREF name="Zu informieren"/>
+            <adonis:INTERREF name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF name="Referenzierte Produkte"/>
+            <adonis:INTERREF name="Referenzierter Dateninput"/>
+            <adonis:INTERREF name="Referenzierter Datenoutput"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Ressource"/>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenziertes Ereignis (Verhalten = Eines)"/>
+            <adonis:INTERREF name="Referenziertes Ereignis (Verhalten = Keines)"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Referenzierte Schnittstellen"/>
+            <adonis:RECORD name="Risiko-/Kontrollzuordnung"/>
+            <adonis:RECORD name="Verhaltensdefinition (Verhalten = Komplex)"/>
+         </extensionElements>
+      </task>
+      <intermediateCatchEvent id="obj.266972" name="Approver to be assigned">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF name="Referenzierte Dokumente"/>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Datenstatus"/>
+            <adonis:INTERREF name="Referenzierte Aktivität"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenziertes Ereignis"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (Laufzeit)"/>
+         </extensionElements>
+         <messageEventDefinition id="messageEventDefinition_obj.266972"/>
+      </intermediateCatchEvent>
+      <task id="obj.266977" name="Assign approver" isForCompensation="false">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := "Durchführungsverantwortung",
+  s := "",
+  c := tokcnt(aval(sAttrName), "\n"),
+  for(i, 0, c - 1) {
+    (cond (s &lt;&gt; "", (s := s + " ODER " + "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")"), (s := "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")")))
+  }, 
+  s
+) val:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bearbeitungszeit" type="TIME">00:000:00:00:30</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Wartezeit" type="TIME">00:000:00:05:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Erledigt durch" type="STRING"/>
+            <adonis:ATTRIBUTE name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kennzeichen anzeigen (&#34;i&#34;), wenn eine Beschreibung eingegeben ist"
+                              type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen"
+                              type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Verantwortliche Rolle"/>
+            <adonis:INTERREF name="Referenzierte Anwendungsfälle"/>
+            <adonis:INTERREF name="Referenzierte Dokumente"/>
+            <adonis:INTERREF name="Input"/>
+            <adonis:INTERREF name="Output"/>
+            <adonis:INTERREF name="Durchführungsverantwortung"/>
+            <adonis:INTERREF name="Ergebnisverantwortung"/>
+            <adonis:INTERREF name="Mitarbeit/Mitwirkung"/>
+            <adonis:INTERREF name="Zu informieren"/>
+            <adonis:INTERREF name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF name="Referenzierte Produkte"/>
+            <adonis:INTERREF name="Referenzierter Dateninput"/>
+            <adonis:INTERREF name="Referenzierter Datenoutput"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Ressource"/>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenziertes Ereignis (Verhalten = Eines)"/>
+            <adonis:INTERREF name="Referenziertes Ereignis (Verhalten = Keines)"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Referenzierte Schnittstellen"/>
+            <adonis:RECORD name="Risiko-/Kontrollzuordnung"/>
+            <adonis:RECORD name="Verhaltensdefinition (Verhalten = Komplex)"/>
+         </extensionElements>
+      </task>
+      <eventBasedGateway id="obj.266982" name="Exclusive Gateway">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Exclusive Gateway</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Darstellung (Name)" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+         </extensionElements>
+      </eventBasedGateway>
+      <intermediateCatchEvent id="obj.266987" name="7 days">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF name="Referenzierte Dokumente"/>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Datenstatus"/>
+            <adonis:INTERREF name="Referenzierte Aktivität"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenziertes Ereignis"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (Laufzeit)"/>
+         </extensionElements>
+         <timerEventDefinition id="timerEventDefinition_obj.266987">
+            <timeDate xsi:type="tFormalExpression">2010:01:01 00:00:00</timeDate>
+         </timerEventDefinition>
+      </intermediateCatchEvent>
+      <endEvent id="obj.266992" name="Timeout">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">End Event</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name anzeigen" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Datenstatus"/>
+            <adonis:INTERREF name="Referenzierte Aktivität"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+         </extensionElements>
+      </endEvent>
+      <intermediateCatchEvent id="obj.266997" name="Invoice review needed">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF name="Referenzierte Dokumente"/>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Datenstatus"/>
+            <adonis:INTERREF name="Referenzierte Aktivität"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenziertes Ereignis"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (Laufzeit)"/>
+         </extensionElements>
+         <messageEventDefinition id="messageEventDefinition_obj.266997"/>
+      </intermediateCatchEvent>
+      <task id="obj.267002" name="Review and document result" isForCompensation="false">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := "Durchführungsverantwortung",
+  s := "",
+  c := tokcnt(aval(sAttrName), "\n"),
+  for(i, 0, c - 1) {
+    (cond (s &lt;&gt; "", (s := s + " ODER " + "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")"), (s := "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")")))
+  }, 
+  s
+) val:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bearbeitungszeit" type="TIME">00:000:00:02:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Erledigt durch" type="STRING"/>
+            <adonis:ATTRIBUTE name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kosten" type="DOUBLE">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kennzeichen anzeigen (&#34;i&#34;), wenn eine Beschreibung eingegeben ist"
+                              type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen"
+                              type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Verantwortliche Rolle"/>
+            <adonis:INTERREF name="Referenzierte Anwendungsfälle"/>
+            <adonis:INTERREF name="Referenzierte Dokumente"/>
+            <adonis:INTERREF name="Input"/>
+            <adonis:INTERREF name="Output"/>
+            <adonis:INTERREF name="Durchführungsverantwortung"/>
+            <adonis:INTERREF name="Ergebnisverantwortung"/>
+            <adonis:INTERREF name="Mitarbeit/Mitwirkung"/>
+            <adonis:INTERREF name="Zu informieren"/>
+            <adonis:INTERREF name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF name="Referenzierte Produkte"/>
+            <adonis:INTERREF name="Referenzierter Dateninput"/>
+            <adonis:INTERREF name="Referenzierter Datenoutput"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF name="Referenzierte Ressource"/>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenziertes Ereignis (Verhalten = Eines)"/>
+            <adonis:INTERREF name="Referenziertes Ereignis (Verhalten = Keines)"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Referenzierte Schnittstellen"/>
+            <adonis:RECORD name="Risiko-/Kontrollzuordnung"/>
+            <adonis:RECORD name="Verhaltensdefinition (Verhalten = Komplex)"/>
+         </extensionElements>
+      </task>
+      <endEvent id="obj.267007" name="Invoice reviewed">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING">End Event</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE name="Name anzeigen" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:INTERREF name="Referenzierte Kategorie"/>
+            <adonis:INTERREF name="Referenzierte Objekte"/>
+            <adonis:INTERREF name="Datenstatus"/>
+            <adonis:INTERREF name="Referenzierte Aktivität"/>
+            <adonis:INTERREF name="Referenzierte Nachricht"/>
+            <adonis:INTERREF name="Referenzierte Operation"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF name="Referenzierte Inputdaten (Laufzeit)"/>
+         </extensionElements>
+      </endEvent>
+      <sequenceFlow id="con.266965" name="" sourceRef="obj.266958" targetRef="obj.266962">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266970" name="" sourceRef="obj.266962" targetRef="obj.266967">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266975" name="" sourceRef="obj.266967" targetRef="obj.266972">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266980" name="" sourceRef="obj.266972" targetRef="obj.266977">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266985" name="" sourceRef="obj.266977" targetRef="obj.266982">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266990" name="" sourceRef="obj.266982" targetRef="obj.266987">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING">0,1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING">0,1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+         <conditionExpression id="con.266990_condExpr" xsi:type="tFormalExpression">0,1</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="con.266995" name="" sourceRef="obj.266987" targetRef="obj.266992">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.267000" name="" sourceRef="obj.266982" targetRef="obj.266997">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING">0,9</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING">0,9</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+         <conditionExpression id="con.267000_condExpr" xsi:type="tFormalExpression">0,9</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="con.267005" name="" sourceRef="obj.266997" targetRef="obj.267002">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.267010" name="" sourceRef="obj.267002" targetRef="obj.267007">
+         <extensionElements>
+            <adonis:ATTRIBUTE name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+   </process>
+   <process id="obj.266955_process" name="Process Engine - Invoice Receipt"
+            isExecutable="false">
+      <extensionElements>
+         <adonis:ATTRIBUTE name="Beschreibung" type="STRING"/>
+         <adonis:ATTRIBUTE name="Kommentar" type="STRING"/>
+         <adonis:ATTRIBUTE name="Offene Fragen" type="STRING"/>
+         <adonis:ATTRIBUTE name="Orientierung" type="ENUMERATION">horizontal</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Farbe" type="STRING">white</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Sichtbarer Rand" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Beschreibung der Änderungen" type="STRING"/>
+         <adonis:ATTRIBUTE name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Description" type="STRING"/>
+         <adonis:ATTRIBUTE name="Comment" type="STRING"/>
+         <adonis:ATTRIBUTE name="Schriftfarbe" type="EXPRESSION">EXPR val:"black"</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Name (english)" type="STRING">Pool</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Minimum" type="INTEGER">0</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Maximum" type="INTEGER">1</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="ist vollständig" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE name="Visualisierte Werte" type="ENUMERATION">Keiner</adonis:ATTRIBUTE>
+         <adonis:INTERREF name="Referenzierter Partner (Entität)"/>
+         <adonis:INTERREF name="Referenzierter Partner (Rolle)"/>
+         <adonis:INTERREF name="Referenzierte Schnittstelle"/>
+      </extensionElements>
+   </process>
+   <process id="mod.266950" name="adonis-invoice-en-collaboration" isExecutable="false">
+      <laneSet id="mod.266950_LaneSet"/>
+   </process>
+   <bpmndi:BPMNDiagram id="Diagram_mod.266950">
+      <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="mod.266950">
+         <bpmndi:BPMNShape bpmnElement="obj.266952" id="BPMN_Shape_obj.266952">
+            <omgdc:Bounds height="283" width="1134" x="0" y="57"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266955" id="BPMN_Shape_obj.266955">
+            <omgdc:Bounds height="151" width="1134" x="0" y="416"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266958" id="BPMN_Shape_obj.266958">
+            <omgdc:Bounds width="53" height="53" x="125" y="144"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266962" id="BPMN_Shape_obj.266962">
+            <omgdc:Bounds height="57" width="106" x="212" y="142"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266967" id="BPMN_Shape_obj.266967">
+            <omgdc:Bounds height="57" width="106" x="363" y="142"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266972" id="BPMN_Shape_obj.266972">
+            <omgdc:Bounds width="53" height="53" x="503" y="144"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266977" id="BPMN_Shape_obj.266977">
+            <omgdc:Bounds height="57" width="106" x="609" y="142"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266982" id="BPMN_Shape_obj.266982">
+            <omgdc:Bounds width="53" height="53" x="748" y="144"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266987" id="BPMN_Shape_obj.266987">
+            <omgdc:Bounds width="53" height="53" x="843" y="68"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266992" id="BPMN_Shape_obj.266992">
+            <omgdc:Bounds width="53" height="53" x="937" y="68"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266997" id="BPMN_Shape_obj.266997">
+            <omgdc:Bounds width="53" height="53" x="843" y="219"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.267002" id="BPMN_Shape_obj.267002">
+            <omgdc:Bounds height="57" width="106" x="930" y="217"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.267007" id="BPMN_Shape_obj.267007">
+            <omgdc:Bounds width="53" height="53" x="1070" y="219"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.266965" bpmnElement="con.266965"
+                          sourceElement="BPMN_Shape_obj.266958"
+                          targetElement="BPMN_Shape_obj.266962">
+            <omgdi:waypoint x="151" y="170"/>
+            <omgdi:waypoint x="265" y="170"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.266970" bpmnElement="con.266970"
+                          sourceElement="BPMN_Shape_obj.266962"
+                          targetElement="BPMN_Shape_obj.266967">
+            <omgdi:waypoint x="265" y="170"/>
+            <omgdi:waypoint x="416" y="170"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.266975" bpmnElement="con.266975"
+                          sourceElement="BPMN_Shape_obj.266967"
+                          targetElement="BPMN_Shape_obj.266972">
+            <omgdi:waypoint x="416" y="170"/>
+            <omgdi:waypoint x="529" y="170"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.266980" bpmnElement="con.266980"
+                          sourceElement="BPMN_Shape_obj.266972"
+                          targetElement="BPMN_Shape_obj.266977">
+            <omgdi:waypoint x="529" y="170"/>
+            <omgdi:waypoint x="662" y="170"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.266985" bpmnElement="con.266985"
+                          sourceElement="BPMN_Shape_obj.266977"
+                          targetElement="BPMN_Shape_obj.266982">
+            <omgdi:waypoint x="662" y="170"/>
+            <omgdi:waypoint x="775" y="170"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.266990" bpmnElement="con.266990"
+                          sourceElement="BPMN_Shape_obj.266982"
+                          targetElement="BPMN_Shape_obj.266987">
+            <omgdi:waypoint x="775" y="170"/>
+            <omgdi:waypoint x="775" y="95"/>
+            <omgdi:waypoint x="869" y="95"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.266995" bpmnElement="con.266995"
+                          sourceElement="BPMN_Shape_obj.266987"
+                          targetElement="BPMN_Shape_obj.266992">
+            <omgdi:waypoint x="869" y="95"/>
+            <omgdi:waypoint x="964" y="95"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.267000" bpmnElement="con.267000"
+                          sourceElement="BPMN_Shape_obj.266982"
+                          targetElement="BPMN_Shape_obj.266997">
+            <omgdi:waypoint x="775" y="170"/>
+            <omgdi:waypoint x="775" y="246"/>
+            <omgdi:waypoint x="869" y="246"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.267005" bpmnElement="con.267005"
+                          sourceElement="BPMN_Shape_obj.266997"
+                          targetElement="BPMN_Shape_obj.267002">
+            <omgdi:waypoint x="869" y="246"/>
+            <omgdi:waypoint x="983" y="246"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.267010" bpmnElement="con.267010"
+                          sourceElement="BPMN_Shape_obj.267002"
+                          targetElement="BPMN_Shape_obj.267007">
+            <omgdi:waypoint x="983" y="246"/>
+            <omgdi:waypoint x="1096" y="246"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>

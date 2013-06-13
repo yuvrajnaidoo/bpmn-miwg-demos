@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://activiti.org/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Signavio Process Editor, http://www.signavio.com" exporterVersion="7.0.0" expressionLanguage="http://www.w3.org/1999/XPath" id="sid-647120ce-fd30-4442-a6a8-e781b6ba3a34" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+   <dataStore capacity="0" id="sid-abbaebb0-1ce9-4457-a1bb-ee8651b7fa2e" isUnlimited="false" name="Financial Accounting System"/>
+   <message id="sid-de8dd045-0af2-43b2-9a23-0b606850e271" name="invoice-received-en-collaboration-camunda"/>
+   <collaboration id="sid-dbb3e2db-1742-497f-b57b-9e21e8271d82">
+      <participant id="obj.266955" name="Process Engine - Invoice Receipt" processRef="obj.266955_process">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+      </participant>
+      <participant id="obj.266952" name="Team-Assistant" processRef="obj.266952_process">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+      </participant>
+      <messageFlow id="sid-1A3B8267-2FF8-4D86-868E-72EFFB7A0FB7" name="" sourceRef="obj.267002" targetRef="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97"/>
+      <messageFlow id="sid-6239D6AA-0D8E-40D7-A8A7-02DBD980A072" name="" sourceRef="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97" targetRef="obj.266997"/>
+      <messageFlow id="sid-925118AE-D734-4A29-A5FA-D7D0CB44E058" name="" sourceRef="obj.266962" targetRef="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86"/>
+      <messageFlow id="sid-FF7DF08F-CCF7-4B1A-971D-649149DB7306" name="" sourceRef="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694" targetRef="obj.266972"/>
+      <messageFlow id="sid-C3A05EF0-D48B-405E-9FC7-0A7D89595152" name="" sourceRef="obj.266977" targetRef="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694"/>
+   </collaboration>
+   <process id="obj.266952_process" isClosed="false" isExecutable="false" name="Team-Assistant" processType="None">
+      <extensionElements>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Orientierung" type="ENUMERATION">horizontal</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Farbe" type="STRING">white</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Sichtbarer Rand" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="EXPRESSION">EXPR val:"black"</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Pool</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Minimum" type="INTEGER">0</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Maximum" type="INTEGER">1</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist vollständig" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Keiner</adonis:ATTRIBUTE>
+         <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Partner (Entität)"/>
+         <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Partner (Rolle)"/>
+         <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Schnittstelle"/>
+      </extensionElements>
+      <laneSet id="sid-da65e792-271e-4245-be8b-e2e952641645">
+         <lane id="sid-7AC5D907-12C2-4804-9576-C08489FE9F37">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+            </extensionElements>
+         </lane>
+      </laneSet>
+   </process>
+   <process id="obj.266955_process" isClosed="false" isExecutable="false" name="Process Engine - Invoice Receipt" processType="None">
+      <extensionElements>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Orientierung" type="ENUMERATION">horizontal</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Farbe" type="STRING">white</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Sichtbarer Rand" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="EXPRESSION">EXPR val:"black"</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Pool</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Minimum" type="INTEGER">0</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Maximum" type="INTEGER">1</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist vollständig" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+         <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Keiner</adonis:ATTRIBUTE>
+         <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Partner (Entität)"/>
+         <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Partner (Rolle)"/>
+         <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Schnittstelle"/>
+      </extensionElements>
+      <laneSet id="sid-11fec89d-4f21-4529-8b62-3dd5e3635592">
+         <lane id="sid-D307B110-27BD-4451-84A0-2E4A4413236B" name="Team Assistant">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+            </extensionElements>
+            <flowNodeRef>sid-3EF95F5C-CFA7-4C60-9F83-082287A73694</flowNodeRef>
+            <flowNodeRef>sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97</flowNodeRef>
+            <flowNodeRef>sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E</flowNodeRef>
+            <flowNodeRef>sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F</flowNodeRef>
+            <flowNodeRef>sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86</flowNodeRef>
+         </lane>
+         <lane id="sid-38767BCB-3425-4143-BD29-4D842F84FB51" name="Approver">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+            </extensionElements>
+            <flowNodeRef>sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420</flowNodeRef>
+            <flowNodeRef>sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255</flowNodeRef>
+         </lane>
+         <lane id="sid-1ED1D1E7-4878-4CF8-804D-B8B35C90A34F" name="Accountant">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+            </extensionElements>
+            <flowNodeRef>sid-F98EB7F7-E842-4B42-89F5-2779A343983D</flowNodeRef>
+            <flowNodeRef>sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019</flowNodeRef>
+            <flowNodeRef>sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5</flowNodeRef>
+         </lane>
+      </laneSet>
+      <userTask camunda:assignee="demo" camunda:formKey="app:assignApprover.jsf" completionQuantity="1" id="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694" implementation="webService" isForCompensation="false" name="Assign Approver" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+         </extensionElements>
+         <incoming>sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F</incoming>
+         <outgoing>sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78</outgoing>
+      </userTask>
+      <userTask camunda:assignee="demo" camunda:formKey="app:reviewInvoice.jsf" completionQuantity="1" id="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97" implementation="webService" isForCompensation="false" name="Review&#10;Invoice" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+         </extensionElements>
+         <incoming>sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A</incoming>
+         <outgoing>sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781</outgoing>
+      </userTask>
+      <exclusiveGateway gatewayDirection="Diverging" id="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E" name="Review&#10;successful?">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+         <incoming>sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781</incoming>
+         <outgoing>sid-8AB22994-1CC7-432E-AB26-FBB621117564</outgoing>
+         <outgoing>sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6</outgoing>
+      </exclusiveGateway>
+      <endEvent id="sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F" name="Invoice not&#10;processed">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+         <incoming>sid-8AB22994-1CC7-432E-AB26-FBB621117564</incoming>
+      </endEvent>
+      <startEvent camunda:formKey="app:startProcess.jsf" id="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86" isInterrupting="true" name="Invoice&#10;received">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+         <outgoing>sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F</outgoing>
+         <messageEventDefinition id="sid-2ed29d7a-a6b6-4ff4-9ab6-1af5cfafbdee" messageRef="sid-de8dd045-0af2-43b2-9a23-0b606850e271"/>
+      </startEvent>
+      <userTask camunda:assignee="${approver}" camunda:formKey="app:approveInvoice.jsf" completionQuantity="1" id="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420" implementation="webService" isForCompensation="false" name="Approve Invoice" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+         </extensionElements>
+         <incoming>sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78</incoming>
+         <incoming>sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6</incoming>
+         <outgoing>sid-B6DF07B7-8435-4347-8F85-C59101F3559A</outgoing>
+      </userTask>
+      <exclusiveGateway gatewayDirection="Diverging" id="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255" name="Invoice&#10;approved?">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+         <incoming>sid-B6DF07B7-8435-4347-8F85-C59101F3559A</incoming>
+         <outgoing>sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A</outgoing>
+         <outgoing>sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B</outgoing>
+      </exclusiveGateway>
+      <userTask camunda:candidateGroups="accounting" camunda:formKey="app:prepareBankTransfer.jsf" completionQuantity="1" id="sid-F98EB7F7-E842-4B42-89F5-2779A343983D" implementation="webService" isForCompensation="false" name="Prepare&#13;&#10;Bank&#13;&#10;Transfer" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+         </extensionElements>
+         <incoming>sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B</incoming>
+         <outgoing>sid-B08C4A76-2700-4A39-B5F9-240390D3C51B</outgoing>
+      </userTask>
+      <endEvent id="sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019" name="Invoice&#10;processed">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+         <incoming>sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0</incoming>
+      </endEvent>
+      <serviceTask camunda:delegateExpression="#{archiveService}" completionQuantity="1" id="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5" implementation="webService" isForCompensation="false" name="Archive&#10;Invoice" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+         </extensionElements>
+         <incoming>sid-B08C4A76-2700-4A39-B5F9-240390D3C51B</incoming>
+         <outgoing>sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0</outgoing>
+      </serviceTask>
+      <sequenceFlow id="sid-8AB22994-1CC7-432E-AB26-FBB621117564" isImmediate="true" name="no" sourceRef="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E" targetRef="sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F">
+         <conditionExpression id="sid-645209f5-6de1-49f6-881e-113db0517a14" xsi:type="tFormalExpression">${clarified == 'no'}</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781" isImmediate="true" name="" sourceRef="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97" targetRef="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E"/>
+      <sequenceFlow id="sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F" isImmediate="true" name="" sourceRef="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86" targetRef="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694"/>
+      <sequenceFlow id="sid-B6DF07B7-8435-4347-8F85-C59101F3559A" isImmediate="true" name="" sourceRef="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420" targetRef="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255"/>
+      <sequenceFlow id="sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A" name="no" sourceRef="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255" targetRef="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97"/>
+      <sequenceFlow id="sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78" name="" sourceRef="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694" targetRef="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420"/>
+      <sequenceFlow id="sid-B08C4A76-2700-4A39-B5F9-240390D3C51B" isImmediate="true" name="" sourceRef="sid-F98EB7F7-E842-4B42-89F5-2779A343983D" targetRef="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5"/>
+      <sequenceFlow id="sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0" isImmediate="true" name="" sourceRef="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5" targetRef="sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019"/>
+      <sequenceFlow id="sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B" name="yes" sourceRef="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255" targetRef="sid-F98EB7F7-E842-4B42-89F5-2779A343983D"/>
+      <sequenceFlow id="sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6" name="yes" sourceRef="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E" targetRef="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420"/>
+      <dataStoreReference dataStoreRef="sid-abbaebb0-1ce9-4457-a1bb-ee8651b7fa2e" id="sid-C4A81A9E-1BA9-46C8-A16B-B8F971E9A32E" name="Financial Accounting System">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+         </extensionElements>
+      </dataStoreReference>
+      <association associationDirection="None" id="sid-107C7C24-C255-48CE-9804-3399AA324B81" sourceRef="sid-F98EB7F7-E842-4B42-89F5-2779A343983D" targetRef="sid-C4A81A9E-1BA9-46C8-A16B-B8F971E9A32E"/>
+   </process>
+   <process id="sid-295ed538-190e-4ef4-a83d-b23fea95aa6f" isClosed="false" isExecutable="false" name="Team-Assistant" processType="None">
+      <startEvent id="obj.266958" isInterrupting="true" name="Invoice received">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Prozeßkalender" type="LONGSTRING">D@Werktag@b@32400-43200@U900;1800@45000-59400@U900;1800@Frei@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Menge" type="EXPRESSION">EXPR expr:(20
+) val:20</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezugszeitraum" type="ENUMERATION">Pro Tag</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Abbruch nach Toleranzwartezeit" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Toleranzwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Durchlaufzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kostentreiber" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kostentreibermenge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Start Event</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kritische Erfolgsfaktoren" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Dokumente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Produkte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Input"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Output"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Datenstatus"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Aktivität"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Prozeßverantwortung"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Prozeßkennzahlen"/>
+         </extensionElements>
+         <outgoing>con.266965</outgoing>
+         <messageEventDefinition id="sid-08a5dbee-7aeb-4fa5-bbbe-6676efab3192"/>
+      </startEvent>
+      <task completionQuantity="1" id="obj.266962" isForCompensation="false" name="Scan invoice" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := "Durchführungsverantwortung",
+  s := "",
+  c := tokcnt(aval(sAttrName), "\n"),
+  for(i, 0, c - 1) {
+    (cond (s &lt;&gt; "", (s := s + " ODER " + "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")"), (s := "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")")))
+  }, 
+  s
+) val:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeitungszeit" type="TIME">00:000:00:00:05</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Erledigt durch" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kosten" type="DOUBLE">0.5</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichen anzeigen (&quot;i&quot;), wenn eine Beschreibung eingegeben ist" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Verantwortliche Rolle"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Anwendungsfälle"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Dokumente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Input"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Output"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Durchführungsverantwortung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Ergebnisverantwortung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Mitarbeit/Mitwirkung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Zu informieren"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Produkte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Dateninput"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Datenoutput"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Ressource"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis (Verhalten = Eines)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis (Verhalten = Keines)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Schnittstellen"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Risiko-/Kontrollzuordnung"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Verhaltensdefinition (Verhalten = Komplex)"/>
+         </extensionElements>
+         <incoming>con.266965</incoming>
+         <outgoing>con.266970</outgoing>
+      </task>
+      <task completionQuantity="1" id="obj.266967" isForCompensation="false" name="Archive original" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := "Durchführungsverantwortung",
+  s := "",
+  c := tokcnt(aval(sAttrName), "\n"),
+  for(i, 0, c - 1) {
+    (cond (s &lt;&gt; "", (s := s + " ODER " + "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")"), (s := "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")")))
+  }, 
+  s
+) val:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeitungszeit" type="TIME">00:000:00:00:10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Erledigt durch" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichen anzeigen (&quot;i&quot;), wenn eine Beschreibung eingegeben ist" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Verantwortliche Rolle"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Anwendungsfälle"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Dokumente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Input"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Output"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Durchführungsverantwortung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Ergebnisverantwortung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Mitarbeit/Mitwirkung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Zu informieren"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Produkte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Dateninput"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Datenoutput"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Ressource"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis (Verhalten = Eines)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis (Verhalten = Keines)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Schnittstellen"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Risiko-/Kontrollzuordnung"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Verhaltensdefinition (Verhalten = Komplex)"/>
+         </extensionElements>
+         <incoming>con.266970</incoming>
+         <outgoing>con.266975</outgoing>
+      </task>
+      <intermediateCatchEvent id="obj.266972" name="Approver to be assigned">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Dokumente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Datenstatus"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Aktivität"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (Laufzeit)"/>
+         </extensionElements>
+         <incoming>con.266975</incoming>
+         <outgoing>con.266980</outgoing>
+         <messageEventDefinition id="sid-2454257c-a726-4098-8e2d-122a657a4892"/>
+      </intermediateCatchEvent>
+      <task completionQuantity="1" id="obj.266977" isForCompensation="false" name="Assign approver" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := "Durchführungsverantwortung",
+  s := "",
+  c := tokcnt(aval(sAttrName), "\n"),
+  for(i, 0, c - 1) {
+    (cond (s &lt;&gt; "", (s := s + " ODER " + "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")"), (s := "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")")))
+  }, 
+  s
+) val:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeitungszeit" type="TIME">00:000:00:00:30</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Wartezeit" type="TIME">00:000:00:05:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Erledigt durch" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichen anzeigen (&quot;i&quot;), wenn eine Beschreibung eingegeben ist" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Verantwortliche Rolle"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Anwendungsfälle"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Dokumente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Input"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Output"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Durchführungsverantwortung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Ergebnisverantwortung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Mitarbeit/Mitwirkung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Zu informieren"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Produkte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Dateninput"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Datenoutput"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Ressource"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis (Verhalten = Eines)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis (Verhalten = Keines)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Schnittstellen"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Risiko-/Kontrollzuordnung"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Verhaltensdefinition (Verhalten = Komplex)"/>
+         </extensionElements>
+         <incoming>con.266980</incoming>
+         <outgoing>con.266985</outgoing>
+      </task>
+      <eventBasedGateway eventGatewayType="Exclusive" gatewayDirection="Diverging" id="obj.266982" instantiate="false" name="Exclusive Gateway">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Exclusive Gateway</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung (Name)" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+         </extensionElements>
+         <incoming>con.266985</incoming>
+         <outgoing>con.266990</outgoing>
+         <outgoing>con.267000</outgoing>
+      </eventBasedGateway>
+      <intermediateCatchEvent id="obj.266987" name="7 days">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Dokumente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Datenstatus"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Aktivität"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (Laufzeit)"/>
+         </extensionElements>
+         <incoming>con.266990</incoming>
+         <outgoing>con.266995</outgoing>
+         <timerEventDefinition id="sid-b939cd42-926b-4507-9d50-5ce1d88d4df1">
+            <timeDate id="sid-88a2299f-0880-40f9-ae06-e087979b89eb" xsi:type="tFormalExpression">2010:01:01 00:00:00</timeDate>
+         </timerEventDefinition>
+      </intermediateCatchEvent>
+      <endEvent id="obj.266992" name="Timeout">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">End Event</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name anzeigen" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Datenstatus"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Aktivität"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+         </extensionElements>
+         <incoming>con.266995</incoming>
+      </endEvent>
+      <intermediateCatchEvent id="obj.266997" name="Invoice review needed">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Dokumente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Datenstatus"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Aktivität"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (Laufzeit)"/>
+         </extensionElements>
+         <incoming>con.267000</incoming>
+         <outgoing>con.267005</outgoing>
+         <messageEventDefinition id="sid-c34411ff-63e2-4fae-b8d9-c789c852e059"/>
+      </intermediateCatchEvent>
+      <task completionQuantity="1" id="obj.267002" isForCompensation="false" name="Review and document result" startQuantity="1">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="dokumente" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="risks" metaValue=""/>
+            <signavio:signavioMetaData metaKey="dokument" metaValue=""/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := "Durchführungsverantwortung",
+  s := "",
+  c := tokcnt(aval(sAttrName), "\n"),
+  for(i, 0, c - 1) {
+    (cond (s &lt;&gt; "", (s := s + " ODER " + "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")"), (s := "({\"" + irtaval(sAttrName, i, "Name") + "\" : \"Rolle\"} &lt;- \"hat Rolle\")")))
+  }, 
+  s
+) val:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeitungszeit" type="TIME">00:000:00:02:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Erledigt durch" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kosten" type="DOUBLE">1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisinfo" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichen anzeigen (&quot;i&quot;), wenn eine Beschreibung eingegeben ist" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Verantwortliche Rolle"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Anwendungsfälle"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Dokumente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Input"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Output"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Durchführungsverantwortung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Ergebnisverantwortung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Mitarbeit/Mitwirkung"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Zu informieren"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte IT-Systemelemente"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Produkte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Dateninput"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierter Datenoutput"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Outputdaten (Laufzeit)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Ressource"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis (Verhalten = Eines)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenziertes Ereignis (Verhalten = Keines)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Schnittstellen"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Risiko-/Kontrollzuordnung"/>
+            <adonis:RECORD xmlns:adonis="http://www.boc-group.com" name="Verhaltensdefinition (Verhalten = Komplex)"/>
+         </extensionElements>
+         <incoming>con.267005</incoming>
+         <outgoing>con.267010</outgoing>
+      </task>
+      <endEvent id="obj.267007" name="Invoice reviewed">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING">End Event</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung der Änderungen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Offene Fragen" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name anzeigen" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Namensraum" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Importtyp" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Ort" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Externe Dokumentation" type="PROGRAMCALL">ITEM "" param:""</adonis:ATTRIBUTE>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Kategorie"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Objekte"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Datenstatus"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Aktivität"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Nachricht"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Operation"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (optional)"/>
+            <adonis:INTERREF xmlns:adonis="http://www.boc-group.com" name="Referenzierte Inputdaten (Laufzeit)"/>
+         </extensionElements>
+         <incoming>con.267010</incoming>
+      </endEvent>
+      <sequenceFlow id="con.266965" isImmediate="true" name="" sourceRef="obj.266958" targetRef="obj.266962">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266970" isImmediate="true" name="" sourceRef="obj.266962" targetRef="obj.266967">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266975" isImmediate="true" name="" sourceRef="obj.266967" targetRef="obj.266972">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266980" isImmediate="true" name="" sourceRef="obj.266972" targetRef="obj.266977">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266985" isImmediate="true" name="" sourceRef="obj.266977" targetRef="obj.266982">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.266990" isImmediate="true" name="" sourceRef="obj.266982" targetRef="obj.266987">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING">0,1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING">0,1</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+         <conditionExpression id="sid-d0fd7f0f-f318-453e-a7da-c227d34df3e6" xsi:type="tFormalExpression">0,1</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="con.266995" isImmediate="true" name="" sourceRef="obj.266987" targetRef="obj.266992">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.267000" isImmediate="true" name="" sourceRef="obj.266982" targetRef="obj.266997">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING">0,9</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING">0,9</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+         <conditionExpression id="sid-48faefd7-d5c6-4233-bbfa-3d9320b5fc64" xsi:type="tFormalExpression">0,9</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="con.267005" isImmediate="true" name="" sourceRef="obj.266997" targetRef="obj.267002">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="con.267010" isImmediate="true" name="" sourceRef="obj.267002" targetRef="obj.267007">
+         <extensionElements>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangsbedingung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Übergangswahrscheinlichkeit" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kommentar" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Name (english)" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Bezeichnung" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Beschreibung" type="LONGSTRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Kategorie" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Description" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Comment" type="STRING"/>
+            <adonis:ATTRIBUTE xmlns:adonis="http://www.boc-group.com" name="Info for Transition Condition" type="STRING"/>
+         </extensionElements>
+      </sequenceFlow>
+   </process>
+   <bpmndi:BPMNDiagram id="sid-daa344b6-e181-45ba-9d2d-cb595ee26ff1">
+      <bpmndi:BPMNPlane bpmnElement="sid-dbb3e2db-1742-497f-b57b-9e21e8271d82" id="sid-4eaf4966-d9b8-4c38-a4bd-129006962abf">
+         <bpmndi:BPMNShape bpmnElement="obj.266955" id="obj.266955_gui" isHorizontal="true">
+            <omgdc:Bounds height="444.00000000000034" width="1134.0" x="69.5" y="354.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266952" id="obj.266952_gui" isHorizontal="true">
+            <omgdc:Bounds height="250.0" width="1134.0" x="69.5" y="57.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-7AC5D907-12C2-4804-9576-C08489FE9F37" id="sid-7AC5D907-12C2-4804-9576-C08489FE9F37_gui" isHorizontal="true">
+            <omgdc:Bounds height="250.0" width="1104.0" x="99.5" y="57.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-D307B110-27BD-4451-84A0-2E4A4413236B" id="sid-D307B110-27BD-4451-84A0-2E4A4413236B_gui" isHorizontal="true">
+            <omgdc:Bounds height="164.00000000000006" width="1104.0" x="99.5" y="354.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-38767BCB-3425-4143-BD29-4D842F84FB51" id="sid-38767BCB-3425-4143-BD29-4D842F84FB51_gui" isHorizontal="true">
+            <omgdc:Bounds height="141.00000000000017" width="1104.0" x="99.5" y="518.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-1ED1D1E7-4878-4CF8-804D-B8B35C90A34F" id="sid-1ED1D1E7-4878-4CF8-804D-B8B35C90A34F_gui" isHorizontal="true">
+            <omgdc:Bounds height="139.0000000000001" width="1104.0" x="99.5" y="659.0000000000002"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694" id="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="250.0" y="391.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97" id="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="718.0" y="391.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E" id="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="863.0" y="411.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F" id="sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F_gui">
+            <omgdc:Bounds height="28.0" width="28.0" x="1099.0" y="417.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86" id="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="165.0" y="416.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420" id="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="405.0" y="546.6666666666667"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255" id="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="540.0" y="566.6666666666667"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-F98EB7F7-E842-4B42-89F5-2779A343983D" id="sid-F98EB7F7-E842-4B42-89F5-2779A343983D_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="812.0" y="693.0000000000002"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019" id="sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019_gui">
+            <omgdc:Bounds height="28.0" width="28.0" x="1099.0" y="718.0000000000002"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5" id="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="954.0" y="693.0000000000002"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="sid-C4A81A9E-1BA9-46C8-A16B-B8F971E9A32E" id="sid-C4A81A9E-1BA9-46C8-A16B-B8F971E9A32E_gui">
+            <omgdc:Bounds height="60.173" width="62.000999999999976" x="737.0" y="818.0000000000002"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266958" id="obj.266958_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="206.0" y="155.5"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266962" id="obj.266962_gui">
+            <omgdc:Bounds height="57.0" width="106.0" x="281.5" y="142.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266967" id="obj.266967_gui">
+            <omgdc:Bounds height="57.0" width="106.0" x="432.5" y="142.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266972" id="obj.266972_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="584.0" y="155.5"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266977" id="obj.266977_gui">
+            <omgdc:Bounds height="57.0" width="106.0" x="678.5" y="142.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266982" id="obj.266982_gui">
+            <omgdc:Bounds height="40.0" width="40.0" x="824.0" y="150.5"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266987" id="obj.266987_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="924.0" y="79.5"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266992" id="obj.266992_gui">
+            <omgdc:Bounds height="28.0" width="28.0" x="1018.0" y="79.5"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.266997" id="obj.266997_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="924.0" y="230.5"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.267002" id="obj.267002_gui">
+            <omgdc:Bounds height="57.0" width="106.0" x="999.5" y="217.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.267007" id="obj.267007_gui">
+            <omgdc:Bounds height="28.0" width="28.0" x="1151.0" y="230.5"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge bpmnElement="sid-1A3B8267-2FF8-4D86-868E-72EFFB7A0FB7" id="sid-1A3B8267-2FF8-4D86-868E-72EFFB7A0FB7_gui">
+            <omgdi:waypoint x="1052.5" y="274.0"/>
+            <omgdi:waypoint x="1052.5" y="338.0"/>
+            <omgdi:waypoint x="784.6666666666666" y="338.0"/>
+            <omgdi:waypoint x="784.6666666666666" y="391.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-6239D6AA-0D8E-40D7-A8A7-02DBD980A072" id="sid-6239D6AA-0D8E-40D7-A8A7-02DBD980A072_gui">
+            <omgdi:waypoint x="751.3333333333334" y="391.0"/>
+            <omgdi:waypoint x="751.3333333333334" y="320.0"/>
+            <omgdi:waypoint x="939.0" y="320.0"/>
+            <omgdi:waypoint x="939.0" y="260.5"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0" id="sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0_gui">
+            <omgdi:waypoint x="1054.0" y="733.0000000000002"/>
+            <omgdi:waypoint x="1099.0" y="732.2372881355934"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.266980" id="con.266980_gui">
+            <omgdi:waypoint x="614.0" y="170.4433962264151"/>
+            <omgdi:waypoint x="678.5" y="170.20000000000002"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-B08C4A76-2700-4A39-B5F9-240390D3C51B" id="sid-B08C4A76-2700-4A39-B5F9-240390D3C51B_gui">
+            <omgdi:waypoint x="912.0" y="733.0000000000002"/>
+            <omgdi:waypoint x="954.0" y="733.0000000000002"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A" id="sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A_gui">
+            <omgdi:waypoint x="560.5" y="566.6666666666667"/>
+            <omgdi:waypoint x="560.5" y="431.0"/>
+            <omgdi:waypoint x="718.0" y="431.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.266985" id="con.266985_gui">
+            <omgdi:waypoint x="784.5" y="170.23555555555555"/>
+            <omgdi:waypoint x="824.0" y="170.4111111111111"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-B6DF07B7-8435-4347-8F85-C59101F3559A" id="sid-B6DF07B7-8435-4347-8F85-C59101F3559A_gui">
+            <omgdi:waypoint x="505.0" y="586.6666666666667"/>
+            <omgdi:waypoint x="540.0" y="586.6666666666667"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-107C7C24-C255-48CE-9804-3399AA324B81" id="sid-107C7C24-C255-48CE-9804-3399AA324B81_gui">
+            <omgdi:waypoint x="836.175878898794" y="773.0000000000002"/>
+            <omgdi:waypoint x="794.9741751777718" y="818.0000000000002"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.266970" id="con.266970_gui">
+            <omgdi:waypoint x="387.5" y="170.0"/>
+            <omgdi:waypoint x="432.5" y="170.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6" id="sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6_gui">
+            <omgdi:waypoint x="883.5" y="411.0"/>
+            <omgdi:waypoint x="883.5" y="374.0"/>
+            <omgdi:waypoint x="455.0" y="374.0"/>
+            <omgdi:waypoint x="455.0" y="546.6666666666667"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781" id="sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781_gui">
+            <omgdi:waypoint x="818.0" y="431.0"/>
+            <omgdi:waypoint x="863.0" y="431.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78" id="sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78_gui">
+            <omgdi:waypoint x="350.0" y="431.0"/>
+            <omgdi:waypoint x="377.5" y="431.0"/>
+            <omgdi:waypoint x="377.5" y="586.6666666666667"/>
+            <omgdi:waypoint x="405.0" y="586.6666666666667"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.266975" id="con.266975_gui">
+            <omgdi:waypoint x="538.5" y="170.23348017621146"/>
+            <omgdi:waypoint x="584.0" y="170.4339207048458"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F" id="sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F_gui">
+            <omgdi:waypoint x="195.0" y="431.0"/>
+            <omgdi:waypoint x="250.0" y="431.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.266965" id="con.266965_gui">
+            <omgdi:waypoint x="236.0" y="170.4339207048458"/>
+            <omgdi:waypoint x="281.5" y="170.23348017621146"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-8AB22994-1CC7-432E-AB26-FBB621117564" id="sid-8AB22994-1CC7-432E-AB26-FBB621117564_gui">
+            <omgdi:waypoint x="903.0" y="431.0"/>
+            <omgdi:waypoint x="1099.0" y="431.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-925118AE-D734-4A29-A5FA-D7D0CB44E058" id="sid-925118AE-D734-4A29-A5FA-D7D0CB44E058_gui">
+            <omgdi:waypoint x="334.5" y="199.0"/>
+            <omgdi:waypoint x="334.5" y="318.5"/>
+            <omgdi:waypoint x="180.0" y="318.5"/>
+            <omgdi:waypoint x="180.0" y="416.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.267010" id="con.267010_gui">
+            <omgdi:waypoint x="1105.5" y="246.0"/>
+            <omgdi:waypoint x="1128.25" y="246.0"/>
+            <omgdi:waypoint x="1128.25" y="244.5"/>
+            <omgdi:waypoint x="1151.0" y="244.5"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-FF7DF08F-CCF7-4B1A-971D-649149DB7306" id="sid-FF7DF08F-CCF7-4B1A-971D-649149DB7306_gui">
+            <omgdi:waypoint x="283.3333333333333" y="391.0"/>
+            <omgdi:waypoint x="283.3333333333333" y="328.0"/>
+            <omgdi:waypoint x="599.0" y="328.0"/>
+            <omgdi:waypoint x="599.0" y="185.5"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B" id="sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B_gui">
+            <omgdi:waypoint x="580.0" y="587.1666666666667"/>
+            <omgdi:waypoint x="681.0" y="587.1666666666667"/>
+            <omgdi:waypoint x="681.0" y="733.0000000000002"/>
+            <omgdi:waypoint x="812.0" y="733.0000000000002"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.266990" id="con.266990_gui">
+            <omgdi:waypoint x="844.1324503311258" y="150.5"/>
+            <omgdi:waypoint x="844.5" y="95.0"/>
+            <omgdi:waypoint x="924.0" y="94.57936507936508"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="sid-C3A05EF0-D48B-405E-9FC7-0A7D89595152" id="sid-C3A05EF0-D48B-405E-9FC7-0A7D89595152_gui">
+            <omgdi:waypoint x="731.5" y="199.0"/>
+            <omgdi:waypoint x="731.5" y="339.0"/>
+            <omgdi:waypoint x="316.66666666666663" y="339.0"/>
+            <omgdi:waypoint x="316.66666666666663" y="391.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.266995" id="con.266995_gui">
+            <omgdi:waypoint x="954.0" y="94.33870967741936"/>
+            <omgdi:waypoint x="1018.0" y="93.65053763440861"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.267005" id="con.267005_gui">
+            <omgdi:waypoint x="954.0" y="245.5660792951542"/>
+            <omgdi:waypoint x="999.5" y="245.76651982378854"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="con.267000" id="con.267000_gui">
+            <omgdi:waypoint x="844.1333333333333" y="190.5"/>
+            <omgdi:waypoint x="844.5" y="245.5"/>
+            <omgdi:waypoint x="924.0" y="245.5"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>

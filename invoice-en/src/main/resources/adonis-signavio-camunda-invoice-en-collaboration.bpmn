@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:adonis="http://www.boc-group.com" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://activiti.org/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd" id="sid-04642d37-d6bd-4b98-a98f-dcce6910f084" exporter="Signavio Process Editor, http://www.signavio.com" exporterVersion="7.0.0" targetNamespace="http://www.omg.org/bpmn20">
+  <dataStore id="sid-68ebec0a-5338-4eff-86cd-53c3c9fb3b4b" isUnlimited="false" name="Financial Accounting System"/>
+  <message id="sid-42ae25d3-642a-4d93-83a3-7505012fc5d1" name="invoice-received-en-collaboration-camunda-adonis-signavio"/>
+  <collaboration id="sid-1940abf4-77cd-4ac2-9c4e-afba7c6c5020">
+    <participant id="obj.266955" name="Process Engine - Invoice Receipt" processRef="obj.266955_process">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+      </extensionElements>
+    </participant>
+    <participant id="obj.266952" name="Team-Assistant" processRef="obj.266952_process">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+      </extensionElements>
+    </participant>
+    <messageFlow id="sid-1A3B8267-2FF8-4D86-868E-72EFFB7A0FB7" name="" sourceRef="obj.267002" targetRef="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97"/>
+    <messageFlow id="sid-6239D6AA-0D8E-40D7-A8A7-02DBD980A072" name="" sourceRef="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97" targetRef="obj.266997"/>
+    <messageFlow id="sid-925118AE-D734-4A29-A5FA-D7D0CB44E058" name="" sourceRef="obj.266962" targetRef="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86"/>
+    <messageFlow id="sid-FF7DF08F-CCF7-4B1A-971D-649149DB7306" name="" sourceRef="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694" targetRef="obj.266972"/>
+    <messageFlow id="sid-C3A05EF0-D48B-405E-9FC7-0A7D89595152" name="" sourceRef="obj.266977" targetRef="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694"/>
+  </collaboration>
+  <process id="obj.266952_process" name="Team-Assistant" isExecutable="false">
+    <extensionElements>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Orientierung" type="ENUMERATION">horizontal</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Farbe" type="STRING">white</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Sichtbarer Rand" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="EXPRESSION">EXPR val:&quot;black&quot;</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Pool</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Minimum" type="INTEGER">0</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Maximum" type="INTEGER">1</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist vollständig" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Keiner</adonis:ATTRIBUTE>
+      <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Partner (Entität)"/>
+      <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Partner (Rolle)"/>
+      <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Schnittstelle"/>
+    </extensionElements>
+    <laneSet id="sid-b30780c2-cfb9-4866-b9c1-102736203625">
+      <lane id="sid-7AC5D907-12C2-4804-9576-C08489FE9F37">
+        <extensionElements>
+          <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue=""/>
+        </extensionElements>
+        <flowNodeRef>obj.266958</flowNodeRef>
+        <flowNodeRef>obj.266962</flowNodeRef>
+        <flowNodeRef>obj.266967</flowNodeRef>
+        <flowNodeRef>obj.266972</flowNodeRef>
+        <flowNodeRef>obj.266977</flowNodeRef>
+        <flowNodeRef>obj.266982</flowNodeRef>
+        <flowNodeRef>obj.266987</flowNodeRef>
+        <flowNodeRef>obj.266992</flowNodeRef>
+        <flowNodeRef>obj.266997</flowNodeRef>
+        <flowNodeRef>obj.267002</flowNodeRef>
+        <flowNodeRef>obj.267007</flowNodeRef>
+      </lane>
+    </laneSet>
+    <startEvent id="obj.266958" name="Invoice received">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Prozeßkalender" type="LONGSTRING">D@Werktag@b@32400-43200@U900;1800@45000-59400@U900;1800@Frei@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Menge" type="EXPRESSION">EXPR expr:(20
+) val:20</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezugszeitraum" type="ENUMERATION">Pro Tag</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Abbruch nach Toleranzwartezeit" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Toleranzwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Durchlaufzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisinfo" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kostentreiber" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kostentreibermenge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Start Event</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kritische Erfolgsfaktoren" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Dokumente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Produkte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Input"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Output"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Datenstatus"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Aktivität"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Prozeßverantwortung"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Prozeßkennzahlen"/>
+      </extensionElements>
+      <outgoing>con.266965</outgoing>
+      <messageEventDefinition id="sid-7e8d2433-0f09-4809-9a2f-ebc14882ab0d"/>
+    </startEvent>
+    <task id="obj.266962" name="Scan invoice">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := &quot;Durchführungsverantwortung&quot;,
+  s := &quot;&quot;,
+  c := tokcnt(aval(sAttrName), &quot;\n&quot;),
+  for(i, 0, c - 1) {
+    (cond (s &lt;> &quot;&quot;, (s := s + &quot; ODER &quot; + &quot;({\&quot;&quot; + irtaval(sAttrName, i, &quot;Name&quot;) + &quot;\&quot; : \&quot;Rolle\&quot;} &lt;- \&quot;hat Rolle\&quot;)&quot;), (s := &quot;({\&quot;&quot; + irtaval(sAttrName, i, &quot;Name&quot;) + &quot;\&quot; : \&quot;Rolle\&quot;} &lt;- \&quot;hat Rolle\&quot;)&quot;)))
+  }, 
+  s
+) val:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeitungszeit" type="TIME">00:000:00:00:05</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Erledigt durch" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kosten" type="DOUBLE">0.5</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisinfo" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichen anzeigen (&quot;i&quot;), wenn eine Beschreibung eingegeben ist" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Verantwortliche Rolle"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Anwendungsfälle"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Dokumente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Input"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Output"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Durchführungsverantwortung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Ergebnisverantwortung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Mitarbeit/Mitwirkung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Zu informieren"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Produkte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Dateninput"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Datenoutput"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Ressource"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis (Verhalten = Eines)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis (Verhalten = Keines)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Schnittstellen"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Risiko-/Kontrollzuordnung"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Verhaltensdefinition (Verhalten = Komplex)"/>
+      </extensionElements>
+      <incoming>con.266965</incoming>
+      <outgoing>con.266970</outgoing>
+    </task>
+    <task id="obj.266967" name="Archive original">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := &quot;Durchführungsverantwortung&quot;,
+  s := &quot;&quot;,
+  c := tokcnt(aval(sAttrName), &quot;\n&quot;),
+  for(i, 0, c - 1) {
+    (cond (s &lt;> &quot;&quot;, (s := s + &quot; ODER &quot; + &quot;({\&quot;&quot; + irtaval(sAttrName, i, &quot;Name&quot;) + &quot;\&quot; : \&quot;Rolle\&quot;} &lt;- \&quot;hat Rolle\&quot;)&quot;), (s := &quot;({\&quot;&quot; + irtaval(sAttrName, i, &quot;Name&quot;) + &quot;\&quot; : \&quot;Rolle\&quot;} &lt;- \&quot;hat Rolle\&quot;)&quot;)))
+  }, 
+  s
+) val:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeitungszeit" type="TIME">00:000:00:00:10</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Erledigt durch" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisinfo" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichen anzeigen (&quot;i&quot;), wenn eine Beschreibung eingegeben ist" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Verantwortliche Rolle"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Anwendungsfälle"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Dokumente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Input"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Output"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Durchführungsverantwortung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Ergebnisverantwortung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Mitarbeit/Mitwirkung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Zu informieren"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Produkte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Dateninput"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Datenoutput"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Ressource"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis (Verhalten = Eines)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis (Verhalten = Keines)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Schnittstellen"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Risiko-/Kontrollzuordnung"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Verhaltensdefinition (Verhalten = Komplex)"/>
+      </extensionElements>
+      <incoming>con.266970</incoming>
+      <outgoing>con.266975</outgoing>
+    </task>
+    <intermediateCatchEvent id="obj.266972" name="Approver to be assigned">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Dokumente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Datenstatus"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Aktivität"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (Laufzeit)"/>
+      </extensionElements>
+      <incoming>con.266975</incoming>
+      <outgoing>con.266980</outgoing>
+      <messageEventDefinition id="sid-0d8f0ccb-a9ec-458e-b597-081e94ff31e5"/>
+    </intermediateCatchEvent>
+    <task id="obj.266977" name="Assign approver">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := &quot;Durchführungsverantwortung&quot;,
+  s := &quot;&quot;,
+  c := tokcnt(aval(sAttrName), &quot;\n&quot;),
+  for(i, 0, c - 1) {
+    (cond (s &lt;> &quot;&quot;, (s := s + &quot; ODER &quot; + &quot;({\&quot;&quot; + irtaval(sAttrName, i, &quot;Name&quot;) + &quot;\&quot; : \&quot;Rolle\&quot;} &lt;- \&quot;hat Rolle\&quot;)&quot;), (s := &quot;({\&quot;&quot; + irtaval(sAttrName, i, &quot;Name&quot;) + &quot;\&quot; : \&quot;Rolle\&quot;} &lt;- \&quot;hat Rolle\&quot;)&quot;)))
+  }, 
+  s
+) val:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeitungszeit" type="TIME">00:000:00:00:30</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Wartezeit" type="TIME">00:000:00:05:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Erledigt durch" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisinfo" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichen anzeigen (&quot;i&quot;), wenn eine Beschreibung eingegeben ist" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Verantwortliche Rolle"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Anwendungsfälle"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Dokumente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Input"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Output"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Durchführungsverantwortung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Ergebnisverantwortung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Mitarbeit/Mitwirkung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Zu informieren"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Produkte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Dateninput"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Datenoutput"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Ressource"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis (Verhalten = Eines)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis (Verhalten = Keines)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Schnittstellen"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Risiko-/Kontrollzuordnung"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Verhaltensdefinition (Verhalten = Komplex)"/>
+      </extensionElements>
+      <incoming>con.266980</incoming>
+      <outgoing>con.266985</outgoing>
+    </task>
+    <eventBasedGateway id="obj.266982" name="Exclusive Gateway" gatewayDirection="Diverging" eventGatewayType="Exclusive">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Exclusive Gateway</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung (Name)" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+      </extensionElements>
+      <incoming>con.266985</incoming>
+      <outgoing>con.266990</outgoing>
+      <outgoing>con.267000</outgoing>
+    </eventBasedGateway>
+    <intermediateCatchEvent id="obj.266987" name="7 days">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Dokumente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Datenstatus"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Aktivität"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (Laufzeit)"/>
+      </extensionElements>
+      <incoming>con.266990</incoming>
+      <outgoing>con.266995</outgoing>
+      <timerEventDefinition id="sid-3f8152f3-1685-4a8e-a6fd-376269f7648d">
+        <timeDate xsi:type="tFormalExpression" id="sid-7a224416-f3a0-4795-98cd-429dc1817043">2010:01:01 00:00:00</timeDate>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <endEvent id="obj.266992" name="Timeout">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">End Event</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name anzeigen" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Datenstatus"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Aktivität"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+      </extensionElements>
+      <incoming>con.266995</incoming>
+    </endEvent>
+    <intermediateCatchEvent id="obj.266997" name="Invoice review needed">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Intermediate Event (sequence flow)</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Dokumente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Datenstatus"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Aktivität"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (Laufzeit)"/>
+      </extensionElements>
+      <incoming>con.267000</incoming>
+      <outgoing>con.267005</outgoing>
+      <messageEventDefinition id="sid-411b262e-f076-4fab-bca1-27e5da1f0235"/>
+    </intermediateCatchEvent>
+    <task id="obj.267002" name="Review and document result">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeiter" type="EXPRESSION">EXPR expr:( 
+  sAttrName := &quot;Durchführungsverantwortung&quot;,
+  s := &quot;&quot;,
+  c := tokcnt(aval(sAttrName), &quot;\n&quot;),
+  for(i, 0, c - 1) {
+    (cond (s &lt;> &quot;&quot;, (s := s + &quot; ODER &quot; + &quot;({\&quot;&quot; + irtaval(sAttrName, i, &quot;Name&quot;) + &quot;\&quot; : \&quot;Rolle\&quot;} &lt;- \&quot;hat Rolle\&quot;)&quot;), (s := &quot;({\&quot;&quot; + irtaval(sAttrName, i, &quot;Name&quot;) + &quot;\&quot; : \&quot;Rolle\&quot;} &lt;- \&quot;hat Rolle\&quot;)&quot;)))
+  }, 
+  s
+) val:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeitungszeit" type="TIME">00:000:00:02:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Priorität" type="INTEGER">10</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Erledigt durch" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchgehende Bearbeitung" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Max. Ressourcenwartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kooperativ" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kooperationsart" type="ENUMERATION">synchron</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchschnittl. Teilnehmerzahl" type="INTEGER">1</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Min. Anwesenheitsquote" type="INTEGER">100</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Max. Startzeitraum" type="TIME">00:001:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bearbeitung unterbrechbar" type="ENUMERATION">ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Wartestapel" type="ENUMERATION">persönlich</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kosten" type="DOUBLE">1</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisinfo" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Anzahl" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Bearbeitungszeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Wartezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Liegezeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Transportzeit" type="TIME">00:000:00:00:00</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ermittelte Personalkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="EDV-Transaktionskosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="EDV-Batch-Kosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Druckkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Versandkosten" type="DOUBLE">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Task</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente visualisieren" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichen anzeigen (&quot;i&quot;), wenn eine Beschreibung eingegeben ist" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Symbole bei vorhandenen Risiken oder Kontrollen anzeigen" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Verhalten" type="ENUMERATION">Keines</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung (Name)" type="ENUMERATION">zentriert</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ressourcenzuordnung" type="ENUMERATION">Ressource referenzieren</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ressourcenzuordnung über Ausdruck" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Durchführungsverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ergebnisverantwortung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Mitarbeit/Mitwirkung visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zu informieren visualisieren" type="ENUMERATION">nein</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Verantwortliche Rolle"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Anwendungsfälle"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Dokumente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Input"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Output"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Durchführungsverantwortung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Ergebnisverantwortung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Mitarbeit/Mitwirkung"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Zu informieren"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte IT-Systemelemente"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Produkte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Dateninput"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Datenoutput"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Outputdaten (Laufzeit)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Ressource"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis (Verhalten = Eines)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenziertes Ereignis (Verhalten = Keines)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Schnittstellen"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Risiko-/Kontrollzuordnung"/>
+        <adonis:RECORD xsi:type="xsd:anyType" name="Verhaltensdefinition (Verhalten = Komplex)"/>
+      </extensionElements>
+      <incoming>con.267005</incoming>
+      <outgoing>con.267010</outgoing>
+    </task>
+    <endEvent id="obj.267007" name="Invoice reviewed">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">ohne Namen</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Reihenfolge" type="INTEGER">0</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">End Event</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name anzeigen" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Objektart" type="ENUMERATION">Information</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Namensraum" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Importtyp" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Ort" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Externe Dokumentation" type="PROGRAMCALL">ITEM &quot;&quot; param:&quot;&quot;</adonis:ATTRIBUTE>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Kategorie"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Objekte"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Datenstatus"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Aktivität"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Nachricht"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Operation"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (optional)"/>
+        <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Inputdaten (Laufzeit)"/>
+      </extensionElements>
+      <incoming>con.267010</incoming>
+    </endEvent>
+    <sequenceFlow id="con.266965" name="" isImmediate="true" sourceRef="obj.266958" targetRef="obj.266962">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="con.266970" name="" isImmediate="true" sourceRef="obj.266962" targetRef="obj.266967">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="con.266975" name="" isImmediate="true" sourceRef="obj.266967" targetRef="obj.266972">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="con.266980" name="" isImmediate="true" sourceRef="obj.266972" targetRef="obj.266977">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="con.266985" name="" isImmediate="true" sourceRef="obj.266977" targetRef="obj.266982">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="con.266990" name="" isImmediate="true" sourceRef="obj.266982" targetRef="obj.266987">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING">0,1</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING">0,1</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression" id="sid-d7f77cc8-00f4-4ef6-b35d-6dcb3f9f2978">0,1</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="con.266995" name="" isImmediate="true" sourceRef="obj.266987" targetRef="obj.266992">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="con.267000" name="" isImmediate="true" sourceRef="obj.266982" targetRef="obj.266997">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING">0,9</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING">0,9</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression" id="sid-ee8239e2-ad20-4fdf-b7db-8b9639508d3f">0,9</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="con.267005" name="" isImmediate="true" sourceRef="obj.266997" targetRef="obj.267002">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="con.267010" name="" isImmediate="true" sourceRef="obj.267002" targetRef="obj.267007">
+      <extensionElements>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangsbedingung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Übergangswahrscheinlichkeit" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Bezeichnung</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Darstellung" type="ENUMERATION">automatisch</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="ENUMERATION">schwarz</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Bezeichnung" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="LONGSTRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Drehen der visualisierten Werte um 90 Grad" type="ENUMERATION">no</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kategorie" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist unmittelbar" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+        <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Info for Transition Condition" type="STRING"/>
+      </extensionElements>
+    </sequenceFlow>
+  </process>
+  <process id="obj.266955_process" name="Process Engine - Invoice Receipt" isExecutable="true">
+    <extensionElements>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kommentar" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Offene Fragen" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Orientierung" type="ENUMERATION">horizontal</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Farbe" type="STRING">white</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Sichtbarer Rand" type="ENUMERATION">Ja</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Beschreibung der Änderungen" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Kennzeichnung von Änderungen" type="ENUMERATION">Keine Änderung</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Description" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Comment" type="STRING"/>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Schriftfarbe" type="EXPRESSION">EXPR val:&quot;black&quot;</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Name (english)" type="STRING">Pool</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Minimum" type="INTEGER">0</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Maximum" type="INTEGER">1</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Monitoring" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="ist vollständig" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Auditierung" type="ENUMERATION">Nein</adonis:ATTRIBUTE>
+      <adonis:ATTRIBUTE xsi:type="xsd:anyType" name="Visualisierte Werte" type="ENUMERATION">Keiner</adonis:ATTRIBUTE>
+      <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Partner (Entität)"/>
+      <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierter Partner (Rolle)"/>
+      <adonis:INTERREF xsi:type="xsd:anyType" name="Referenzierte Schnittstelle"/>
+    </extensionElements>
+    <laneSet id="sid-c1ca0a25-dae3-4776-a066-54ff55cd9b2f">
+      <lane id="sid-D307B110-27BD-4451-84A0-2E4A4413236B" name="Team Assistant">
+        <extensionElements>
+          <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue=""/>
+        </extensionElements>
+        <flowNodeRef>sid-3EF95F5C-CFA7-4C60-9F83-082287A73694</flowNodeRef>
+        <flowNodeRef>sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97</flowNodeRef>
+        <flowNodeRef>sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E</flowNodeRef>
+        <flowNodeRef>sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F</flowNodeRef>
+        <flowNodeRef>sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86</flowNodeRef>
+      </lane>
+      <lane id="sid-38767BCB-3425-4143-BD29-4D842F84FB51" name="Approver">
+        <extensionElements>
+          <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue=""/>
+        </extensionElements>
+        <flowNodeRef>sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420</flowNodeRef>
+        <flowNodeRef>sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255</flowNodeRef>
+      </lane>
+      <lane id="sid-1ED1D1E7-4878-4CF8-804D-B8B35C90A34F" name="Accountant">
+        <extensionElements>
+          <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue=""/>
+        </extensionElements>
+        <flowNodeRef>sid-F98EB7F7-E842-4B42-89F5-2779A343983D</flowNodeRef>
+        <flowNodeRef>sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019</flowNodeRef>
+        <flowNodeRef>sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5</flowNodeRef>
+      </lane>
+    </laneSet>
+    <userTask id="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694" camunda:assignee="demo" camunda:formKey="app:assignApprover.jsf" name="Assign Approver" implementation="webService">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+      </extensionElements>
+      <incoming>sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F</incoming>
+      <outgoing>sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78</outgoing>
+    </userTask>
+    <userTask id="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97" camunda:assignee="demo" camunda:formKey="app:reviewInvoice.jsf" name="Review&#xA;Invoice" implementation="webService">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+      </extensionElements>
+      <incoming>sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A</incoming>
+      <outgoing>sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781</outgoing>
+    </userTask>
+    <exclusiveGateway id="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E" name="Review&#xA;successful?" gatewayDirection="Diverging">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+      </extensionElements>
+      <incoming>sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781</incoming>
+      <outgoing>sid-8AB22994-1CC7-432E-AB26-FBB621117564</outgoing>
+      <outgoing>sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6</outgoing>
+    </exclusiveGateway>
+    <endEvent id="sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F" name="Invoice not&#xA;processed">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+      </extensionElements>
+      <incoming>sid-8AB22994-1CC7-432E-AB26-FBB621117564</incoming>
+    </endEvent>
+    <startEvent id="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86" camunda:formKey="app:startProcess.jsf" name="Invoice&#xA;received">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+      </extensionElements>
+      <outgoing>sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F</outgoing>
+      <messageEventDefinition id="sid-cf0fc4f1-c0f8-4a97-bdfa-50959aae21b0" messageRef="sid-42ae25d3-642a-4d93-83a3-7505012fc5d1"/>
+    </startEvent>
+    <userTask id="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420" camunda:assignee="${approver}" camunda:formKey="app:approveInvoice.jsf" name="Approve Invoice" implementation="webService">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+      </extensionElements>
+      <incoming>sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78</incoming>
+      <incoming>sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6</incoming>
+      <outgoing>sid-B6DF07B7-8435-4347-8F85-C59101F3559A</outgoing>
+    </userTask>
+    <exclusiveGateway id="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255" name="Invoice&#xA;approved?" gatewayDirection="Diverging">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+      </extensionElements>
+      <incoming>sid-B6DF07B7-8435-4347-8F85-C59101F3559A</incoming>
+      <outgoing>sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A</outgoing>
+      <outgoing>sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B</outgoing>
+    </exclusiveGateway>
+    <userTask id="sid-F98EB7F7-E842-4B42-89F5-2779A343983D" camunda:candidateGroups="accounting" camunda:formKey="app:prepareBankTransfer.jsf" name="Prepare&#xD;&#xA;Bank&#xD;&#xA;Transfer" implementation="webService">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+      </extensionElements>
+      <incoming>sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B</incoming>
+      <outgoing>sid-B08C4A76-2700-4A39-B5F9-240390D3C51B</outgoing>
+    </userTask>
+    <endEvent id="sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019" name="Invoice&#xA;processed">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+      </extensionElements>
+      <incoming>sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0</incoming>
+    </endEvent>
+    <serviceTask id="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5" camunda:delegateExpression="#{archiveService}" name="Archive&#xA;Invoice" implementation="webService">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokumente" metaValue="[]"/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="risks" metaValue=""/>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="dokument" metaValue=""/>
+      </extensionElements>
+      <incoming>sid-B08C4A76-2700-4A39-B5F9-240390D3C51B</incoming>
+      <outgoing>sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0</outgoing>
+    </serviceTask>
+    <sequenceFlow id="sid-8AB22994-1CC7-432E-AB26-FBB621117564" name="no" isImmediate="true" sourceRef="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E" targetRef="sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F">
+      <conditionExpression xsi:type="tFormalExpression" id="sid-99a909f1-40a2-4195-b5ca-0525c01cbb0a">${clarified == 'no'}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781" name="" isImmediate="true" sourceRef="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97" targetRef="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E"/>
+    <sequenceFlow id="sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F" name="" isImmediate="true" sourceRef="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86" targetRef="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694"/>
+    <sequenceFlow id="sid-B6DF07B7-8435-4347-8F85-C59101F3559A" name="" isImmediate="true" sourceRef="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420" targetRef="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255"/>
+    <sequenceFlow id="sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A" name="no" sourceRef="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255" targetRef="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97">
+      <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78" name="" sourceRef="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694" targetRef="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420"/>
+    <sequenceFlow id="sid-B08C4A76-2700-4A39-B5F9-240390D3C51B" name="" isImmediate="true" sourceRef="sid-F98EB7F7-E842-4B42-89F5-2779A343983D" targetRef="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5"/>
+    <sequenceFlow id="sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0" name="" isImmediate="true" sourceRef="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5" targetRef="sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019"/>
+    <sequenceFlow id="sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B" name="yes" sourceRef="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255" targetRef="sid-F98EB7F7-E842-4B42-89F5-2779A343983D">
+      <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6" name="yes" sourceRef="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E" targetRef="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420">
+      <conditionExpression xsi:type="tFormalExpression">${clarified == 'yes'}</conditionExpression>
+    </sequenceFlow>
+    <dataStoreReference id="sid-C4A81A9E-1BA9-46C8-A16B-B8F971E9A32E" name="Financial Accounting System" dataStoreRef="sid-68ebec0a-5338-4eff-86cd-53c3c9fb3b4b">
+      <extensionElements>
+        <signavio:signavioMetaData xsi:type="xsd:anyType" metaKey="bgcolor" metaValue="#ffffff"/>
+      </extensionElements>
+    </dataStoreReference>
+    <association id="sid-107C7C24-C255-48CE-9804-3399AA324B81" sourceRef="sid-F98EB7F7-E842-4B42-89F5-2779A343983D" targetRef="sid-C4A81A9E-1BA9-46C8-A16B-B8F971E9A32E"/>
+  </process>
+  <bpmndi:BPMNDiagram id="sid-a8fee7bc-55d7-4e45-a9fb-a016824af9a6">
+    <bpmndi:BPMNPlane id="sid-2e6cd94f-6116-4d89-a20f-91af587f5c82" bpmnElement="sid-1940abf4-77cd-4ac2-9c4e-afba7c6c5020">
+      <bpmndi:BPMNShape id="obj.266955_gui" bpmnElement="obj.266955" isHorizontal="true">
+        <omgdc:Bounds height="444.0" width="1134.0" x="69.5" y="354.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266952_gui" bpmnElement="obj.266952" isHorizontal="true">
+        <omgdc:Bounds height="250.0" width="1134.0" x="69.5" y="57.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-7AC5D907-12C2-4804-9576-C08489FE9F37_gui" bpmnElement="sid-7AC5D907-12C2-4804-9576-C08489FE9F37" isHorizontal="true">
+        <omgdc:Bounds height="250.0" width="1104.0" x="99.5" y="57.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266958_gui" bpmnElement="obj.266958">
+        <omgdc:Bounds height="30.0" width="30.0" x="206.0" y="155.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266962_gui" bpmnElement="obj.266962">
+        <omgdc:Bounds height="57.0" width="106.0" x="281.5" y="142.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266967_gui" bpmnElement="obj.266967">
+        <omgdc:Bounds height="57.0" width="106.0" x="432.5" y="142.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266972_gui" bpmnElement="obj.266972">
+        <omgdc:Bounds height="30.0" width="30.0" x="584.0" y="155.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266977_gui" bpmnElement="obj.266977">
+        <omgdc:Bounds height="57.0" width="106.0" x="678.5" y="142.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266982_gui" bpmnElement="obj.266982">
+        <omgdc:Bounds height="40.0" width="40.0" x="824.0" y="150.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266987_gui" bpmnElement="obj.266987">
+        <omgdc:Bounds height="30.0" width="30.0" x="924.0" y="79.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266992_gui" bpmnElement="obj.266992">
+        <omgdc:Bounds height="28.0" width="28.0" x="1018.0" y="79.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.266997_gui" bpmnElement="obj.266997">
+        <omgdc:Bounds height="30.0" width="30.0" x="924.0" y="230.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.267002_gui" bpmnElement="obj.267002">
+        <omgdc:Bounds height="57.0" width="106.0" x="999.5" y="217.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="obj.267007_gui" bpmnElement="obj.267007">
+        <omgdc:Bounds height="28.0" width="28.0" x="1151.0" y="230.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-D307B110-27BD-4451-84A0-2E4A4413236B_gui" bpmnElement="sid-D307B110-27BD-4451-84A0-2E4A4413236B" isHorizontal="true">
+        <omgdc:Bounds height="164.0" width="1104.0" x="99.5" y="354.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-38767BCB-3425-4143-BD29-4D842F84FB51_gui" bpmnElement="sid-38767BCB-3425-4143-BD29-4D842F84FB51" isHorizontal="true">
+        <omgdc:Bounds height="141.0" width="1104.0" x="99.5" y="518.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-1ED1D1E7-4878-4CF8-804D-B8B35C90A34F_gui" bpmnElement="sid-1ED1D1E7-4878-4CF8-804D-B8B35C90A34F" isHorizontal="true">
+        <omgdc:Bounds height="139.0" width="1104.0" x="99.5" y="659.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694_gui" bpmnElement="sid-3EF95F5C-CFA7-4C60-9F83-082287A73694">
+        <omgdc:Bounds height="80.0" width="100.0" x="250.0" y="391.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97_gui" bpmnElement="sid-3F8AF47C-2803-44DF-AFA8-315F9D9DCD97">
+        <omgdc:Bounds height="80.0" width="100.0" x="718.0" y="391.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E_gui" bpmnElement="sid-44E5CEF8-1832-4CD7-8F1C-653E3081799E" isMarkerVisible="true">
+        <omgdc:Bounds height="40.0" width="40.0" x="863.0" y="411.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F_gui" bpmnElement="sid-9D9727A2-A0D2-404E-BEEE-D19DED88A38F">
+        <omgdc:Bounds height="28.0" width="28.0" x="1099.0" y="417.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86_gui" bpmnElement="sid-ABFF2892-30D1-4B7B-877A-7F7770F94F86">
+        <omgdc:Bounds height="30.0" width="30.0" x="165.0" y="416.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420_gui" bpmnElement="sid-FBBBC98D-34D8-4D7B-BEA2-3D982B997420">
+        <omgdc:Bounds height="80.0" width="100.0" x="405.0" y="546.6667"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255_gui" bpmnElement="sid-F1D2FFF3-ABCF-4DB9-A2B1-544CAA30E255" isMarkerVisible="true">
+        <omgdc:Bounds height="40.0" width="40.0" x="540.0" y="566.6667"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-F98EB7F7-E842-4B42-89F5-2779A343983D_gui" bpmnElement="sid-F98EB7F7-E842-4B42-89F5-2779A343983D">
+        <omgdc:Bounds height="80.0" width="100.0" x="812.0" y="693.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019_gui" bpmnElement="sid-A1652E4A-7B3A-48ED-8DFC-9E654B337019">
+        <omgdc:Bounds height="28.0" width="28.0" x="1099.0" y="718.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5_gui" bpmnElement="sid-1E05C0B1-4F50-49F9-8383-7EE6BF4685A5">
+        <omgdc:Bounds height="80.0" width="100.0" x="954.0" y="693.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-C4A81A9E-1BA9-46C8-A16B-B8F971E9A32E_gui" bpmnElement="sid-C4A81A9E-1BA9-46C8-A16B-B8F971E9A32E">
+        <omgdc:Bounds height="60.173" width="62.001" x="737.0" y="818.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="sid-1A3B8267-2FF8-4D86-868E-72EFFB7A0FB7_gui" bpmnElement="sid-1A3B8267-2FF8-4D86-868E-72EFFB7A0FB7">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1052.5" y="274.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1052.5" y="338.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="784.6667" y="338.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="784.6667" y="391.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-6239D6AA-0D8E-40D7-A8A7-02DBD980A072_gui" bpmnElement="sid-6239D6AA-0D8E-40D7-A8A7-02DBD980A072">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="751.3333" y="391.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="751.3333" y="320.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="939.0" y="320.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="939.0" y="260.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0_gui" bpmnElement="sid-0058C1B2-BAB9-4483-A5A2-6528BC4D0DA0">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1054.0" y="733.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1099.0" y="732.2373"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.266980_gui" bpmnElement="con.266980">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="614.0" y="170.44339"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="678.5" y="170.2"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-B08C4A76-2700-4A39-B5F9-240390D3C51B_gui" bpmnElement="sid-B08C4A76-2700-4A39-B5F9-240390D3C51B">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="912.0" y="733.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="954.0" y="733.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A_gui" bpmnElement="sid-2BF67CA4-38BD-49C1-9AF3-0C0843A3384A">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="560.5" y="566.6667"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="560.5" y="431.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="718.0" y="431.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.266985_gui" bpmnElement="con.266985">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="784.5" y="170.23555"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="824.0" y="170.41112"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-B6DF07B7-8435-4347-8F85-C59101F3559A_gui" bpmnElement="sid-B6DF07B7-8435-4347-8F85-C59101F3559A">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="505.0" y="586.6667"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="540.0" y="586.6667"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-107C7C24-C255-48CE-9804-3399AA324B81_gui" bpmnElement="sid-107C7C24-C255-48CE-9804-3399AA324B81">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="836.1759" y="773.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="794.9742" y="818.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.266970_gui" bpmnElement="con.266970">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="387.5" y="170.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="432.5" y="170.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6_gui" bpmnElement="sid-E18C5171-BA5A-4028-9F96-7C6D2CAC96A6">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="883.5" y="411.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="883.5" y="374.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="455.0" y="374.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="455.0" y="546.6667"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781_gui" bpmnElement="sid-100C7D45-D952-42DC-8B73-3C0DBAB2E781">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="818.0" y="431.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="863.0" y="431.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78_gui" bpmnElement="sid-2DF7DAF6-5EB3-4F29-BFAA-91B4BDD7FD78">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="350.0" y="431.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="377.5" y="431.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="377.5" y="586.6667"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="405.0" y="586.6667"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.266975_gui" bpmnElement="con.266975">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="538.5" y="170.23347"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="584.0" y="170.43391"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F_gui" bpmnElement="sid-88347D6B-CF1A-4880-94E2-3F30DADDDD8F">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="195.0" y="431.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="250.0" y="431.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.266965_gui" bpmnElement="con.266965">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="236.0" y="170.43391"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="281.5" y="170.23347"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-8AB22994-1CC7-432E-AB26-FBB621117564_gui" bpmnElement="sid-8AB22994-1CC7-432E-AB26-FBB621117564">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="903.0" y="431.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1099.0" y="431.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-925118AE-D734-4A29-A5FA-D7D0CB44E058_gui" bpmnElement="sid-925118AE-D734-4A29-A5FA-D7D0CB44E058">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="334.5" y="199.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="334.5" y="318.5"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="180.0" y="318.5"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="180.0" y="416.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.267010_gui" bpmnElement="con.267010">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1105.5" y="246.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1128.25" y="246.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1128.25" y="244.5"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1151.0" y="244.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-FF7DF08F-CCF7-4B1A-971D-649149DB7306_gui" bpmnElement="sid-FF7DF08F-CCF7-4B1A-971D-649149DB7306">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="283.33334" y="391.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="283.33334" y="328.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="599.0" y="328.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="599.0" y="185.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B_gui" bpmnElement="sid-828E36D9-B0BD-4E1F-B750-AF78980A0A7B">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="580.0" y="587.1667"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="681.0" y="587.1667"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="681.0" y="733.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="812.0" y="733.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.266990_gui" bpmnElement="con.266990">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="844.13245" y="150.5"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="844.5" y="95.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="924.0" y="94.57937"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-C3A05EF0-D48B-405E-9FC7-0A7D89595152_gui" bpmnElement="sid-C3A05EF0-D48B-405E-9FC7-0A7D89595152">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="731.5" y="199.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="731.5" y="339.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="316.66666" y="339.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="316.66666" y="391.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.266995_gui" bpmnElement="con.266995">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="954.0" y="94.33871"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1018.0" y="93.650536"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.267005_gui" bpmnElement="con.267005">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="954.0" y="245.56609"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="999.5" y="245.76653"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="con.267000_gui" bpmnElement="con.267000">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="844.13336" y="190.5"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="844.5" y="245.5"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="924.0" y="245.5"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
