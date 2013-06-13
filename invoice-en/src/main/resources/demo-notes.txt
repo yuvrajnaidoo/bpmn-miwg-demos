@@ -1,0 +1,6 @@
+- executable=true
+- Assignees: demo, ${approver}, accounting
+- Forms: app:assignApprover.jsf, app:approveInvoice.jsf, app:reviewInvoice.jsf, app:prepareBankTransfer.jsf
+- Services: #{archiveService}
+- Conditions: ${!approved}, ${approved}, ${clarified == 'yes'}, ${clarified == 'no'}
+- Message Name: invoice-received-en-collaboration-camunda-adonis-signavio
