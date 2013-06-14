@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://activiti.org/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd" id="sid-fc433a04-2c94-4a00-82f7-61318b96eb22" exporter="Signavio Process Editor, http://www.signavio.com" exporterVersion="7.0.0" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL">
+  <message id="sid-675c4e5d-0231-4aa5-b96f-b0fb8f5598e1" name=""/>
+  <dataStore id="sid-61eb5a5d-d368-4d76-86c2-681d4ee39515" isUnlimited="false" name="Offene &#xA;Rechnungen"/>
+  <collaboration id="sid-5b31f487-36e7-4ad0-bef4-f22fa7276c7e">
+    <participant id="sid-C17FF365-4509-43E7-A1C9-C075163EA182" name="Poststelle"/>
+    <participant id="sid-D21978C6-EC73-4EDA-8E3E-D23AABECF3D3" name="Rechnungssteller"/>
+    <participant id="sid-9AEAFE5E-8A71-4CF4-853C-65EBB51554BB" name="Rechnungseingang (camunda BPM)" processRef="camunda-invoice-de"/>
+  </collaboration>
+  <process id="camunda-invoice-de" name="Rechnungseingang (camunda BPM)" isExecutable="true">
+    <laneSet id="sid-05051b13-c6f9-4027-aae4-ec0ef1e4d6c0">
+      <lane id="sid-9FAC101E-37D6-4EE6-8E6D-F5FB387247FC" name="Team-Assistenz">
+        <flowNodeRef>sid-F97B4602-EE39-4C6F-B5CE-93543E5B815F</flowNodeRef>
+        <flowNodeRef>user-task-select-approver</flowNodeRef>
+        <flowNodeRef>sid-19C69198-25EC-476B-ADAB-C97B496398D4</flowNodeRef>
+        <flowNodeRef>sid-2E49E032-A81C-4DBE-A30A-6222DACA160C</flowNodeRef>
+        <flowNodeRef>Kl_rung_erfolgreich__153</flowNodeRef>
+        <flowNodeRef>endEvent_165</flowNodeRef>
+      </lane>
+      <lane id="sid-350FDA87-B083-4C67-91CF-20E0A291920A" name="Freigebender">
+        <flowNodeRef>sid-75ABF6BF-1CA5-4CC2-9787-600855885947</flowNodeRef>
+        <flowNodeRef>Freigabe_erfolgt__131</flowNodeRef>
+      </lane>
+      <lane id="sid-6819245D-1995-4FA2-B0DB-A6CECBB2CFE9" name="Buchhaltung">
+        <flowNodeRef>sid-39BC837C-A028-4F8D-A998-CDB68643E87D</flowNodeRef>
+        <flowNodeRef>archive-pdf</flowNodeRef>
+        <flowNodeRef>sid-A1773E2F-398F-4D9E-8B3D-A221E110A432</flowNodeRef>
+      </lane>
+    </laneSet>
+    <startEvent id="sid-F97B4602-EE39-4C6F-B5CE-93543E5B815F" camunda:formKey="app:startProcess.jsf" name="Rechnungs-&#xA;freigabe &#xA;angefordert">
+      <outgoing>sid-B28168F3-5B1A-424E-A992-6F0928E67120</outgoing>
+      <messageEventDefinition id="sid-ae0b1a46-3941-4044-a5a0-75ef722694ba" messageRef="sid-675c4e5d-0231-4aa5-b96f-b0fb8f5598e1"/>
+    </startEvent>
+    <userTask id="user-task-select-approver" camunda:assignee="demo" camunda:formKey="app:assignApprover.jsf" name="Freigebenden auswählen" implementation="webService">
+      <incoming>sid-B28168F3-5B1A-424E-A992-6F0928E67120</incoming>
+      <outgoing>sid-07C7183C-4049-4F75-B312-E9CB1DF63BFF</outgoing>
+    </userTask>
+    <exclusiveGateway id="sid-19C69198-25EC-476B-ADAB-C97B496398D4" name="" gatewayDirection="Converging">
+      <incoming>sid-07C7183C-4049-4F75-B312-E9CB1DF63BFF</incoming>
+      <incoming>sid-D4EA8617-0104-40EB-A520-7876DF2AAF81</incoming>
+      <outgoing>sid-73A99982-282D-4DCC-8778-2BAA47C63B88</outgoing>
+    </exclusiveGateway>
+    <userTask id="sid-2E49E032-A81C-4DBE-A30A-6222DACA160C" camunda:assignee="demo" camunda:formKey="app:clarifyInvoice.jsf" name="Rechnung klären" implementation="webService">
+      <incoming>sid-314DFE46-2D8A-43A2-9CBE-AF8E6E872560</incoming>
+      <outgoing>sid-7239B249-99B8-4FBF-AA83-34F94AC84746</outgoing>
+    </userTask>
+    <exclusiveGateway id="Kl_rung_erfolgreich__153" name="Klärung&#xA;erfolgreich?" gatewayDirection="Diverging">
+      <incoming>sid-7239B249-99B8-4FBF-AA83-34F94AC84746</incoming>
+      <outgoing>nein_185</outgoing>
+      <outgoing>sid-D4EA8617-0104-40EB-A520-7876DF2AAF81</outgoing>
+    </exclusiveGateway>
+    <endEvent id="endEvent_165" name="Rechnung &#xA;NICHT &#xA;erfolgreich &#xA;bearbeitet">
+      <incoming>nein_185</incoming>
+    </endEvent>
+    <userTask id="sid-75ABF6BF-1CA5-4CC2-9787-600855885947" camunda:assignee="#{approver}" camunda:formKey="app:approveInvoice.jsf" name="Rechnung freigeben" implementation="webService">
+      <incoming>sid-73A99982-282D-4DCC-8778-2BAA47C63B88</incoming>
+      <outgoing>sid-B6A18F1D-7A5D-4236-ACD1-2E7D06561B47</outgoing>
+    </userTask>
+    <exclusiveGateway id="Freigabe_erfolgt__131" name="Freigabe&#xA;erfolgt?" gatewayDirection="Diverging">
+      <incoming>sid-B6A18F1D-7A5D-4236-ACD1-2E7D06561B47</incoming>
+      <outgoing>flow-approved</outgoing>
+      <outgoing>sid-314DFE46-2D8A-43A2-9CBE-AF8E6E872560</outgoing>
+    </exclusiveGateway>
+    <userTask id="sid-39BC837C-A028-4F8D-A998-CDB68643E87D" camunda:candidateGroups="accounting" camunda:formKey="app:preparePayment.jsf" name="Bezahlung vorbereiten" implementation="webService">
+      <incoming>flow-approved</incoming>
+      <outgoing>sid-A377F224-BACC-45CB-A249-D4029CA531AF</outgoing>
+    </userTask>
+    <serviceTask id="archive-pdf" camunda:assignee="kermit" camunda:delegateExpression="#{svnService}" camunda:formKey="preparePayment" name="PDF &#xA;archivieren" implementation="webService">
+      <incoming>sid-A377F224-BACC-45CB-A249-D4029CA531AF</incoming>
+      <outgoing>sid-B19A7D54-AA7A-4D23-BFAD-F6B66A2EB132</outgoing>
+    </serviceTask>
+    <endEvent id="sid-A1773E2F-398F-4D9E-8B3D-A221E110A432" name="Rechnung&#xA;verarbeitet">
+      <incoming>sid-B19A7D54-AA7A-4D23-BFAD-F6B66A2EB132</incoming>
+    </endEvent>
+    <sequenceFlow id="flow-approved" name="Ja" isImmediate="true" sourceRef="Freigabe_erfolgt__131" targetRef="sid-39BC837C-A028-4F8D-A998-CDB68643E87D">
+      <conditionExpression xsi:type="tFormalExpression" id="sid-b780ad05-8351-4380-87b5-867f03bba129">${approved}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-7239B249-99B8-4FBF-AA83-34F94AC84746" name="" isImmediate="true" sourceRef="sid-2E49E032-A81C-4DBE-A30A-6222DACA160C" targetRef="Kl_rung_erfolgreich__153"/>
+    <sequenceFlow id="nein_185" name="nein" isImmediate="true" sourceRef="Kl_rung_erfolgreich__153" targetRef="endEvent_165">
+      <conditionExpression xsi:type="tFormalExpression" id="sid-594eae0b-8000-48a8-9aa8-a1595594e17f">${!clarified.equals('yes')}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-07C7183C-4049-4F75-B312-E9CB1DF63BFF" name="" isImmediate="true" sourceRef="user-task-select-approver" targetRef="sid-19C69198-25EC-476B-ADAB-C97B496398D4"/>
+    <sequenceFlow id="sid-B6A18F1D-7A5D-4236-ACD1-2E7D06561B47" name="" isImmediate="true" sourceRef="sid-75ABF6BF-1CA5-4CC2-9787-600855885947" targetRef="Freigabe_erfolgt__131"/>
+    <sequenceFlow id="sid-D4EA8617-0104-40EB-A520-7876DF2AAF81" name="ja" isImmediate="true" sourceRef="Kl_rung_erfolgreich__153" targetRef="sid-19C69198-25EC-476B-ADAB-C97B496398D4">
+      <conditionExpression xsi:type="tFormalExpression" id="sid-3363d065-b391-46c3-9229-7ed0b8de1f72">${clarified.equals('yes')}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-A377F224-BACC-45CB-A249-D4029CA531AF" name="" isImmediate="true" sourceRef="sid-39BC837C-A028-4F8D-A998-CDB68643E87D" targetRef="archive-pdf"/>
+    <sequenceFlow id="sid-B28168F3-5B1A-424E-A992-6F0928E67120" name="" isImmediate="true" sourceRef="sid-F97B4602-EE39-4C6F-B5CE-93543E5B815F" targetRef="user-task-select-approver"/>
+    <sequenceFlow id="sid-73A99982-282D-4DCC-8778-2BAA47C63B88" name="" isImmediate="true" sourceRef="sid-19C69198-25EC-476B-ADAB-C97B496398D4" targetRef="sid-75ABF6BF-1CA5-4CC2-9787-600855885947"/>
+    <sequenceFlow id="sid-314DFE46-2D8A-43A2-9CBE-AF8E6E872560" name="Nein" isImmediate="true" sourceRef="Freigabe_erfolgt__131" targetRef="sid-2E49E032-A81C-4DBE-A30A-6222DACA160C">
+      <conditionExpression xsi:type="tFormalExpression" id="sid-e38722ca-c2e6-4f41-9f61-016709406cae">${!approved}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-B19A7D54-AA7A-4D23-BFAD-F6B66A2EB132" name="" isImmediate="true" sourceRef="archive-pdf" targetRef="sid-A1773E2F-398F-4D9E-8B3D-A221E110A432"/>
+  </process>
+  <bpmndi:BPMNDiagram id="sid-870e9ffe-0ee9-4b20-b135-c689a95f6bc5">
+    <bpmndi:BPMNPlane id="sid-92f5d318-8601-41f1-949a-1baf24a2b550" bpmnElement="sid-5b31f487-36e7-4ad0-bef4-f22fa7276c7e">
+      <bpmndi:BPMNShape id="sid-9AEAFE5E-8A71-4CF4-853C-65EBB51554BB_gui" bpmnElement="sid-9AEAFE5E-8A71-4CF4-853C-65EBB51554BB" isHorizontal="true">
+        <omgdc:Bounds height="513.85626" width="975.5008" x="0.0" y="0.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-9FAC101E-37D6-4EE6-8E6D-F5FB387247FC_gui" bpmnElement="sid-9FAC101E-37D6-4EE6-8E6D-F5FB387247FC" isHorizontal="true">
+        <omgdc:Bounds height="179.45543" width="945.5008" x="30.0" y="0.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-350FDA87-B083-4C67-91CF-20E0A291920A_gui" bpmnElement="sid-350FDA87-B083-4C67-91CF-20E0A291920A" isHorizontal="true">
+        <omgdc:Bounds height="167.20042" width="945.5008" x="30.0" y="179.45543"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-6819245D-1995-4FA2-B0DB-A6CECBB2CFE9_gui" bpmnElement="sid-6819245D-1995-4FA2-B0DB-A6CECBB2CFE9" isHorizontal="true">
+        <omgdc:Bounds height="167.20042" width="945.5008" x="30.0" y="346.65585"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-F97B4602-EE39-4C6F-B5CE-93543E5B815F_gui" bpmnElement="sid-F97B4602-EE39-4C6F-B5CE-93543E5B815F">
+        <omgdc:Bounds height="30.0" width="30.0" x="82.70603" y="85.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="user-task-select-approver_gui" bpmnElement="user-task-select-approver">
+        <omgdc:Bounds height="80.0" width="100.0" x="180.0" y="59.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-19C69198-25EC-476B-ADAB-C97B496398D4_gui" bpmnElement="sid-19C69198-25EC-476B-ADAB-C97B496398D4" isMarkerVisible="true">
+        <omgdc:Bounds height="40.0" width="40.0" x="321.71143" y="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-2E49E032-A81C-4DBE-A30A-6222DACA160C_gui" bpmnElement="sid-2E49E032-A81C-4DBE-A30A-6222DACA160C">
+        <omgdc:Bounds height="80.0" width="100.0" x="600.31384" y="60.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Kl_rung_erfolgreich__153_gui" bpmnElement="Kl_rung_erfolgreich__153" isMarkerVisible="true">
+        <omgdc:Bounds height="40.0" width="40.0" x="738.776" y="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="endEvent_165_gui" bpmnElement="endEvent_165">
+        <omgdc:Bounds height="28.0" width="28.0" x="892.5008" y="84.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-75ABF6BF-1CA5-4CC2-9787-600855885947_gui" bpmnElement="sid-75ABF6BF-1CA5-4CC2-9787-600855885947">
+        <omgdc:Bounds height="80.0" width="100.0" x="373.9259" y="223.45543"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Freigabe_erfolgt__131_gui" bpmnElement="Freigabe_erfolgt__131" isMarkerVisible="true">
+        <omgdc:Bounds height="40.0" width="40.0" x="506.8058" y="243.45543"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-39BC837C-A028-4F8D-A998-CDB68643E87D_gui" bpmnElement="sid-39BC837C-A028-4F8D-A998-CDB68643E87D">
+        <omgdc:Bounds height="80.0" width="100.0" x="600.31384" y="390.65585"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="archive-pdf_gui" bpmnElement="archive-pdf">
+        <omgdc:Bounds height="80.0" width="100.0" x="750.5008" y="390.65585"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-A1773E2F-398F-4D9E-8B3D-A221E110A432_gui" bpmnElement="sid-A1773E2F-398F-4D9E-8B3D-A221E110A432">
+        <omgdc:Bounds height="28.0" width="28.0" x="892.5008" y="413.65585"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="sid-7239B249-99B8-4FBF-AA83-34F94AC84746_gui" bpmnElement="sid-7239B249-99B8-4FBF-AA83-34F94AC84746">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="700.31384" y="100.22944"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="738.776" y="100.07849"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="nein_185_gui" bpmnElement="nein_185">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="778.776" y="99.729225"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="892.5008" y="98.189545"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-07C7183C-4049-4F75-B312-E9CB1DF63BFF_gui" bpmnElement="sid-07C7183C-4049-4F75-B312-E9CB1DF63BFF">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="280.0" y="99.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="321.71143" y="99.67591"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow-approved_gui" bpmnElement="flow-approved">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="526.70905" y="283.45544"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="526.0" y="430.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="600.31384" y="430.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-B6A18F1D-7A5D-4236-ACD1-2E7D06561B47_gui" bpmnElement="sid-B6A18F1D-7A5D-4236-ACD1-2E7D06561B47">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="473.9259" y="263.69727"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="506.8058" y="263.5469"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-D4EA8617-0104-40EB-A520-7876DF2AAF81_gui" bpmnElement="sid-D4EA8617-0104-40EB-A520-7876DF2AAF81">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="758.776" y="80.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="758.776" y="33.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="342.21143" y="33.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="341.8607" y="80.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-A377F224-BACC-45CB-A249-D4029CA531AF_gui" bpmnElement="sid-A377F224-BACC-45CB-A249-D4029CA531AF">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="700.31384" y="430.65585"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="750.5008" y="430.65585"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-B28168F3-5B1A-424E-A992-6F0928E67120_gui" bpmnElement="sid-B28168F3-5B1A-424E-A992-6F0928E67120">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="112.70603" y="99.817726"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="180.0" y="99.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-73A99982-282D-4DCC-8778-2BAA47C63B88_gui" bpmnElement="sid-73A99982-282D-4DCC-8778-2BAA47C63B88">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="341.7726" y="120.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="342.21143" y="263.45544"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="373.9259" y="263.45544"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-314DFE46-2D8A-43A2-9CBE-AF8E6E872560_gui" bpmnElement="sid-314DFE46-2D8A-43A2-9CBE-AF8E6E872560">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="526.8058" y="243.45543"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="526.8058" y="100.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="600.31384" y="100.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-B19A7D54-AA7A-4D23-BFAD-F6B66A2EB132_gui" bpmnElement="sid-B19A7D54-AA7A-4D23-BFAD-F6B66A2EB132">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="850.5008" y="430.65585"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="892.5008" y="428.40585"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
