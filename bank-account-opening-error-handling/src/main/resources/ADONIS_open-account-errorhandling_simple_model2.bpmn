@@ -9,7 +9,7 @@
     </extensionElements>
     <participant id="obj.270250" name="Process Engine" processRef="obj.270250_process"/>
   </collaboration>
-  <process id="obj.270250_process" name="Process Engine" isExecutable="false">
+  <process id="obj.270250_process" name="Open Bank Account (ADONIS &amp; camunda)" isExecutable="true">
     <extensionElements/>
     <laneSet id="obj.270250_LaneSet">
       <lane id="obj.270253" name=" ">
@@ -24,11 +24,11 @@
         <flowNodeRef>BoundaryEvent_1</flowNodeRef>
       </lane>
     </laneSet>
-    <startEvent id="obj.270256" name="Order received">
+    <startEvent id="obj.270256" activiti:formKey="embedded:app:apply-for-new-bank-account.html" name="Order received">
       <extensionElements/>
       <outgoing>con.270288</outgoing>
     </startEvent>
-    <userTask id="obj.270259" name="Check documents" implementation="##WebService">
+    <userTask id="obj.270259" activiti:assignee="demo" activiti:formKey="app:check-documents.jsf" name="Check documents" implementation="##WebService">
       <extensionElements/>
       <incoming>con.270288</incoming>
       <outgoing>con.270291</outgoing>
@@ -39,12 +39,12 @@
       <outgoing>con.270294</outgoing>
       <outgoing>con.270297</outgoing>
     </exclusiveGateway>
-    <serviceTask id="obj.270265" name="Inform customer" implementation="##WebService">
+    <serviceTask id="obj.270265" activiti:delegateExpression="${customerNotificationDelegate}" name="Inform customer" implementation="##WebService">
       <extensionElements/>
       <incoming>con.270294</incoming>
       <outgoing>con.270300</outgoing>
     </serviceTask>
-    <serviceTask id="obj.270268" name="Set up account" implementation="##WebService">
+    <serviceTask id="obj.270268" activiti:delegateExpression="${accountSetupDelegate}" name="Set up account" implementation="##WebService">
       <extensionElements/>
       <incoming>con.270297</incoming>
       <outgoing>con.270303</outgoing>
@@ -62,10 +62,10 @@
     <sequenceFlow id="con.270288" name="" sourceRef="obj.270256" targetRef="obj.270259"/>
     <sequenceFlow id="con.270291" name="" sourceRef="obj.270259" targetRef="obj.270262"/>
     <sequenceFlow id="con.270294" name="No" sourceRef="obj.270262" targetRef="obj.270265">
-      <conditionExpression xsi:type="tFormalExpression" id="con.270294_condExpr">0,1</conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="con.270297" name="Yes" sourceRef="obj.270262" targetRef="obj.270268">
-      <conditionExpression xsi:type="tFormalExpression" id="con.270297_condExpr">0,9</conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="con.270300" name="" sourceRef="obj.270265" targetRef="obj.270271"/>
     <sequenceFlow id="con.270303" name="" sourceRef="obj.270268" targetRef="obj.270271"/>
