@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd" id="sid-6e78c618-5d55-41fd-a707-ff6c3ce06181" name="wmdl" targetNamespace="http://www.trisotech.com/definitions/sid-6e78c618-5d55-41fd-a707-ff6c3ce06181">
+  <semantic:process id="WFP-Page_sid-3b0ea2ae-d5b1-4f82-8b3e-5992e24b2deb-1" isExecutable="false">
+    <semantic:laneSet id="lsobj.266952">
+      <semantic:lane id="obj.268831" name=" ">
+        <semantic:flowNodeRef>obj.266958</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.266962</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.266967</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.266972</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.266977</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.266982</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.266992</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.266997</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.267002</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.267007</semantic:flowNodeRef>
+        <semantic:flowNodeRef>obj.266987</semantic:flowNodeRef>
+      </semantic:lane>
+    </semantic:laneSet>
+    <semantic:startEvent id="obj.266958" name="Invoice received ">
+      <semantic:outgoing>con.266965</semantic:outgoing>
+      <semantic:messageEventDefinition/>
+    </semantic:startEvent>
+    <semantic:task id="obj.266962" name="Scan invoice">
+      <semantic:incoming>con.266965</semantic:incoming>
+      <semantic:outgoing>con.266970</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="obj.266967" name="Archive original">
+      <semantic:incoming>con.266970</semantic:incoming>
+      <semantic:outgoing>con.266975</semantic:outgoing>
+    </semantic:task>
+    <semantic:intermediateCatchEvent id="obj.266972" name="Approver to be assigned">
+      <semantic:incoming>con.266975</semantic:incoming>
+      <semantic:outgoing>con.266980</semantic:outgoing>
+      <semantic:messageEventDefinition messageRef="Message_1371222284460"/>
+    </semantic:intermediateCatchEvent>
+    <semantic:task id="obj.266977" name="Assign approver">
+      <semantic:incoming>con.266980</semantic:incoming>
+      <semantic:outgoing>con.266985</semantic:outgoing>
+    </semantic:task>
+    <semantic:eventBasedGateway id="obj.266982" eventGatewayType="Exclusive">
+      <semantic:incoming>con.266985</semantic:incoming>
+      <semantic:outgoing>con.266990</semantic:outgoing>
+      <semantic:outgoing>con.267000</semantic:outgoing>
+    </semantic:eventBasedGateway>
+    <semantic:endEvent id="obj.266992" name="Timeout">
+      <semantic:incoming>con.266995</semantic:incoming>
+    </semantic:endEvent>
+    <semantic:intermediateCatchEvent id="obj.266997" name="Invoice review needed">
+      <semantic:incoming>con.267000</semantic:incoming>
+      <semantic:outgoing>con.267005</semantic:outgoing>
+      <semantic:messageEventDefinition messageRef="Message_1371222284458"/>
+    </semantic:intermediateCatchEvent>
+    <semantic:task id="obj.267002" name="Review and document result">
+      <semantic:incoming>con.267005</semantic:incoming>
+      <semantic:outgoing>con.267010</semantic:outgoing>
+    </semantic:task>
+    <semantic:endEvent id="obj.267007" name="Invoice reviewed">
+      <semantic:incoming>con.267010</semantic:incoming>
+    </semantic:endEvent>
+    <semantic:sequenceFlow id="con.266965" name="" sourceRef="obj.266958" targetRef="obj.266962"/>
+    <semantic:sequenceFlow id="con.266970" name="" sourceRef="obj.266962" targetRef="obj.266967"/>
+    <semantic:sequenceFlow id="con.266975" name="" sourceRef="obj.266967" targetRef="obj.266972"/>
+    <semantic:sequenceFlow id="con.266980" name="" sourceRef="obj.266972" targetRef="obj.266977"/>
+    <semantic:sequenceFlow id="con.266985" name="" sourceRef="obj.266977" targetRef="obj.266982"/>
+    <semantic:sequenceFlow id="con.266990" name="" sourceRef="obj.266982" targetRef="obj.266987">
+      <semantic:conditionExpression xsi:type="semantic:tExpression"/>
+    </semantic:sequenceFlow>
+    <semantic:sequenceFlow id="con.267000" name="" sourceRef="obj.266982" targetRef="obj.266997">
+      <semantic:conditionExpression xsi:type="semantic:tExpression"/>
+    </semantic:sequenceFlow>
+    <semantic:sequenceFlow id="con.267005" name="" sourceRef="obj.266997" targetRef="obj.267002"/>
+    <semantic:sequenceFlow id="con.267010" name="" sourceRef="obj.267002" targetRef="obj.267007"/>
+    <semantic:intermediateCatchEvent id="obj.266987" name="7 days">
+      <semantic:incoming>con.266990</semantic:incoming>
+      <semantic:outgoing>con.266995</semantic:outgoing>
+      <semantic:timerEventDefinition>
+        <semantic:timeDate xsi:type="semantic:tFormalExpression"/>
+      </semantic:timerEventDefinition>
+    </semantic:intermediateCatchEvent>
+    <semantic:sequenceFlow id="con.266995" name="" sourceRef="obj.266987" targetRef="obj.266992"/>
+  </semantic:process>
+  <semantic:process id="WFP-Page_sid-3b0ea2ae-d5b1-4f82-8b3e-5992e24b2deb-2" name="Invoice Receipt (ADONIS, Signavio, BPI &amp; camunda)" isExecutable="true">
+    <semantic:laneSet id="lssid-C18AF551-5C11-4625-B840-25E4BC8B6E90">
+      <semantic:lane id="sid-38B6E6E8-C143-41ED-8E58-BF1FDD2E2A43" name="Team Assistant">
+        <semantic:flowNodeRef>sid-80525526-26A8-4B73-9E11-0AA696255833</semantic:flowNodeRef>
+        <semantic:flowNodeRef>sid-F5F8BB67-5D7A-4D9D-A10B-DF13EB02A400</semantic:flowNodeRef>
+        <semantic:flowNodeRef>sid-9FED1CFD-7BC4-4749-8A36-897B07466689</semantic:flowNodeRef>
+        <semantic:flowNodeRef>sid-89B6D383-70B2-4955-9D43-2F4A0C34E944</semantic:flowNodeRef>
+        <semantic:flowNodeRef>sid-9E931EA2-CD9D-4CF4-A0DA-C279A5EB6D7A</semantic:flowNodeRef>
+      </semantic:lane>
+      <semantic:lane id="_82913743-E001-4761-9728-AAD505E8C0AC" name="Approver">
+        <semantic:flowNodeRef>_1FFD0F74-2C58-4010-B577-7A62B8AE47C6</semantic:flowNodeRef>
+        <semantic:flowNodeRef>_FA7E4FF3-B932-45A7-B0C6-CD2136AF8A1C</semantic:flowNodeRef>
+      </semantic:lane>
+      <semantic:lane id="Lane_1" name="Accountant">
+        <semantic:flowNodeRef>UserTask_1</semantic:flowNodeRef>
+        <semantic:flowNodeRef>ServiceTask_1</semantic:flowNodeRef>
+        <semantic:flowNodeRef>EndEvent_1</semantic:flowNodeRef>
+      </semantic:lane>
+    </semantic:laneSet>
+    <semantic:startEvent id="sid-80525526-26A8-4B73-9E11-0AA696255833" name="Invoice  received" activiti:formKey="app:startProcess.jsf">
+      <semantic:outgoing>sid-8B929978-66FC-4B07-8D7E-439238C57D7A</semantic:outgoing>
+      <semantic:messageEventDefinition messageRef="Message_1"/>
+    </semantic:startEvent>
+    <semantic:userTask id="sid-F5F8BB67-5D7A-4D9D-A10B-DF13EB02A400" activiti:assignee="demo" activiti:formKey="app:assignApprover.jsf" name="Assign Approver" implementation="##WebService">
+      <semantic:incoming>sid-8B929978-66FC-4B07-8D7E-439238C57D7A</semantic:incoming>
+      <semantic:outgoing>_AC7A1E52-C7F6-44CF-99B1-A902822E4AA9</semantic:outgoing>
+    </semantic:userTask>
+    <semantic:userTask id="sid-9FED1CFD-7BC4-4749-8A36-897B07466689" activiti:assignee="demo" activiti:formKey="app:reviewInvoice.jsf" name="Review Invoice" implementation="##WebService">
+      <semantic:incoming>_4EB0E6A2-F815-47D6-BF3A-E37D2DD0D50F</semantic:incoming>
+      <semantic:outgoing>sid-0D9CFE75-D793-42A0-A19E-06D76B277A04</semantic:outgoing>
+    </semantic:userTask>
+    <semantic:exclusiveGateway id="sid-89B6D383-70B2-4955-9D43-2F4A0C34E944" name="Review  successful?">
+      <semantic:incoming>sid-0D9CFE75-D793-42A0-A19E-06D76B277A04</semantic:incoming>
+      <semantic:outgoing>sid-136E7C33-DC02-4BF3-8838-3654AED80314</semantic:outgoing>
+      <semantic:outgoing>_476703A5-CD6D-409A-84B2-7BBC506CEE4B</semantic:outgoing>
+    </semantic:exclusiveGateway>
+    <semantic:endEvent id="sid-9E931EA2-CD9D-4CF4-A0DA-C279A5EB6D7A" name="Invoice not processed">
+      <semantic:incoming>sid-136E7C33-DC02-4BF3-8838-3654AED80314</semantic:incoming>
+    </semantic:endEvent>
+    <semantic:exclusiveGateway id="_1FFD0F74-2C58-4010-B577-7A62B8AE47C6" name="Invoice Approved?">
+      <semantic:incoming>_BADE38F0-A1D2-4701-8964-0FCC10D5C49C</semantic:incoming>
+      <semantic:outgoing>_4EB0E6A2-F815-47D6-BF3A-E37D2DD0D50F</semantic:outgoing>
+      <semantic:outgoing>SequenceFlow_1</semantic:outgoing>
+    </semantic:exclusiveGateway>
+    <semantic:sequenceFlow id="sid-8B929978-66FC-4B07-8D7E-439238C57D7A" name="" sourceRef="sid-80525526-26A8-4B73-9E11-0AA696255833" targetRef="sid-F5F8BB67-5D7A-4D9D-A10B-DF13EB02A400"/>
+    <semantic:sequenceFlow id="sid-0D9CFE75-D793-42A0-A19E-06D76B277A04" name="" sourceRef="sid-9FED1CFD-7BC4-4749-8A36-897B07466689" targetRef="sid-89B6D383-70B2-4955-9D43-2F4A0C34E944"/>
+    <semantic:sequenceFlow id="sid-136E7C33-DC02-4BF3-8838-3654AED80314" name="no" sourceRef="sid-89B6D383-70B2-4955-9D43-2F4A0C34E944" targetRef="sid-9E931EA2-CD9D-4CF4-A0DA-C279A5EB6D7A">
+      <semantic:conditionExpression xsi:type="semantic:tFormalExpression">${clarified == 'no'}</semantic:conditionExpression>
+    </semantic:sequenceFlow>
+    <semantic:sequenceFlow id="_AC7A1E52-C7F6-44CF-99B1-A902822E4AA9" name="" sourceRef="sid-F5F8BB67-5D7A-4D9D-A10B-DF13EB02A400" targetRef="_FA7E4FF3-B932-45A7-B0C6-CD2136AF8A1C"/>
+    <semantic:sequenceFlow id="_4EB0E6A2-F815-47D6-BF3A-E37D2DD0D50F" name="No" sourceRef="_1FFD0F74-2C58-4010-B577-7A62B8AE47C6" targetRef="sid-9FED1CFD-7BC4-4749-8A36-897B07466689">
+      <semantic:conditionExpression xsi:type="semantic:tFormalExpression">${!approved}</semantic:conditionExpression>
+    </semantic:sequenceFlow>
+    <semantic:sequenceFlow id="_476703A5-CD6D-409A-84B2-7BBC506CEE4B" name="Yes" sourceRef="sid-89B6D383-70B2-4955-9D43-2F4A0C34E944" targetRef="_FA7E4FF3-B932-45A7-B0C6-CD2136AF8A1C">
+      <semantic:conditionExpression xsi:type="semantic:tFormalExpression">${clarified == 'yes'}</semantic:conditionExpression>
+    </semantic:sequenceFlow>
+    <semantic:userTask id="_FA7E4FF3-B932-45A7-B0C6-CD2136AF8A1C" activiti:assignee="${approver}" activiti:formKey="app:approveInvoice.jsf" name="Approve Invoice" implementation="##WebService">
+      <semantic:incoming>_AC7A1E52-C7F6-44CF-99B1-A902822E4AA9</semantic:incoming>
+      <semantic:incoming>_476703A5-CD6D-409A-84B2-7BBC506CEE4B</semantic:incoming>
+      <semantic:outgoing>_BADE38F0-A1D2-4701-8964-0FCC10D5C49C</semantic:outgoing>
+    </semantic:userTask>
+    <semantic:sequenceFlow id="_BADE38F0-A1D2-4701-8964-0FCC10D5C49C" name="" sourceRef="_FA7E4FF3-B932-45A7-B0C6-CD2136AF8A1C" targetRef="_1FFD0F74-2C58-4010-B577-7A62B8AE47C6"/>
+    <semantic:sequenceFlow id="SequenceFlow_1" sourceRef="_1FFD0F74-2C58-4010-B577-7A62B8AE47C6" targetRef="UserTask_1">
+      <semantic:conditionExpression xsi:type="semantic:tFormalExpression">${approved}</semantic:conditionExpression>
+    </semantic:sequenceFlow>
+    <semantic:userTask id="UserTask_1" activiti:formKey="app:prepareBankTransfer.jsf" activiti:candidateGroups="accounting" name="Prepare&#xA;Bank Transfer">
+      <semantic:incoming>SequenceFlow_1</semantic:incoming>
+      <semantic:outgoing>SequenceFlow_2</semantic:outgoing>
+    </semantic:userTask>
+    <semantic:serviceTask id="ServiceTask_1" activiti:delegateExpression="#{archiveService}" name="Archive&#xA;Invoice">
+      <semantic:incoming>SequenceFlow_2</semantic:incoming>
+      <semantic:outgoing>SequenceFlow_3</semantic:outgoing>
+    </semantic:serviceTask>
+    <semantic:sequenceFlow id="SequenceFlow_2" sourceRef="UserTask_1" targetRef="ServiceTask_1"/>
+    <semantic:endEvent id="EndEvent_1" name="End Event">
+      <semantic:incoming>SequenceFlow_3</semantic:incoming>
+    </semantic:endEvent>
+    <semantic:sequenceFlow id="SequenceFlow_3" sourceRef="ServiceTask_1" targetRef="EndEvent_1"/>
+  </semantic:process>
+  <semantic:message id="Message_1371222284456"/>
+  <semantic:message id="Message_1371222284457"/>
+  <semantic:message id="Message_1371222284458"/>
+  <semantic:message id="Message_1371222284459"/>
+  <semantic:message id="Message_1371222284460"/>
+  <semantic:collaboration id="C1371222284455">
+    <semantic:participant id="sid-C18AF551-5C11-4625-B840-25E4BC8B6E90" name="Process Engine - Invoice Receipt" processRef="WFP-Page_sid-3b0ea2ae-d5b1-4f82-8b3e-5992e24b2deb-2"/>
+    <semantic:participant id="obj.266952" name="User" processRef="WFP-Page_sid-3b0ea2ae-d5b1-4f82-8b3e-5992e24b2deb-1"/>
+    <semantic:messageFlow id="sid-6D07D877-4CCF-42E1-AFB5-5C64939D0AA8" messageRef="Message_1371222284456" name="" sourceRef="obj.267002" targetRef="sid-9FED1CFD-7BC4-4749-8A36-897B07466689"/>
+    <semantic:messageFlow id="sid-4E82457B-3C74-4B5A-B4C1-005CD653B1B7" messageRef="Message_1371222284457" name="" sourceRef="obj.266977" targetRef="sid-F5F8BB67-5D7A-4D9D-A10B-DF13EB02A400"/>
+    <semantic:messageFlow id="sid-7A1A1E46-C7D2-4CA0-AFF4-01FF8697E9DD" messageRef="Message_1371222284458" name="" sourceRef="sid-9FED1CFD-7BC4-4749-8A36-897B07466689" targetRef="obj.266997"/>
+    <semantic:messageFlow id="sid-C05AD117-997B-46A5-BCAF-A603B38182F0" messageRef="Message_1371222284459" name="" sourceRef="obj.266962" targetRef="sid-80525526-26A8-4B73-9E11-0AA696255833"/>
+    <semantic:messageFlow id="sid-45896730-BCC0-48D1-B2B5-084666C7E4C6" messageRef="Message_1371222284460" name="" sourceRef="sid-F5F8BB67-5D7A-4D9D-A10B-DF13EB02A400" targetRef="obj.266972"/>
+  </semantic:collaboration>
+  <semantic:message id="Message_1" name="invoice-received-adonis-signavio-bpi-camunda"/>
+  <bpmndi:BPMNDiagram documentation="" id="oryx.json-Page_sid-3b0ea2ae-d5b1-4f82-8b3e-5992e24b2deb" name="page.untitled 1" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="C1371222284455">
+      <bpmndi:BPMNShape id="S1371222284430_sid-C18AF551-5C11-4625-B840-25E4BC8B6E90" bpmnElement="sid-C18AF551-5C11-4625-B840-25E4BC8B6E90" isHorizontal="true">
+        <dc:Bounds height="548.0" width="1008.0" x="13.0" y="465.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="168.80725" width="12.26001" x="14.0" y="580.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284432_sid-38B6E6E8-C143-41ED-8E58-BF1FDD2E2A43" bpmnElement="sid-38B6E6E8-C143-41ED-8E58-BF1FDD2E2A43" isHorizontal="true">
+        <dc:Bounds height="250.0" width="978.0" x="43.0" y="465.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="78.9695" width="12.260002" x="44.0" y="552.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284433__82913743-E001-4761-9728-AAD505E8C0AC" bpmnElement="_82913743-E001-4761-9728-AAD505E8C0AC" isHorizontal="true">
+        <dc:Bounds height="150.0" width="978.0" x="43.0" y="714.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="46.5045" width="12.260002" x="48.0" y="766.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284434_obj.266952" bpmnElement="obj.266952" isHorizontal="true">
+        <dc:Bounds height="283.0" width="1021.0" x="0.0" y="57.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="24.19825" width="12.26001" x="1.0" y="186.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284435_obj.268831" bpmnElement="obj.268831" isHorizontal="true">
+        <dc:Bounds height="283.0" width="991.0" x="30.0" y="57.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284437_obj.266958" bpmnElement="obj.266958">
+        <dc:Bounds height="30.0" width="30.0" x="52.0" y="155.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.26" width="86.0" x="22.33" y="183.02"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284438_obj.266962" bpmnElement="obj.266962">
+        <dc:Bounds height="57.0" width="106.0" x="128.0" y="142.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.260002" width="64.98375" x="147.42313" y="163.12"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284439_obj.266967" bpmnElement="obj.266967">
+        <dc:Bounds height="57.0" width="106.0" x="260.0" y="142.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.260002" width="78.35675" x="272.73663" y="163.12"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284440_obj.266972" bpmnElement="obj.266972">
+        <dc:Bounds height="30.0" width="30.0" x="411.0" y="155.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="26.260002" width="78.35675" x="385.32663" y="182.1"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284441_obj.266977" bpmnElement="obj.266977">
+        <dc:Bounds height="57.0" width="106.0" x="487.0" y="142.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.260002" width="82.81799" x="497.511" y="163.12"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284442_obj.266982" bpmnElement="obj.266982">
+        <dc:Bounds height="40.0" width="40.0" x="633.0" y="150.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.260002" width="109.5855" x="598.2073" y="192.06"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284443_obj.266987" bpmnElement="obj.266987">
+        <dc:Bounds height="30.0" width="30.0" x="684.0" y="78.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="26.0" width="55.0" x="669.0" y="105.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284444_obj.266992" bpmnElement="obj.266992">
+        <dc:Bounds height="28.0" width="28.0" x="789.0" y="79.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.26" width="41.398247" x="780.9659" y="106.02"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284445_obj.266997" bpmnElement="obj.266997">
+        <dc:Bounds height="30.0" width="30.0" x="695.0" y="230.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.260002" width="114.046745" x="651.4816" y="257.1"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284446_obj.267002" bpmnElement="obj.267002">
+        <dc:Bounds height="57.0" width="106.0" x="770.0" y="217.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="26.259998" width="81.53875" x="781.1456" y="231.12"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284447_obj.267007" bpmnElement="obj.267007">
+        <dc:Bounds height="28.0" width="28.0" x="921.0" y="230.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.26" width="85.365746" x="890.9821" y="257.02"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284448_sid-80525526-26A8-4B73-9E11-0AA696255833" bpmnElement="sid-80525526-26A8-4B73-9E11-0AA696255833">
+        <dc:Bounds height="30.0" width="30.0" x="90.0" y="575.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="26.26" width="43.3225" x="81.66875" y="603.02"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284449_sid-F5F8BB67-5D7A-4D9D-A10B-DF13EB02A400" bpmnElement="sid-F5F8BB67-5D7A-4D9D-A10B-DF13EB02A400">
+        <dc:Bounds height="80.0" width="100.0" x="165.0" y="550.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.259998" width="84.086494" x="171.93675" y="582.32"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284450_sid-9FED1CFD-7BC4-4749-8A36-897B07466689" bpmnElement="sid-9FED1CFD-7BC4-4749-8A36-897B07466689">
+        <dc:Bounds height="80.0" width="100.0" x="530.0" y="550.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.259998" width="77.07751" x="540.4412" y="582.32"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284451_sid-89B6D383-70B2-4955-9D43-2F4A0C34E944" bpmnElement="sid-89B6D383-70B2-4955-9D43-2F4A0C34E944" isMarkerVisible="true">
+        <dc:Bounds height="40.0" width="40.0" x="675.0" y="570.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="26.260002" width="59.877495" x="665.0613" y="612.06"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284452_sid-9E931EA2-CD9D-4CF4-A0DA-C279A5EB6D7A" bpmnElement="sid-9E931EA2-CD9D-4CF4-A0DA-C279A5EB6D7A">
+        <dc:Bounds height="28.0" width="28.0" x="921.0" y="576.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.26" width="111.48824" x="877.9209" y="603.02"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284453__FA7E4FF3-B932-45A7-B0C6-CD2136AF8A1C" bpmnElement="_FA7E4FF3-B932-45A7-B0C6-CD2136AF8A1C">
+        <dc:Bounds height="76.0" width="96.0" x="324.0" y="743.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="26.26" width="42.688248" x="346.6609" y="768.35"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S1371222284454__1FFD0F74-2C58-4010-B577-7A62B8AE47C6" bpmnElement="_1FFD0F74-2C58-4010-B577-7A62B8AE47C6" isMarkerVisible="true">
+        <dc:Bounds height="42.0" width="42.0" x="461.0" y="760.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="26.260002" width="55.437744" x="454.28613" y="805.35"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="E1371222284461_sid-C05AD117-997B-46A5-BCAF-A603B38182F0" bpmnElement="sid-C05AD117-997B-46A5-BCAF-A603B38182F0">
+        <di:waypoint xsi:type="dc:Point" x="181.0" y="198.0"/>
+        <di:waypoint xsi:type="dc:Point" x="181.0" y="387.0"/>
+        <di:waypoint xsi:type="dc:Point" x="105.0" y="387.0"/>
+        <di:waypoint xsi:type="dc:Point" x="105.0" y="575.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284462_sid-0D9CFE75-D793-42A0-A19E-06D76B277A04" bpmnElement="sid-0D9CFE75-D793-42A0-A19E-06D76B277A04">
+        <di:waypoint xsi:type="dc:Point" x="630.0" y="590.0"/>
+        <di:waypoint xsi:type="dc:Point" x="675.0" y="590.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284463__BADE38F0-A1D2-4701-8964-0FCC10D5C49C" bpmnElement="_BADE38F0-A1D2-4701-8964-0FCC10D5C49C">
+        <di:waypoint xsi:type="dc:Point" x="420.0" y="781.0"/>
+        <di:waypoint xsi:type="dc:Point" x="461.0" y="781.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436">
+          <dc:Bounds height="6.0" width="6.0" x="440.0" y="782.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284464_con.266970" bpmnElement="con.266970">
+        <di:waypoint xsi:type="dc:Point" x="234.0" y="170.0"/>
+        <di:waypoint xsi:type="dc:Point" x="260.0" y="170.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284465_sid-6D07D877-4CCF-42E1-AFB5-5C64939D0AA8" bpmnElement="sid-6D07D877-4CCF-42E1-AFB5-5C64939D0AA8">
+        <di:waypoint xsi:type="dc:Point" x="823.0" y="273.0"/>
+        <di:waypoint xsi:type="dc:Point" x="823.0" y="436.0"/>
+        <di:waypoint xsi:type="dc:Point" x="593.0" y="436.0"/>
+        <di:waypoint xsi:type="dc:Point" x="593.0" y="550.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284466_sid-136E7C33-DC02-4BF3-8838-3654AED80314" bpmnElement="sid-136E7C33-DC02-4BF3-8838-3654AED80314">
+        <di:waypoint xsi:type="dc:Point" x="715.0" y="590.0"/>
+        <di:waypoint xsi:type="dc:Point" x="921.0" y="590.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.26001" width="11.859985" x="812.57" y="591.35"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284467_con.266965" bpmnElement="con.266965">
+        <di:waypoint xsi:type="dc:Point" x="82.0" y="170.0"/>
+        <di:waypoint xsi:type="dc:Point" x="128.0" y="170.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284468_con.266990" bpmnElement="con.266990">
+        <di:waypoint xsi:type="dc:Point" x="653.0" y="150.0"/>
+        <di:waypoint xsi:type="dc:Point" x="653.0" y="93.0"/>
+        <di:waypoint xsi:type="dc:Point" x="684.0" y="93.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436">
+          <dc:Bounds height="6.0" width="6.0" x="650.0" y="107.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284469__476703A5-CD6D-409A-84B2-7BBC506CEE4B" bpmnElement="_476703A5-CD6D-409A-84B2-7BBC506CEE4B">
+        <di:waypoint xsi:type="dc:Point" x="695.0" y="570.0"/>
+        <di:waypoint xsi:type="dc:Point" x="695.0" y="510.0"/>
+        <di:waypoint xsi:type="dc:Point" x="372.0" y="510.0"/>
+        <di:waypoint xsi:type="dc:Point" x="372.0" y="743.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="26.0" width="33.0" x="697.0" y="549.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284470_con.266980" bpmnElement="con.266980">
+        <di:waypoint xsi:type="dc:Point" x="441.0" y="170.0"/>
+        <di:waypoint xsi:type="dc:Point" x="487.0" y="170.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284471_sid-8B929978-66FC-4B07-8D7E-439238C57D7A" bpmnElement="sid-8B929978-66FC-4B07-8D7E-439238C57D7A">
+        <di:waypoint xsi:type="dc:Point" x="120.0" y="590.0"/>
+        <di:waypoint xsi:type="dc:Point" x="165.0" y="590.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284472_con.266995" bpmnElement="con.266995">
+        <di:waypoint xsi:type="dc:Point" x="714.0" y="93.0"/>
+        <di:waypoint xsi:type="dc:Point" x="789.0" y="93.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436">
+          <dc:Bounds height="6.0" width="6.0" x="743.0" y="93.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284473_con.267005" bpmnElement="con.267005">
+        <di:waypoint xsi:type="dc:Point" x="725.0" y="245.0"/>
+        <di:waypoint xsi:type="dc:Point" x="770.0" y="245.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284474__AC7A1E52-C7F6-44CF-99B1-A902822E4AA9" bpmnElement="_AC7A1E52-C7F6-44CF-99B1-A902822E4AA9">
+        <di:waypoint xsi:type="dc:Point" x="265.0" y="590.0"/>
+        <di:waypoint xsi:type="dc:Point" x="294.0" y="590.0"/>
+        <di:waypoint xsi:type="dc:Point" x="294.0" y="782.0"/>
+        <di:waypoint xsi:type="dc:Point" x="324.0" y="782.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436">
+          <dc:Bounds height="6.0" width="6.0" x="291.0" y="661.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284475_sid-4E82457B-3C74-4B5A-B4C1-005CD653B1B7" bpmnElement="sid-4E82457B-3C74-4B5A-B4C1-005CD653B1B7">
+        <di:waypoint xsi:type="dc:Point" x="540.0" y="198.0"/>
+        <di:waypoint xsi:type="dc:Point" x="540.0" y="403.0"/>
+        <di:waypoint xsi:type="dc:Point" x="231.0" y="403.0"/>
+        <di:waypoint xsi:type="dc:Point" x="231.0" y="550.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284476_con.266975" bpmnElement="con.266975">
+        <di:waypoint xsi:type="dc:Point" x="366.0" y="170.0"/>
+        <di:waypoint xsi:type="dc:Point" x="411.0" y="170.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284477_con.267000" bpmnElement="con.267000">
+        <di:waypoint xsi:type="dc:Point" x="653.0" y="190.0"/>
+        <di:waypoint xsi:type="dc:Point" x="653.0" y="245.0"/>
+        <di:waypoint xsi:type="dc:Point" x="695.0" y="245.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284478__4EB0E6A2-F815-47D6-BF3A-E37D2DD0D50F" bpmnElement="_4EB0E6A2-F815-47D6-BF3A-E37D2DD0D50F">
+        <di:waypoint xsi:type="dc:Point" x="482.0" y="760.0"/>
+        <di:waypoint xsi:type="dc:Point" x="482.0" y="590.0"/>
+        <di:waypoint xsi:type="dc:Point" x="530.0" y="590.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284431">
+          <dc:Bounds height="12.26001" width="13.629974" x="490.19" y="741.35"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284479_con.267010" bpmnElement="con.267010">
+        <di:waypoint xsi:type="dc:Point" x="876.0" y="246.0"/>
+        <di:waypoint xsi:type="dc:Point" x="898.0" y="246.0"/>
+        <di:waypoint xsi:type="dc:Point" x="898.0" y="244.0"/>
+        <di:waypoint xsi:type="dc:Point" x="921.0" y="244.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284480_con.266985" bpmnElement="con.266985">
+        <di:waypoint xsi:type="dc:Point" x="593.0" y="170.0"/>
+        <di:waypoint xsi:type="dc:Point" x="633.0" y="170.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284481_sid-45896730-BCC0-48D1-B2B5-084666C7E4C6" bpmnElement="sid-45896730-BCC0-48D1-B2B5-084666C7E4C6">
+        <di:waypoint xsi:type="dc:Point" x="202.0" y="550.0"/>
+        <di:waypoint xsi:type="dc:Point" x="202.0" y="375.0"/>
+        <di:waypoint xsi:type="dc:Point" x="426.0" y="375.0"/>
+        <di:waypoint xsi:type="dc:Point" x="426.0" y="185.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E1371222284482_sid-7A1A1E46-C7D2-4CA0-AFF4-01FF8697E9DD" bpmnElement="sid-7A1A1E46-C7D2-4CA0-AFF4-01FF8697E9DD">
+        <di:waypoint xsi:type="dc:Point" x="567.0" y="550.0"/>
+        <di:waypoint xsi:type="dc:Point" x="567.0" y="413.0"/>
+        <di:waypoint xsi:type="dc:Point" x="710.0" y="413.0"/>
+        <di:waypoint xsi:type="dc:Point" x="710.0" y="260.0"/>
+        <bpmndi:BPMNLabel labelStyle="LS1371222284436"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_Lane_2" bpmnElement="Lane_1" isHorizontal="true">
+        <dc:Bounds height="150.0" width="978.0" x="43.0" y="863.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_UserTask_2" bpmnElement="UserTask_1">
+        <dc:Bounds height="57.0" width="106.0" x="564.0" y="910.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_1" bpmnElement="SequenceFlow_1" sourceElement="S1371222284454__1FFD0F74-2C58-4010-B577-7A62B8AE47C6" targetElement="_BPMNShape_UserTask_2">
+        <di:waypoint xsi:type="dc:Point" x="482.0" y="802.0"/>
+        <di:waypoint xsi:type="dc:Point" x="482.0" y="938.0"/>
+        <di:waypoint xsi:type="dc:Point" x="564.0" y="938.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="482.0" y="827.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_ServiceTask_2" bpmnElement="ServiceTask_1">
+        <dc:Bounds height="57.0" width="106.0" x="720.0" y="910.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="_BPMNShape_UserTask_2" targetElement="_BPMNShape_ServiceTask_2">
+        <di:waypoint xsi:type="dc:Point" x="670.0" y="938.0"/>
+        <di:waypoint xsi:type="dc:Point" x="720.0" y="938.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_EndEvent_2" bpmnElement="EndEvent_1">
+        <dc:Bounds height="28.0" width="28.0" x="876.0" y="924.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_3" bpmnElement="SequenceFlow_3" sourceElement="_BPMNShape_ServiceTask_2" targetElement="_BPMNShape_EndEvent_2">
+        <di:waypoint xsi:type="dc:Point" x="826.0" y="938.0"/>
+        <di:waypoint xsi:type="dc:Point" x="876.0" y="938.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="LS1371222284431">
+      <dc:Font name="Arial" size="8.0"/>
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="LS1371222284436">
+      <dc:Font/>
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</semantic:definitions>
