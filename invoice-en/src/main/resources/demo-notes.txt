@@ -1,10 +1,13 @@
 executable=true
 
 Process Name:
-Invoice Receipt (ADONIS, Signavio, BPI & camunda)
+Invoice Receipt (ADONIS, Signavio, BPI, Yaoqiang & camunda)
+
+Process ID:
+invoice-adonis-signavio-bpi-yaoqiang-camunda
 
 Messages:
-invoice-received-adonis-signavio-bpi-camunda
+invoice-received-adonis-signavio-bpi-yaoqiang-camunda
 
 Users:
 demo
