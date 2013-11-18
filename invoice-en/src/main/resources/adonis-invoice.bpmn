@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:signavio="http://www.signavio.com"
+             xmlns:inspire="http://bpminspire.com/bpmn2/extension/inspire"
+             xmlns:activiti="http://activiti.org/bpmn"
+             xmlns:adonis="http://www.boc-group.com"
+             xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             exporter="ADONIS 5.1 DE"
+             exporterVersion="5.1.1.0"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.omg.org/bpmn20"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"
+             name="invoice">
+   <message id="messageEventDefinition_obj.274042" name="messageEventDefinition_obj.274042"/>
+   <message id="messageEventDefinition_obj.274060" name="messageEventDefinition_obj.274060"/>
+   <message id="messageEventDefinition_obj.274066" name="messageEventDefinition_obj.274066"/>
+   <collaboration id="mod.274004_Collaboration">
+      <extensionElements>
+         <adonis:modelstate>In Bearbeitung</adonis:modelstate>
+         <adonis:modelversion/>
+      </extensionElements>
+      <participant processRef="obj.274006_process" id="obj.274006" name="User"/>
+   </collaboration>
+   <process id="obj.274006_process" name="User" isExecutable="false">
+      <extensionElements/>
+      <laneSet id="obj.274006_LaneSet">
+         <lane id="obj.274009" name=" ">
+            <extensionElements/>
+            <flowNodeRef>obj.274013</flowNodeRef>
+            <flowNodeRef>obj.274018</flowNodeRef>
+            <flowNodeRef>obj.274024</flowNodeRef>
+            <flowNodeRef>obj.274030</flowNodeRef>
+            <flowNodeRef>obj.274036</flowNodeRef>
+            <flowNodeRef>obj.274042</flowNodeRef>
+            <flowNodeRef>obj.274048</flowNodeRef>
+            <flowNodeRef>obj.274054</flowNodeRef>
+            <flowNodeRef>obj.274060</flowNodeRef>
+            <flowNodeRef>obj.274066</flowNodeRef>
+            <flowNodeRef>obj.274072</flowNodeRef>
+         </lane>
+      </laneSet>
+      <startEvent id="obj.274013" name="Invoice received">
+         <extensionElements/>
+         <messageEventDefinition id="messageEventDefinition_obj.274013"/>
+      </startEvent>
+      <task id="obj.274018" name="scan invoice" isForCompensation="false">
+         <extensionElements/>
+      </task>
+      <task id="obj.274024" name="archive original" isForCompensation="false">
+         <extensionElements/>
+      </task>
+      <intermediateCatchEvent id="obj.274030" name="approver to be assigned">
+         <extensionElements/>
+         <messageEventDefinition id="messageEventDefinition_obj.274030"/>
+      </intermediateCatchEvent>
+      <eventBasedGateway id="obj.274036" name="event based gateway">
+         <extensionElements/>
+      </eventBasedGateway>
+      <intermediateCatchEvent id="obj.274042" name="7 days">
+         <extensionElements/>
+         <timerEventDefinition id="timerEventDefinition_obj.274042">
+            <timeDate xsi:type="tFormalExpression">2010:01:01 00:00:00</timeDate>
+         </timerEventDefinition>
+      </intermediateCatchEvent>
+      <intermediateCatchEvent id="obj.274048" name="invoice review needed">
+         <extensionElements/>
+         <messageEventDefinition id="messageEventDefinition_obj.274048"/>
+      </intermediateCatchEvent>
+      <task id="obj.274054" name="review and document results" isForCompensation="false">
+         <extensionElements/>
+      </task>
+      <endEvent id="obj.274060" name="invoice reviewed">
+         <extensionElements/>
+      </endEvent>
+      <endEvent id="obj.274066" name="Endereignis-274066">
+         <extensionElements/>
+      </endEvent>
+      <task id="obj.274072" name="assign approver" isForCompensation="false">
+         <extensionElements/>
+      </task>
+      <sequenceFlow id="con.274021" name="" sourceRef="obj.274013" targetRef="obj.274018"/>
+      <sequenceFlow id="con.274027" name="" sourceRef="obj.274018" targetRef="obj.274024"/>
+      <sequenceFlow id="con.274033" name="" sourceRef="obj.274024" targetRef="obj.274030"/>
+      <sequenceFlow id="con.274039" name="" sourceRef="obj.274030" targetRef="obj.274072"/>
+      <sequenceFlow id="con.274045" name="" sourceRef="obj.274036" targetRef="obj.274042"/>
+      <sequenceFlow id="con.274051" name="" sourceRef="obj.274036" targetRef="obj.274048"/>
+      <sequenceFlow id="con.274057" name="" sourceRef="obj.274048" targetRef="obj.274054"/>
+      <sequenceFlow id="con.274063" name="" sourceRef="obj.274054" targetRef="obj.274060"/>
+      <sequenceFlow id="con.274069" name="" sourceRef="obj.274042" targetRef="obj.274066"/>
+      <sequenceFlow id="con.274075" name="" sourceRef="obj.274072" targetRef="obj.274036"/>
+   </process>
+   <process id="mod.274004" name="invoice" isExecutable="false">
+      <laneSet id="mod.274004_LaneSet"/>
+   </process>
+   <bpmndi:BPMNDiagram id="Diagram_mod.274004">
+      <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="mod.274004">
+         <bpmndi:BPMNShape bpmnElement="obj.274006" id="BPMN_Shape_obj.274006">
+            <omgdc:Bounds height="246" width="1285" x="0" y="38"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274009" id="BPMN_Shape_obj.274009">
+            <omgdc:Bounds width="1172" height="246" x="113" y="38"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274013" id="BPMN_Shape_obj.274013">
+            <omgdc:Bounds width="53" height="53" x="144" y="125"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274018" id="BPMN_Shape_obj.274018">
+            <omgdc:Bounds height="57" width="106" x="231" y="123"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274024" id="BPMN_Shape_obj.274024">
+            <omgdc:Bounds height="57" width="106" x="382" y="123"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274030" id="BPMN_Shape_obj.274030">
+            <omgdc:Bounds width="53" height="53" x="522" y="125"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274036" id="BPMN_Shape_obj.274036">
+            <omgdc:Bounds width="53" height="53" x="767" y="125"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274042" id="BPMN_Shape_obj.274042">
+            <omgdc:Bounds width="53" height="53" x="919" y="87"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274048" id="BPMN_Shape_obj.274048">
+            <omgdc:Bounds width="53" height="53" x="919" y="200"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274054" id="BPMN_Shape_obj.274054">
+            <omgdc:Bounds height="57" width="106" x="1005" y="198"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274060" id="BPMN_Shape_obj.274060">
+            <omgdc:Bounds width="53" height="53" x="1145" y="200"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274066" id="BPMN_Shape_obj.274066">
+            <omgdc:Bounds width="53" height="53" x="1013" y="87"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="obj.274072" id="BPMN_Shape_obj.274072">
+            <omgdc:Bounds height="57" width="106" x="627" y="123"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274021" bpmnElement="con.274021"
+                          sourceElement="BPMN_Shape_obj.274013"
+                          targetElement="BPMN_Shape_obj.274018">
+            <omgdi:waypoint x="170" y="151"/>
+            <omgdi:waypoint x="283" y="151"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274027" bpmnElement="con.274027"
+                          sourceElement="BPMN_Shape_obj.274018"
+                          targetElement="BPMN_Shape_obj.274024">
+            <omgdi:waypoint x="283" y="151"/>
+            <omgdi:waypoint x="435" y="151"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274033" bpmnElement="con.274033"
+                          sourceElement="BPMN_Shape_obj.274024"
+                          targetElement="BPMN_Shape_obj.274030">
+            <omgdi:waypoint x="435" y="151"/>
+            <omgdi:waypoint x="548" y="151"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274039" bpmnElement="con.274039"
+                          sourceElement="BPMN_Shape_obj.274030"
+                          targetElement="BPMN_Shape_obj.274072">
+            <omgdi:waypoint x="548" y="151"/>
+            <omgdi:waypoint x="680" y="151"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274045" bpmnElement="con.274045"
+                          sourceElement="BPMN_Shape_obj.274036"
+                          targetElement="BPMN_Shape_obj.274042">
+            <omgdi:waypoint x="794" y="151"/>
+            <omgdi:waypoint x="794" y="113"/>
+            <omgdi:waypoint x="945" y="113"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274051" bpmnElement="con.274051"
+                          sourceElement="BPMN_Shape_obj.274036"
+                          targetElement="BPMN_Shape_obj.274048">
+            <omgdi:waypoint x="794" y="151"/>
+            <omgdi:waypoint x="794" y="227"/>
+            <omgdi:waypoint x="945" y="227"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274057" bpmnElement="con.274057"
+                          sourceElement="BPMN_Shape_obj.274048"
+                          targetElement="BPMN_Shape_obj.274054">
+            <omgdi:waypoint x="945" y="227"/>
+            <omgdi:waypoint x="1058" y="227"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274063" bpmnElement="con.274063"
+                          sourceElement="BPMN_Shape_obj.274054"
+                          targetElement="BPMN_Shape_obj.274060">
+            <omgdi:waypoint x="1058" y="227"/>
+            <omgdi:waypoint x="1172" y="227"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274069" bpmnElement="con.274069"
+                          sourceElement="BPMN_Shape_obj.274042"
+                          targetElement="BPMN_Shape_obj.274066">
+            <omgdi:waypoint x="945" y="113"/>
+            <omgdi:waypoint x="1039" y="113"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_con.274075" bpmnElement="con.274075"
+                          sourceElement="BPMN_Shape_obj.274072"
+                          targetElement="BPMN_Shape_obj.274036">
+            <omgdi:waypoint x="680" y="151"/>
+            <omgdi:waypoint x="794" y="151"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
