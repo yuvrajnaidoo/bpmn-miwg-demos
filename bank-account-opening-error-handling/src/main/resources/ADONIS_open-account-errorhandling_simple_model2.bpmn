@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:adonis="http://www.boc-group.com" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:inspire="http://bpminspire.com/bpmn2/extension/inspire" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd" exporter="ADONIS 5.1 DE" exporterVersion="5.1.1.0" name="Bank Account Opening - error handling (happy version)" targetNamespace="http://www.omg.org/bpmn20">
+  <message id="messageEventDefinition_obj.270256" name="messageEventDefinition_obj.270256"/>
+  <message id="messageEventDefinition_obj.270274" name="messageEventDefinition_obj.270274"/>
+  <collaboration id="mod.270249_Collaboration">
+    <extensionElements>
+      <adonis:modelstate xsi:type="xsd:anyType">In Bearbeitung</adonis:modelstate>
+      <adonis:modelversion xsi:type="xsd:anyType"/>
+    </extensionElements>
+    <participant id="obj.270250" name="Process Engine" processRef="obj.270250_process"/>
+  </collaboration>
+  <process id="obj.270250_process" name="Open Bank Account (ADONIS &amp; camunda)" isExecutable="true">
+    <extensionElements/>
+    <laneSet id="obj.270250_LaneSet">
+      <lane id="obj.270253" name=" ">
+        <extensionElements/>
+        <flowNodeRef>obj.270256</flowNodeRef>
+        <flowNodeRef>obj.270259</flowNodeRef>
+        <flowNodeRef>obj.270262</flowNodeRef>
+        <flowNodeRef>obj.270265</flowNodeRef>
+        <flowNodeRef>obj.270268</flowNodeRef>
+        <flowNodeRef>obj.270271</flowNodeRef>
+        <flowNodeRef>obj.270274</flowNodeRef>
+        <flowNodeRef>BoundaryEvent_1</flowNodeRef>
+      </lane>
+    </laneSet>
+    <startEvent id="obj.270256" activiti:formKey="embedded:app:apply-for-new-bank-account.html" name="Order received">
+      <extensionElements/>
+      <outgoing>con.270288</outgoing>
+    </startEvent>
+    <userTask id="obj.270259" activiti:assignee="demo" activiti:formKey="app:check-documents.jsf" name="Check documents" implementation="##WebService">
+      <extensionElements/>
+      <incoming>con.270288</incoming>
+      <outgoing>con.270291</outgoing>
+    </userTask>
+    <exclusiveGateway id="obj.270262" name="Documents approved?">
+      <extensionElements/>
+      <incoming>con.270291</incoming>
+      <outgoing>con.270294</outgoing>
+      <outgoing>con.270297</outgoing>
+    </exclusiveGateway>
+    <serviceTask id="obj.270265" activiti:delegateExpression="${customerNotificationDelegate}" name="Inform customer" implementation="##WebService">
+      <extensionElements/>
+      <incoming>con.270294</incoming>
+      <outgoing>con.270300</outgoing>
+    </serviceTask>
+    <serviceTask id="obj.270268" activiti:delegateExpression="${accountSetupDelegate}" name="Set up account" implementation="##WebService">
+      <extensionElements/>
+      <incoming>con.270297</incoming>
+      <outgoing>con.270303</outgoing>
+    </serviceTask>
+    <exclusiveGateway id="obj.270271" name="Merge">
+      <extensionElements/>
+      <incoming>con.270300</incoming>
+      <incoming>con.270303</incoming>
+      <outgoing>con.270304</outgoing>
+    </exclusiveGateway>
+    <endEvent id="obj.270274" name="Order processed">
+      <extensionElements/>
+      <incoming>con.270304</incoming>
+    </endEvent>
+    <sequenceFlow id="con.270288" name="" sourceRef="obj.270256" targetRef="obj.270259"/>
+    <sequenceFlow id="con.270291" name="" sourceRef="obj.270259" targetRef="obj.270262"/>
+    <sequenceFlow id="con.270294" name="No" sourceRef="obj.270262" targetRef="obj.270265">
+      <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="con.270297" name="Yes" sourceRef="obj.270262" targetRef="obj.270268">
+      <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="con.270300" name="" sourceRef="obj.270265" targetRef="obj.270271"/>
+    <sequenceFlow id="con.270303" name="" sourceRef="obj.270268" targetRef="obj.270271"/>
+    <sequenceFlow id="con.270304" name="" sourceRef="obj.270271" targetRef="obj.270274"/>
+    <boundaryEvent id="BoundaryEvent_1" name="" attachedToRef="obj.270268">
+      <errorEventDefinition id="ErrorEventDefinition_1"/>
+    </boundaryEvent>
+    <textAnnotation id="TextAnnotation_1">
+      <text>What should happen if we have a duplicate here?</text>
+    </textAnnotation>
+    <association id="Association_1" sourceRef="TextAnnotation_1" targetRef="BoundaryEvent_1"/>
+  </process>
+  <process id="mod.270249" name="Bank Account Opening - error handling (happy version)" isExecutable="false">
+    <laneSet id="mod.270249_LaneSet"/>
+  </process>
+  <bpmndi:BPMNDiagram id="Diagram_mod.270249">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="mod.270249">
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270250" bpmnElement="obj.270250" isHorizontal="true">
+        <omgdc:Bounds height="321.0" width="1134.0" x="0.0" y="95.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270253" bpmnElement="obj.270253" isHorizontal="true">
+        <omgdc:Bounds height="321.0" width="1021.0" x="113.0" y="95.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270256" bpmnElement="obj.270256">
+        <omgdc:Bounds height="53.0" width="53.0" x="181.0" y="200.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270259" bpmnElement="obj.270259">
+        <omgdc:Bounds height="57.0" width="106.0" x="325.0" y="198.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270262" bpmnElement="obj.270262" isMarkerVisible="true">
+        <omgdc:Bounds height="53.0" width="53.0" x="503.0" y="200.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270265" bpmnElement="obj.270265">
+        <omgdc:Bounds height="57.0" width="106.0" x="609.0" y="104.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270268" bpmnElement="obj.270268">
+        <omgdc:Bounds height="57.0" width="106.0" x="609.0" y="198.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270271" bpmnElement="obj.270271" isMarkerVisible="true">
+        <omgdc:Bounds height="53.0" width="53.0" x="786.0" y="200.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMN_Shape_obj.270274" bpmnElement="obj.270274">
+        <omgdc:Bounds height="53.0" width="53.0" x="900.0" y="200.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMN_Edge_con.270288" bpmnElement="con.270288" sourceElement="BPMN_Shape_obj.270256" targetElement="BPMN_Shape_obj.270259">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="208.0" y="227.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="378.0" y="227.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMN_Edge_con.270291" bpmnElement="con.270291" sourceElement="BPMN_Shape_obj.270259" targetElement="BPMN_Shape_obj.270262">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="378.0" y="227.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="529.0" y="227.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMN_Edge_con.270294" bpmnElement="con.270294" sourceElement="BPMN_Shape_obj.270262" targetElement="BPMN_Shape_obj.270265">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="529.0" y="227.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="529.0" y="132.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="662.0" y="132.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMN_Edge_con.270297" bpmnElement="con.270297" sourceElement="BPMN_Shape_obj.270262" targetElement="BPMN_Shape_obj.270268">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="529.0" y="227.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="662.0" y="227.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMN_Edge_con.270300" bpmnElement="con.270300" sourceElement="BPMN_Shape_obj.270265" targetElement="BPMN_Shape_obj.270271">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="662.0" y="132.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="813.0" y="132.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="813.0" y="227.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMN_Edge_con.270303" bpmnElement="con.270303" sourceElement="BPMN_Shape_obj.270268" targetElement="BPMN_Shape_obj.270271">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="662.0" y="227.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="813.0" y="227.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMN_Edge_con.270304" bpmnElement="con.270304" sourceElement="BPMN_Shape_obj.270271" targetElement="BPMN_Shape_obj.270274">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="813.0" y="227.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="926.0" y="227.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_BoundaryEvent_3" bpmnElement="BoundaryEvent_1">
+        <omgdc:Bounds height="53.0" width="53.0" x="660.0" y="229.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="6.0" width="6.0" x="683.0" y="287.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_TextAnnotation_3" bpmnElement="TextAnnotation_1">
+        <omgdc:Bounds height="100.0" width="100.0" x="752.0" y="294.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_Association_1" bpmnElement="Association_1" sourceElement="_BPMNShape_TextAnnotation_3" targetElement="_BPMNShape_BoundaryEvent_3">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="752.0" y="306.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="712.0" y="275.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
