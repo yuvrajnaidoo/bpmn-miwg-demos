@@ -1,0 +1,33 @@
+executable=true
+
+Process Name:
+Invoice Receipt (ADONIS, Signavio, BPI, Yaoqiang & camunda)
+
+Process ID:
+invoice-adonis-signavio-bpi-yaoqiang-camunda
+
+Messages:
+invoice-received-adonis-signavio-bpi-yaoqiang-camunda
+
+Users:
+demo
+${approver}
+
+Groups:
+accounting
+
+Forms:
+app:startProcess.jsf
+app:assignApprover.jsf
+app:approveInvoice.jsf
+app:reviewInvoice.jsf
+app:prepareBankTransfer.jsf
+
+Services:
+#{archiveService}
+
+Conditions:
+${!approved}
+${approved}
+${clarified == 'yes'}
+${clarified == 'no'}

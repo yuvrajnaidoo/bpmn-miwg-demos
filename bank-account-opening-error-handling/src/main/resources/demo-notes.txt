@@ -1,0 +1,19 @@
+executable=true
+
+Process Name:
+Open Bank Account (ADONIS & camunda)
+
+assignees:
+demo
+
+formKeys:
+embedded:app:apply-for-new-bank-account.html
+app:check-documents.jsf
+
+Condition Expressions:
+${approved}
+${!approved}
+
+Delegate Expressions:
+${customerNotificationDelegate}
+${accountSetupDelegate}
