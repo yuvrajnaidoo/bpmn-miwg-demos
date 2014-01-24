@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="bank-account-opening-error-handling" default="deploy.jboss">
+<project name="demo-adonis-camunda" default="deploy.jboss">
 
 	<property file="build.properties" />
 	<property file="${user.home}/.camunda/build.properties" />
