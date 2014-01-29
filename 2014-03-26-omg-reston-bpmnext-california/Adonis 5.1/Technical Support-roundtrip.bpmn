@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:signavio="http://www.signavio.com"
+             xmlns:inspire="http://bpminspire.com/bpmn2/extension/inspire"
+             xmlns:activiti="http://activiti.org/bpmn"
+             xmlns:adonis="http://www.boc-group.com"
+             xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             exporter="ADONIS"
+             exporterVersion="5.1.1.0"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.omg.org/bpmn20"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"
+             name="Technical Support Process v0.11">
+   <message id="messageEventDefinition__10-219" name="messageEventDefinition__10-219"/>
+   <process id="22406" name="Technical Support Process v0.11" isExecutable="false">
+      <extensionElements>
+         <adonis:modelstate>In process</adonis:modelstate>
+         <adonis:modelversion/>
+         <adonis:attribute name="Description" type="STRING"/>
+      </extensionElements>
+      <laneSet id="22406_LaneSet"/>
+      <manualTask id="_10-57" name="Get issue description from customer"
+                  isForCompensation="false">
+         <extensionElements>
+            <adonis:attribute name="Description" type="STRING"/>
+         </extensionElements>
+      </manualTask>
+      <endEvent id="_10-219" name="Customer issue resolved">
+         <extensionElements>
+            <adonis:attribute name="Description" type="STRING"/>
+         </extensionElements>
+      </endEvent>
+      <manualTask id="_10-138" name="Provide solution to customer" isForCompensation="false">
+         <extensionElements>
+            <adonis:attribute name="Description" type="STRING"/>
+         </extensionElements>
+      </manualTask>
+      <startEvent id="_10-42" name="Customer issue report">
+         <extensionElements>
+            <adonis:attribute name="Description" type="STRING"/>
+         </extensionElements>
+         <messageEventDefinition id="messageEventDefinition__10-42"/>
+      </startEvent>
+      <exclusiveGateway id="_10-195" name="Exclusive Gateway">
+         <extensionElements>
+            <adonis:attribute name="Description" type="STRING"/>
+         </extensionElements>
+      </exclusiveGateway>
+      <sequenceFlow id="_10-108" name="" sourceRef="_10-42" targetRef="_10-57">
+         <extensionElements>
+            <adonis:attribute name="Description" type="LONGSTRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_10-217" name="" sourceRef="_10-138" targetRef="_10-195">
+         <extensionElements>
+            <adonis:attribute name="Description" type="LONGSTRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_10-233" name="Solution is effective" sourceRef="_10-195"
+                    targetRef="_10-219">
+         <extensionElements>
+            <adonis:attribute name="Description" type="LONGSTRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_10-456" name="Solution is not effective" sourceRef="_10-195"
+                    targetRef="_10-57">
+         <extensionElements>
+            <adonis:attribute name="Description" type="LONGSTRING"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_10-136" name="" sourceRef="_10-57" targetRef="_10-138">
+         <extensionElements>
+            <adonis:attribute name="Description" type="LONGSTRING"/>
+         </extensionElements>
+      </sequenceFlow>
+   </process>
+   <bpmndi:BPMNDiagram id="Diagram_22406">
+      <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="22406">
+         <bpmndi:BPMNShape bpmnElement="_10-57" id="BPMN_Shape__10-57">
+            <omgdc:Bounds height="68" width="132" x="268" y="438"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_10-219" id="BPMN_Shape__10-219">
+            <omgdc:Bounds width="53" height="53" x="862" y="446"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_10-138" id="BPMN_Shape__10-138">
+            <omgdc:Bounds height="68" width="106" x="476" y="438"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_10-42" id="BPMN_Shape__10-42">
+            <omgdc:Bounds width="53" height="53" x="163" y="446"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_10-195" isMarkerVisible="true" id="BPMN_Shape__10-195">
+            <omgdc:Bounds width="53" height="53" x="654" y="446"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge id="BPMN_Edge__10-108" bpmnElement="_10-108" sourceElement="BPMN_Shape__10-42"
+                          targetElement="BPMN_Shape__10-57">
+            <omgdi:waypoint x="189" y="473"/>
+            <omgdi:waypoint x="335" y="473"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__10-217" bpmnElement="_10-217" sourceElement="BPMN_Shape__10-138"
+                          targetElement="BPMN_Shape__10-195">
+            <omgdi:waypoint x="529" y="473"/>
+            <omgdi:waypoint x="680" y="473"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__10-233" bpmnElement="_10-233" sourceElement="BPMN_Shape__10-195"
+                          targetElement="BPMN_Shape__10-219">
+            <omgdi:waypoint x="680" y="473"/>
+            <omgdi:waypoint x="888" y="473"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__10-456" bpmnElement="_10-456" sourceElement="BPMN_Shape__10-195"
+                          targetElement="BPMN_Shape__10-57">
+            <omgdi:waypoint x="680" y="473"/>
+            <omgdi:waypoint x="680" y="586"/>
+            <omgdi:waypoint x="321" y="586"/>
+            <omgdi:waypoint x="335" y="473"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__10-136" bpmnElement="_10-136" sourceElement="BPMN_Shape__10-57"
+                          targetElement="BPMN_Shape__10-138">
+            <omgdi:waypoint x="335" y="473"/>
+            <omgdi:waypoint x="529" y="473"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
