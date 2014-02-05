@@ -1,0 +1,16 @@
+pool3-part1-camunda.bpmn
+
+2nd Level Technical Support Agent
+
+2nd level
+issue created
+
+Find
+solution
+
+Issue resolved?
+
+Issue handled by
+2nd level support
+
+Request supplier support
