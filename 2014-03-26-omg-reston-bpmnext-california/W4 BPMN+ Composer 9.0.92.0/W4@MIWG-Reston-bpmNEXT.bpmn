@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:style="http://www.w4.eu/spec/DataComposer/20120927/Diagram/Style" xmlns:w4="http://www.w4.eu/spec/BPMN/20110701/MODEL" xmlns:w4graph="http://www.w4.eu/spec/BPMN/20110930/GRAPH" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="W4_MIWG_Reston_bpmNEXT" w4:version="1.0" exporter="W4_BPMN_Composer" exporterVersion="001" expressionLanguage="http://www.w4.eu/spec/EL/20110701" name="W4@MIWG-Reston-bpmNEXT" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" typeLanguage="http://www.w4.eu/spec/BPMN/20110701/DT">
+  <bpmn2:process id="Bpmn2_Process_8cQRA5I0EeOgk9lB_GxVVw" name="SupplierPool" isClosed="true" isExecutable="false" processType="None">
+    <bpmn2:extensionElements>
+      <w4graph:graphStyle>
+        <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        <w4graph:root gridVisible="true" snapToGrid="true" rulerVisible="true" snapToGuide="true" rulerUnit="Pixels">
+          <Grid spacing="15" color="230,230,230"/>
+          <VerticalRuler/>
+          <HorizontalRuler/>
+        </w4graph:root>
+      </w4graph:graphStyle>
+    </bpmn2:extensionElements>
+    <bpmn2:startEvent id="Bpmn2_StartEvent_8cQRBZI0EeOgk9lB_GxVVw" name="Supplier issue" isInterrupting="true">
+      <bpmn2:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="109,183,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>Bpmn2_SequenceFlow_8cQRC5I0EeOgk9lB_GxVVw</bpmn2:outgoing>
+      <bpmn2:messageEventDefinition id="Bpmn2_MessageEventDefinition_iBi6sJJeEeOiZqPchN1rzw"/>
+    </bpmn2:startEvent>
+    <bpmn2:manualTask id="Bpmn2_ManualTask_cqujoZI1EeOgk9lB_GxVVw" name="Find solution supplier issue" completionQuantity="1" isForCompensation="false" startQuantity="1">
+      <bpmn2:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="true" borderColor="" collapsed="false"/>
+        </w4graph:graphStyle>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Bpmn2_SequenceFlow_8cQRC5I0EeOgk9lB_GxVVw</bpmn2:incoming>
+      <bpmn2:outgoing>Bpmn2_SequenceFlow_fEXUgZI1EeOgk9lB_GxVVw</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:sequenceFlow id="Bpmn2_SequenceFlow_8cQRC5I0EeOgk9lB_GxVVw" isImmediate="true" sourceRef="Bpmn2_StartEvent_8cQRBZI0EeOgk9lB_GxVVw" targetRef="Bpmn2_ManualTask_cqujoZI1EeOgk9lB_GxVVw">
+      <bpmn2:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:manualTask id="Bpmn2_ManualTask_ErrUEZI2EeOgk9lB_GxVVw" name="Provide solution to 2nd level support" completionQuantity="1" isForCompensation="false" startQuantity="1">
+      <bpmn2:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Bpmn2_SequenceFlow_fEXUgZI1EeOgk9lB_GxVVw</bpmn2:incoming>
+      <bpmn2:outgoing>Bpmn2_SequenceFlow_jJxqsZI1EeOgk9lB_GxVVw</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:sequenceFlow id="Bpmn2_SequenceFlow_fEXUgZI1EeOgk9lB_GxVVw" isImmediate="true" sourceRef="Bpmn2_ManualTask_cqujoZI1EeOgk9lB_GxVVw" targetRef="Bpmn2_ManualTask_ErrUEZI2EeOgk9lB_GxVVw">
+      <bpmn2:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:endEvent id="Bpmn2_EndEvent_jJxqspI1EeOgk9lB_GxVVw" name="Issue handled by supplier">
+      <bpmn2:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Bpmn2_SequenceFlow_jJxqsZI1EeOgk9lB_GxVVw</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="Bpmn2_SequenceFlow_jJxqsZI1EeOgk9lB_GxVVw" isImmediate="true" sourceRef="Bpmn2_ManualTask_ErrUEZI2EeOgk9lB_GxVVw" targetRef="Bpmn2_EndEvent_jJxqspI1EeOgk9lB_GxVVw">
+      <bpmn2:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="Bpmndi_BPMNDiagram_8cQRAZI0EeOgk9lB_GxVVw" name="SupplierPool">
+    <bpmndi:BPMNPlane id="Bpmndi_BPMNPlane_8cQRApI0EeOgk9lB_GxVVw" bpmnElement="Bpmn2_Process_8cQRA5I0EeOgk9lB_GxVVw">
+      <bpmndi:BPMNShape id="Bpmndi_BPMNShape_8cQRBJI0EeOgk9lB_GxVVw" bpmnElement="Bpmn2_StartEvent_8cQRBZI0EeOgk9lB_GxVVw">
+        <dc:Bounds height="32.0" width="32.0" x="32.0" y="64.0"/>
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_8cQRBpI0EeOgk9lB_GxVVw" labelStyle="Bpmndi_BPMNLabelStyle_91Co4JI0EeOgk9lB_GxVVw">
+          <dc:Bounds height="18.0" width="90.0" x="3.0" y="96.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Bpmndi_BPMNShape_8cQRB5I0EeOgk9lB_GxVVw" bpmnElement="Bpmn2_ManualTask_cqujoZI1EeOgk9lB_GxVVw">
+        <dc:Bounds height="64.0" width="112.0" x="184.0" y="48.0"/>
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_8cQRCZI0EeOgk9lB_GxVVw" labelStyle="Bpmndi_BPMNLabelStyle_90X6gZI0EeOgk9lB_GxVVw">
+          <dc:Bounds height="36.0" width="93.0" x="194.0" y="62.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_8cQRCpI0EeOgk9lB_GxVVw" bpmnElement="Bpmn2_SequenceFlow_8cQRC5I0EeOgk9lB_GxVVw" sourceElement="Bpmndi_BPMNShape_8cQRBJI0EeOgk9lB_GxVVw" targetElement="Bpmndi_BPMNShape_8cQRB5I0EeOgk9lB_GxVVw">
+        <di:waypoint xsi:type="dc:Point" x="64.0" y="80.0"/>
+        <di:waypoint xsi:type="dc:Point" x="184.0" y="80.0"/>
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_8cQRDJI0EeOgk9lB_GxVVw" labelStyle="Bpmndi_BPMNLabelStyle_90qOYJI0EeOgk9lB_GxVVw"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Bpmndi_BPMNShape_fPPHwJI1EeOgk9lB_GxVVw" bpmnElement="Bpmn2_ManualTask_ErrUEZI2EeOgk9lB_GxVVw" isHorizontal="true" isMarkerVisible="true" isMessageVisible="true">
+        <dc:Bounds height="64.0" width="112.0" x="536.0" y="48.0"/>
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_fPPHwZI1EeOgk9lB_GxVVw" labelStyle="Bpmndi_BPMNLabelStyle_fPPHwpI1EeOgk9lB_GxVVw">
+          <dc:Bounds height="54.0" width="108.0" x="540.0" y="58.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_fPbVAJI1EeOgk9lB_GxVVw" bpmnElement="Bpmn2_SequenceFlow_fEXUgZI1EeOgk9lB_GxVVw" sourceElement="Bpmndi_BPMNShape_8cQRB5I0EeOgk9lB_GxVVw" targetElement="Bpmndi_BPMNShape_fPPHwJI1EeOgk9lB_GxVVw">
+        <di:waypoint xsi:type="dc:Point" x="296.0" y="80.0"/>
+        <di:waypoint xsi:type="dc:Point" x="536.0" y="80.0"/>
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_fPbVAZI1EeOgk9lB_GxVVw" labelStyle="Bpmndi_BPMNLabelStyle_fPhboJI1EeOgk9lB_GxVVw"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Bpmndi_BPMNShape_jS1gEJI1EeOgk9lB_GxVVw" bpmnElement="Bpmn2_EndEvent_jJxqspI1EeOgk9lB_GxVVw" isHorizontal="true" isMarkerVisible="true" isMessageVisible="true">
+        <dc:Bounds height="32.0" width="32.0" x="784.0" y="64.0"/>
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jS1gEZI1EeOgk9lB_GxVVw" labelStyle="Bpmndi_BPMNLabelStyle_jS7msJI1EeOgk9lB_GxVVw">
+          <dc:Bounds height="36.0" width="101.0" x="750.0" y="96.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_jTHz8JI1EeOgk9lB_GxVVw" bpmnElement="Bpmn2_SequenceFlow_jJxqsZI1EeOgk9lB_GxVVw" sourceElement="Bpmndi_BPMNShape_fPPHwJI1EeOgk9lB_GxVVw" targetElement="Bpmndi_BPMNShape_jS1gEJI1EeOgk9lB_GxVVw">
+        <di:waypoint xsi:type="dc:Point" x="648.0" y="79.0"/>
+        <di:waypoint xsi:type="dc:Point" x="784.0" y="79.0"/>
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jTHz8ZI1EeOgk9lB_GxVVw" labelStyle="Bpmndi_BPMNLabelStyle_jTN6kJI1EeOgk9lB_GxVVw"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_90X6gZI0EeOgk9lB_GxVVw">
+      <dc:Font name="Segoe UI" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_90qOYJI0EeOgk9lB_GxVVw">
+      <dc:Font name="Segoe UI" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_91Co4JI0EeOgk9lB_GxVVw">
+      <dc:Font name="Segoe UI" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_fPPHwpI1EeOgk9lB_GxVVw">
+      <dc:Font name="Segoe UI" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_fPhboJI1EeOgk9lB_GxVVw">
+      <dc:Font name="Segoe UI" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_jS7msJI1EeOgk9lB_GxVVw">
+      <dc:Font name="Segoe UI" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_jTN6kJI1EeOgk9lB_GxVVw">
+      <dc:Font name="Segoe UI" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
