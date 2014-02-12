@@ -1,0 +1,11 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.omg.bpmn.miwg</groupId>
+  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>bpmn-miwg-demos</artifactId>
+  <name>BPMN MIWG public demo artefacts</name>
+  <description>- 2013-06-19 First presentation at OMG technical meeting, Berlin
+-2014-03-26 Second demo presented jointly at the OMG meeting at Reston and at the BPMNext conference in Asilomar, California</description>
+  <inceptionYear>2013</inceptionYear>
+  <url>http://www.omgwiki.org/bpmn-miwg/doku.php</url>
+</project>
