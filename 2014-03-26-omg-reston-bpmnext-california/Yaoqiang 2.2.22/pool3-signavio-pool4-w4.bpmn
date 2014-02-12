@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:tns="http://activiti.org/bpmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Yaoqiang BPMN Editor" exporterVersion="2.2.22 (GPLv3, Non-Commercial)" expressionLanguage="http://www.w3.org/1999/XPath" id="sid-667581c9-32b0-4ba9-8a75-02ff0025b939" name="" targetNamespace="http://activiti.org/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" 
+xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" 
+xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" 
+xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" 
+xmlns:signavio="http://www.signavio.com" 
+xmlns:style="http://www.w4.eu/spec/DataComposer/20120927/Diagram/Style" 
+xmlns:tns="http://activiti.org/bpmn" 
+xmlns:w4="http://www.w4.eu/spec/BPMN/20110701/MODEL" 
+xmlns:w4graph="http://www.w4.eu/spec/BPMN/20110930/GRAPH" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:yaoqiang="http://bpmn.sourceforge.net" 
+exporter="Yaoqiang BPMN Editor" 
+exporterVersion="2.2.22 (GPLv3, Non-Commercial)" 
+expressionLanguage="http://www.w3.org/1999/XPath" 
+id="sid-667581c9-32b0-4ba9-8a75-02ff0025b939" 
+name="" 
+targetNamespace="http://activiti.org/bpmn" 
+typeLanguage="http://www.w3.org/2001/XMLSchema" 
+xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
   <collaboration id="sid-5b1dfc2e-a9c4-4213-8376-8421547dae20" isClosed="false">
     <participant id="_Participant_11" name="2nd Level Technical Support Agent" processRef="Process_1">
       <participantMultiplicity maximum="1" minimum="0"/>
