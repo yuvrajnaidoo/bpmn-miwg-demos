@@ -3,7 +3,7 @@
   <process id="myProcess" name="1st Level Technical Support Agent" isExecutable="true">
     <task id="manualtask1" name="Find solution"></task>
     <sequenceFlow id="flow1" sourceRef="messagestartevent1" targetRef="manualtask1"></sequenceFlow>
-    <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
+    <exclusiveGateway id="exclusivegateway1" name="Solution available?"></exclusiveGateway>
     <sequenceFlow id="flow2" sourceRef="manualtask1" targetRef="exclusivegateway1"></sequenceFlow>
     <sequenceFlow id="flow3" sourceRef="exclusivegateway1" targetRef="manualtask2"></sequenceFlow>
     <endEvent id="endevent1" name="Issue resolved by level 1"></endEvent>
