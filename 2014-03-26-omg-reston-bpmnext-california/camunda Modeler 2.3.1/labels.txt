@@ -7,6 +7,8 @@ Level2 Issue
 Find
 solution
 
+Issue resolved?
+
 <!--
 Solution available
 
