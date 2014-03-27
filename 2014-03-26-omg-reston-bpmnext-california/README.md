@@ -1,5 +1,6 @@
-BPMN MIWG Demo at Co-Located at OMG Technical Meeting in Reston and BPM Next in California (2014-03-26)
-=======================================================================================================
+BPMN MIWG Demo at OMG Technical Meeting in Reston and bpmNEXT in California (2014-03-26)
+========================================================================================
 
-The next interchange demonstration will be co-located with OMG technical meeting in Reston and BPM Next in California on March 26th 2014.
+This interchange demonstration took place co-located with
+[OMG technical meeting in Reston](http://www.omg.org/news/meetings/tc/va-14/info.htm) and [bpmNEXT in California](http://www.bpmnext.com/) on March 26th 2014.
 
