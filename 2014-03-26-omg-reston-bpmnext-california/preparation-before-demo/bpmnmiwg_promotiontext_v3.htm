@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="IE=10" http-equiv="X-UA-Compatible" />
+        <title>
+            BPMN Interchange Demo at OMG Technical Meeting and bpmNEXT
+        </title>
+        <style type="text/css">
+/*<![CDATA[*/
+        @import url(http://ssssssssssss.googleapis.com/css?family=Open+Sans:600,300);
+        #outlook a{padding:0} 
+        body{font-size:13px;line-height:22px;font-family:"Open Sans",Tahoma,sans-serif!important;color:#555;width:100%!important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0}
+        .ExternalClass{width:100%}
+        .ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{line-height:100%}
+        #backgroundTable{margin:0;padding:0;width:100%!important;line-height:100%!important;background-color:#eee}
+        img{outline:0;text-decoration:none;-ms-interpolation-mode:bicubic}
+        a img{border:0}
+        .image_fix{display:block}
+        table td{border-collapse:collapse}
+        table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}
+        a{color:#00A9A1;font-size:13px}
+        p{font-size:13px;line-height:22px!important;font-family:"Open Sans",Tahoma,sans-serif!important;color:#555;margin:0;padding:0;padding-bottom:6px!important}
+        p.salut{font-size:16px}
+        table{background-color:#fff}
+        table.header{background-color:#555}
+        table.header a.textlink{color:#fff;text-decoration:none;padding:16px 20px;line-height:18px!important}
+        table.teaserbox{background-color:#eee}
+        table.footer1,table.social{background-color:#555}
+        table.footer1 p{color:#ddd;text-align:left}
+        table.footer1 a,table.social a{color:#ddd;text-decoration:none}
+        table.social a {display:block}
+        table.footer2{background-color:#333}
+        table.footer2 p{color:#ccc;font-size:11px;line-height:15px!important}
+        table.footer2 a{color:#ccc;font-size:11px}
+        td.line_fix{line-height:1px!important;height:1px;font-size:6px}
+        .preheader{background-color:#eee}
+        .preheader p{color:#ccc;font-size:11px}
+        a.event_text_link{color:#555;text-decoration:none}
+        .section_headline{font-size:24px;line-height:24px;color:#7f7f7f;text-decoration:none}
+        strong{font-weight:600}
+        code{background-color:#faf2aa;border:1px solid #fae100;padding:2px 4px}
+        table.fix-longstrings{table-layout:fixed;width:100%}
+        td.fix-longstrings a{word-wrap:break-word}
+        ul{list-style-type:square}
+        /*]]>*/
+        </style><!--[if gte mso 9]><style type="text/css">
+a{font-family:"Open Sans",Tahoma,sans-serif;}
+p{line-height:22px;}
+</style><![endif]-->
+    </head>
+    <body style="font-size: 13px;line-height: 22px;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;width: 100% !important;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0">
+        <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" bgcolor="#EEEEEE" width="100%" style="margin: 0;padding: 0;width: 100% !important;line-height: 100% !important;background-color: #eee;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+            <tr>
+                <td align="center" style="border-collapse: collapse">
+                    <table cellpadding="0" cellspacing="0" border="0" align="center" summary="header" width="600" bgcolor="#FFFFFF" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;background-color: #fff">
+                        <!-- Preheader -->
+                        <tr>
+                            <td colspan="3" width="600" class="preheader" align="center" style="border-collapse: collapse;background-color: #eee"></td>
+                        </tr><!-- Header -->
+                        <tr>
+                            <td colspan="3" width="600" style="border-collapse: collapse">
+                                <table cellpadding="0" cellspacing="0" border="0" align="center" class="header" summary="header" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;background-color: #00A9A1">
+                                    <tr>
+                                        <td width="180" height="50" align="center" style="border-collapse: collapse">
+                                        	&nbsp;
+                                        </td>
+                                        <td width="220" style="border-collapse: collapse">
+                                            &nbsp;
+                                        </td>
+                                        <td width="200" height="50" align="center" valign="middle" class="header_button" style="border-collapse: collapse;">
+                                            <a href="http://www.omgwiki.org/bpmn-miwg/doku.php?id=start" class="textlink" target="_blank" style="color: #fff;font-size: 13px;text-decoration: none;padding: 16px 20px;line-height: 18px !important">BPMN MIWG Website</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="60" style="border-collapse: collapse"></td>
+                        </tr><!-- Intro -->
+                        <tr>
+                            <td width="40" style="border-collapse: collapse"></td>
+                            <td width="520" style="border-collapse: collapse">
+                            	<p class="section_headline" style="font-size: 24px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #7f7f7f;margin: 0;padding: 0;padding-bottom: 6px !important;text-decoration: none">
+                                    BPMN Interchange Demo at OMG Technical Meeting and bpmNEXT
+                                </p>
+                                <table cellpadding="0" cellspacing="0" border="0" summary="intro" class="fix-longstrings" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;background-color: #fff;table-layout: fixed;width: 100%">
+                                    <tr>
+                                        <td width="160" align="left" valign="top" style="border-collapse: collapse">
+                                            <p class="salut" style="font-size: 16px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                &nbsp;
+                                            </p>
+                                            <img src="http://www.omgwiki.org/bpmn-miwg/lib/exe/fetch.php?w=200&media=miwg-logo-827x512.png" width="120" alt="BPMN MIWG Logo" style="outline: 0;text-decoration: none;-ms-interpolation-mode: bicubic" />
+                                        </td>
+                                        <td width="360" align="left" valign="top" class="fix-longstrings" style="border-collapse: collapse">
+                                            <p class="salut" style="font-size: 16px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                &nbsp;
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                Do you need to move your business process models from one tool to another as part of your process improvement lifecycle? Would you like to learn more about BPMN interoperability and how BPMN can benefit your organization? Interested in meeting BPMN experts and being among the first to know about current and future technologies in business process modeling and automation?
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                            	A live demonstration of BPMN Model Interchange will concurrently take place during the <a href="http://www.omg.org/news/meetings/tc/va-14/info.htm" style="font-size: 13px;word-wrap: break-word">OMG Technical Meeting</a> and <a href="http://www.bpmnext.com/2014-program/" style="font-size: 13px;word-wrap: break-word">bpmNEXT</a>. Sign up for either event to witness this demonstration in person.
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                            	The event will be hosted by Denis Gagne of OMG BPMN Model Interchange Working Group (<a href="http://www.omgwiki.org/bpmn-miwg/doku.php?id=start" style="font-size: 13px;word-wrap: break-word">BPMN MIWG</a>) featuring a multitude of BPMN-based tools and platforms. Do not miss the opportunity to see a smooth and complete interchange of process models between leading software vendors.
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                            	Cannot make it? Then join the live stream of the interchange demo via this link: <a href="http://www.businessprocessincubator.com/bpmn-interchange-demo-mar-2014.html" style="font-size: 13px;word-wrap: break-word">Live-Stream</a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="40" style="border-collapse: collapse"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="30" style="border-collapse: collapse"></td>
+                        </tr><!-- Info Section -->
+                        <tr>
+                            <td width="40" style="border-collapse: collapse"></td>
+                            <td width="520" align="left" style="border-collapse: collapse">
+                                <p class="section_headline" style="font-size: 24px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #7f7f7f;margin: 0;padding: 0;padding-bottom: 6px !important;text-decoration: none">
+                                    Participants of the demonstration include:
+                                </p>
+                            </td>
+                            <td width="40" style="border-collapse: collapse"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="20" style="border-collapse: collapse"></td>
+                        </tr>
+                        <tr>
+                            <td width="40" style="border-collapse: collapse"></td>
+                            <td width="520" style="border-collapse: collapse">
+                                <table cellpadding="0" cellspacing="0" border="0" summary="news section" class="fix-longstrings" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;background-color: #fff;table-layout: fixed;width: 100%">
+                                    <tr>
+                                        <td width="140" align="left" valign="top" style="border-collapse: collapse">
+                                        <td width="360" align="left" valign="top" class="fix-longstrings" style="border-collapse: collapse">
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                <ul style="list-style-type:square">
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="https://www.blueworkslive.com/">Blueworks</a> Live from IBM</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://www.bonitasoft.com/">Bonita BPM Studio Community Edition</a> from Bonitasoft (Open Source)</p>
+													</li>
+													<li> 
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://www.oracle.com/us/technologies/bpm/suite/overview/index.html">Oracle BPM Suite</a> from Oracle</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://www.itp-commerce.com/">Process Modeler for Microsoft Visio</a> from itp-commerce</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://www.boc-group.com/products/adonis/">ADONIS</a> from BOC Group</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://camunda.org/bpmn/tool/">camunda Modeler</a> and <a href="https://github.com/camunda/camunda-bpmn.js/">camunda-bpmn.js</a> from camunda (Open Source)</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://www.signavio.com/">Signavio Process Editor</a> from Signavio</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://www.w4software.com/produit/bpmn-plus.htm">W4 BPMN+</a> from W4 Software</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://bpmn.sourceforge.net/">Yaoqiang BPMN Editor</a> from Yaoqiang</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http://activiti.org/">Activiti Designer</a> from Alfresco (Open Source)</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important"><a href="http:/www.bpmnvisiomodeler.com">BPMN Visio Modeler</a> and <a href="http://www.bpmnwebmodeler.com">BPMN Web Modeler</a> from Trisotech</p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">With the participation of <a href="http://www.bpm.com/">BPM.com</a></p>
+													</li>
+													<li>
+														<p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">and the participation of <a href="http://www.knowprocess.com/">KnowProcess.com</a></p>
+													</li>
+												</ul>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" height="30" style="border-collapse: collapse"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="40" style="border-collapse: collapse"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="20" style="border-collapse: collapse"></td>
+                        </tr><!-- Sidestory -->
+                        <tr>
+                            <td width="40" style="border-collapse: collapse"></td>
+                            <td width="520" style="border-collapse: collapse">
+                                <table cellpadding="0" cellspacing="0" border="0" class="teaserbox" summary="teaser" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;background-color: #eee">
+                                    <tr>
+                                        <td colspan="4" height="30" style="border-collapse: collapse"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10" style="border-collapse: collapse"></td>
+                                        <td width="100" valign="top" style="border-collapse: collapse">
+                                            <img src="http://www.signavio.com/message/img/icon-teaser-didyouknow.png" width="100" height="100" alt="" style="outline: 0;text-decoration: none;-ms-interpolation-mode: bicubic" />
+                                        </td>
+                                        <td width="380" align="left" class="section_headline" style="border-collapse: collapse;font-size: 24px;line-height: 24px;color: #7f7f7f;text-decoration: none">
+                                            At a glance:<br/>
+                                            <p class="salut" style="font-size: 16px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                &nbsp;
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                <strong>Live Stream</strong>
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+												<a href="http://www.businessprocessincubator.com/bpmn-interchange-demo-mar-2014.html">Register for the Live Stream</a><br>
+												Provided by the Business Process Incubator
+												
+                                            </p>
+                                            <p class="salut" style="font-size: 16px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                &nbsp;
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                <strong>bpmNEXT</strong>
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+												When: March 25th-27th, 2014</br>
+												<strong>Interchange Demo: March 26th, 2014 at 11:00hrs (PT)</strong></br>
+												Where: Asilomar Conference Grounds</br>
+												800 Asilomar Ave, Pacific Grove, CA 93950, United States</br>
+                                            </p>
+                                            <p class="salut" style="font-size: 16px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                &nbsp;
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                <strong>OMG technical meeting</strong>
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+												When: March 24th-28th, 2014</br>
+												<strong>Interchange Demo: March 26th, 2014 at 14:00hrs (ET)</strong></br>
+												Where:  Hyatt Regency Reston </br>
+												Lake Thoreau room (2nd floor)<br>
+												1800 Presidents Street, Reston, VA 20190</br>
+                                            </p>
+                                            <p class="salut" style="font-size: 16px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                &nbsp;
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                <strong>bpmNEXT</strong> will showcase what's next in the area of business process management from 25-27 march. Witness the latest developments in the BPM area and see how to ensure your organization's ability with the commitment to standards, interoperability and sustainability. Learn how to continue to use the systems and technologies you currently have in place and be ahead with future technologies. Find more information about the program and the speakers at the <a href="http://www.bpmnext.com/2014-program/" style="font-size: 13px;word-wrap: break-word">bpmNEXT website</a>.
+                                            </p>
+                                            <p class="salut" style="font-size: 16px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                &nbsp;
+                                            </p>
+                                            <p style="font-size: 13px;line-height: 22px !important;font-family: &quot;Open Sans&quot;, Tahoma, sans-serif !important;color: #555;margin: 0;padding: 0;padding-bottom: 6px !important">
+                                                <strong>The OMG technical meeting</strong> on 24-28 march brings together IT architects, business analysts and government experts as well as vendors and end users. Every meeting is a great opportunity to meet and network with these experts and to get a firsthand insight about how to influence the direction of future standards. Connect directly with standards specialists of the tech industry, and learn about the future landscape of enterprise technologies. Find more information on the <a href="http://www.omg.org/news/meetings/tc/va-14/info.htm" style="font-size: 13px;word-wrap: break-word">OMG website</a>, and save the date now!
+                                            </p>
+                                        </td>
+                                        <td width="30" style="border-collapse: collapse"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" height="30" style="border-collapse: collapse"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="40" style="border-collapse: collapse"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="40" style="border-collapse: collapse"></td>
+                        </tr><!-- Footer DE -->
+                        <tr>
+                            <td colspan="3" width="600" style="border-collapse: collapse">
+                                <table cellpadding="0" cellspacing="0" border="0" class="footer1" summary="contact" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;background-color: #00A9A1">
+                                   
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" width="600" style="border-collapse: collapse">
+                                <table cellpadding="0" cellspacing="0" border="0" class="footer2" summary="footer" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;background-color: #00A9A1">
+                                    <tr>
+                                        <td width="40" style="border-collapse: collapse"></td>
+                                        <td width="520" height="50" align="left" style="border-collapse: collapse">
+                                          
+                                        </td>
+                                        <td width="40" style="border-collapse: collapse"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
