@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:ns2="http://www.ibm.com/bpm/Extensions" xmlns:ns3="http://www.omg.org/spec/DD/20100524/DI" xmlns:ns4="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ns5="http://www.omg.org/spec/DD/20100524/DC" exporterVersion="2.0" exporter="http://www.ibm.com/WebSphere/bpm/BlueworksLive" targetNamespace="http://www.ibm.com/WebSphere/bpm/BlueworksLive/10000c33ff81a95-20000ab400094b0" id="bpmn-df9140e4-1086-4a24-8f7c-2ab2b6feb8ea" xmlns:res="http://www.ibm.com/WebSphere/bpm/BlueworksLive/Resources" xmlns:bwl0="http://www.ibm.com/WebSphere/bpm/BlueworksLive/Glossaries">
+    <import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="../Glossaries.bpmn" namespace="http://www.ibm.com/WebSphere/bpm/BlueworksLive/Glossaries"/>
+    <import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="../Resources.bpmn" namespace="http://www.ibm.com/WebSphere/bpm/BlueworksLive/Resources"/>
+    <process isExecutable="false" processType="Private" name="Front Office" id="bpmn-f5992442-59b6-49cb-bb40-18c1a47b7803">
+        <extensionElements>
+            <ns2:bpmAttributes>
+                <ns2:milestones id="bpmn-aa1624a4-7800-40d6-88b7-5c7875a34ed3">
+                    <ns2:milestone name="Milestone 1" id="bpmn-0278ef49-bd46-4233-a77d-50026df0d18a">
+                        <flowNodeRef>bpmn-f6290c36-243d-4836-9d06-5c2f811907d5</flowNodeRef>
+                        <flowNodeRef>bpmn-d227b144-8832-438e-a83b-89be01d24382</flowNodeRef>
+                        <flowNodeRef>bpmn-f286bf29-d2eb-4429-bcc1-670a5b983fd1</flowNodeRef>
+                        <flowNodeRef>bpmn-4336829a-665a-4663-9eb1-62d969bd0115</flowNodeRef>
+                    </ns2:milestone>
+                </ns2:milestones>
+                <ns2:properties/>
+            </ns2:bpmAttributes>
+        </extensionElements>
+        <laneSet id="bpmn-4abe7154-4b16-47ae-95f0-c26a741af226">
+            <lane name="Account Manager" id="bpmn-2da62286-8a72-4bee-9dd3-fab266133c35">
+                <flowNodeRef>bpmn-f6290c36-243d-4836-9d06-5c2f811907d5</flowNodeRef>
+                <flowNodeRef>bpmn-d227b144-8832-438e-a83b-89be01d24382</flowNodeRef>
+                <flowNodeRef>bpmn-f286bf29-d2eb-4429-bcc1-670a5b983fd1</flowNodeRef>
+                <flowNodeRef>bpmn-4336829a-665a-4663-9eb1-62d969bd0115</flowNodeRef>
+            </lane>
+        </laneSet>
+        <sequenceFlow targetRef="bpmn-d227b144-8832-438e-a83b-89be01d24382" sourceRef="bpmn-f6290c36-243d-4836-9d06-5c2f811907d5" id="bpmn-49ffbd1d-b359-4f1c-a6f9-7bf68911f79a"/>
+        <sequenceFlow targetRef="bpmn-f286bf29-d2eb-4429-bcc1-670a5b983fd1" sourceRef="bpmn-d227b144-8832-438e-a83b-89be01d24382" id="bpmn-9ef5a024-8cca-43ac-8175-999d12f8665b"/>
+        <sequenceFlow targetRef="bpmn-4336829a-665a-4663-9eb1-62d969bd0115" sourceRef="bpmn-f286bf29-d2eb-4429-bcc1-670a5b983fd1" id="bpmn-5886ea9c-d0fd-4e45-89a2-cafce838f17a"/>
+        <startEvent name="Issue Report" id="bpmn-f6290c36-243d-4836-9d06-5c2f811907d5">
+            <messageEventDefinition id="bpmn-4f0a565b-0624-4d64-b660-141b01fe6002"/>
+        </startEvent>
+        <task name="Get Description" id="bpmn-d227b144-8832-438e-a83b-89be01d24382">
+            <performer name="Account Manager">
+                <resourceRef xmlns:res="http://www.ibm.com/WebSphere/bpm/BlueworksLive/Resources">res:bpmn-2da62286-8a72-4bee-9dd3-fab266133c35</resourceRef>
+            </performer>
+        </task>
+        <task name="Provide Solution" id="bpmn-f286bf29-d2eb-4429-bcc1-670a5b983fd1">
+            <performer name="Account Manager">
+                <resourceRef xmlns:res="http://www.ibm.com/WebSphere/bpm/BlueworksLive/Resources">res:bpmn-2da62286-8a72-4bee-9dd3-fab266133c35</resourceRef>
+            </performer>
+        </task>
+        <endEvent name="Issue Resolved" id="bpmn-4336829a-665a-4663-9eb1-62d969bd0115"/>
+    </process>
+</definitions>
