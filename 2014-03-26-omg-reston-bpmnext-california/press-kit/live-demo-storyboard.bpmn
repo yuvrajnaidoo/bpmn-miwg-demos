@@ -13,11 +13,11 @@
       <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>
     </bpmn2:userTask>
-    <bpmn2:userTask id="UserTask_4" name="W4&#xA;Business&#xA;First">
+    <bpmn2:userTask id="UserTask_4" name="W4&#xA;BPMN&#x2b;&#xA;Composer">
       <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_14</bpmn2:outgoing>
     </bpmn2:userTask>
-    <bpmn2:userTask id="UserTask_5" name="Bonitasoft">
+    <bpmn2:userTask id="UserTask_5" name="Bonita&#xA;BPM&#xA;Studio&#xA;Community&#xA;Edition">
       <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_11</bpmn2:outgoing>
     </bpmn2:userTask>
@@ -56,7 +56,7 @@
       <bpmn2:outgoing>SequenceFlow_32</bpmn2:outgoing>
     </bpmn2:userTask>
     <bpmn2:sequenceFlow id="SequenceFlow_32" name="" sourceRef="UserTask_17" targetRef="ParallelGateway_7"/>
-    <bpmn2:userTask id="UserTask_16" name="W4&#xA;Business&#xA;First">
+    <bpmn2:userTask id="UserTask_16" name="W4&#xA;BPMN&#x2b;&#xA;Engine">
       <bpmn2:incoming>SequenceFlow_25</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_31</bpmn2:outgoing>
     </bpmn2:userTask>
@@ -105,7 +105,7 @@
     <bpmn2:sequenceFlow id="SequenceFlow_24" name="" sourceRef="ParallelGateway_6" targetRef="UserTask_15"/>
     <bpmn2:sequenceFlow id="SequenceFlow_25" name="" sourceRef="ParallelGateway_6" targetRef="UserTask_16"/>
     <bpmn2:sequenceFlow id="SequenceFlow_26" name="" sourceRef="ParallelGateway_6" targetRef="UserTask_17"/>
-    <bpmn2:userTask id="UserTask_11" name="Trisotech BPMN Modeler for MS Visio">
+    <bpmn2:userTask id="UserTask_11" name="Trisotech BPMN Visio Modeler">
       <bpmn2:incoming>SequenceFlow_19</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_21</bpmn2:outgoing>
     </bpmn2:userTask>
@@ -115,7 +115,7 @@
       <bpmn2:outgoing>SequenceFlow_30</bpmn2:outgoing>
     </bpmn2:userTask>
     <bpmn2:sequenceFlow id="SequenceFlow_30" name="" sourceRef="UserTask_15" targetRef="ParallelGateway_7"/>
-    <bpmn2:userTask id="UserTask_10" name="Yaoqiang">
+    <bpmn2:userTask id="UserTask_10" name="Yaoqiang BPMN Editor">
       <bpmn2:incoming>SequenceFlow_16</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_18</bpmn2:outgoing>
     </bpmn2:userTask>
@@ -135,7 +135,7 @@
     </bpmn2:userTask>
     <bpmn2:sequenceFlow id="SequenceFlow_17" name="" sourceRef="UserTask_9" targetRef="ParallelGateway_5"/>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="BPMN MIWG March 2014 Demo">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds height="36.0" width="36.0" x="52.0" y="292.0"/>
