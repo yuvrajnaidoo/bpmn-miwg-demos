@@ -11,8 +11,9 @@ In addition the demo has been streamed live to the Internet via [YouTube](//www.
 
 Here is the story board of the demo as a BPMN process:
 
-![Story Board of the Demo in BPMN](https://raw.githubusercontent.com/bpmn-miwg/bpmn-miwg-demos/master/2014-03-26-omg-reston-bpmnext-california/press-kit/live-demo-storyboard.png)
+[Open the story board in the Trisotech BPMN Process Animator](https://www.businessprocessincubator.com/bpmnwebmodeler/?model=eyJ0IjoiYnBpLXB1YmxpYyIsImYiOnsic2t1IjoiZ2V0LTExOTciLCJyZXBvc2l0b3J5SWQiOiIwIiwicGF0aCI6Ii8ifX0=&profile=socialviewer) or click on the image for an interactive version
 
+[![Story Board of the Demo in BPMN](https://raw.githubusercontent.com/bpmn-miwg/bpmn-miwg-demos/master/2014-03-26-omg-reston-bpmnext-california/press-kit/live-demo-storyboard.png)](http://bpmn-miwg.github.io/bpmn-miwg-demos/2014-03-26-omg-reston-bpmnext-california/press-kit/live-demo-storyboard.html)
 During this demo, a new Web-based [test result table](http://bpmn-miwg.github.io/bpmn-miwg-tools/) has been first presented to the public (click on the image for current results):
 [<img src="http://bpmn-miwg.github.io/bpmn-miwg-tools/bpmn-tools-tested-for-model-interchange-screenshot.png">](http://bpmn-miwg.github.io/bpmn-miwg-tools/)
 
