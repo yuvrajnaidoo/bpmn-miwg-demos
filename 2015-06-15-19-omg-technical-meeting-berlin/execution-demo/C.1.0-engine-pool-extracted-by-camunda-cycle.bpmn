@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:camunda="http://activiti.org/bpmn"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:signavio="http://www.signavio.com"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"
+             exporter="Signavio Process Editor, http://www.signavio.com"
+             exporterVersion="7.0.0"
+             targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL">
+   <dataStore id="sid-14ef3d18-7218-4f57-98f0-bb595114754b" isUnlimited="false"
+              name="Financial Accounting System"/>
+   <message id="sid-328811a0-7f72-468f-92de-6ab19e353312" name="invoice-received-C.1.0"/>
+   <collaboration id="sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3">
+      <participant id="Process_Engine_1" name="Process Engine - Invoice Receipt"
+                   processRef="bpmn-miwg-test-case-c.1.0">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <signavio:signavioMetaData metaKey="rolle" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </participant>
+   </collaboration>
+   <process id="bpmn-miwg-test-case-c.1.0" name="BPMN MIWG Test Case C.1.0" isClosed="true"
+            isExecutable="true">
+      <extensionElements/>
+      <laneSet id="sid-499dfba4-1449-4914-9e85-55b252800bad">
+         <lane id="Approver" name="Approver">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+               <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            </extensionElements>
+            <flowNodeRef>approveInvoice</flowNodeRef>
+            <flowNodeRef>invoice_approved</flowNodeRef>
+         </lane>
+         <lane id="teamAssistant" name="Team Assistant">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+               <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            </extensionElements>
+            <flowNodeRef>assignApprover</flowNodeRef>
+            <flowNodeRef>reviewInvoice</flowNodeRef>
+            <flowNodeRef>reviewSuccessful_gw</flowNodeRef>
+            <flowNodeRef>invoiceNotProcessed</flowNodeRef>
+            <flowNodeRef>StartEvent_1</flowNodeRef>
+         </lane>
+         <lane id="Accountant" name="Accountant">
+            <extensionElements>
+               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+               <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            </extensionElements>
+            <flowNodeRef>prepareBankTransfer</flowNodeRef>
+            <flowNodeRef>invoiceProcessed</flowNodeRef>
+            <flowNodeRef>archiveInvoice</flowNodeRef>
+         </lane>
+      </laneSet>
+      <userTask id="approveInvoice" camunda:assignee="${approver}"
+                camunda:formKey="app:approveInvoice.jsf"
+                name="Approve Invoice"
+                implementation="webService">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="documentationlink" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="test" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adaptertype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="adapterconfiguration" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adapterclassname" metaValue=""/>
+            <signavio:signavioMetaData metaKey="servicereferenz" metaValue=""/>
+            <signavio:signavioMetaData metaKey="risiko" metaValue=""/>
+            <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+            <signavio:signavioMetaData metaKey="riskandcontrols" metaValue=""/>
+         </extensionElements>
+      </userTask>
+      <exclusiveGateway id="invoice_approved" name="Invoice&#xA;approved?" gatewayDirection="Diverging">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <signavio:signavioMetaData metaKey="adaptertype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="adapterconfiguration" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adapterclassname" metaValue=""/>
+         </extensionElements>
+      </exclusiveGateway>
+      <userTask id="assignApprover" camunda:assignee="demo"
+                camunda:formKey="app:assignApprover.jsf"
+                name="Assign&#xA;Approver"
+                implementation="webService">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="documentationlink" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="test" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adaptertype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="adapterconfiguration" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adapterclassname" metaValue=""/>
+            <signavio:signavioMetaData metaKey="servicereferenz" metaValue=""/>
+            <signavio:signavioMetaData metaKey="risiko" metaValue=""/>
+            <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+            <signavio:signavioMetaData metaKey="riskandcontrols" metaValue=""/>
+         </extensionElements>
+      </userTask>
+      <userTask id="reviewInvoice" camunda:assignee="demo"
+                camunda:formKey="app:reviewInvoice.jsf"
+                name="Rechnung klären"
+                implementation="webService">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="documentationlink" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="test" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adaptertype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="adapterconfiguration" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adapterclassname" metaValue=""/>
+            <signavio:signavioMetaData metaKey="servicereferenz" metaValue=""/>
+            <signavio:signavioMetaData metaKey="risiko" metaValue=""/>
+            <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+            <signavio:signavioMetaData metaKey="riskandcontrols" metaValue=""/>
+         </extensionElements>
+      </userTask>
+      <exclusiveGateway id="reviewSuccessful_gw" name="Review&#xA;successful?" gatewayDirection="Diverging">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <signavio:signavioMetaData metaKey="adaptertype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="adapterconfiguration" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adapterclassname" metaValue=""/>
+         </extensionElements>
+      </exclusiveGateway>
+      <endEvent id="invoiceNotProcessed" name="Invoice not&#xA;processed">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </endEvent>
+      <startEvent id="StartEvent_1" camunda:formKey="app:startProcess.jsf"
+                  name="Invoice&#xA;received">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+         <messageEventDefinition id="sid-14929637-5f1e-4d27-811c-ef5e4ddaa4c7"
+                                 messageRef="sid-328811a0-7f72-468f-92de-6ab19e353312"/>
+      </startEvent>
+      <userTask id="prepareBankTransfer" camunda:candidateGroups="accounting"
+                camunda:formKey="app:prepareBankTransfer.jsf"
+                name="Prepare&#xD;&#xA;Bank&#xD;&#xA;Transfer"
+                implementation="webService">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="documentationlink" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="test" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adaptertype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="adapterconfiguration" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adapterclassname" metaValue=""/>
+            <signavio:signavioMetaData metaKey="servicereferenz" metaValue=""/>
+            <signavio:signavioMetaData metaKey="risiko" metaValue=""/>
+            <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+            <signavio:signavioMetaData metaKey="riskandcontrols" metaValue=""/>
+         </extensionElements>
+      </userTask>
+      <endEvent id="invoiceProcessed" name="Invoice&#xA;processed">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </endEvent>
+      <serviceTask id="archiveInvoice" camunda:delegateExpression="#{archiveService}"
+                   name="Archive&#xA;Invoice"
+                   implementation="webService">
+         <extensionElements>
+            <camunda:field name="text0" stringValue="Hello World"/>
+            <camunda:field name="text1">
+               <camunda:expression>${genderBean.getGenderString(gender)}</camunda:expression>
+            </camunda:field>
+            <camunda:field name="text2">
+               <camunda:expression>Hello ${gender == 'male' ? 'Mr.' : 'Mrs.'} ${name}</camunda:expression>
+            </camunda:field>
+            <camunda:field name="text3">
+               <camunda:string>
+	          Hello World
+	      </camunda:string>
+            </camunda:field>
+            <camunda:field name="text4">
+               <camunda:string>
+	          &lt;p&gt;Hello World&lt;/p&gt;&lt;br&gt;
+	      </camunda:string>
+            </camunda:field>
+            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+            <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="documentationlink" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="test" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adaptertype" metaValue=""/>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+            <signavio:signavioMetaData metaKey="adapterconfiguration" metaValue=""/>
+            <signavio:signavioMetaData metaKey="adapterclassname" metaValue=""/>
+            <signavio:signavioMetaData metaKey="servicereferenz" metaValue=""/>
+            <signavio:signavioMetaData metaKey="risiko" metaValue=""/>
+            <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+            <signavio:signavioMetaData metaKey="riskandcontrols" metaValue=""/>
+         </extensionElements>
+      </serviceTask>
+      <sequenceFlow id="invoiceApproved" name="yes" isImmediate="true" sourceRef="invoice_approved"
+                    targetRef="prepareBankTransfer">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+         <conditionExpression xsi:type="tFormalExpression" id="sid-0ed8a0cb-f28a-4689-bbd8-77dafd0ccfa0">${approved}</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="invoiceNotApproved" name="no" isImmediate="true"
+                    sourceRef="invoice_approved"
+                    targetRef="reviewInvoice">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+         <conditionExpression xsi:type="tFormalExpression" id="sid-d4f3f0f7-79c3-4b1c-817e-13d9bdd96666">${!approved}</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="reviewSuccessful" name="yes" isImmediate="true"
+                    sourceRef="reviewSuccessful_gw"
+                    targetRef="approveInvoice">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+         <conditionExpression xsi:type="tFormalExpression" id="sid-e669aead-8bad-4dbb-b282-e9f811e02f77">${clarified == 'yes'}</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="reviewNotSuccessful" name="no" isImmediate="true"
+                    sourceRef="reviewSuccessful_gw"
+                    targetRef="invoiceNotProcessed">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+         <conditionExpression xsi:type="tFormalExpression" id="sid-628a2fdc-7654-4273-930d-8e3127b9e8b2">${clarified == 'no'}</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="sequenceFlow_180" isImmediate="true" sourceRef="approveInvoice"
+                    targetRef="invoice_approved">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="sequenceFlow_183" isImmediate="true" sourceRef="reviewInvoice"
+                    targetRef="reviewSuccessful_gw">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="sequenceFlow_178" isImmediate="true" sourceRef="assignApprover"
+                    targetRef="approveInvoice">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="SequenceFlow_2" isImmediate="true" sourceRef="prepareBankTransfer"
+                    targetRef="archiveInvoice">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="SequenceFlow_3" isImmediate="true" sourceRef="archiveInvoice"
+                    targetRef="invoiceProcessed">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="SequenceFlow_1" isImmediate="true" sourceRef="StartEvent_1"
+                    targetRef="assignApprover">
+         <extensionElements>
+            <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
+         </extensionElements>
+      </sequenceFlow>
+   </process>
+   <bpmndi:BPMNDiagram id="sid-78cf0368-c97e-4dea-885f-0e535c20d6c7">
+      <bpmndi:BPMNPlane id="sid-39085760-f7ff-4491-a241-483b340d6533"
+                        bpmnElement="sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3">
+         <bpmndi:BPMNShape id="Process_Engine_1_gui" bpmnElement="Process_Engine_1" isHorizontal="true">
+            <omgdc:Bounds height="488.0" width="1009.0" x="0" y="0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="Approver_gui" bpmnElement="Approver" isHorizontal="true">
+            <omgdc:Bounds height="161.0" width="979.0" x="30" y="183"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="teamAssistant_gui" bpmnElement="teamAssistant" isHorizontal="true">
+            <omgdc:Bounds height="183.0" width="979.0" x="30" y="0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="Accountant_gui" bpmnElement="Accountant" isHorizontal="true">
+            <omgdc:Bounds height="144.0" width="979.0" x="30" y="344"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="approveInvoice_gui" bpmnElement="approveInvoice">
+            <omgdc:Bounds height="80.0" width="100.0" x="353" y="225"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="invoice_approved_gui" bpmnElement="invoice_approved" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="488" y="245"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="assignApprover_gui" bpmnElement="assignApprover">
+            <omgdc:Bounds height="80.0" width="100.0" x="180" y="52"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="reviewInvoice_gui" bpmnElement="reviewInvoice">
+            <omgdc:Bounds height="80.0" width="100.0" x="548" y="52"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="reviewSuccessful_gw_gui" bpmnElement="reviewSuccessful_gw">
+            <omgdc:Bounds height="40.0" width="40.0" x="693" y="72"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="invoiceNotProcessed_gui" bpmnElement="invoiceNotProcessed">
+            <omgdc:Bounds height="28.0" width="28.0" x="926" y="78"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="StartEvent_1_gui" bpmnElement="StartEvent_1">
+            <omgdc:Bounds height="30.0" width="30.0" x="95" y="77"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="prepareBankTransfer_gui" bpmnElement="prepareBankTransfer">
+            <omgdc:Bounds height="80.0" width="100.0" x="638" y="385"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="invoiceProcessed_gui" bpmnElement="invoiceProcessed">
+            <omgdc:Bounds height="28.0" width="28.0" x="926" y="411"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape id="archiveInvoice_gui" bpmnElement="archiveInvoice">
+            <omgdc:Bounds height="80.0" width="100.0" x="780" y="385"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge id="invoiceApproved_gui" bpmnElement="invoiceApproved">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="528" y="265"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="587" y="265"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="587" y="425"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="638" y="425"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="26.0" width="32.0" x="561" y="238"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="invoiceNotApproved_gui" bpmnElement="invoiceNotApproved">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="508" y="245"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="508" y="92"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="548" y="92"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="26.0" width="24.0" x="518" y="201"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="reviewSuccessful_gui" bpmnElement="reviewSuccessful">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="713" y="72"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="713" y="35"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="403" y="35"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="403" y="225"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="26.0" width="32.0" x="717" y="28"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="reviewNotSuccessful_gui" bpmnElement="reviewNotSuccessful">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="733" y="92"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="926" y="92"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="26.0" width="24.0" x="741" y="91"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="sequenceFlow_180_gui" bpmnElement="sequenceFlow_180">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="453" y="265"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="488" y="265"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="sequenceFlow_183_gui" bpmnElement="sequenceFlow_183">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="648" y="92"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="693" y="92"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="sequenceFlow_178_gui" bpmnElement="sequenceFlow_178">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="280" y="92"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="310" y="92"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="310" y="265"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="353" y="265"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="SequenceFlow_2_gui" bpmnElement="SequenceFlow_2">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="738" y="425"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="780" y="425"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="SequenceFlow_3_gui" bpmnElement="SequenceFlow_3">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="880" y="425"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="926" y="425"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="SequenceFlow_1_gui" bpmnElement="SequenceFlow_1">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="125" y="92"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="180" y="92"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
