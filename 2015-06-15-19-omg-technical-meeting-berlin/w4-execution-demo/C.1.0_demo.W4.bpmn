@@ -3,35 +3,35 @@
   <bpmn:import importType="http://www.w3.org/2001/XMLSchema" location="xsdTypes.xsd" namespace="http://xsdTypes.org/"/>
   <bpmn:collaboration id="Bpmn_Collaboration_J-fEMYXbEeSJyfDq3KCXkg" isClosed="true" name="Collaboration">
     <bpmn:extensionElements>
-      <w4graph:graphStyle><![CDATA[
-        ]]><w4graph:basic background="0,0,0" foreground="0,0,0" autoResize="false" borderColor="255,255,255" collapsed="false"/><![CDATA[
-        ]]><w4graph:root gridVisible="true" snapToGrid="true" rulerVisible="true" snapToGuide="true" rulerUnit="Pixels"><![CDATA[
-          ]]><Grid spacing="15" color="230,230,230"/><![CDATA[
-          ]]><VerticalRuler/><![CDATA[
-          ]]><HorizontalRuler/><![CDATA[
-        ]]></w4graph:root><![CDATA[
-      ]]></w4graph:graphStyle>
+      <w4graph:graphStyle>
+        <w4graph:basic background="0,0,0" foreground="0,0,0" autoResize="false" borderColor="255,255,255" collapsed="false"/>
+        <w4graph:root gridVisible="true" snapToGrid="true" rulerVisible="true" snapToGuide="true" rulerUnit="Pixels">
+          <Grid spacing="15" color="230,230,230"/>
+          <VerticalRuler/>
+          <HorizontalRuler/>
+        </w4graph:root>
+      </w4graph:graphStyle>
     </bpmn:extensionElements>
     <bpmn:participant id="Bpmn_Participant_J-fEM4XbEeSJyfDq3KCXkg" name="Process Engine - Invoiced Receipt" processRef="Bpmn_Process_qWsuYoXrEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="192,192,192" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="192,192,192" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:participant>
   </bpmn:collaboration>
   <bpmn:process id="Bpmn_Process_qWsuYoXrEeSJyfDq3KCXkg" name="C.1.0_demo.W4" isClosed="true" isExecutable="true" processType="Private">
     <bpmn:extensionElements>
-      <w4graph:graphStyle><![CDATA[
-        ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-      ]]></w4graph:graphStyle>
+      <w4graph:graphStyle>
+        <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+      </w4graph:graphStyle>
     </bpmn:extensionElements>
     <bpmn:laneSet id="Bpmn_LaneSet_qWsuY4XrEeSJyfDq3KCXkg">
       <bpmn:lane id="Bpmn_Lane_qWq5MYXrEeSJyfDq3KCXkg" name="Team Assistant">
         <bpmn:extensionElements>
-          <w4graph:graphStyle><![CDATA[
-            ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]></w4graph:graphStyle>
+          <w4graph:graphStyle>
+            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          </w4graph:graphStyle>
         </bpmn:extensionElements>
         <bpmn:flowNodeRef>Bpmn_StartEvent_AEw9UYXsEeSJyfDq3KCXkg</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Bpmn_UserTask_C6LrQYXsEeSJyfDq3KCXkg</bpmn:flowNodeRef>
@@ -41,18 +41,18 @@
       </bpmn:lane>
       <bpmn:lane id="Bpmn_Lane_qsZ4ooXrEeSJyfDq3KCXkg" name="Approver">
         <bpmn:extensionElements>
-          <w4graph:graphStyle><![CDATA[
-            ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]></w4graph:graphStyle>
+          <w4graph:graphStyle>
+            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          </w4graph:graphStyle>
         </bpmn:extensionElements>
         <bpmn:flowNodeRef>Bpmn_UserTask_IYMzIYXsEeSJyfDq3KCXkg</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Bpmn_ExclusiveGateway_JzJuMoXsEeSJyfDq3KCXkg</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Bpmn_Lane_r4Sc8oXrEeSJyfDq3KCXkg" name="Accountant">
         <bpmn:extensionElements>
-          <w4graph:graphStyle><![CDATA[
-            ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]></w4graph:graphStyle>
+          <w4graph:graphStyle>
+            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          </w4graph:graphStyle>
         </bpmn:extensionElements>
         <bpmn:flowNodeRef>Bpmn_ServiceTask_QzE4QYXtEeSJyfDq3KCXkg</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Bpmn_UserTask_RArPYYXtEeSJyfDq3KCXkg</bpmn:flowNodeRef>
@@ -61,17 +61,17 @@
     </bpmn:laneSet>
     <bpmn:startEvent id="Bpmn_StartEvent_AEw9UYXsEeSJyfDq3KCXkg" name="Invoice received" isInterrupting="true">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="109,183,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="109,183,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:outgoing>Bpmn_SequenceFlow_CmHfwoXsEeSJyfDq3KCXkg</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:userTask id="Bpmn_UserTask_C6LrQYXsEeSJyfDq3KCXkg" name="Assign Approver" completionQuantity="1" isForCompensation="false" startQuantity="1">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_CmHfwoXsEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:outgoing>Bpmn_SequenceFlow_GJ69soXsEeSJyfDq3KCXkg</bpmn:outgoing>
@@ -81,17 +81,17 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_CmHfwoXsEeSJyfDq3KCXkg" isImmediate="true" sourceRef="Bpmn_StartEvent_AEw9UYXsEeSJyfDq3KCXkg" targetRef="Bpmn_UserTask_C6LrQYXsEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:sequenceFlow>
     <bpmn:userTask id="Bpmn_UserTask_IYMzIYXsEeSJyfDq3KCXkg" name="Approve Invoice" completionQuantity="1" isForCompensation="false" startQuantity="1">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_GJ69soXsEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:incoming>Bpmn_SequenceFlow_GQPLoIXtEeSJyfDq3KCXkg</bpmn:incoming>
@@ -99,9 +99,9 @@
       <bpmn:ioSpecification id="Bpmn_InputOutputSpecification_TJpRkIXuEeSJyfDq3KCXkg">
         <bpmn:dataOutput id="Bpmn_DataOutput_TKF9gIXuEeSJyfDq3KCXkg" itemSubjectRef="xsdBool" isCollection="false" name="approved">
           <bpmn:extensionElements>
-            <w4graph:graphStyle><![CDATA[
-              ]]><w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-            ]]></w4graph:graphStyle>
+            <w4graph:graphStyle>
+              <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+            </w4graph:graphStyle>
           </bpmn:extensionElements>
         </bpmn:dataOutput>
         <bpmn:inputSet id="Bpmn_InputSet_TJ-owIXuEeSJyfDq3KCXkg" name="default input set">
@@ -114,10 +114,10 @@
       </bpmn:ioSpecification>
       <bpmn:dataOutputAssociation id="Bpmn_DataOutputAssociation_TI0LIIXuEeSJyfDq3KCXkg">
         <bpmn:extensionElements>
-          <w4graph:graphStyle><![CDATA[
-            ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-            ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-          ]]></w4graph:graphStyle>
+          <w4graph:graphStyle>
+            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+            <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+          </w4graph:graphStyle>
         </bpmn:extensionElements>
         <bpmn:sourceRef>Bpmn_DataOutput_TKF9gIXuEeSJyfDq3KCXkg</bpmn:sourceRef>
         <bpmn:targetRef>Bpmn_DataObject_S6pzUoXuEeSJyfDq3KCXkg</bpmn:targetRef>
@@ -128,17 +128,17 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_GJ69soXsEeSJyfDq3KCXkg" isImmediate="true" sourceRef="Bpmn_UserTask_C6LrQYXsEeSJyfDq3KCXkg" targetRef="Bpmn_UserTask_IYMzIYXsEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:sequenceFlow>
     <bpmn:exclusiveGateway id="Bpmn_ExclusiveGateway_JzJuMoXsEeSJyfDq3KCXkg" name="Invoice approved ?" gatewayDirection="Unspecified">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_JzJuMYXsEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:outgoing>Bpmn_SequenceFlow_1o17koXsEeSJyfDq3KCXkg</bpmn:outgoing>
@@ -146,26 +146,26 @@
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_JzJuMYXsEeSJyfDq3KCXkg" isImmediate="true" sourceRef="Bpmn_UserTask_IYMzIYXsEeSJyfDq3KCXkg" targetRef="Bpmn_ExclusiveGateway_JzJuMoXsEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:sequenceFlow>
     <bpmn:userTask id="Bpmn_UserTask_6PZP8YXsEeSJyfDq3KCXkg" name="Review Invoice" completionQuantity="1" isForCompensation="false" startQuantity="1">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_1o17koXsEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:outgoing>Bpmn_SequenceFlow_7Mi0sYXsEeSJyfDq3KCXkg</bpmn:outgoing>
       <bpmn:ioSpecification id="Bpmn_InputOutputSpecification_UacLEIXuEeSJyfDq3KCXkg">
         <bpmn:dataOutput id="Bpmn_DataOutput_Uai4wIXuEeSJyfDq3KCXkg" itemSubjectRef="xsdString" isCollection="false" name="clarified">
           <bpmn:extensionElements>
-            <w4graph:graphStyle><![CDATA[
-              ]]><w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-            ]]></w4graph:graphStyle>
+            <w4graph:graphStyle>
+              <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+            </w4graph:graphStyle>
           </bpmn:extensionElements>
         </bpmn:dataOutput>
         <bpmn:inputSet id="Bpmn_InputSet_UacLEoXuEeSJyfDq3KCXkg" name="default input set">
@@ -178,10 +178,10 @@
       </bpmn:ioSpecification>
       <bpmn:dataOutputAssociation id="Bpmn_DataOutputAssociation_UaaV4YXuEeSJyfDq3KCXkg">
         <bpmn:extensionElements>
-          <w4graph:graphStyle><![CDATA[
-            ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-            ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-          ]]></w4graph:graphStyle>
+          <w4graph:graphStyle>
+            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+            <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+          </w4graph:graphStyle>
         </bpmn:extensionElements>
         <bpmn:sourceRef>Bpmn_DataOutput_Uai4wIXuEeSJyfDq3KCXkg</bpmn:sourceRef>
         <bpmn:targetRef>Bpmn_DataObject_ULd68IXuEeSJyfDq3KCXkg</bpmn:targetRef>
@@ -192,18 +192,18 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_1o17koXsEeSJyfDq3KCXkg" name="no" isImmediate="true" sourceRef="Bpmn_ExclusiveGateway_JzJuMoXsEeSJyfDq3KCXkg" targetRef="Bpmn_UserTask_6PZP8YXsEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" id="Bpmn_FormalExpression_4eRycIX-EeS2aMmHjntHlA"><![CDATA[not(bpmn:getDataObject('approved'))]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:exclusiveGateway id="Bpmn_ExclusiveGateway_7Mi0soXsEeSJyfDq3KCXkg" name="Review succesfull ?" gatewayDirection="Unspecified">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_7Mi0sYXsEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:outgoing>Bpmn_SequenceFlow_EH5mIoXtEeSJyfDq3KCXkg</bpmn:outgoing>
@@ -211,43 +211,43 @@
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_7Mi0sYXsEeSJyfDq3KCXkg" isImmediate="true" sourceRef="Bpmn_UserTask_6PZP8YXsEeSJyfDq3KCXkg" targetRef="Bpmn_ExclusiveGateway_7Mi0soXsEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:sequenceFlow>
     <bpmn:endEvent id="Bpmn_EndEvent_EH5mI4XtEeSJyfDq3KCXkg" name="Invoice not processed">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_EH5mIoXtEeSJyfDq3KCXkg</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_EH5mIoXtEeSJyfDq3KCXkg" name="no" isImmediate="true" sourceRef="Bpmn_ExclusiveGateway_7Mi0soXsEeSJyfDq3KCXkg" targetRef="Bpmn_EndEvent_EH5mI4XtEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" id="Bpmn_FormalExpression_D_NOEIX2EeS2aMmHjntHlA"><![CDATA[bpmn:getDataObject('clarified') = 'no']]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_GQPLoIXtEeSJyfDq3KCXkg" name="yes" isImmediate="true" sourceRef="Bpmn_ExclusiveGateway_7Mi0soXsEeSJyfDq3KCXkg" targetRef="Bpmn_UserTask_IYMzIYXsEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" id="Bpmn_FormalExpression_JzRecIX2EeS2aMmHjntHlA"><![CDATA[bpmn:getDataObject('clarified') = 'yes']]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:userTask id="Bpmn_UserTask_RArPYYXtEeSJyfDq3KCXkg" name="Prepare Bank Transfer" completionQuantity="1" isForCompensation="false" startQuantity="1">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_Iu4_YoXtEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:outgoing>Bpmn_SequenceFlow_NAcUIoXtEeSJyfDq3KCXkg</bpmn:outgoing>
@@ -257,58 +257,58 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_Iu4_YoXtEeSJyfDq3KCXkg" name="yes" isImmediate="true" sourceRef="Bpmn_ExclusiveGateway_JzJuMoXsEeSJyfDq3KCXkg" targetRef="Bpmn_UserTask_RArPYYXtEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" id="Bpmn_FormalExpression_61aB4IX-EeS2aMmHjntHlA"><![CDATA[bpmn:getDataObject('approved')]]></bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:serviceTask id="Bpmn_ServiceTask_QzE4QYXtEeSJyfDq3KCXkg" w4:serviceName="ArchiveInvoice" name="Archive Invoice" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="##unspecified">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_NAcUIoXtEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:outgoing>Bpmn_SequenceFlow_RZcUsoXtEeSJyfDq3KCXkg</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_NAcUIoXtEeSJyfDq3KCXkg" isImmediate="true" sourceRef="Bpmn_UserTask_RArPYYXtEeSJyfDq3KCXkg" targetRef="Bpmn_ServiceTask_QzE4QYXtEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:sequenceFlow>
     <bpmn:endEvent id="Bpmn_EndEvent_RZcUs4XtEeSJyfDq3KCXkg" name="Invoice processed">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
       <bpmn:incoming>Bpmn_SequenceFlow_RZcUsoXtEeSJyfDq3KCXkg</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Bpmn_SequenceFlow_RZcUsoXtEeSJyfDq3KCXkg" isImmediate="true" sourceRef="Bpmn_ServiceTask_QzE4QYXtEeSJyfDq3KCXkg" targetRef="Bpmn_EndEvent_RZcUs4XtEeSJyfDq3KCXkg">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-          ]]><w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:sequenceFlow>
     <bpmn:dataObject id="Bpmn_DataObject_S6pzUoXuEeSJyfDq3KCXkg" name="approved" itemSubjectRef="xsdBool" isCollection="false">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:dataObject>
     <bpmn:dataObject id="Bpmn_DataObject_ULd68IXuEeSJyfDq3KCXkg" name="clarified" itemSubjectRef="xsdString" isCollection="false">
       <bpmn:extensionElements>
-        <w4graph:graphStyle><![CDATA[
-          ]]><w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/><![CDATA[
-        ]]></w4graph:graphStyle>
+        <w4graph:graphStyle>
+          <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:dataObject>
   </bpmn:process>
