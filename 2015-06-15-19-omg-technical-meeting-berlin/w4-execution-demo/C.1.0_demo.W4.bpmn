@@ -97,7 +97,7 @@
       <bpmn:incoming>Bpmn_SequenceFlow_GQPLoIXtEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:outgoing>Bpmn_SequenceFlow_JzJuMYXsEeSJyfDq3KCXkg</bpmn:outgoing>
       <bpmn:ioSpecification id="Bpmn_InputOutputSpecification_TJpRkIXuEeSJyfDq3KCXkg">
-        <bpmn:dataOutput id="Bpmn_DataOutput_TKF9gIXuEeSJyfDq3KCXkg" itemSubjectRef="xsdBool" isCollection="false" name="approved">
+        <bpmn:dataOutput id="Bpmn_DataOutput_2qKU0KMbEeSn1oYMoeoAJg" itemSubjectRef="xsdBool" isCollection="false" name="approved_0">
           <bpmn:extensionElements>
             <w4graph:graphStyle>
               <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
@@ -108,19 +108,19 @@
           <bpmn:outputSetRefs>Bpmn_OutputSet_TJzpoIXuEeSJyfDq3KCXkg</bpmn:outputSetRefs>
         </bpmn:inputSet>
         <bpmn:outputSet id="Bpmn_OutputSet_TJzpoIXuEeSJyfDq3KCXkg" name="default output set">
-          <bpmn:dataOutputRefs>Bpmn_DataOutput_TKF9gIXuEeSJyfDq3KCXkg</bpmn:dataOutputRefs>
+          <bpmn:dataOutputRefs>Bpmn_DataOutput_2qKU0KMbEeSn1oYMoeoAJg</bpmn:dataOutputRefs>
           <bpmn:inputSetRefs>Bpmn_InputSet_TJ-owIXuEeSJyfDq3KCXkg</bpmn:inputSetRefs>
         </bpmn:outputSet>
       </bpmn:ioSpecification>
-      <bpmn:dataOutputAssociation id="Bpmn_DataOutputAssociation_TI0LIIXuEeSJyfDq3KCXkg">
+      <bpmn:dataOutputAssociation id="Bpmn_DataOutputAssociation_2qCZAqMbEeSn1oYMoeoAJg">
         <bpmn:extensionElements>
           <w4graph:graphStyle>
             <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
             <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
           </w4graph:graphStyle>
         </bpmn:extensionElements>
-        <bpmn:sourceRef>Bpmn_DataOutput_TKF9gIXuEeSJyfDq3KCXkg</bpmn:sourceRef>
-        <bpmn:targetRef>Bpmn_DataObject_S6pzUoXuEeSJyfDq3KCXkg</bpmn:targetRef>
+        <bpmn:sourceRef>Bpmn_DataOutput_2qKU0KMbEeSn1oYMoeoAJg</bpmn:sourceRef>
+        <bpmn:targetRef>Bpmn_DataObjectReference_1YTrYKMbEeSn1oYMoeoAJg</bpmn:targetRef>
       </bpmn:dataOutputAssociation>
       <bpmn:potentialOwner id="Bpmn_ResourceRole_FBBzUJ2jEeSJrckAbhSZNA" name="Approve Invoice Potential Owner">
         <bpmn:resourceRef>Bpmn_Resource_vFr9YJ2iEeSJrckAbhSZNA</bpmn:resourceRef>
@@ -161,7 +161,7 @@
       <bpmn:incoming>Bpmn_SequenceFlow_1o17koXsEeSJyfDq3KCXkg</bpmn:incoming>
       <bpmn:outgoing>Bpmn_SequenceFlow_7Mi0sYXsEeSJyfDq3KCXkg</bpmn:outgoing>
       <bpmn:ioSpecification id="Bpmn_InputOutputSpecification_UacLEIXuEeSJyfDq3KCXkg">
-        <bpmn:dataOutput id="Bpmn_DataOutput_Uai4wIXuEeSJyfDq3KCXkg" itemSubjectRef="xsdString" isCollection="false" name="clarified">
+        <bpmn:dataOutput id="Bpmn_DataOutput_ajryUKMbEeS-9OInGpj6Ag" itemSubjectRef="xsdString" isCollection="false" name="clarified_0">
           <bpmn:extensionElements>
             <w4graph:graphStyle>
               <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
@@ -172,19 +172,19 @@
           <bpmn:outputSetRefs>Bpmn_OutputSet_UacLEYXuEeSJyfDq3KCXkg</bpmn:outputSetRefs>
         </bpmn:inputSet>
         <bpmn:outputSet id="Bpmn_OutputSet_UacLEYXuEeSJyfDq3KCXkg" name="default output set">
-          <bpmn:dataOutputRefs>Bpmn_DataOutput_Uai4wIXuEeSJyfDq3KCXkg</bpmn:dataOutputRefs>
+          <bpmn:dataOutputRefs>Bpmn_DataOutput_ajryUKMbEeS-9OInGpj6Ag</bpmn:dataOutputRefs>
           <bpmn:inputSetRefs>Bpmn_InputSet_UacLEoXuEeSJyfDq3KCXkg</bpmn:inputSetRefs>
         </bpmn:outputSet>
       </bpmn:ioSpecification>
-      <bpmn:dataOutputAssociation id="Bpmn_DataOutputAssociation_UaaV4YXuEeSJyfDq3KCXkg">
+      <bpmn:dataOutputAssociation id="Bpmn_DataOutputAssociation_ajioYqMbEeS-9OInGpj6Ag">
         <bpmn:extensionElements>
           <w4graph:graphStyle>
             <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
             <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
           </w4graph:graphStyle>
         </bpmn:extensionElements>
-        <bpmn:sourceRef>Bpmn_DataOutput_Uai4wIXuEeSJyfDq3KCXkg</bpmn:sourceRef>
-        <bpmn:targetRef>Bpmn_DataObject_ULd68IXuEeSJyfDq3KCXkg</bpmn:targetRef>
+        <bpmn:sourceRef>Bpmn_DataOutput_ajryUKMbEeS-9OInGpj6Ag</bpmn:sourceRef>
+        <bpmn:targetRef>Bpmn_DataObjectReference_Y8d84KMbEeS-9OInGpj6Ag</bpmn:targetRef>
       </bpmn:dataOutputAssociation>
       <bpmn:potentialOwner id="Bpmn_ResourceRole_BCEqcJ2jEeSJrckAbhSZNA" name="Review Invoice Potential Owner">
         <bpmn:resourceRef>Bpmn_Resource_szB-QJ2iEeSJrckAbhSZNA</bpmn:resourceRef>
@@ -311,6 +311,20 @@
         </w4graph:graphStyle>
       </bpmn:extensionElements>
     </bpmn:dataObject>
+    <bpmn:dataObjectReference id="Bpmn_DataObjectReference_Y8d84KMbEeS-9OInGpj6Ag" name="clarified" dataObjectRef="Bpmn_DataObject_ULd68IXuEeSJyfDq3KCXkg">
+      <bpmn:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
+      </bpmn:extensionElements>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObjectReference id="Bpmn_DataObjectReference_1YTrYKMbEeSn1oYMoeoAJg" name="approved" dataObjectRef="Bpmn_DataObject_S6pzUoXuEeSJyfDq3KCXkg">
+      <bpmn:extensionElements>
+        <w4graph:graphStyle>
+          <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+        </w4graph:graphStyle>
+      </bpmn:extensionElements>
+    </bpmn:dataObjectReference>
   </bpmn:process>
   <bpmn:itemDefinition id="xsdString" isCollection="false" itemKind="Information" structureRef="xsd:tString"/>
   <bpmn:itemDefinition id="xsdBool" isCollection="false" itemKind="Information" structureRef="xsd:tBool"/>
@@ -480,23 +494,23 @@
           <dc:Bounds height="16.0" width="1.0" x="1067.0" y="491.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Bpmndi_BPMNShape_THIJEIXuEeSJyfDq3KCXkg" bpmnElement="Bpmn_DataObject_S6pzUoXuEeSJyfDq3KCXkg" isHorizontal="true" isMarkerVisible="true" isMessageVisible="true">
+      <bpmndi:BPMNShape id="Bpmndi_BPMNShape_Y8ej8KMbEeS-9OInGpj6Ag" bpmnElement="Bpmn_DataObjectReference_1YTrYKMbEeSn1oYMoeoAJg">
         <dc:Bounds height="35.0" width="35.0" x="474.0" y="344.0"/>
-        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_THIJEYXuEeSJyfDq3KCXkg" labelStyle="Bpmndi_BPMNLabelStyle_TIieUIXuEeSJyfDq3KCXkg">
-          <dc:Bounds height="18.0" width="59.0" x="462.0" y="379.0"/>
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_Y8ej8aMbEeS-9OInGpj6Ag" labelStyle="Bpmndi_BPMNLabelStyle_Y86o0KMbEeS-9OInGpj6Ag">
+          <dc:Bounds height="18.0" width="63.0" x="692.0" y="186.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_TIqaIIXuEeSJyfDq3KCXkg" bpmnElement="Bpmn_DataOutputAssociation_TI0LIIXuEeSJyfDq3KCXkg">
+      <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_ajioYKMbEeS-9OInGpj6Ag" bpmnElement="Bpmn_DataOutputAssociation_2qCZAqMbEeSn1oYMoeoAJg">
         <di:waypoint xsi:type="dc:Point" x="489.0" y="312.0"/>
         <di:waypoint xsi:type="dc:Point" x="489.0" y="344.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Bpmndi_BPMNShape_UaOIoIXuEeSJyfDq3KCXkg" bpmnElement="Bpmn_DataObject_ULd68IXuEeSJyfDq3KCXkg" isHorizontal="true" isMarkerVisible="true" isMessageVisible="true">
+      <bpmndi:BPMNShape id="Bpmndi_BPMNShape_1YUScKMbEeSn1oYMoeoAJg" bpmnElement="Bpmn_DataObjectReference_Y8d84KMbEeS-9OInGpj6Ag">
         <dc:Bounds height="35.0" width="35.0" x="720.0" y="152.0"/>
-        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_UaOIoYXuEeSJyfDq3KCXkg" labelStyle="Bpmndi_BPMNLabelStyle_UaSaEIXuEeSJyfDq3KCXkg">
+        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_1YUScaMbEeSn1oYMoeoAJg" labelStyle="Bpmndi_BPMNLabelStyle_1YhGwKMbEeSn1oYMoeoAJg">
           <dc:Bounds height="18.0" width="63.0" x="706.0" y="187.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_UaaV4IXuEeSJyfDq3KCXkg" bpmnElement="Bpmn_DataOutputAssociation_UaaV4YXuEeSJyfDq3KCXkg">
+      <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_2qCZAKMbEeSn1oYMoeoAJg" bpmnElement="Bpmn_DataOutputAssociation_ajioYqMbEeS-9OInGpj6Ag">
         <di:waypoint xsi:type="dc:Point" x="734.0" y="124.0"/>
         <di:waypoint xsi:type="dc:Point" x="734.0" y="152.0"/>
       </bpmndi:BPMNEdge>
@@ -576,10 +590,10 @@
     <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_Rc0Y0IXtEeSJyfDq3KCXkg">
       <dc:Font name="Segoe UI" size="9.0"/>
     </bpmndi:BPMNLabelStyle>
-    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_TIieUIXuEeSJyfDq3KCXkg">
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_Y86o0KMbEeS-9OInGpj6Ag">
       <dc:Font name="Segoe UI" size="9.0"/>
     </bpmndi:BPMNLabelStyle>
-    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_UaSaEIXuEeSJyfDq3KCXkg">
+    <bpmndi:BPMNLabelStyle id="Bpmndi_BPMNLabelStyle_1YhGwKMbEeSn1oYMoeoAJg">
       <dc:Font name="Segoe UI" size="9.0"/>
     </bpmndi:BPMNLabelStyle>
   </bpmndi:BPMNDiagram>
