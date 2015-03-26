@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Created by Process Modeler 6 SR1 for Microsoft Visio (http://www.itp-commerce.com)-->
-<definitions targetNamespace="http://www.itp-commerce.com" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:itp="http://www.itp-commerce.com/BPMN2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd" exporter="Process Modeler 6 for Microsoft Visio" exporterVersion="6.2769.13758 SR1" name="Fridge Repair Service" itp:version="1.0" itp:author="Stephan Fischli" itp:creationDate="04.11.2008 15:43:58" itp:modificationDate="23.02.2015 15:54:12" itp:createdWithVersion="5.2739.13641 SR6" itp:conformanceSubClass="Full" id="_5033f8b0-0396-494b-a52c-787034420443" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0">
+<definitions targetNamespace="http://www.itp-commerce.com" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:itp="http://www.itp-commerce.com/BPMN2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd" exporter="Process Modeler 6 for Microsoft Visio" exporterVersion="6.2769.13758 SR1" name="Fridge Repair Service" itp:version="1.0" itp:author="Stephan Fischli" itp:creationDate="04.11.2008 15:43:58" itp:modificationDate="26.03.2015 10:49:31" itp:createdWithVersion="5.2739.13641 SR6" itp:conformanceSubClass="Full" id="_5033f8b0-0396-494b-a52c-787034420443" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0">
   <process id="_8170787a-3207-434d-9bea-4787059f444f" name="Fridge Repair Process" processType="None">
     <extensionElements>
       <itp:systemDefinedAttributes>
@@ -963,116 +963,116 @@ The case will be qualified into either a 'trivial problem', which requires no pr
     <bpmndi:BPMNPlane id="_1" bpmnElement="_dc14d79e-d79c-492e-bcef-95b9b2bd7647">
       <bpmndi:BPMNShape id="_F3DB66B4-E405-430D-946B-A10125E1D16E" bpmnElement="_0dcebf90-9551-4bc3-a040-107f16defd3f" isHorizontal="true" itp:label="Fridge Repair Process" itp:elementType="participant" color:border-color="#FF0000">
         <dc:Bounds x="19.842505511811055" y="147.40157480314963" width="804.04721574803159" height="413.85826771653547" />
-        <bpmndi:BPMNLabel labelStyle="_317df858-3fe7-49a4-af1e-6ae5c6a3121c" color:color="#FF0000">
+        <bpmndi:BPMNLabel labelStyle="_96927c3c-f8fe-4b41-9dab-22d782429f4a" color:color="#FF0000">
           <dc:Bounds x="26.64" y="290.715590551181" width="14.4" height="126.72" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_2839B4B4-C30C-4E25-9ED3-4A26167E4102" bpmnElement="_569d10fa-7074-48b3-9538-2c8ce2c23fe2" isHorizontal="true" itp:label="Standard repair team" itp:elementType="lane" color:border-color="#FF0000">
         <dc:Bounds x="48.419418897637854" y="365.1024047244095" width="775.47030236220473" height="196.15745196850395" />
-        <bpmndi:BPMNLabel labelStyle="_44faee4b-fe88-449e-be7d-74f79146f17a" color:color="#FF0000">
-          <dc:Bounds x="55.44" y="408.435590551181" width="12.96" height="110.16" />
+        <bpmndi:BPMNLabel labelStyle="_96927c3c-f8fe-4b41-9dab-22d782429f4a" color:color="#FF0000">
+          <dc:Bounds x="55.44" y="403.395590551181" width="14.4" height="120.24" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_883E039B-762B-40E4-BB54-658473E59FE0" bpmnElement="_99179f5a-ec32-4f3e-8458-cc8c233bfedf" isHorizontal="true" itp:label="Emergency repair team" itp:elementType="lane" color:border-color="#FF0000">
         <dc:Bounds x="48.419418897637854" y="269.29133858267716" width="775.47030236220473" height="95.846456692913392" />
-        <bpmndi:BPMNLabel labelStyle="_95e313c0-2de9-4289-b989-1190f16de2a0" color:color="#FF0000">
-          <dc:Bounds x="55.8" y="274.515590551181" width="23.76" height="85.68" />
+        <bpmndi:BPMNLabel labelStyle="_96927c3c-f8fe-4b41-9dab-22d782429f4a" color:color="#FF0000">
+          <dc:Bounds x="55.44" y="283.515590551181" width="28.8" height="67.68" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_3DD5A736-A9F7-4875-AA70-04A5F84C9F97" bpmnElement="_a856e80e-d5d6-4947-86b6-eb53239254a5" isHorizontal="true" itp:label="Call center" itp:elementType="lane" color:border-color="#FF0000">
         <dc:Bounds x="48.419418897637854" y="147.40157480314963" width="775.47030236220473" height="121.88976377952757" />
-        <bpmndi:BPMNLabel labelStyle="_44faee4b-fe88-449e-be7d-74f79146f17a" color:color="#FF0000">
-          <dc:Bounds x="55.44" y="178.755590551181" width="12.96" height="59.76" />
+        <bpmndi:BPMNLabel labelStyle="_96927c3c-f8fe-4b41-9dab-22d782429f4a" color:color="#FF0000">
+          <dc:Bounds x="55.44" y="176.235590551181" width="14.4" height="64.8" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_1BF9B2F3-F30D-4FD6-A820-C247ADFA711C" bpmnElement="_cc9778bd-edd8-4df2-ba15-56c310f90e62" itp:label="Receive customer request" itp:elementType="startEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="106.2992125984252" y="215.7874015748032" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="81.36" y="234.555590551181" width="66.24" height="20.16" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_E1F1DCD4-3EF3-4AE1-A299-CA9DD87394A9" bpmnElement="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" itp:label="Analyse customer request" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="161.57480314960631" y="194.52755905511816" width="121.88976377952757" height="59.527559055118111" />
-        <bpmndi:BPMNLabel labelStyle="_95e313c0-2de9-4289-b989-1190f16de2a0" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686" color:color="#000000">
           <dc:Bounds x="161.28" y="217.635590551181" width="122.4" height="13.68" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_435CF240-46A5-42AD-BF44-42FFC0F07528" bpmnElement="_a92069f7-377b-4dbd-a1fd-1da071aabf6d" itp:label="Replace fridge" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="599.5275590551181" y="156.61417322834649" width="121.88976377952757" height="59.527559055118111" />
-        <bpmndi:BPMNLabel labelStyle="_d9838c7e-fa3f-4a5f-889f-f4e31b6e9c3e" color:color="#000000">
-          <dc:Bounds x="627.84" y="179.835590551181" width="64.8" height="12.96" />
+        <bpmndi:BPMNLabel labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686" color:color="#000000">
+          <dc:Bounds x="624.6" y="179.475590551181" width="71.28" height="13.68" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_EAB1A438-E5B0-499F-A12D-AF064D4E8CC0" bpmnElement="_177bd313-c6c9-4df5-8f82-313beb30d2eb" itp:label="Fridge replaced" itp:elementType="endEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="762.51968503937007" y="177.87401574803153" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="742.32" y="196.035590551181" width="57.6" height="10.8" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_E1E0CD2C-68F5-4FA5-8030-3EC58F72EA27" bpmnElement="_604be023-654c-44df-a64c-365254a100cd" isMarkerVisible="false" itp:label="Service type" itp:elementType="exclusiveGateway" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="310.3937007874016" y="208.34645669291342" width="42.519685039370081" height="31.889763779527559" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="345.6" y="239.235590551181" width="46.08" height="9.36" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_76095EFE-FB8D-4DE6-814F-2270E01AD1B6" bpmnElement="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887" itp:label="Emergency repair completed" itp:elementType="endEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="754.01574803149606" y="305.43307086614175" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="729.72" y="323.835590551181" width="65.52" height="20.16" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_E906D9C4-7070-4E7D-AAFE-0465F605AA03" bpmnElement="_2b6bc88e-d3be-4704-87d1-c264bf704589" isMarkerVisible="false" itp:label="Service level" itp:elementType="exclusiveGateway" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="310.3937007874016" y="403.228346456693" width="42.519685039370081" height="31.889763779527559" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="270" y="431.475590551181" width="47.52" height="9.36" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_4DEC803E-A8C9-45DF-B46D-586C0E00B70D" bpmnElement="_d034722f-751d-4f37-a3d7-47993822e979" itp:label="Perform repair (standard level)" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="445.03937007874015" y="485.0973921259843" width="121.88976377952757" height="59.527559055118111" />
-        <bpmndi:BPMNLabel labelStyle="_95e313c0-2de9-4289-b989-1190f16de2a0" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686" color:color="#000000">
           <dc:Bounds x="448.2" y="502.755590551181" width="115.92" height="23.76" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_F97318A7-9E18-4D7D-89EC-3191F6897A72" bpmnElement="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba" itp:label="Perform repair (premium level)" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="445.03937007874015" y="389.40944881889766" width="121.88976377952757" height="59.527559055118111" />
-        <bpmndi:BPMNLabel labelStyle="_95e313c0-2de9-4289-b989-1190f16de2a0" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686" color:color="#000000">
           <dc:Bounds x="448.2" y="406.995590551181" width="115.92" height="23.76" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_A458F0A3-C866-435A-AA83-9EB586E9F159" bpmnElement="_dcee5c64-3010-4ee5-b480-bce856e6f29c" itp:label="Repair completed" itp:elementType="endEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="756.85039370078744" y="410.6692913385827" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="732.96" y="392.595590551181" width="64.8" height="10.8" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_C965CE25-28B4-4971-B66F-CBA0D6F291E0" bpmnElement="_936c0bfa-5ebf-4546-8d1a-cce556148788" isMarkerVisible="false" itp:label="Successful?" itp:elementType="exclusiveGateway" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="639.2125984251968" y="297.99212598425197" width="42.519685039370081" height="31.889763779527559" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="637.56" y="332.835590551181" width="45.36" height="9.36" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_44EE9D7D-A31D-463D-8804-483D05C6CF42" bpmnElement="_cd6f230f-13c3-4027-aa3e-57de601a1ab2" isExpanded="false" itp:label="Perform emergency repair" itp:elementType="subProcess" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="445.03937007874015" y="284.17322834645671" width="121.88976377952757" height="59.527559055118111" />
-        <bpmndi:BPMNLabel labelStyle="_95e313c0-2de9-4289-b989-1190f16de2a0" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686" color:color="#000000">
           <dc:Bounds x="444.6" y="296.835590551181" width="123.12" height="22.32" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_430FBD9C-4644-4486-BF93-2E31B2E45B27" bpmnElement="_59624ded-2172-4bcb-aa62-24ac01ae7087" itp:label="2 days" itp:elementType="boundaryEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="538.11019842519681" y="380.90551181102364" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="504.72" y="368.835590551181" width="25.92" height="10.8" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_1982457A-6211-4090-9814-98A41B97C09C" bpmnElement="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd" itp:label="SL upgrade" itp:elementType="boundaryEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="538.11019842519681" y="476.59345511811028" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="489.24" y="466.755590551181" width="43.92" height="10.8" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_0F47EA76-94CD-4643-A488-490A89F16822" bpmnElement="_acb2aca3-8851-48f0-b127-7b3c9db5e18d" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_0F47EA76-94CD-4643-A488-490A89F16822" bpmnElement="_acb2aca3-8851-48f0-b127-7b3c9db5e18d" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="283.46456692913387" y="224.29133858267721" />
         <di:waypoint x="310.3937007874016" y="224.29133858267721" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="293.4" y="208.635590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
@@ -1081,7 +1081,7 @@ The case will be qualified into either a 'trivial problem', which requires no pr
         <di:waypoint x="331.65354330708664" y="186.37795275590554" />
         <di:waypoint x="575.51306456692919" y="186.37795275590554" />
         <di:waypoint x="599.5275590551181" y="186.37795275590554" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="439.56" y="169.035590551181" width="42.48" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
@@ -1089,14 +1089,14 @@ The case will be qualified into either a 'trivial problem', which requires no pr
         <di:waypoint x="352.91338582677167" y="224.29133858267721" />
         <di:waypoint x="505.98425196850394" y="224.29133858267721" />
         <di:waypoint x="505.98425196850394" y="284.17322834645671" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="422.28" y="207.195590551181" width="78.48" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_8C0818ED-B4E7-46E6-BE2B-F3931A463889" bpmnElement="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee" itp:label="Regular repair service" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="331.65354330708664" y="240.23622047244095" />
         <di:waypoint x="331.65354330708664" y="403.228346456693" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="246.6" y="305.115590551181" width="88.56" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
@@ -1104,87 +1104,87 @@ The case will be qualified into either a 'trivial problem', which requires no pr
         <di:waypoint x="331.65354330708664" y="435.1181102362205" />
         <di:waypoint x="331.65354330708664" y="514.86117165354335" />
         <di:waypoint x="445.03937007874021" y="514.86117165354335" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="353.16" y="495.195590551181" width="42.48" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_5FE8E799-C6D8-48A1-A9D1-9737073726D1" bpmnElement="_be893987-caec-4605-b078-bd96b7cd6c12" itp:label="Premium" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="352.91338582677167" y="419.17322834645677" />
         <di:waypoint x="445.03937007874021" y="419.17322834645677" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="379.08" y="395.115590551181" width="42.48" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_4A53C1A1-42C9-4475-B6A9-3798D9EEEEFB" bpmnElement="_435d9320-bbf4-48ad-aa56-16cb5483e95b" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_4A53C1A1-42C9-4475-B6A9-3798D9EEEEFB" bpmnElement="_435d9320-bbf4-48ad-aa56-16cb5483e95b" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="566.92913385826773" y="514.86117165354335" />
         <di:waypoint x="765.35433070866145" y="514.86117165354335" />
         <di:waypoint x="765.35433070866145" y="427.67716535433078" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="710.28" y="505.995590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_7DF74040-E9E3-4DD4-A637-207B563C697F" bpmnElement="_d54c5707-af7a-4b36-a059-46681bbf0004" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_7DF74040-E9E3-4DD4-A637-207B563C697F" bpmnElement="_d54c5707-af7a-4b36-a059-46681bbf0004" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="566.92913385826773" y="419.17322834645677" />
         <di:waypoint x="575.51312125984259" y="419.17322834645677" />
         <di:waypoint x="756.85039370078744" y="419.17322834645677" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="661.32" y="403.755590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_F9C96896-344F-4432-AB77-24C2CCE2E921" bpmnElement="_2ba0552a-bfce-416f-8673-5d58769c09da" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_F9C96896-344F-4432-AB77-24C2CCE2E921" bpmnElement="_2ba0552a-bfce-416f-8673-5d58769c09da" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="546.61413543307083" y="380.90551181102364" />
         <di:waypoint x="546.61413543307083" y="343.70078740157487" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="549.72" y="353.355590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_1B6D3757-9455-4000-8CBF-162518262CC4" bpmnElement="_b22c01a4-1eef-4f52-9b16-a201a9621619" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_1B6D3757-9455-4000-8CBF-162518262CC4" bpmnElement="_b22c01a4-1eef-4f52-9b16-a201a9621619" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="566.92913385826773" y="313.93700787401576" />
         <di:waypoint x="575.51312125984259" y="313.93700787401576" />
         <di:waypoint x="639.21259842519692" y="313.93700787401576" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="600.12" y="297.915590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_BEF6DF3F-AA58-4F04-A04B-DEED916C0B5E" bpmnElement="_c5756bb9-6e6f-42d1-8799-c2d673499eb8" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_BEF6DF3F-AA58-4F04-A04B-DEED916C0B5E" bpmnElement="_c5756bb9-6e6f-42d1-8799-c2d673499eb8" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="721.41732283464569" y="186.37795275590554" />
         <di:waypoint x="762.51968503937007" y="186.37795275590554" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="738.36" y="170.475590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_1E6E2E82-D37B-4C05-B911-57EFBA8D3160" bpmnElement="_af4532c5-4b7d-45c6-a6a0-f13739a4ba57" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_1E6E2E82-D37B-4C05-B911-57EFBA8D3160" bpmnElement="_af4532c5-4b7d-45c6-a6a0-f13739a4ba57" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="546.61413543307083" y="476.59345511811028" />
         <di:waypoint x="546.61413543307083" y="448.93700787401576" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="549.72" y="453.435590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_6E623C3D-0A6B-4933-935A-2941B81A4DAD" bpmnElement="_cf380e47-1401-4e7e-b710-193b626e49eb" itp:label="yes" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="681.732283464567" y="313.93700787401576" />
         <di:waypoint x="754.01574803149606" y="313.93700787401576" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="692.28" y="289.275590551181" width="22.32" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_ED4E0978-EEA1-48D8-97A6-CDE203B6FB79" bpmnElement="_3fb323d5-2c59-487a-af63-804208f6c5cb" itp:label="no" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="660.4724409448819" y="297.992125984252" />
         <di:waypoint x="660.4724409448819" y="216.14173228346459" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="670.68" y="266.235590551181" width="19.44" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_55E23507-9E27-4074-A5D7-FB4D8A0A5328" bpmnElement="_a5af06ae-bd69-464d-bbaf-3d7418702d77" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_55E23507-9E27-4074-A5D7-FB4D8A0A5328" bpmnElement="_a5af06ae-bd69-464d-bbaf-3d7418702d77" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="123.30708661417323" y="224.29133858267721" />
         <di:waypoint x="161.57480314960631" y="224.29133858267721" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="139.32" y="208.635590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_08E326A7-7E10-4FC5-9DD1-777671C67137" bpmnElement="_24897a75-c027-48d9-9612-68f8f4de4dca" itp:label="Customer request" itp:elementType="messageFlow" color:border-color="#000000">
         <di:waypoint x="114.80314960629922" y="118.60755590551179" />
         <di:waypoint x="114.80314960629922" y="215.7874015748032" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="125.64" y="160.395590551181" width="74.16" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
@@ -1192,59 +1192,68 @@ The case will be qualified into either a 'trivial problem', which requires no pr
         <di:waypoint x="577.87531653543306" y="118.60755590551179" />
         <di:waypoint x="577.87531653543306" y="485.0973921259843" />
         <di:waypoint x="555.11807244094484" y="485.0973921259843" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_a5393580-5694-4a87-9c13-5e8187ca2c52" color:color="#000000">
           <dc:Bounds x="450.72" y="127.275590551181" width="129.6" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_3CE2F8D5-D735-4F22-9902-42F6DB7C8070" bpmnElement="_2f786f9e-5aee-40c9-9db1-1c219bd30076" isHorizontal="true" itp:label="Customer" itp:elementType="participant" color:border-color="#FF0000">
         <dc:Bounds x="19.842505511811055" y="34.985508661417313" width="804.04721574803159" height="83.622047244094489" />
-        <bpmndi:BPMNLabel labelStyle="_317df858-3fe7-49a4-af1e-6ae5c6a3121c" color:color="#FF0000">
+        <bpmndi:BPMNLabel labelStyle="_96927c3c-f8fe-4b41-9dab-22d782429f4a" color:color="#FF0000">
           <dc:Bounds x="26.64" y="47.3555905511812" width="14.4" height="59.04" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="_96927c3c-f8fe-4b41-9dab-22d782429f4a">
+      <dc:Font name="Arial" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="_a5393580-5694-4a87-9c13-5e8187ca2c52">
+      <dc:Font name="Arial" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="_ea62b61f-473a-454a-a9bc-14475ce28686">
+      <dc:Font name="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
   </bpmndi:BPMNDiagram>
   <bpmndi:BPMNDiagram name="Perform emergency repair (1)" resolution="72">
     <bpmndi:BPMNPlane id="_2" bpmnElement="_cd6f230f-13c3-4027-aa3e-57de601a1ab2">
-      <bpmndi:BPMNShape id="_87504C8B-AEA1-4AFB-BB2E-8BA88CEA6E4C" bpmnElement="_2d952f4b-8728-451b-8956-686e0cd2e073" itp:label="(unbenannt)" itp:elementType="startEvent" color:background-color="#ECECFF" color:border-color="#000000">
+      <bpmndi:BPMNShape id="_87504C8B-AEA1-4AFB-BB2E-8BA88CEA6E4C" bpmnElement="_2d952f4b-8728-451b-8956-686e0cd2e073" itp:label="(unnamed)" itp:elementType="startEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="82.204724409448829" y="263.62204724409452" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="90.72" y="281.715590551181" width="0" height="10.8" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_6B94EBA4-456D-4C9F-BF91-40CC2DF67715" bpmnElement="_b3196388-e37a-4e2a-a05c-dc78957cc098" itp:label="Identify problem" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="131.10236220472442" y="242.36220472440948" width="121.88976377952757" height="59.527559055118111" />
-        <bpmndi:BPMNLabel labelStyle="_95e313c0-2de9-4289-b989-1190f16de2a0" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_f5b787f6-a8b0-4383-8234-eb80a9649d82" color:color="#000000">
           <dc:Bounds x="153.36" y="265.155590551181" width="77.76" height="13.68" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_F1DC896A-8F60-46C3-BD14-008ED85C3A19" bpmnElement="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" isMarkerVisible="false" itp:label="Severity" itp:elementType="exclusiveGateway" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="318.89763779527561" y="256.18110236220474" width="42.519685039370081" height="31.889763779527559" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="299.88" y="286.755590551181" width="30.96" height="9.36" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_0AA3B5CB-115D-4279-9D00-32B6C7AB8574" bpmnElement="_f7b840ec-324b-4b94-b909-7b3965290a9f" itp:label="Advice customer" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="445.03937007874015" y="161.57480314960634" width="121.88976377952757" height="59.527559055118111" />
-        <bpmndi:BPMNLabel labelStyle="_95e313c0-2de9-4289-b989-1190f16de2a0" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_f5b787f6-a8b0-4383-8234-eb80a9649d82" color:color="#000000">
           <dc:Bounds x="465.84" y="184.515590551181" width="80.64" height="13.68" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_0EA6AED7-69C5-44A0-9AFE-2D88AFE9F6A6" bpmnElement="_c46eb9a6-dba6-404e-a749-0a188551106a" itp:label="Appoint technician" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="445.03937007874015" y="242.36220472440948" width="121.88976377952757" height="59.527559055118111" />
-        <bpmndi:BPMNLabel labelStyle="_95e313c0-2de9-4289-b989-1190f16de2a0" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_f5b787f6-a8b0-4383-8234-eb80a9649d82" color:color="#000000">
           <dc:Bounds x="461.88" y="265.155590551181" width="88.56" height="13.68" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_853EB5FC-A9DB-4311-BFE4-C290F4FB0EFB" bpmnElement="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc" itp:label="Successful" itp:elementType="endEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="598.11023622047253" y="221.10236220472444" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="622.44" y="224.835590551181" width="41.04" height="10.8" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_C8566737-27CA-4868-B67F-A03488AE87E7" bpmnElement="_13340b88-62d8-40da-a02f-59679d434f46" itp:label="Unsuccessful" itp:elementType="endEvent" color:background-color="#ECECFF" color:border-color="#000000">
         <dc:Bounds x="598.11023622047253" y="345.82677165354335" width="17.007874015748033" height="17.007874015748033" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="620.28" y="348.675590551181" width="49.68" height="10.8" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
@@ -1252,14 +1261,14 @@ The case will be qualified into either a 'trivial problem', which requires no pr
         <di:waypoint x="340.15748031496065" y="256.18110236220474" />
         <di:waypoint x="340.15748031496065" y="191.33858267716539" />
         <di:waypoint x="445.03937007874021" y="191.33858267716539" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="361.8" y="171.915590551181" width="62.64" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_559A7A3A-9BE3-4638-8484-DAFA5272FDC1" bpmnElement="_11e62df5-3541-4000-8635-ce8be57d532f" itp:label="Common problem" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="361.41732283464569" y="272.12598425196853" />
         <di:waypoint x="445.03937007874021" y="272.12598425196853" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="359.64" y="248.235590551181" width="74.16" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
@@ -1267,55 +1276,46 @@ The case will be qualified into either a 'trivial problem', which requires no pr
         <di:waypoint x="340.15748031496065" y="288.07086614173232" />
         <di:waypoint x="340.15748031496065" y="354.33070866141736" />
         <di:waypoint x="598.11023622047253" y="354.33070866141736" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="372.96" y="336.075590551181" width="59.04" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_0D266684-9EEC-433E-AE67-482EB662D689" bpmnElement="_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_0D266684-9EEC-433E-AE67-482EB662D689" bpmnElement="_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="566.92913385826773" y="191.33858267716539" />
         <di:waypoint x="606.61417322834654" y="191.33858267716539" />
         <di:waypoint x="606.61417322834654" y="221.10236220472444" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="597.24" y="183.435590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_6084E399-D3AC-4D75-9982-A0FF423E015D" bpmnElement="_752caf9f-4710-47da-98d8-744b4c5e5790" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_6084E399-D3AC-4D75-9982-A0FF423E015D" bpmnElement="_752caf9f-4710-47da-98d8-744b4c5e5790" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="566.92913385826773" y="272.12598425196853" />
         <di:waypoint x="606.61417322834654" y="272.12598425196853" />
         <di:waypoint x="606.61417322834654" y="238.11023622047247" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="599.4" y="261.195590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_A2B66067-12F6-4D0A-99D1-43F1C8D68DE9" bpmnElement="_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_A2B66067-12F6-4D0A-99D1-43F1C8D68DE9" bpmnElement="_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="99.212598425196859" y="272.12598425196853" />
         <di:waypoint x="131.10236220472442" y="272.12598425196853" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="111.96" y="256.155590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_187830DC-7C60-413F-A89E-671BA8B9C5D9" bpmnElement="_35bd0f68-b0f8-43f6-9f1a-c5692d07464a" itp:label="(unbenannt)" itp:elementType="sequenceFlow" color:border-color="#000000">
+      <bpmndi:BPMNEdge id="_187830DC-7C60-413F-A89E-671BA8B9C5D9" bpmnElement="_35bd0f68-b0f8-43f6-9f1a-c5692d07464a" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000">
         <di:waypoint x="252.99212598425197" y="272.12598425196853" />
         <di:waypoint x="318.89763779527561" y="272.12598425196853" />
-        <bpmndi:BPMNLabel labelStyle="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8" color:color="#000000">
+        <bpmndi:BPMNLabel labelStyle="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff" color:color="#000000">
           <dc:Bounds x="283.32" y="256.155590551181" width="7.92" height="17.28" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
-    <bpmndi:BPMNLabelStyle id="_317df858-3fe7-49a4-af1e-6ae5c6a3121c">
-      <dc:Font name="Arial" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
-    </bpmndi:BPMNLabelStyle>
-    <bpmndi:BPMNLabelStyle id="_44faee4b-fe88-449e-be7d-74f79146f17a">
-      <dc:Font name="Arial" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
-    </bpmndi:BPMNLabelStyle>
-    <bpmndi:BPMNLabelStyle id="_95e313c0-2de9-4289-b989-1190f16de2a0">
-      <dc:Font name="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
-    </bpmndi:BPMNLabelStyle>
-    <bpmndi:BPMNLabelStyle id="_964cbbf6-0e1c-44dc-a6a8-65f3498035f8">
+    <bpmndi:BPMNLabelStyle id="_676d2f11-7cd7-4f26-a6d7-ed5bc55badff">
       <dc:Font name="Arial" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
     </bpmndi:BPMNLabelStyle>
-    <bpmndi:BPMNLabelStyle id="_d9838c7e-fa3f-4a5f-889f-f4e31b6e9c3e">
-      <dc:Font name="Arial" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    <bpmndi:BPMNLabelStyle id="_f5b787f6-a8b0-4383-8234-eb80a9649d82">
+      <dc:Font name="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
     </bpmndi:BPMNLabelStyle>
   </bpmndi:BPMNDiagram>
 </definitions>
