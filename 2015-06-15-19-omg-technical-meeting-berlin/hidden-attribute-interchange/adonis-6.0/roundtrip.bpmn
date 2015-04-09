@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:signavio="http://www.signavio.com"
+             xmlns:inspire="http://bpminspire.com/bpmn2/extension/inspire"
+             xmlns:activiti="http://activiti.org/bpmn"
+             xmlns:adonis="http://www.boc-group.com"
+             xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             exporter="ADONIS"
+             exporterVersion="6.1.4.1"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.omg.org/bpmn20"
+             id="def_57286"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+   <message id="message__24897a75-c027-48d9-9612-68f8f4de4dca"/>
+   <message id="message__ea710670-f00a-4ee4-86ea-fc0bca9bc23a"/>
+   <collaboration id="_dc14d79e-d79c-492e-bcef-95b9b2bd7647" name="Fridge Repair Process">
+      <extensionElements>
+         <adonis:modelattributes/>
+      </extensionElements>
+      <participant processRef="process__0dcebf90-9551-4bc3-a040-107f16defd3f"
+                   name="Fridge Repair Process"
+                   id="_0dcebf90-9551-4bc3-a040-107f16defd3f"/>
+      <participant processRef="process__2f786f9e-5aee-40c9-9db1-1c219bd30076" name="Customer"
+                   id="_2f786f9e-5aee-40c9-9db1-1c219bd30076"/>
+      <messageFlow messageRef="message__24897a75-c027-48d9-9612-68f8f4de4dca"
+                   id="_24897a75-c027-48d9-9612-68f8f4de4dca"
+                   name="Customer request"
+                   sourceRef="_2f786f9e-5aee-40c9-9db1-1c219bd30076"
+                   targetRef="_cc9778bd-edd8-4df2-ba15-56c310f90e62">
+         <extensionElements>
+            <adonis:connector/>
+         </extensionElements>
+      </messageFlow>
+      <messageFlow messageRef="message__ea710670-f00a-4ee4-86ea-fc0bca9bc23a"
+                   id="_ea710670-f00a-4ee4-86ea-fc0bca9bc23a"
+                   name="Request for service level upgrade"
+                   sourceRef="_2f786f9e-5aee-40c9-9db1-1c219bd30076"
+                   targetRef="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd">
+         <extensionElements>
+            <adonis:connector/>
+         </extensionElements>
+      </messageFlow>
+   </collaboration>
+   <process name="Fridge Repair Process" id="process__0dcebf90-9551-4bc3-a040-107f16defd3f"
+            isExecutable="false">
+      <extensionElements>
+         <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+            <attribute name="ExternalId" type="String"/>
+            <attribute name="KPICost" type="Float" value="1" format="Currency;Fr.;;KPI;2"/>
+            <attribute name="KPIDuration" type="Float" value="1" format="Duration;;;KPI;3">
+               <attribute name="KeyData" type="String" value="1" format="Duration;;;KPI;3">
+                  <attribute name="ElementsCountKey" type="String" value="43"/>
+                  <attribute name="ErrorsKey" type="String" value="0"/>
+                  <attribute name="WarningsKey" type="String" value="0"/>
+                  <attribute name="InformationKey" type="String" value="0"/>
+                  <attribute name="MethodAndStyleKey" type="String" value="0"/>
+                  <attribute name="eCHKey" type="String" value="0"/>
+                  <attribute name="DescriptiveConformanceSubClassKey" type="String" value="41"/>
+                  <attribute name="AnalyticConformanceSubClassKey" type="String" value="43"/>
+                  <attribute name="ExecutableConformanceSubClassKey" type="String" value="41"/>
+                  <attribute name="StartEventsKey" type="String" value="1"/>
+                  <attribute name="ActivitiesKey" type="String" value="1"/>
+                  <attribute name="SubLevelsKey" type="String" value="1"/>
+                  <attribute name="GatewaysKey" type="String" value="3"/>
+                  <attribute name="GatesKey" type="String" value="0"/>
+                  <attribute name="BlackboxPoolsKey" type="String" value="2"/>
+                  <attribute name="UnlinkedSubProcessesKey" type="String" value="0"/>
+                  <attribute name="UnlinkedCallActivitiesKey" type="String" value="0"/>
+                  <attribute name="EndMessageEventsKey" type="String" value="1"/>
+                  <attribute name="TypedTasksKey" type="String" value="7"/>
+                  <attribute name="UntypedTasksKey" type="String" value="0"/>
+                  <attribute name="ReadingDataObjectsKey" type="String" value="0"/>
+                  <attribute name="WritingDataObjectsKey" type="String" value="0"/>
+                  <attribute name="UnnamedDataObjectsKey" type="String" value="0"/>
+                  <attribute name="UnnamedDataStoresKey" type="String" value="0"/>
+                  <attribute name="ActivitesWithoutRoleKey" type="String" value="0"/>
+                  <attribute name="TextAnnotationFlowElementRatioKey" type="String" value="0"/>
+                  <attribute name="OrComplexGatewaysKey" type="String" value="0"/>
+                  <attribute name="CollaborationTasksKey" type="String" value="0"/>
+               </attribute>
+               <attribute name="ProcessAnalysis" type="String" value="98" format="Duration;;;KPI;3"/>
+            </attribute>
+            <attribute name="QualityAnalysis" type="String">
+               <attribute name="KeyData" type="String" value="1" format="Duration;;;KPI;3">
+                  <attribute name="ElementsCountKey" type="String" value="43"/>
+                  <attribute name="ErrorsKey" type="String" value="0"/>
+                  <attribute name="WarningsKey" type="String" value="0"/>
+                  <attribute name="InformationKey" type="String" value="0"/>
+                  <attribute name="MethodAndStyleKey" type="String" value="0"/>
+                  <attribute name="eCHKey" type="String" value="0"/>
+                  <attribute name="DescriptiveConformanceSubClassKey" type="String" value="41"/>
+                  <attribute name="AnalyticConformanceSubClassKey" type="String" value="43"/>
+                  <attribute name="ExecutableConformanceSubClassKey" type="String" value="41"/>
+                  <attribute name="StartEventsKey" type="String" value="1"/>
+                  <attribute name="ActivitiesKey" type="String" value="1"/>
+                  <attribute name="SubLevelsKey" type="String" value="1"/>
+                  <attribute name="GatewaysKey" type="String" value="3"/>
+                  <attribute name="GatesKey" type="String" value="0"/>
+                  <attribute name="BlackboxPoolsKey" type="String" value="2"/>
+                  <attribute name="UnlinkedSubProcessesKey" type="String" value="0"/>
+                  <attribute name="UnlinkedCallActivitiesKey" type="String" value="0"/>
+                  <attribute name="EndMessageEventsKey" type="String" value="1"/>
+                  <attribute name="TypedTasksKey" type="String" value="7"/>
+                  <attribute name="UntypedTasksKey" type="String" value="0"/>
+                  <attribute name="ReadingDataObjectsKey" type="String" value="0"/>
+                  <attribute name="WritingDataObjectsKey" type="String" value="0"/>
+                  <attribute name="UnnamedDataObjectsKey" type="String" value="0"/>
+                  <attribute name="UnnamedDataStoresKey" type="String" value="0"/>
+                  <attribute name="ActivitesWithoutRoleKey" type="String" value="0"/>
+                  <attribute name="TextAnnotationFlowElementRatioKey" type="String" value="0"/>
+                  <attribute name="OrComplexGatewaysKey" type="String" value="0"/>
+                  <attribute name="CollaborationTasksKey" type="String" value="0"/>
+               </attribute>
+               <attribute name="ProcessAnalysis" type="String" value="98" format="Duration;;;KPI;3"/>
+               <attribute name="ProcessExecution" type="String" value="71"/>
+               <attribute name="DiagramInterchange" type="String" value="71"/>
+               <attribute name="ProcessSimulation" type="String" value="100"/>
+            </attribute>
+         </itp:systemDefinedAttributes>
+         <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+            <itp:label lang="unspecified"/>
+            <itp:label lang="de">Kühlschrank-Reparaturprozess</itp:label>
+            <itp:label lang="en">Fridge Repair Process</itp:label>
+         </itp:localization>
+         <adonis:instance>
+            <adonis:attribute name="Minimum" type="INTEGER">0</adonis:attribute>
+            <adonis:attribute name="Maximum" type="INTEGER">1</adonis:attribute>
+            <adonis:attribute name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:attribute>
+            <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+            <adonis:attribute name="ist vollständig" type="ENUMERATION">Nein</adonis:attribute>
+            <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+         </adonis:instance>
+         <adonis:modelattributes/>
+      </extensionElements>
+      <laneSet id="laneSet_obj.57372">
+         <lane name="Standard repair team" id="_569d10fa-7074-48b3-9538-2c8ce2c23fe2">
+            <extensionElements>
+               <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+               </itp:systemDefinedAttributes>
+               <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+                  <itp:label lang="unspecified"/>
+                  <itp:label lang="de">Standard-Reparaturteam</itp:label>
+                  <itp:label lang="en">Standard repair team</itp:label>
+               </itp:localization>
+               <adonis:instance/>
+            </extensionElements>
+            <flowNodeRef>_d034722f-751d-4f37-a3d7-47993822e979</flowNodeRef>
+            <flowNodeRef>_6a34496f-8cf7-42e5-88a9-d1af98cc3cba</flowNodeRef>
+            <flowNodeRef>_2b6bc88e-d3be-4704-87d1-c264bf704589</flowNodeRef>
+            <flowNodeRef>_dcee5c64-3010-4ee5-b480-bce856e6f29c</flowNodeRef>
+            <flowNodeRef>_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd</flowNodeRef>
+         </lane>
+         <lane name="Emergency repair team" id="_99179f5a-ec32-4f3e-8458-cc8c233bfedf">
+            <extensionElements>
+               <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+               </itp:systemDefinedAttributes>
+               <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+                  <itp:label lang="unspecified"/>
+                  <itp:label lang="de">Notfallrperatur-Team</itp:label>
+                  <itp:label lang="en">Emergency repair team</itp:label>
+               </itp:localization>
+               <adonis:instance/>
+            </extensionElements>
+            <flowNodeRef>_cd6f230f-13c3-4027-aa3e-57de601a1ab2</flowNodeRef>
+            <flowNodeRef>_b3dc1906-d4d3-40c5-aaf6-5a74148ae887</flowNodeRef>
+            <flowNodeRef>_936c0bfa-5ebf-4546-8d1a-cce556148788</flowNodeRef>
+            <flowNodeRef>_59624ded-2172-4bcb-aa62-24ac01ae7087</flowNodeRef>
+         </lane>
+         <lane name="Call center" id="_a856e80e-d5d6-4947-86b6-eb53239254a5">
+            <extensionElements>
+               <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+               </itp:systemDefinedAttributes>
+               <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+                  <itp:label lang="unspecified"/>
+                  <itp:label lang="de">Call Center</itp:label>
+                  <itp:label lang="en">Call center</itp:label>
+               </itp:localization>
+               <adonis:instance/>
+            </extensionElements>
+            <flowNodeRef>_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a</flowNodeRef>
+            <flowNodeRef>_a92069f7-377b-4dbd-a1fd-1da071aabf6d</flowNodeRef>
+            <flowNodeRef>_cc9778bd-edd8-4df2-ba15-56c310f90e62</flowNodeRef>
+            <flowNodeRef>_177bd313-c6c9-4df5-8f82-313beb30d2eb</flowNodeRef>
+            <flowNodeRef>_604be023-654c-44df-a64c-365254a100cd</flowNodeRef>
+         </lane>
+      </laneSet>
+      <subProcess name="Perform emergency repair" id="_cd6f230f-13c3-4027-aa3e-57de601a1ab2"
+                  isForCompensation="false">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute name="KPICost" type="Float" value="0" format="Currency;SFr.;;KPI;2"/>
+               <attribute name="KPIDuration" type="Float" value="14400" format="Duration;;;KPI;3">
+                  <attribute name="KPIActiveTime" type="Float" value="14400" format="Duration;;;KPI;3;0.3"/>
+                  <attribute name="KPIWaitTime" type="Float" value="0" format="Duration;;;KPI;3"/>
+               </attribute>
+               <attribute name="Resource" type="String"
+                          value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Notfallreparatur ausführen</itp:label>
+               <itp:label lang="en">Perform emergency repair</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Methode" type="ENUMERATION">Kompensation</adonis:attribute>
+               <adonis:attribute name="Verhalten" type="ENUMERATION">Keines</adonis:attribute>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Globaler Teilprozeß" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:record name="Verhaltensdefinition (Verhalten = Komplex)"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_437e5969-1e61-4cb9-aa76-4f8854f32eeb</incoming>
+         <incoming>_2ba0552a-bfce-416f-8673-5d58769c09da</incoming>
+         <outgoing>_b22c01a4-1eef-4f52-9b16-a201a9621619</outgoing>
+         <ioSpecification>
+            <inputSet/>
+            <outputSet/>
+         </ioSpecification>
+      </subProcess>
+      <userTask name="Analyse customer request" id="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a"
+                isForCompensation="false"
+                implementation="##WebService">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute name="KPICost" type="Float" value="0" format="Currency;SFr.;;KPI;2"/>
+               <attribute name="KPIDuration" type="Float" value="120" format="Duration;;;KPI;3">
+                  <attribute name="KPIActiveTime" type="Float" value="120" format="Duration;;;KPI;3;0.5"/>
+                  <attribute name="KPIWaitTime" type="Float" value="0" format="Duration;;;KPI;3"/>
+               </attribute>
+               <attribute name="Resource" type="String"
+                          value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Kundenanfrage beantworten</itp:label>
+               <itp:label lang="en">Analyse customer request</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Verhalten" type="ENUMERATION">Keines</adonis:attribute>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:record name="Verhaltensdefinition (Verhalten = Komplex)"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_a5af06ae-bd69-464d-bbaf-3d7418702d77</incoming>
+         <outgoing>_acb2aca3-8851-48f0-b127-7b3c9db5e18d</outgoing>
+         <ioSpecification>
+            <inputSet/>
+            <outputSet/>
+         </ioSpecification>
+      </userTask>
+      <userTask name="Replace fridge" id="_a92069f7-377b-4dbd-a1fd-1da071aabf6d"
+                isForCompensation="false"
+                implementation="##WebService">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute name="KPICost" type="Float" value="0" format="Currency;SFr.;;KPI;2"/>
+               <attribute name="KPIDuration" type="Float" value="60" format="Duration;;;KPI;3">
+                  <attribute name="KPIActiveTime" type="Float" value="60" format="Duration;;;KPI;3;0.5"/>
+                  <attribute name="KPIWaitTime" type="Float" value="0" format="Duration;;;KPI;3"/>
+               </attribute>
+               <attribute name="Resource" type="String"
+                          value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Garantiefall bearbeiten</itp:label>
+               <itp:label lang="en">Replace fridge</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Verhalten" type="ENUMERATION">Keines</adonis:attribute>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:record name="Verhaltensdefinition (Verhalten = Komplex)"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_b99800c3-c340-460c-a43e-098014a365d0</incoming>
+         <incoming>_3fb323d5-2c59-487a-af63-804208f6c5cb</incoming>
+         <outgoing>_c5756bb9-6e6f-42d1-8799-c2d673499eb8</outgoing>
+         <ioSpecification>
+            <inputSet/>
+            <outputSet/>
+         </ioSpecification>
+      </userTask>
+      <userTask name="Perform repair (standard level)"
+                id="_d034722f-751d-4f37-a3d7-47993822e979"
+                isForCompensation="false"
+                implementation="##WebService">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute name="KPICost" type="Float" value="0" format="Currency;SFr.;;KPI;2"/>
+               <attribute name="KPIDuration" type="Float" value="36000" format="Duration;;;KPI;3">
+                  <attribute name="KPIActiveTime" type="Float" value="21600" format="Duration;;;KPI;3;0.3"/>
+                  <attribute name="KPIWaitTime" type="Float" value="14400" format="Duration;;;KPI;3"/>
+               </attribute>
+               <attribute name="Resource" type="String"
+                          value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSIxYWZkYWNjMS0zMDk4LTQ4YzAtOGUwNS1mYWQwZjZkMTg5OTAiIG1heC1jYXBhY2l0eT0iMjAwIiBjcml0aWNhbC1jYXBhY2l0eT0iMTgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Reparatur ausführen (Standard Level)</itp:label>
+               <itp:label lang="en">Perform repair (standard level)</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Verhalten" type="ENUMERATION">Keines</adonis:attribute>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:record name="Verhaltensdefinition (Verhalten = Komplex)"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_cddf9325-a85b-4347-8c57-8b909fa77ae9</incoming>
+         <outgoing>_435d9320-bbf4-48ad-aa56-16cb5483e95b</outgoing>
+         <ioSpecification>
+            <inputSet/>
+            <outputSet/>
+         </ioSpecification>
+      </userTask>
+      <userTask name="Perform repair (premium level)"
+                id="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba"
+                isForCompensation="false"
+                implementation="##WebService">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute name="KPICost" type="Float" value="0" format="Currency;SFr.;;KPI;2"/>
+               <attribute name="KPIDuration" type="Float" value="8100" format="Duration;;;KPI;3">
+                  <attribute name="KPIActiveTime" type="Float" value="7200" format="Duration;;;KPI;3;0.3"/>
+                  <attribute name="KPIWaitTime" type="Float" value="900" format="Duration;;;KPI;3"/>
+               </attribute>
+               <attribute name="Resource" type="String"
+                          value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkOGIzZTMyZC1lMDRmLTRhYzgtOWYyMC0wZDkzMTI3YWZlYWUiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Reparatur ausführen (Premium Level)</itp:label>
+               <itp:label lang="en">Perform repair (premium level)</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Verhalten" type="ENUMERATION">Keines</adonis:attribute>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Ja</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Globale Aufgabe" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:record name="Verhaltensdefinition (Verhalten = Komplex)"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_be893987-caec-4605-b078-bd96b7cd6c12</incoming>
+         <incoming>_af4532c5-4b7d-45c6-a6a0-f13739a4ba57</incoming>
+         <outgoing>_d54c5707-af7a-4b36-a059-46681bbf0004</outgoing>
+         <ioSpecification>
+            <inputSet/>
+            <outputSet/>
+         </ioSpecification>
+      </userTask>
+      <startEvent name="Receive customer request" id="_cc9778bd-edd8-4df2-ba15-56c310f90e62">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Störung</itp:label>
+               <itp:label lang="en">Receive customer request</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:instance>
+         </extensionElements>
+         <outgoing>_a5af06ae-bd69-464d-bbaf-3d7418702d77</outgoing>
+         <messageEventDefinition/>
+      </startEvent>
+      <endEvent name="Fridge replaced" id="_177bd313-c6c9-4df5-8f82-313beb30d2eb">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Grantiefall</itp:label>
+               <itp:label lang="en">Fridge replaced</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_c5756bb9-6e6f-42d1-8799-c2d673499eb8</incoming>
+         <inputSet/>
+      </endEvent>
+      <exclusiveGateway name="Service type" id="_604be023-654c-44df-a64c-365254a100cd">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de"/>
+               <itp:label lang="en">Service type</itp:label>
+            </itp:localization>
+            <adonis:instance/>
+         </extensionElements>
+         <incoming>_acb2aca3-8851-48f0-b127-7b3c9db5e18d</incoming>
+         <outgoing>_b99800c3-c340-460c-a43e-098014a365d0</outgoing>
+         <outgoing>_437e5969-1e61-4cb9-aa76-4f8854f32eeb</outgoing>
+         <outgoing>_ada039b6-94dd-4a15-a6b1-c7fe662c64ee</outgoing>
+      </exclusiveGateway>
+      <endEvent name="Emergency repair completed" id="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Notfall Reparatur</itp:label>
+               <itp:label lang="en">Emergency repair completed</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_cf380e47-1401-4e7e-b710-193b626e49eb</incoming>
+         <inputSet/>
+      </endEvent>
+      <exclusiveGateway name="Service level" id="_2b6bc88e-d3be-4704-87d1-c264bf704589">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Service Level</itp:label>
+               <itp:label lang="en">Service level</itp:label>
+            </itp:localization>
+            <adonis:instance/>
+         </extensionElements>
+         <incoming>_ada039b6-94dd-4a15-a6b1-c7fe662c64ee</incoming>
+         <outgoing>_cddf9325-a85b-4347-8c57-8b909fa77ae9</outgoing>
+         <outgoing>_be893987-caec-4605-b078-bd96b7cd6c12</outgoing>
+      </exclusiveGateway>
+      <endEvent name="Repair completed" id="_dcee5c64-3010-4ee5-b480-bce856e6f29c">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Reparatur</itp:label>
+               <itp:label lang="en">Repair completed</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Input)" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_435d9320-bbf4-48ad-aa56-16cb5483e95b</incoming>
+         <incoming>_d54c5707-af7a-4b36-a059-46681bbf0004</incoming>
+         <inputSet/>
+      </endEvent>
+      <exclusiveGateway name="Successful?" id="_936c0bfa-5ebf-4546-8d1a-cce556148788">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">Erfolg?</itp:label>
+               <itp:label lang="en">Successful?</itp:label>
+            </itp:localization>
+            <adonis:instance/>
+         </extensionElements>
+         <incoming>_b22c01a4-1eef-4f52-9b16-a201a9621619</incoming>
+         <outgoing>_cf380e47-1401-4e7e-b710-193b626e49eb</outgoing>
+         <outgoing>_3fb323d5-2c59-487a-af63-804208f6c5cb</outgoing>
+      </exclusiveGateway>
+      <boundaryEvent name="2 days" id="_59624ded-2172-4bcb-aa62-24ac01ae7087" cancelActivity="true"
+                     attachedToRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">2 Tage</itp:label>
+               <itp:label lang="en">2 days</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Aktivität abbrechen" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:instance>
+         </extensionElements>
+         <outgoing>_2ba0552a-bfce-416f-8673-5d58769c09da</outgoing>
+         <timerEventDefinition id="timerEventDefinition__59624ded-2172-4bcb-aa62-24ac01ae7087">
+            <timeDate xsi:type="tFormalExpression">2010:01:01 00:00:00</timeDate>
+         </timerEventDefinition>
+      </boundaryEvent>
+      <boundaryEvent name="SL upgrade" id="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd"
+                     cancelActivity="true"
+                     attachedToRef="_d034722f-751d-4f37-a3d7-47993822e979">
+         <extensionElements>
+            <itp:systemDefinedAttributes xmlns:itp="http://www.itp-commerce.com/BPMN2.0">
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute name="Probability" type="Float" value="5"/>
+               <attribute name="Resource" type="String"
+                          value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkOGIzZTMyZC1lMDRmLTRhYzgtOWYyMC0wZDkzMTI3YWZlYWUiIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
+            </itp:systemDefinedAttributes>
+            <itp:localization xmlns:itp="http://www.itp-commerce.com/BPMN2.0" default="en">
+               <itp:label lang="unspecified"/>
+               <itp:label lang="de">SL-Upgrade</itp:label>
+               <itp:label lang="en">SL upgrade</itp:label>
+            </itp:localization>
+            <adonis:instance>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Objektart" type="ENUMERATION">Information</adonis:attribute>
+               <adonis:attribute name="Zusammengesetzter Datentyp (Output)" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Aktivität abbrechen" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:instance>
+         </extensionElements>
+         <outgoing>_af4532c5-4b7d-45c6-a6a0-f13739a4ba57</outgoing>
+         <messageEventDefinition/>
+      </boundaryEvent>
+      <sequenceFlow sourceRef="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a"
+                    targetRef="_604be023-654c-44df-a64c-365254a100cd"
+                    name=""
+                    id="_acb2aca3-8851-48f0-b127-7b3c9db5e18d">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_604be023-654c-44df-a64c-365254a100cd"
+                    targetRef="_a92069f7-377b-4dbd-a1fd-1da071aabf6d"
+                    name="Warranty"
+                    id="_b99800c3-c340-460c-a43e-098014a365d0">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_b99800c3-c340-460c-a43e-098014a365d0_condExpr"
+                              xsi:type="tFormalExpression">test='Warranty'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_604be023-654c-44df-a64c-365254a100cd"
+                    targetRef="_cd6f230f-13c3-4027-aa3e-57de601a1ab2"
+                    name="Emergency service"
+                    id="_437e5969-1e61-4cb9-aa76-4f8854f32eeb">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_437e5969-1e61-4cb9-aa76-4f8854f32eeb_condExpr"
+                              xsi:type="tFormalExpression">test='Emergency service'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_604be023-654c-44df-a64c-365254a100cd"
+                    targetRef="_2b6bc88e-d3be-4704-87d1-c264bf704589"
+                    name="Regular repair service"
+                    id="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee_condExpr"
+                              xsi:type="tFormalExpression">test='Regular repair service'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_2b6bc88e-d3be-4704-87d1-c264bf704589"
+                    targetRef="_d034722f-751d-4f37-a3d7-47993822e979"
+                    name="Standard"
+                    id="_cddf9325-a85b-4347-8c57-8b909fa77ae9">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_cddf9325-a85b-4347-8c57-8b909fa77ae9_condExpr"
+                              xsi:type="tFormalExpression">test='Standard'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_2b6bc88e-d3be-4704-87d1-c264bf704589"
+                    targetRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba"
+                    name="Premium"
+                    id="_be893987-caec-4605-b078-bd96b7cd6c12">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_be893987-caec-4605-b078-bd96b7cd6c12_condExpr"
+                              xsi:type="tFormalExpression">test='Premium'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_d034722f-751d-4f37-a3d7-47993822e979"
+                    targetRef="_dcee5c64-3010-4ee5-b480-bce856e6f29c"
+                    name=""
+                    id="_435d9320-bbf4-48ad-aa56-16cb5483e95b">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba"
+                    targetRef="_dcee5c64-3010-4ee5-b480-bce856e6f29c"
+                    name=""
+                    id="_d54c5707-af7a-4b36-a059-46681bbf0004">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_59624ded-2172-4bcb-aa62-24ac01ae7087"
+                    targetRef="_cd6f230f-13c3-4027-aa3e-57de601a1ab2"
+                    name=""
+                    id="_2ba0552a-bfce-416f-8673-5d58769c09da">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_cd6f230f-13c3-4027-aa3e-57de601a1ab2"
+                    targetRef="_936c0bfa-5ebf-4546-8d1a-cce556148788"
+                    name=""
+                    id="_b22c01a4-1eef-4f52-9b16-a201a9621619">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_a92069f7-377b-4dbd-a1fd-1da071aabf6d"
+                    targetRef="_177bd313-c6c9-4df5-8f82-313beb30d2eb"
+                    name=""
+                    id="_c5756bb9-6e6f-42d1-8799-c2d673499eb8">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd"
+                    targetRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba"
+                    name=""
+                    id="_af4532c5-4b7d-45c6-a6a0-f13739a4ba57">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_936c0bfa-5ebf-4546-8d1a-cce556148788"
+                    targetRef="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887"
+                    name="yes"
+                    id="_cf380e47-1401-4e7e-b710-193b626e49eb">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_cf380e47-1401-4e7e-b710-193b626e49eb_condExpr"
+                              xsi:type="tFormalExpression">test='ja'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_936c0bfa-5ebf-4546-8d1a-cce556148788"
+                    targetRef="_a92069f7-377b-4dbd-a1fd-1da071aabf6d"
+                    name="no"
+                    id="_3fb323d5-2c59-487a-af63-804208f6c5cb">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_3fb323d5-2c59-487a-af63-804208f6c5cb_condExpr"
+                              xsi:type="tFormalExpression">test='nein'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_cc9778bd-edd8-4df2-ba15-56c310f90e62"
+                    targetRef="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a"
+                    name=""
+                    id="_a5af06ae-bd69-464d-bbaf-3d7418702d77">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+               <adonis:attribute name="ist unmittelbar" type="ENUMERATION">Nein</adonis:attribute>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+   </process>
+   <process name="Customer" id="process__2f786f9e-5aee-40c9-9db1-1c219bd30076"
+            isExecutable="false">
+      <extensionElements>
+         <adonis:instance>
+            <adonis:attribute name="Minimum" type="INTEGER">0</adonis:attribute>
+            <adonis:attribute name="Maximum" type="INTEGER">1</adonis:attribute>
+            <adonis:attribute name="Prozeßtyp" type="ENUMERATION">Nicht spezifiziert</adonis:attribute>
+            <adonis:attribute name="Monitoring" type="ENUMERATION">Nein</adonis:attribute>
+            <adonis:attribute name="ist vollständig" type="ENUMERATION">Nein</adonis:attribute>
+            <adonis:attribute name="Auditierung" type="ENUMERATION">Nein</adonis:attribute>
+         </adonis:instance>
+         <adonis:modelattributes/>
+      </extensionElements>
+   </process>
+   <bpmndi:BPMNDiagram name="Fridge Repair Process" id="Diagram_57286">
+      <bpmndi:BPMNPlane id="_1" bpmnElement="_dc14d79e-d79c-492e-bcef-95b9b2bd7647">
+         <bpmndi:BPMNShape bpmnElement="_0dcebf90-9551-4bc3-a040-107f16defd3f" isHorizontal="true"
+                           id="BPMN_Shape__0dcebf90-9551-4bc3-a040-107f16defd3f">
+            <omgdc:Bounds height="538" width="812" x="20" y="244"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_569d10fa-7074-48b3-9538-2c8ce2c23fe2" isHorizontal="true"
+                           id="BPMN_Shape__569d10fa-7074-48b3-9538-2c8ce2c23fe2">
+            <omgdc:Bounds width="776" height="196" x="57" y="586"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_99179f5a-ec32-4f3e-8458-cc8c233bfedf" isHorizontal="true"
+                           id="BPMN_Shape__99179f5a-ec32-4f3e-8458-cc8c233bfedf">
+            <omgdc:Bounds width="776" height="151" x="57" y="435"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_a856e80e-d5d6-4947-86b6-eb53239254a5" isHorizontal="true"
+                           id="BPMN_Shape__a856e80e-d5d6-4947-86b6-eb53239254a5">
+            <omgdc:Bounds width="776" height="189" x="57" y="246"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_cc9778bd-edd8-4df2-ba15-56c310f90e62"
+                           id="BPMN_Shape__cc9778bd-edd8-4df2-ba15-56c310f90e62">
+            <omgdc:Bounds width="53" height="53" x="87" y="295"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a"
+                           id="BPMN_Shape__c73a5f4a-72f1-4e11-bb40-2f98da75fb9a">
+            <omgdc:Bounds height="59" width="122" x="166" y="292"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_a92069f7-377b-4dbd-a1fd-1da071aabf6d"
+                           id="BPMN_Shape__a92069f7-377b-4dbd-a1fd-1da071aabf6d">
+            <omgdc:Bounds height="59" width="122" x="601" y="254"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_177bd313-c6c9-4df5-8f82-313beb30d2eb"
+                           id="BPMN_Shape__177bd313-c6c9-4df5-8f82-313beb30d2eb">
+            <omgdc:Bounds width="53" height="53" x="748" y="257"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_604be023-654c-44df-a64c-365254a100cd"
+                           id="BPMN_Shape__604be023-654c-44df-a64c-365254a100cd">
+            <omgdc:Bounds width="53" height="53" x="314" y="295"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887"
+                           id="BPMN_Shape__b3dc1906-d4d3-40c5-aaf6-5a74148ae887">
+            <omgdc:Bounds width="53" height="53" x="730" y="465"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_2b6bc88e-d3be-4704-87d1-c264bf704589"
+                           id="BPMN_Shape__2b6bc88e-d3be-4704-87d1-c264bf704589">
+            <omgdc:Bounds width="53" height="53" x="314" y="616"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_d034722f-751d-4f37-a3d7-47993822e979"
+                           id="BPMN_Shape__d034722f-751d-4f37-a3d7-47993822e979">
+            <omgdc:Bounds height="59" width="122" x="449" y="707"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba"
+                           id="BPMN_Shape__6a34496f-8cf7-42e5-88a9-d1af98cc3cba">
+            <omgdc:Bounds height="59" width="122" x="449" y="613"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_dcee5c64-3010-4ee5-b480-bce856e6f29c"
+                           id="BPMN_Shape__dcee5c64-3010-4ee5-b480-bce856e6f29c">
+            <omgdc:Bounds width="53" height="53" x="748" y="616"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_936c0bfa-5ebf-4546-8d1a-cce556148788"
+                           id="BPMN_Shape__936c0bfa-5ebf-4546-8d1a-cce556148788">
+            <omgdc:Bounds width="53" height="53" x="635" y="465"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_cd6f230f-13c3-4027-aa3e-57de601a1ab2" isExpanded="false"
+                           id="BPMN_Shape__cd6f230f-13c3-4027-aa3e-57de601a1ab2">
+            <omgdc:Bounds height="59" width="122" x="449" y="462"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_59624ded-2172-4bcb-aa62-24ac01ae7087"
+                           id="BPMN_Shape__59624ded-2172-4bcb-aa62-24ac01ae7087">
+            <omgdc:Bounds width="53" height="53" x="520" y="533"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd"
+                           id="BPMN_Shape__a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd">
+            <omgdc:Bounds width="53" height="53" x="522" y="692"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_2f786f9e-5aee-40c9-9db1-1c219bd30076" isHorizontal="true"
+                           id="BPMN_Shape__2f786f9e-5aee-40c9-9db1-1c219bd30076">
+            <omgdc:Bounds height="151" width="812" x="20" y="1"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge id="BPMN_Edge__acb2aca3-8851-48f0-b127-7b3c9db5e18d"
+                          bpmnElement="_acb2aca3-8851-48f0-b127-7b3c9db5e18d">
+            <omgdi:waypoint x="227" y="321"/>
+            <omgdi:waypoint x="340" y="321"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__b99800c3-c340-460c-a43e-098014a365d0"
+                          bpmnElement="_b99800c3-c340-460c-a43e-098014a365d0">
+            <omgdi:waypoint x="340" y="321"/>
+            <omgdi:waypoint x="340" y="283"/>
+            <omgdi:waypoint x="662" y="283"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__437e5969-1e61-4cb9-aa76-4f8854f32eeb"
+                          bpmnElement="_437e5969-1e61-4cb9-aa76-4f8854f32eeb">
+            <omgdi:waypoint x="340" y="321"/>
+            <omgdi:waypoint x="510" y="321"/>
+            <omgdi:waypoint x="510" y="491"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__ada039b6-94dd-4a15-a6b1-c7fe662c64ee"
+                          bpmnElement="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee">
+            <omgdi:waypoint x="340" y="321"/>
+            <omgdi:waypoint x="340" y="643"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__cddf9325-a85b-4347-8c57-8b909fa77ae9"
+                          bpmnElement="_cddf9325-a85b-4347-8c57-8b909fa77ae9">
+            <omgdi:waypoint x="340" y="643"/>
+            <omgdi:waypoint x="340" y="737"/>
+            <omgdi:waypoint x="510" y="737"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__be893987-caec-4605-b078-bd96b7cd6c12"
+                          bpmnElement="_be893987-caec-4605-b078-bd96b7cd6c12">
+            <omgdi:waypoint x="340" y="643"/>
+            <omgdi:waypoint x="510" y="643"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__435d9320-bbf4-48ad-aa56-16cb5483e95b"
+                          bpmnElement="_435d9320-bbf4-48ad-aa56-16cb5483e95b">
+            <omgdi:waypoint x="510" y="737"/>
+            <omgdi:waypoint x="775" y="737"/>
+            <omgdi:waypoint x="775" y="643"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__d54c5707-af7a-4b36-a059-46681bbf0004"
+                          bpmnElement="_d54c5707-af7a-4b36-a059-46681bbf0004">
+            <omgdi:waypoint x="510" y="643"/>
+            <omgdi:waypoint x="775" y="643"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__2ba0552a-bfce-416f-8673-5d58769c09da"
+                          bpmnElement="_2ba0552a-bfce-416f-8673-5d58769c09da">
+            <omgdi:waypoint x="547" y="559"/>
+            <omgdi:waypoint x="510" y="491"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__b22c01a4-1eef-4f52-9b16-a201a9621619"
+                          bpmnElement="_b22c01a4-1eef-4f52-9b16-a201a9621619">
+            <omgdi:waypoint x="510" y="491"/>
+            <omgdi:waypoint x="662" y="491"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__c5756bb9-6e6f-42d1-8799-c2d673499eb8"
+                          bpmnElement="_c5756bb9-6e6f-42d1-8799-c2d673499eb8">
+            <omgdi:waypoint x="662" y="283"/>
+            <omgdi:waypoint x="775" y="283"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__af4532c5-4b7d-45c6-a6a0-f13739a4ba57"
+                          bpmnElement="_af4532c5-4b7d-45c6-a6a0-f13739a4ba57">
+            <omgdi:waypoint x="548" y="718"/>
+            <omgdi:waypoint x="510" y="643"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__cf380e47-1401-4e7e-b710-193b626e49eb"
+                          bpmnElement="_cf380e47-1401-4e7e-b710-193b626e49eb">
+            <omgdi:waypoint x="662" y="491"/>
+            <omgdi:waypoint x="756" y="491"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__3fb323d5-2c59-487a-af63-804208f6c5cb"
+                          bpmnElement="_3fb323d5-2c59-487a-af63-804208f6c5cb">
+            <omgdi:waypoint x="662" y="491"/>
+            <omgdi:waypoint x="662" y="283"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__a5af06ae-bd69-464d-bbaf-3d7418702d77"
+                          bpmnElement="_a5af06ae-bd69-464d-bbaf-3d7418702d77">
+            <omgdi:waypoint x="113" y="321"/>
+            <omgdi:waypoint x="227" y="321"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__24897a75-c027-48d9-9612-68f8f4de4dca"
+                          bpmnElement="_24897a75-c027-48d9-9612-68f8f4de4dca">
+            <omgdi:waypoint x="426" y="77"/>
+            <omgdi:waypoint x="113" y="227"/>
+            <omgdi:waypoint x="113" y="321"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge__ea710670-f00a-4ee4-86ea-fc0bca9bc23a"
+                          bpmnElement="_ea710670-f00a-4ee4-86ea-fc0bca9bc23a">
+            <omgdi:waypoint x="426" y="77"/>
+            <omgdi:waypoint x="586" y="718"/>
+            <omgdi:waypoint x="548" y="718"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
