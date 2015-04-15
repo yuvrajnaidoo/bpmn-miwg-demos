@@ -87,9 +87,6 @@
         <yaoqiang:label offset-x="0.0" offset-y="0.0" x="0.0" y="8.0"/>
       </extensionElements>
     </sequenceFlow>
-    <subProcess completionQuantity="1" id="_17" isForCompensation="false" startQuantity="1" triggeredByEvent="false">
-      <incoming>_18</incoming>
-    </subProcess>
     <subProcess completionQuantity="1" id="_19" isForCompensation="false" name="Checkout" startQuantity="1" triggeredByEvent="false">
       <incoming>_20</incoming>
       <outgoing>_38</outgoing>
