@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:itp="http://www.itp-commerce.com/BPMN2.0" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Signavio Process Editor, http://www.signavio.com" exporterVersion="9.0.0" expressionLanguage="http://www.w3.org/1999/XPath" id="sid-a7abf5ae-ba09-4fdb-9406-4d432eb4c11f" itp:author="Stephan Fischli" itp:conformanceSubClass="Full" itp:createdWithVersion="5.2739.13641 SR6" itp:creationDate="04.11.2008 15:43:58" itp:modificationDate="26.03.2015 10:49:31" itp:version="1.0" name="Fridge Repair Process (1)" targetNamespace="http://www.itp-commerce.com" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+   <message id="_6840c92f-f02c-46b3-9565-f5e5b1792ba0" name="&lt;de&gt;Servicelevel erhöhen"/>
+   <message id="_2afa0f3b-346b-4071-80ac-03f878c71615" name="&lt;de&gt;Kundenanfrage"/>
+   <collaboration id="sid-87a4f840-a792-4123-8aff-011a43bdc6f1">
+      <extensionElements>
+         <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="b2ea67c9cb464904bba2a710257b25c6"/>
+      </extensionElements>
+      <participant id="_2f786f9e-5aee-40c9-9db1-1c219bd30076" name="Customer">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute format="Currency;Fr.;;KPI;2" name="KPICost" type="Float" value="1"/>
+               <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="1">
+                  <attribute format="Duration;;;KPI;3" name="KPIActiveTime" type="Float" value="1"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="0"/>
+          </attribute>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Kunde</itp:label>
+               <itp:label lang="en">Customer</itp:label>
+        </itp:localization>
+         </extensionElements>
+      </participant>
+      <participant id="_0dcebf90-9551-4bc3-a040-107f16defd3f" name="Fridge Repair Process" processRef="_8170787a-3207-434d-9bea-4787059f444f">
+         <extensionElements/>
+      </participant>
+      <messageFlow id="_24897a75-c027-48d9-9612-68f8f4de4dca" name="Customer request" sourceRef="_2f786f9e-5aee-40c9-9db1-1c219bd30076" targetRef="_cc9778bd-edd8-4df2-ba15-56c310f90e62">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Kundenanfrage</itp:label>
+               <itp:label lang="en">Customer request</itp:label>
+        </itp:localization>
+         </extensionElements>
+      </messageFlow>
+      <messageFlow id="_ea710670-f00a-4ee4-86ea-fc0bca9bc23a" name="Request for service level upgrade" sourceRef="_2f786f9e-5aee-40c9-9db1-1c219bd30076" targetRef="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Servicelevel erhöhen</itp:label>
+               <itp:label lang="en">Request for service level upgrade</itp:label>
+        </itp:localization>
+         </extensionElements>
+      </messageFlow>
+   </collaboration>
+   <process id="_8170787a-3207-434d-9bea-4787059f444f" isClosed="false" isExecutable="false" name="Fridge Repair Process" processType="None">
+      <extensionElements>
+         <itp:localization default="en">
+            <itp:label lang="en">Fridge Repair Process</itp:label>
+        </itp:localization>
+      </extensionElements>
+      <laneSet id="sid-a529cdcd-c1d8-4295-b611-fd0e4b2c797d">
+         <lane id="_569d10fa-7074-48b3-9538-2c8ce2c23fe2" name="Standard repair team">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Standard-Reparaturteam</itp:label>
+                  <itp:label lang="en">Standard repair team</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <flowNodeRef>_2b6bc88e-d3be-4704-87d1-c264bf704589</flowNodeRef>
+            <flowNodeRef>_d034722f-751d-4f37-a3d7-47993822e979</flowNodeRef>
+            <flowNodeRef>_6a34496f-8cf7-42e5-88a9-d1af98cc3cba</flowNodeRef>
+            <flowNodeRef>_dcee5c64-3010-4ee5-b480-bce856e6f29c</flowNodeRef>
+            <flowNodeRef>_59624ded-2172-4bcb-aa62-24ac01ae7087</flowNodeRef>
+            <flowNodeRef>_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd</flowNodeRef>
+         </lane>
+         <lane id="_99179f5a-ec32-4f3e-8458-cc8c233bfedf" name="Emergency repair team">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Notfallrperatur-Team</itp:label>
+                  <itp:label lang="en">Emergency repair team</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <flowNodeRef>_b3dc1906-d4d3-40c5-aaf6-5a74148ae887</flowNodeRef>
+            <flowNodeRef>_936c0bfa-5ebf-4546-8d1a-cce556148788</flowNodeRef>
+            <flowNodeRef>_cd6f230f-13c3-4027-aa3e-57de601a1ab2</flowNodeRef>
+         </lane>
+         <lane id="_a856e80e-d5d6-4947-86b6-eb53239254a5" name="Call center">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Call Center</itp:label>
+                  <itp:label lang="en">Call center</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <flowNodeRef>_cc9778bd-edd8-4df2-ba15-56c310f90e62</flowNodeRef>
+            <flowNodeRef>_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a</flowNodeRef>
+            <flowNodeRef>_a92069f7-377b-4dbd-a1fd-1da071aabf6d</flowNodeRef>
+            <flowNodeRef>_177bd313-c6c9-4df5-8f82-313beb30d2eb</flowNodeRef>
+            <flowNodeRef>_604be023-654c-44df-a64c-365254a100cd</flowNodeRef>
+         </lane>
+      </laneSet>
+      <exclusiveGateway gatewayDirection="Diverging" id="_2b6bc88e-d3be-4704-87d1-c264bf704589" name="Service level">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Service Level</itp:label>
+               <itp:label lang="en">Service level</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_ada039b6-94dd-4a15-a6b1-c7fe662c64ee</incoming>
+         <outgoing>_cddf9325-a85b-4347-8c57-8b909fa77ae9</outgoing>
+         <outgoing>_be893987-caec-4605-b078-bd96b7cd6c12</outgoing>
+      </exclusiveGateway>
+      <userTask completionQuantity="1" id="_d034722f-751d-4f37-a3d7-47993822e979" implementation="##WebService" isForCompensation="false" name="Perform repair (standard level)" startQuantity="1">
+         <documentation id="sid-a914bba7-5066-4957-9e33-6bbde193fbdc">Standard service level is common for most customer support. 
+This level guarantees the fridge will be repaired in a reasonable amount of time. 
+Customers may decide to raise the service level to Premium while waiting for the standard service to solve the issue.</documentation>
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute format="Currency;SFr.;;KPI;2" name="KPICost" type="Float" value="0"/>
+               <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="36000">
+                  <attribute format="Duration;;;KPI;3;0.3" name="KPIActiveTime" type="Float" value="21600"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="14400"/>
+          </attribute>
+               <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSIxYWZkYWNjMS0zMDk4LTQ4YzAtOGUwNS1mYWQwZjZkMTg5OTAiIG1heC1jYXBhY2l0eT0iMjAwIiBjcml0aWNhbC1jYXBhY2l0eT0iMTgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Reparatur ausführen (Standard Level)</itp:label>
+               <itp:label lang="en">Perform repair (standard level)</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_cddf9325-a85b-4347-8c57-8b909fa77ae9</incoming>
+         <outgoing>_435d9320-bbf4-48ad-aa56-16cb5483e95b</outgoing>
+      </userTask>
+      <userTask completionQuantity="1" id="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba" implementation="##WebService" isForCompensation="false" name="Perform repair (premium level)" startQuantity="1">
+         <documentation id="sid-9086ea98-3efe-4bd7-96d3-e969bded21fa">These customers get special service in case of damage. 
+This service level guarantees less than two days to solve the issue.</documentation>
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute format="Currency;SFr.;;KPI;2" name="KPICost" type="Float" value="0"/>
+               <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="8100">
+                  <attribute format="Duration;;;KPI;3;0.3" name="KPIActiveTime" type="Float" value="7200"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="900"/>
+          </attribute>
+               <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkOGIzZTMyZC1lMDRmLTRhYzgtOWYyMC0wZDkzMTI3YWZlYWUiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Reparatur ausführen (Premium Level)</itp:label>
+               <itp:label lang="en">Perform repair (premium level)</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_be893987-caec-4605-b078-bd96b7cd6c12</incoming>
+         <incoming>_af4532c5-4b7d-45c6-a6a0-f13739a4ba57</incoming>
+         <outgoing>_d54c5707-af7a-4b36-a059-46681bbf0004</outgoing>
+      </userTask>
+      <endEvent id="_dcee5c64-3010-4ee5-b480-bce856e6f29c" name="Repair completed">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Reparatur</itp:label>
+               <itp:label lang="en">Repair completed</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_435d9320-bbf4-48ad-aa56-16cb5483e95b</incoming>
+         <incoming>_d54c5707-af7a-4b36-a059-46681bbf0004</incoming>
+      </endEvent>
+      <boundaryEvent attachedToRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba" cancelActivity="true" id="_59624ded-2172-4bcb-aa62-24ac01ae7087" name="2 days" parallelMultiple="false">
+         <outgoing>_2ba0552a-bfce-416f-8673-5d58769c09da</outgoing>
+         <timerEventDefinition id="sid-74a78b99-2d2a-4c55-b748-471bee203915"/>
+      </boundaryEvent>
+      <boundaryEvent attachedToRef="_d034722f-751d-4f37-a3d7-47993822e979" cancelActivity="true" id="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd" name="SL upgrade" parallelMultiple="false">
+         <outgoing>_af4532c5-4b7d-45c6-a6a0-f13739a4ba57</outgoing>
+         <messageEventDefinition id="sid-a00e6e62-fd4e-46d8-9b34-b9455f3c7837"/>
+      </boundaryEvent>
+      <endEvent id="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887" name="Emergency repair completed">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Notfall Reparatur</itp:label>
+               <itp:label lang="en">Emergency repair completed</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_cf380e47-1401-4e7e-b710-193b626e49eb</incoming>
+      </endEvent>
+      <exclusiveGateway gatewayDirection="Diverging" id="_936c0bfa-5ebf-4546-8d1a-cce556148788" name="Successful?">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Erfolg?</itp:label>
+               <itp:label lang="en">Successful?</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_b22c01a4-1eef-4f52-9b16-a201a9621619</incoming>
+         <outgoing>_cf380e47-1401-4e7e-b710-193b626e49eb</outgoing>
+         <outgoing>_3fb323d5-2c59-487a-af63-804208f6c5cb</outgoing>
+      </exclusiveGateway>
+      <subProcess completionQuantity="1" id="_cd6f230f-13c3-4027-aa3e-57de601a1ab2" isForCompensation="false" itp:isCollapsed="true" itp:logicalSheetId="fc8f260a-6c44-4b3d-84e1-7a58181d251b" name="Perform emergency repair" startQuantity="1" triggeredByEvent="false">
+         <documentation id="sid-09af9678-7a35-45d3-8e9d-7e1c93cdcf2a">This is a special case for handling emergencies for clients such as Hospitals or Commercial fridges.</documentation>
+         <extensionElements>
+            <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="f02fef0d0fcc4faab170cf2273a010bf"/>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute format="Currency;SFr.;;KPI;2" name="KPICost" type="Float" value="0"/>
+               <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="14400">
+                  <attribute format="Duration;;;KPI;3;0.3" name="KPIActiveTime" type="Float" value="14400"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="0"/>
+          </attribute>
+               <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Notfallreparatur ausführen</itp:label>
+               <itp:label lang="en">Perform emergency repair</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_437e5969-1e61-4cb9-aa76-4f8854f32eeb</incoming>
+         <incoming>_2ba0552a-bfce-416f-8673-5d58769c09da</incoming>
+         <outgoing>_b22c01a4-1eef-4f52-9b16-a201a9621619</outgoing>
+         <startEvent id="_2d952f4b-8728-451b-8956-686e0cd2e073" isInterrupting="false" name="">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">
+            </itp:label>
+                  <itp:label lang="en">
+            </itp:label>
+          </itp:localization>
+            </extensionElements>
+            <outgoing>_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7</outgoing>
+         </startEvent>
+         <userTask completionQuantity="1" id="_b3196388-e37a-4e2a-a05c-dc78957cc098" implementation="##WebService" isForCompensation="false" name="Identify problem" startQuantity="1">
+            <documentation id="sid-30708612-6528-4178-851e-6ab65bfc80fe">A technician will call the customer to discuss the problem in more detail.
+The case will be qualified into either a 'trivial problem', which requires no professional intervention (eg. fridge has no power, light is broken, fridge must be defrosted), a 'common problem', which is easy to identify but still needs a technician to solve (eg. pump is broken) or 'total damage' (eg. end of life, broken main parts).</documentation>
+            <extensionElements>
+               <itp:userDefinedAttributes>
+                  <attribute format="None" id="99ad3655-eb4a-48dc-af4c-a65ea4caab3e" name="Erweiterte Dokumentation" type="String"/>
+                  <attribute format="None" id="0759e591-3723-473d-9e5a-0aba0644e541" name="Abteilung" type="String"/>
+          </itp:userDefinedAttributes>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+                  <attribute format="Currency;Fr.;;KPI;2" name="KPICost" type="Float" value="1"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="300">
+                     <attribute format="Duration;;;KPI;3" name="KPIActiveTime" type="Float" value="300"/>
+                     <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="0"/>
+            </attribute>
+                  <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Problem identifizieren</itp:label>
+                  <itp:label lang="en">Identify problem</itp:label>
+                  <itp:documentation lang="en">A technician will call the customer to discuss the problem in more detail.
+The case will be qualified into either a 'trivial problem', which requires no professional intervention (eg. fridge has no power, light is broken, fridge must be defrosted), a 'common problem', which is easy to identify but still needs a technician to solve (eg. pump is broken) or 'total damage' (eg. end of life, broken main parts).</itp:documentation>
+          </itp:localization>
+            </extensionElements>
+            <incoming>_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7</incoming>
+            <outgoing>_35bd0f68-b0f8-43f6-9f1a-c5692d07464a</outgoing>
+         </userTask>
+         <exclusiveGateway gatewayDirection="Diverging" id="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" name="Severity">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">
+            </itp:label>
+                  <itp:label lang="en">Severity</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <incoming>_35bd0f68-b0f8-43f6-9f1a-c5692d07464a</incoming>
+            <outgoing>_34cdc55a-8d4c-4abc-9a78-451549eceb34</outgoing>
+            <outgoing>_11e62df5-3541-4000-8635-ce8be57d532f</outgoing>
+            <outgoing>_831da0f3-1f2e-466f-b414-5c15b8837bee</outgoing>
+         </exclusiveGateway>
+         <userTask completionQuantity="1" id="_f7b840ec-324b-4b94-b909-7b3965290a9f" implementation="##WebService" isForCompensation="false" name="Advice customer" startQuantity="1">
+            <documentation id="sid-db8bf84e-fbaf-4fb0-a23e-2b3a73289a60">Customer will get phone support to solve the problem directly.</documentation>
+            <extensionElements>
+               <itp:userDefinedAttributes>
+                  <attribute format="None" id="803ef39e-c226-46f9-9c6c-cfa67419c057" name="Erweiterte Dokumentation" type="String"/>
+                  <attribute format="None" id="a218ea70-cff6-45de-bf17-61f50668b149" name="Abteilung" type="String"/>
+          </itp:userDefinedAttributes>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+                  <attribute format="Currency;Fr.;;KPI;2" name="KPICost" type="Float" value="0"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="1800">
+                     <attribute format="Duration;;;KPI;3;0.25" name="KPIActiveTime" type="Float" value="1500"/>
+                     <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="300"/>
+            </attribute>
+                  <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Kunden beraten</itp:label>
+                  <itp:label lang="en">Advice customer</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <incoming>_34cdc55a-8d4c-4abc-9a78-451549eceb34</incoming>
+            <outgoing>_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8</outgoing>
+         </userTask>
+         <userTask completionQuantity="1" id="_c46eb9a6-dba6-404e-a749-0a188551106a" implementation="##WebService" isForCompensation="false" name="Appoint technician" startQuantity="1">
+            <documentation id="sid-a04ab79d-c161-4819-9775-6c86421ce785">Technician will be required to solve the problem.</documentation>
+            <extensionElements>
+               <itp:userDefinedAttributes>
+                  <attribute format="None" id="6a5762af-91c3-43d9-8560-043964d15601" name="Erweiterte Dokumentation" type="String"/>
+                  <attribute format="None" id="71863c3a-475a-4465-8099-b38ec51c6e06" name="Abteilung" type="String"/>
+          </itp:userDefinedAttributes>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+                  <attribute format="Currency;Fr.;;KPI;2" name="KPICost" type="Float" value="25"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="480">
+                     <attribute format="Duration;;;KPI;3;0.3" name="KPIActiveTime" type="Float" value="180"/>
+                     <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="300"/>
+            </attribute>
+                  <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Techniker einbinden</itp:label>
+                  <itp:label lang="en">Appoint technician</itp:label>
+                  <itp:documentation lang="en">Technician will be required to solve the problem.</itp:documentation>
+          </itp:localization>
+            </extensionElements>
+            <incoming>_11e62df5-3541-4000-8635-ce8be57d532f</incoming>
+            <outgoing>_752caf9f-4710-47da-98d8-744b4c5e5790</outgoing>
+         </userTask>
+         <endEvent id="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc" name="Successful">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Erfolg</itp:label>
+                  <itp:label lang="en">Successful</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <incoming>_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8</incoming>
+            <incoming>_752caf9f-4710-47da-98d8-744b4c5e5790</incoming>
+         </endEvent>
+         <endEvent id="_13340b88-62d8-40da-a02f-59679d434f46" name="Unsuccessful">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Erfolglos</itp:label>
+                  <itp:label lang="en">Unsuccessful</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <incoming>_831da0f3-1f2e-466f-b414-5c15b8837bee</incoming>
+         </endEvent>
+         <sequenceFlow id="_34cdc55a-8d4c-4abc-9a78-451549eceb34" isImmediate="true" name="Trivial problem" sourceRef="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" targetRef="_f7b840ec-324b-4b94-b909-7b3965290a9f">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Einfaches Problem</itp:label>
+                  <itp:label lang="en">Trivial problem</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <conditionExpression id="sid-1fb0f344-4216-40fa-b010-3efe1c9fa8be" xsi:type="tFormalExpression">test='Trivial problem'</conditionExpression>
+         </sequenceFlow>
+         <sequenceFlow id="_11e62df5-3541-4000-8635-ce8be57d532f" isImmediate="true" name="Common problem" sourceRef="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" targetRef="_c46eb9a6-dba6-404e-a749-0a188551106a">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Bekanntes Problem</itp:label>
+                  <itp:label lang="en">Common problem</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <conditionExpression id="sid-04ad3ad5-80c4-4d86-93b7-c06a90c9aa26" xsi:type="tFormalExpression">test='Common problem'</conditionExpression>
+         </sequenceFlow>
+         <sequenceFlow id="_831da0f3-1f2e-466f-b414-5c15b8837bee" isImmediate="true" name="Total damage" sourceRef="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" targetRef="_13340b88-62d8-40da-a02f-59679d434f46">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">Reparatur unmöglich</itp:label>
+                  <itp:label lang="en">Total damage</itp:label>
+          </itp:localization>
+            </extensionElements>
+            <conditionExpression id="sid-a96cbc49-6b78-4b5d-896f-26e15e4fb22d" xsi:type="tFormalExpression">test='Total damage'</conditionExpression>
+         </sequenceFlow>
+         <sequenceFlow id="_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8" isImmediate="true" name="" sourceRef="_f7b840ec-324b-4b94-b909-7b3965290a9f" targetRef="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">
+            </itp:label>
+                  <itp:label lang="en">
+            </itp:label>
+          </itp:localization>
+            </extensionElements>
+         </sequenceFlow>
+         <sequenceFlow id="_752caf9f-4710-47da-98d8-744b4c5e5790" isImmediate="true" name="" sourceRef="_c46eb9a6-dba6-404e-a749-0a188551106a" targetRef="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">
+            </itp:label>
+                  <itp:label lang="en">
+            </itp:label>
+          </itp:localization>
+            </extensionElements>
+         </sequenceFlow>
+         <sequenceFlow id="_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7" isImmediate="true" name="" sourceRef="_2d952f4b-8728-451b-8956-686e0cd2e073" targetRef="_b3196388-e37a-4e2a-a05c-dc78957cc098">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">
+            </itp:label>
+                  <itp:label lang="en">
+            </itp:label>
+          </itp:localization>
+            </extensionElements>
+         </sequenceFlow>
+         <sequenceFlow id="_35bd0f68-b0f8-43f6-9f1a-c5692d07464a" isImmediate="true" name="" sourceRef="_b3196388-e37a-4e2a-a05c-dc78957cc098" targetRef="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c">
+            <extensionElements>
+               <itp:systemDefinedAttributes>
+                  <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+                  <attribute name="ExternalId" type="String"/>
+          </itp:systemDefinedAttributes>
+               <itp:localization default="en">
+                  <itp:label lang="unspecified">
+            </itp:label>
+                  <itp:label lang="de">
+            </itp:label>
+                  <itp:label lang="en">
+            </itp:label>
+          </itp:localization>
+            </extensionElements>
+         </sequenceFlow>
+      </subProcess>
+      <startEvent id="_cc9778bd-edd8-4df2-ba15-56c310f90e62" isInterrupting="false" name="Receive customer request">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Störung</itp:label>
+               <itp:label lang="en">Receive customer request</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <outgoing>_a5af06ae-bd69-464d-bbaf-3d7418702d77</outgoing>
+         <messageEventDefinition id="sid-1c8c5870-9356-40df-9f83-e599e9b89f09"/>
+      </startEvent>
+      <userTask completionQuantity="1" id="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" implementation="##WebService" isForCompensation="false" name="Analyse customer request" startQuantity="1">
+         <documentation id="sid-6c90106e-1ba4-486b-85f5-bd5d0b743c95">First contact with customer</documentation>
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute format="Currency;SFr.;;KPI;2" name="KPICost" type="Float" value="0"/>
+               <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="120">
+                  <attribute format="Duration;;;KPI;3;0.5" name="KPIActiveTime" type="Float" value="120"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="0"/>
+          </attribute>
+               <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Kundenanfrage beantworten</itp:label>
+               <itp:label lang="en">Analyse customer request</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_a5af06ae-bd69-464d-bbaf-3d7418702d77</incoming>
+         <outgoing>_acb2aca3-8851-48f0-b127-7b3c9db5e18d</outgoing>
+      </userTask>
+      <userTask completionQuantity="1" id="_a92069f7-377b-4dbd-a1fd-1da071aabf6d" implementation="##WebService" isForCompensation="false" name="Replace fridge" startQuantity="1">
+         <documentation id="sid-6bef216c-e8f8-4dd9-9b45-8b5b4436cb0b">Fridge replaced if still under warranty.</documentation>
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+               <attribute format="Currency;SFr.;;KPI;2" name="KPICost" type="Float" value="0"/>
+               <attribute format="Duration;;;KPI;3" name="KPIDuration" type="Float" value="60">
+                  <attribute format="Duration;;;KPI;3;0.5" name="KPIActiveTime" type="Float" value="60"/>
+                  <attribute format="Duration;;;KPI;3" name="KPIWaitTime" type="Float" value="0"/>
+          </attribute>
+               <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Garantiefall bearbeiten</itp:label>
+               <itp:label lang="en">Replace fridge</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_b99800c3-c340-460c-a43e-098014a365d0</incoming>
+         <incoming>_3fb323d5-2c59-487a-af63-804208f6c5cb</incoming>
+         <outgoing>_c5756bb9-6e6f-42d1-8799-c2d673499eb8</outgoing>
+      </userTask>
+      <endEvent id="_177bd313-c6c9-4df5-8f82-313beb30d2eb" name="Fridge replaced">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Grantiefall</itp:label>
+               <itp:label lang="en">Fridge replaced</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_c5756bb9-6e6f-42d1-8799-c2d673499eb8</incoming>
+      </endEvent>
+      <exclusiveGateway gatewayDirection="Diverging" id="_604be023-654c-44df-a64c-365254a100cd" name="Service type">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">
+          </itp:label>
+               <itp:label lang="en">Service type</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <incoming>_acb2aca3-8851-48f0-b127-7b3c9db5e18d</incoming>
+         <outgoing>_b99800c3-c340-460c-a43e-098014a365d0</outgoing>
+         <outgoing>_437e5969-1e61-4cb9-aa76-4f8854f32eeb</outgoing>
+         <outgoing>_ada039b6-94dd-4a15-a6b1-c7fe662c64ee</outgoing>
+      </exclusiveGateway>
+      <sequenceFlow id="_acb2aca3-8851-48f0-b127-7b3c9db5e18d" isImmediate="true" name="" sourceRef="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" targetRef="_604be023-654c-44df-a64c-365254a100cd">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">
+          </itp:label>
+               <itp:label lang="en">
+          </itp:label>
+        </itp:localization>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_b99800c3-c340-460c-a43e-098014a365d0" isImmediate="true" name="Warranty" sourceRef="_604be023-654c-44df-a64c-365254a100cd" targetRef="_a92069f7-377b-4dbd-a1fd-1da071aabf6d">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Garantiefall</itp:label>
+               <itp:label lang="en">Warranty</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <conditionExpression id="sid-6aa6ccb3-f8ae-491d-b05f-ef01b3b2b090" xsi:type="tFormalExpression">test='Warranty'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="_437e5969-1e61-4cb9-aa76-4f8854f32eeb" isImmediate="true" name="Emergency service" sourceRef="_604be023-654c-44df-a64c-365254a100cd" targetRef="_cd6f230f-13c3-4027-aa3e-57de601a1ab2">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Notfall</itp:label>
+               <itp:label lang="en">Emergency service</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <conditionExpression id="sid-6c95c5da-034d-49bf-8554-5f9c3f50593a" xsi:type="tFormalExpression">test='Emergency service'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee" isImmediate="true" name="Regular repair service" sourceRef="_604be023-654c-44df-a64c-365254a100cd" targetRef="_2b6bc88e-d3be-4704-87d1-c264bf704589">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Reguläre Reparatur</itp:label>
+               <itp:label lang="en">Regular repair service</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <conditionExpression id="sid-595e3ba1-867b-4fed-8deb-41e79e8bb50f" xsi:type="tFormalExpression">test='Regular repair service'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="_cddf9325-a85b-4347-8c57-8b909fa77ae9" isImmediate="true" name="Standard" sourceRef="_2b6bc88e-d3be-4704-87d1-c264bf704589" targetRef="_d034722f-751d-4f37-a3d7-47993822e979">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Standard</itp:label>
+               <itp:label lang="en">Standard</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <conditionExpression id="sid-7559b680-96c0-4942-b4d3-f4030447a052" xsi:type="tFormalExpression">test='Standard'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="_be893987-caec-4605-b078-bd96b7cd6c12" isImmediate="true" name="Premium" sourceRef="_2b6bc88e-d3be-4704-87d1-c264bf704589" targetRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">Premium</itp:label>
+               <itp:label lang="en">Premium</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <conditionExpression id="sid-a367434e-b2d2-4a4d-b508-b13492edced3" xsi:type="tFormalExpression">test='Premium'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="_435d9320-bbf4-48ad-aa56-16cb5483e95b" isImmediate="true" name="" sourceRef="_d034722f-751d-4f37-a3d7-47993822e979" targetRef="_dcee5c64-3010-4ee5-b480-bce856e6f29c">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">
+          </itp:label>
+               <itp:label lang="en">
+          </itp:label>
+        </itp:localization>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_d54c5707-af7a-4b36-a059-46681bbf0004" isImmediate="true" name="" sourceRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba" targetRef="_dcee5c64-3010-4ee5-b480-bce856e6f29c">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">
+          </itp:label>
+               <itp:label lang="en">
+          </itp:label>
+        </itp:localization>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_2ba0552a-bfce-416f-8673-5d58769c09da" isImmediate="true" name="" sourceRef="_59624ded-2172-4bcb-aa62-24ac01ae7087" targetRef="_cd6f230f-13c3-4027-aa3e-57de601a1ab2">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">
+          </itp:label>
+               <itp:label lang="en">
+          </itp:label>
+        </itp:localization>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_b22c01a4-1eef-4f52-9b16-a201a9621619" isImmediate="true" name="" sourceRef="_cd6f230f-13c3-4027-aa3e-57de601a1ab2" targetRef="_936c0bfa-5ebf-4546-8d1a-cce556148788">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">
+          </itp:label>
+               <itp:label lang="en">
+          </itp:label>
+        </itp:localization>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_c5756bb9-6e6f-42d1-8799-c2d673499eb8" isImmediate="true" name="" sourceRef="_a92069f7-377b-4dbd-a1fd-1da071aabf6d" targetRef="_177bd313-c6c9-4df5-8f82-313beb30d2eb">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">
+          </itp:label>
+               <itp:label lang="en">
+          </itp:label>
+        </itp:localization>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_af4532c5-4b7d-45c6-a6a0-f13739a4ba57" isImmediate="true" name="" sourceRef="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd" targetRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">
+          </itp:label>
+               <itp:label lang="en">
+          </itp:label>
+        </itp:localization>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow id="_cf380e47-1401-4e7e-b710-193b626e49eb" isImmediate="true" name="yes" sourceRef="_936c0bfa-5ebf-4546-8d1a-cce556148788" targetRef="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">ja</itp:label>
+               <itp:label lang="en">yes</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <conditionExpression id="sid-35292071-12a9-4ec3-a521-576f7271deca" xsi:type="tFormalExpression">test='ja'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="_3fb323d5-2c59-487a-af63-804208f6c5cb" isImmediate="true" name="no" sourceRef="_936c0bfa-5ebf-4546-8d1a-cce556148788" targetRef="_a92069f7-377b-4dbd-a1fd-1da071aabf6d">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="unspecified">
+          </itp:label>
+               <itp:label lang="de">nein</itp:label>
+               <itp:label lang="en">no</itp:label>
+        </itp:localization>
+         </extensionElements>
+         <conditionExpression id="sid-82e9bea0-86bc-45bc-9a5d-d3917ec75478" xsi:type="tFormalExpression">test='nein'</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow id="_a5af06ae-bd69-464d-bbaf-3d7418702d77" isImmediate="true" name="" sourceRef="_cc9778bd-edd8-4df2-ba15-56c310f90e62" targetRef="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a">
+         <extensionElements>
+            <itp:systemDefinedAttributes>
+               <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
+               <attribute name="ExternalId" type="String"/>
+        </itp:systemDefinedAttributes>
+            <itp:localization default="en">
+               <itp:label lang="en">
+          </itp:label>
+        </itp:localization>
+         </extensionElements>
+      </sequenceFlow>
+   </process>
+   <bpmndi:BPMNDiagram id="sid-facc0cba-a73b-4a02-844f-20c6e08466c0" name="Fridge Repair Process (1)">
+      <bpmndi:BPMNPlane bpmnElement="sid-87a4f840-a792-4123-8aff-011a43bdc6f1" id="sid-7ce57704-c20d-40ad-bcd7-01f91cfb2685">
+         <bpmndi:BPMNShape bpmnElement="_2f786f9e-5aee-40c9-9db1-1c219bd30076" id="_2f786f9e-5aee-40c9-9db1-1c219bd30076_gui" isHorizontal="true">
+            <omgdc:Bounds height="83.62204724409449" width="804.0472157480316" x="19.842505511811055" y="34.98550866141731"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="20.0" width="98.5714111328125" x="372.58078676181105" y="63.79650948539192"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_0dcebf90-9551-4bc3-a040-107f16defd3f" id="_0dcebf90-9551-4bc3-a040-107f16defd3f_gui" isHorizontal="true">
+            <omgdc:Bounds height="413.85826771653547" width="804.0472157480316" x="19.842505511811055" y="147.40157480314963"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="129.42857360839844" width="12.000000000000021" x="24.842372508035496" y="289.61642185721814"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_569d10fa-7074-48b3-9538-2c8ce2c23fe2" id="_569d10fa-7074-48b3-9538-2c8ce2c23fe2_gui" isHorizontal="true">
+            <omgdc:Bounds height="196.15745196850395" width="775.4703023622048" x="48.419418897637854" y="365.1024047244095"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="128.57142639160156" width="12.000000000000014" x="53.41969529375696" y="398.8954175128607"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_99179f5a-ec32-4f3e-8458-cc8c233bfedf" id="_99179f5a-ec32-4f3e-8458-cc8c233bfedf_gui" isHorizontal="true">
+            <omgdc:Bounds height="95.84645669291336" width="775.4703023622048" x="48.419418897637854" y="269.29133858267716"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="68.57142639160156" width="24.000000000000007" x="47.419190886874524" y="282.9288537333331"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_a856e80e-d5d6-4947-86b6-eb53239254a5" id="_a856e80e-d5d6-4947-86b6-eb53239254a5_gui" isHorizontal="true">
+            <omgdc:Bounds height="121.88976377952758" width="775.4703023622048" x="48.419418897637854" y="147.40157480314963"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="62.57142639160156" width="12.000000000000007" x="53.419536702698274" y="177.06074349711264"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_2b6bc88e-d3be-4704-87d1-c264bf704589" id="_2b6bc88e-d3be-4704-87d1-c264bf704589_gui" isMarkerVisible="false">
+            <omgdc:Bounds height="40.0" width="40.0" x="306.3385826771654" y="399.17322834645677"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="12.0" width="72.85713958740234" x="336.8385826771654" y="429.67322834645677"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_d034722f-751d-4f37-a3d7-47993822e979" id="_d034722f-751d-4f37-a3d7-47993822e979_gui">
+            <omgdc:Bounds height="59.52755905511816" width="121.88976377952764" x="445.03937007874015" y="485.0973921259843"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="23.999999999999943" width="94.28571319580078" x="458.841513175664" y="500.86139206494914"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba" id="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba_gui">
+            <omgdc:Bounds height="59.527559055118104" width="121.88976377952764" x="445.03937007874015" y="389.40944881889766"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="24.0" width="92.57141876220703" x="459.69866039246085" y="405.1734487578625"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_dcee5c64-3010-4ee5-b480-bce856e6f29c" id="_dcee5c64-3010-4ee5-b480-bce856e6f29c_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="750.3543307086613" y="404.1732283464567"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="11.0" width="95.07142639160156" x="716.8186175128606" y="434.1732283464567"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_59624ded-2172-4bcb-aa62-24ac01ae7087" id="_59624ded-2172-4bcb-aa62-24ac01ae7087_gui">
+            <omgdc:Bounds height="30.0" width="29.99999999999983" x="551.2671885527" y="374.40944881889766"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="11.0" width="36.92856979370117" x="547.8029036558494" y="406.40944881889766"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd" id="_a3ebdc66-a929-4fbd-bbe0-6b99167e1ccd_gui">
+            <omgdc:Bounds height="30.0" width="29.99999999999983" x="551.2671885527" y="470.0973921259843"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="10.999999999999943" width="63.642852783203125" x="534.4457621610984" y="502.0973921259843"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887" id="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="747.51968503937" y="298.93700787401576"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="11.0" width="156.35714721679688" x="683.3411114309715" y="328.93700787401576"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_936c0bfa-5ebf-4546-8d1a-cce556148788" id="_936c0bfa-5ebf-4546-8d1a-cce556148788_gui" isMarkerVisible="false">
+            <omgdc:Bounds height="40.0" width="40.0" x="635.1574803149606" y="293.93700787401576"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="12.0" width="70.28571319580078" x="665.6574803149606" y="324.43700787401576"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_cd6f230f-13c3-4027-aa3e-57de601a1ab2" id="_cd6f230f-13c3-4027-aa3e-57de601a1ab2_gui" isExpanded="false">
+            <omgdc:Bounds height="59.527559055118104" width="121.88976377952764" x="445.03937007874015" y="284.1732283464567"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="24.0" width="103.71428680419922" x="454.12722637146476" y="299.93722828542155"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_cc9778bd-edd8-4df2-ba15-56c310f90e62" id="_cc9778bd-edd8-4df2-ba15-56c310f90e62_gui">
+            <omgdc:Bounds height="30.0" width="29.999999999999986" x="99.80314960629921" y="209.2913385826772"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="11.0" width="143.0" x="43.303149606299215" y="241.2913385826772"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" id="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a_gui">
+            <omgdc:Bounds height="59.527559055118104" width="121.88976377952756" x="161.5748031496063" y="194.52755905511816"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="24.0" width="107.14286041259763" x="168.9483726381317" y="210.291558994083"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_a92069f7-377b-4dbd-a1fd-1da071aabf6d" id="_a92069f7-377b-4dbd-a1fd-1da071aabf6d_gui">
+            <omgdc:Bounds height="59.527559055118104" width="121.88976377952758" x="599.527559055118" y="156.6141732283465"/>
+            <bpmndi:BPMNLabel labelStyle="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+               <omgdc:Bounds height="12.0" width="84.00000762939453" x="618.472554935245" y="178.37817316731133"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_177bd313-c6c9-4df5-8f82-313beb30d2eb" id="_177bd313-c6c9-4df5-8f82-313beb30d2eb_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="756.0236220472441" y="171.37795275590554"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="11.0" width="83.28571319580078" x="728.3807654493437" y="201.37795275590554"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_604be023-654c-44df-a64c-365254a100cd" id="_604be023-654c-44df-a64c-365254a100cd_gui" isMarkerVisible="false">
+            <omgdc:Bounds height="40.0" width="40.0" x="306.3385826771654" y="204.2913385826772"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="12.0" width="73.71428680419922" x="336.8385826771654" y="234.7913385826772"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge bpmnElement="_437e5969-1e61-4cb9-aa76-4f8854f32eeb" id="_437e5969-1e61-4cb9-aa76-4f8854f32eeb_gui">
+            <omgdi:waypoint x="346.3385826771654" y="224.2913385826772"/>
+            <omgdi:waypoint x="505.98425196850394" y="224.2913385826772"/>
+            <omgdi:waypoint x="505.98425196850394" y="284.1732283464567"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="12.000000000000028" width="111.42855834960938" x="353.8630065917969" y="204.2910003662109"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_2ba0552a-bfce-416f-8673-5d58769c09da" id="_2ba0552a-bfce-416f-8673-5d58769c09da_gui">
+            <omgdi:waypoint x="559.8177370121498" y="374.40944881889766"/>
+            <omgdi:waypoint x="546.6141354330708" y="343.70078740157487"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_d54c5707-af7a-4b36-a059-46681bbf0004" id="_d54c5707-af7a-4b36-a059-46681bbf0004_gui">
+            <omgdi:waypoint x="566.9291338582677" y="419.17322834645677"/>
+            <omgdi:waypoint x="575.5131212598426" y="419.17322834645677"/>
+            <omgdi:waypoint x="750.3543307086613" y="419.1732283464567"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_cddf9325-a85b-4347-8c57-8b909fa77ae9" id="_cddf9325-a85b-4347-8c57-8b909fa77ae9_gui">
+            <omgdi:waypoint x="327.44947720498783" y="439.17322834645677"/>
+            <omgdi:waypoint x="331.65354330708664" y="514.8611716535434"/>
+            <omgdi:waypoint x="445.03937007874015" y="514.8611716535434"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="56.29405642876628" width="15.071392030251388" x="347.830688836845" y="376.0877899411053"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_b22c01a4-1eef-4f52-9b16-a201a9621619" id="_b22c01a4-1eef-4f52-9b16-a201a9621619_gui">
+            <omgdi:waypoint x="566.9291338582677" y="313.93700787401576"/>
+            <omgdi:waypoint x="575.5131212598426" y="313.93700787401576"/>
+            <omgdi:waypoint x="635.1574803149606" y="313.93700787401576"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_3fb323d5-2c59-487a-af63-804208f6c5cb" id="_3fb323d5-2c59-487a-af63-804208f6c5cb_gui">
+            <omgdi:waypoint x="656.2444368366997" y="293.93700787401576"/>
+            <omgdi:waypoint x="660.4724409448818" y="216.1417322834646"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="16.057066339800485" width="12.819591490028074" x="636.6766242296835" y="270.0410118390164"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_24897a75-c027-48d9-9612-68f8f4de4dca" id="_24897a75-c027-48d9-9612-68f8f4de4dca_gui">
+            <omgdi:waypoint x="114.80314960629921" y="118.6075559055118"/>
+            <omgdi:waypoint x="114.80314960629921" y="209.2913385826772"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="109.7142868041992" width="12.000000000000014" x="94.80270748915795" y="109.09215563950416"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_af4532c5-4b7d-45c6-a6a0-f13739a4ba57" id="_af4532c5-4b7d-45c6-a6a0-f13739a4ba57_gui">
+            <omgdi:waypoint x="558.1147365560543" y="470.0973921259843"/>
+            <omgdi:waypoint x="546.6141354330708" y="448.93700787401576"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee" id="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee_gui">
+            <omgdi:waypoint x="326.3385826771654" y="244.2913385826772"/>
+            <omgdi:waypoint x="326.3385826771654" y="399.17322834645677"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="129.4285888671875" width="12.0" x="306.338848113281" y="106.38754654003927"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_c5756bb9-6e6f-42d1-8799-c2d673499eb8" id="_c5756bb9-6e6f-42d1-8799-c2d673499eb8_gui">
+            <omgdi:waypoint x="721.4173228346456" y="186.37795275590554"/>
+            <omgdi:waypoint x="756.0236220472441" y="186.37795275590554"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_cf380e47-1401-4e7e-b710-193b626e49eb" id="_cf380e47-1401-4e7e-b710-193b626e49eb_gui">
+            <omgdi:waypoint x="675.1574803149606" y="313.93700787401576"/>
+            <omgdi:waypoint x="747.51968503937" y="313.93700787401576"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="12.0" width="20.5714111328125" x="682.6820068359375" y="293.93701171875"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_435d9320-bbf4-48ad-aa56-16cb5483e95b" id="_435d9320-bbf4-48ad-aa56-16cb5483e95b_gui">
+            <omgdi:waypoint x="566.9291338582677" y="514.8611716535434"/>
+            <omgdi:waypoint x="765.3543307086615" y="514.8611716535434"/>
+            <omgdi:waypoint x="765.3543307086613" y="434.1732283464567"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_acb2aca3-8851-48f0-b127-7b3c9db5e18d" id="_acb2aca3-8851-48f0-b127-7b3c9db5e18d_gui">
+            <omgdi:waypoint x="283.46456692913387" y="224.2913385826772"/>
+            <omgdi:waypoint x="306.3385826771654" y="224.2913385826772"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_ea710670-f00a-4ee4-86ea-fc0bca9bc23a" id="_ea710670-f00a-4ee4-86ea-fc0bca9bc23a_gui">
+            <omgdi:waypoint x="577.8753165354331" y="118.6075559055118"/>
+            <omgdi:waypoint x="577.8753165354331" y="485.0973921259843"/>
+            <omgdi:waypoint x="566.2671885527" y="485.0973921259843"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="12.0" width="200.5714111328125" x="369.3035888671875" y="465.09698486328125"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_be893987-caec-4605-b078-bd96b7cd6c12" id="_be893987-caec-4605-b078-bd96b7cd6c12_gui">
+            <omgdi:waypoint x="346.3385826771654" y="419.17322834645677"/>
+            <omgdi:waypoint x="445.03937007874015" y="419.17322834645677"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="12.0" width="51.428558349609375" x="353.8630065917969" y="399.1730041503906"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_b99800c3-c340-460c-a43e-098014a365d0" id="_b99800c3-c340-460c-a43e-098014a365d0_gui">
+            <omgdi:waypoint x="329.1423209949224" y="204.2913385826772"/>
+            <omgdi:waypoint x="331.65354330708664" y="186.37795275590554"/>
+            <omgdi:waypoint x="575.5130645669292" y="186.37795275590554"/>
+            <omgdi:waypoint x="599.527559055118" y="186.37795275590554"/>
+            <bpmndi:BPMNLabel labelStyle="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+               <omgdc:Bounds height="57.68957342636412" width="19.737563849369508" x="310.1505228649164" y="139.6797812746111"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_a5af06ae-bd69-464d-bbaf-3d7418702d77" id="_a5af06ae-bd69-464d-bbaf-3d7418702d77_gui">
+            <omgdi:waypoint x="129.8031496062992" y="224.2913385826772"/>
+            <omgdi:waypoint x="161.5748031496063" y="224.2913385826772"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+      <bpmndi:BPMNLabelStyle id="sid-733c89c2-b0ed-4bd8-b0f0-98e834018e39">
+         <omgdc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name="Arial" size="11.0"/>
+      </bpmndi:BPMNLabelStyle>
+      <bpmndi:BPMNLabelStyle id="sid-9ce598f7-d683-47df-9579-48e6b81e31e1">
+         <omgdc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name="Arial" size="12.0"/>
+      </bpmndi:BPMNLabelStyle>
+   </bpmndi:BPMNDiagram>
+   <bpmndi:BPMNDiagram id="sid-14f1f714-f9d7-4986-82b0-60b354672fbc">
+      <bpmndi:BPMNPlane bpmnElement="_cd6f230f-13c3-4027-aa3e-57de601a1ab2" id="sid-bebe143b-d901-4297-96a6-468ee4e9a7ea">
+         <bpmndi:BPMNShape bpmnElement="_2d952f4b-8728-451b-8956-686e0cd2e073" id="_2d952f4b-8728-451b-8956-686e0cd2e073_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="75.70866141732284" y="257.12598425196853"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_b3196388-e37a-4e2a-a05c-dc78957cc098" id="_b3196388-e37a-4e2a-a05c-dc78957cc098_gui">
+            <omgdc:Bounds height="59.527559055118104" width="121.88976377952756" x="131.10236220472441" y="242.36220472440948"/>
+            <bpmndi:BPMNLabel labelStyle="sid-7db4798b-f2cb-4849-b737-7c8d72098bd5">
+               <omgdc:Bounds height="12.0" width="98.57141876220703" x="142.76165251844512" y="264.1262046633743"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" id="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c_gui" isMarkerVisible="false">
+            <omgdc:Bounds height="40.0" width="40.0" x="314.8425196850394" y="252.12598425196853"/>
+            <bpmndi:BPMNLabel labelStyle="sid-067fa987-e165-49cf-b0d8-29b18a61a815">
+               <omgdc:Bounds height="12.0" width="48.857147216796875" x="345.3425196850394" y="282.62598425196853"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_f7b840ec-324b-4b94-b909-7b3965290a9f" id="_f7b840ec-324b-4b94-b909-7b3965290a9f_gui">
+            <omgdc:Bounds height="59.527559055118104" width="121.88976377952758" x="445.03937007874015" y="161.57480314960634"/>
+            <bpmndi:BPMNLabel labelStyle="sid-7db4798b-f2cb-4849-b737-7c8d72098bd5">
+               <omgdc:Bounds height="12.0" width="99.4285659790039" x="456.2700867840624" y="183.33880308857118"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_c46eb9a6-dba6-404e-a749-0a188551106a" id="_c46eb9a6-dba6-404e-a749-0a188551106a_gui">
+            <omgdc:Bounds height="59.527559055118104" width="121.88976377952758" x="445.03937007874015" y="242.36220472440948"/>
+            <bpmndi:BPMNLabel labelStyle="sid-7db4798b-f2cb-4849-b737-7c8d72098bd5">
+               <omgdc:Bounds height="12.0" width="110.57141876220703" x="450.69866039246085" y="264.1262046633743"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc" id="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="591.6141732283465" y="214.60629921259846"/>
+            <bpmndi:BPMNLabel labelStyle="sid-067fa987-e165-49cf-b0d8-29b18a61a815">
+               <omgdc:Bounds height="11.0" width="58.142852783203125" x="576.542746836745" y="244.60629921259846"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_13340b88-62d8-40da-a02f-59679d434f46" id="_13340b88-62d8-40da-a02f-59679d434f46_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="591.6141732283465" y="339.33070866141736"/>
+            <bpmndi:BPMNLabel labelStyle="sid-067fa987-e165-49cf-b0d8-29b18a61a815">
+               <omgdc:Bounds height="11.0" width="71.5" x="569.8641732283465" y="369.33070866141736"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge bpmnElement="_34cdc55a-8d4c-4abc-9a78-451549eceb34" id="_34cdc55a-8d4c-4abc-9a78-451549eceb34_gui">
+            <omgdi:waypoint x="336.1583091587236" y="252.12598425196853"/>
+            <omgdi:waypoint x="340.15748031496065" y="191.3385826771654"/>
+            <omgdi:waypoint x="445.03937007874015" y="191.3385826771654"/>
+            <bpmndi:BPMNLabel labelStyle="sid-067fa987-e165-49cf-b0d8-29b18a61a815">
+               <omgdc:Bounds height="88.02773484178093" width="17.713590632978367" x="316.6737535865594" y="156.3920122274437"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_11e62df5-3541-4000-8635-ce8be57d532f" id="_11e62df5-3541-4000-8635-ce8be57d532f_gui">
+            <omgdi:waypoint x="354.8425196850394" y="272.12598425196853"/>
+            <omgdi:waypoint x="445.03937007874015" y="272.12598425196853"/>
+            <bpmndi:BPMNLabel labelStyle="sid-067fa987-e165-49cf-b0d8-29b18a61a815">
+               <omgdc:Bounds height="12.000000000000028" width="107.14285278320312" x="362.36700439453125" y="252.1260070800781"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_831da0f3-1f2e-466f-b414-5c15b8837bee" id="_831da0f3-1f2e-466f-b414-5c15b8837bee_gui">
+            <omgdi:waypoint x="336.1356231333153" y="292.12598425196853"/>
+            <omgdi:waypoint x="340.15748031496065" y="354.33070866141736"/>
+            <omgdi:waypoint x="591.6141732283465" y="354.33070866141736"/>
+            <bpmndi:BPMNLabel labelStyle="sid-067fa987-e165-49cf-b0d8-29b18a61a815">
+               <omgdc:Bounds height="82.0331369490514" width="17.228791415508397" x="356.5619529225644" y="203.42968086563198"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8" id="_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8_gui">
+            <omgdi:waypoint x="566.9291338582677" y="191.3385826771654"/>
+            <omgdi:waypoint x="606.6141732283465" y="191.3385826771654"/>
+            <omgdi:waypoint x="606.6141732283465" y="214.60629921259846"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_752caf9f-4710-47da-98d8-744b4c5e5790" id="_752caf9f-4710-47da-98d8-744b4c5e5790_gui">
+            <omgdi:waypoint x="566.9291338582677" y="272.12598425196853"/>
+            <omgdi:waypoint x="606.6141732283465" y="272.12598425196853"/>
+            <omgdi:waypoint x="606.6141732283465" y="244.60629921259846"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7" id="_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7_gui">
+            <omgdi:waypoint x="105.70866141732284" y="272.12598425196853"/>
+            <omgdi:waypoint x="131.10236220472441" y="272.12598425196853"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_35bd0f68-b0f8-43f6-9f1a-c5692d07464a" id="_35bd0f68-b0f8-43f6-9f1a-c5692d07464a_gui">
+            <omgdi:waypoint x="252.99212598425197" y="272.12598425196853"/>
+            <omgdi:waypoint x="314.8425196850394" y="272.12598425196853"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
