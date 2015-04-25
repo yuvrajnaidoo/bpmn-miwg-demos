@@ -32,6 +32,7 @@ Participating Vendors & Tools
 <img src="press-kit/logos/camunda.png" width="250" />
 <img src="press-kit/logos/itp-commerce.jpg" width="250" />
 ![Logo](press-kit/logos/knowprocess.png)
+<img src="press-kit/logos/Signavio.jpg" width="250" />
 <img src="press-kit/logos/Trisotech.png" width="250" vspace="20" />
 <img src="press-kit/logos/W4BPMN+.png" width="250" hspace="30" />
 ![Logo](press-kit/logos/yaoqiang-bpmn-editor.png)
