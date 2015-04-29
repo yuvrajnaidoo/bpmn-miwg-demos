@@ -313,7 +313,7 @@
                <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
             </w4graph:graphStyle>
          </extensionElements>
-         <conditionExpression xsi:type="tFormalExpression" id="sid-d4f3f0f7-79c3-4b1c-817e-13d9bdd96666"><![CDATA[not(bpmn:getDataObject('approved')]]></conditionExpression>
+         <conditionExpression xsi:type="tFormalExpression" id="sid-d4f3f0f7-79c3-4b1c-817e-13d9bdd96666"><![CDATA[not(bpmn:getDataObject('approved'))]]></conditionExpression>
       </sequenceFlow>
       <sequenceFlow id="reviewSuccessful" name="yes" isImmediate="true" sourceRef="reviewSuccessful_gw" targetRef="approveInvoice">
          <extensionElements>
@@ -333,7 +333,7 @@
                <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
             </w4graph:graphStyle>
          </extensionElements>
-         <conditionExpression xsi:type="tFormalExpression" id="sid-628a2fdc-7654-4273-930d-8e3127b9e8b2"><![CDATA[${getDataObject('clarified') == 'no'}]]></conditionExpression>
+         <conditionExpression xsi:type="tFormalExpression" id="sid-628a2fdc-7654-4273-930d-8e3127b9e8b2"><![CDATA[bpmn:getDataObject('clarified') == 'no']]></conditionExpression>
       </sequenceFlow>
       <sequenceFlow id="sequenceFlow_180" isImmediate="true" sourceRef="approveInvoice" targetRef="invoice_approved">
          <extensionElements>
