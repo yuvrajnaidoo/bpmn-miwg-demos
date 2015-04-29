@@ -3,7 +3,7 @@
    <import importType="http://www.w3.org/2001/XMLSchema" location="xsdTypes.xsd" namespace="http://xsdTypes.org/"/>
    <dataStore id="sid-14ef3d18-7218-4f57-98f0-bb595114754b" isUnlimited="false" name="Financial Accounting System"/>
    <message id="sid-328811a0-7f72-468f-92de-6ab19e353312" name="invoice-received-C.1.0"/>
-   <process id="bpmn-miwg-test-case-c.1.0" name="BPMN MIWG Test Case C.1.0" isClosed="true" isExecutable="true" processType="None">
+   <process id="handle-invoice" name="Invoice Handling (OMG BPMN MIWG Demo)" isClosed="true" isExecutable="true" processType="None">
       <extensionElements>
          <w4graph:graphStyle>
             <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
@@ -385,7 +385,7 @@
    <itemDefinition id="xsdString" isCollection="false" itemKind="Information" structureRef="xs:tString"/>
    <itemDefinition id="xsdBool" isCollection="false" itemKind="Information" structureRef="xs:tBool"/>
    <bpmndi:BPMNDiagram id="sid-78cf0368-c97e-4dea-885f-0e535c20d6c7" name="sid-78cf0368-c97e-4dea-885f-0e535c20d6c7">
-      <bpmndi:BPMNPlane id="sid-39085760-f7ff-4491-a241-483b340d6533" bpmnElement="bpmn-miwg-test-case-c.1.0">
+      <bpmndi:BPMNPlane id="sid-39085760-f7ff-4491-a241-483b340d6533" bpmnElement="handle-invoice">
          <bpmndi:BPMNShape id="approveInvoice_gui" bpmnElement="approveInvoice">
             <omgdc:Bounds height="80.0" width="100.0" x="353.0" y="225.0"/>
          </bpmndi:BPMNShape>
