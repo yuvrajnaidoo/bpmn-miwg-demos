@@ -9,45 +9,6 @@
             <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
          </w4graph:graphStyle>
       </extensionElements>
-      <laneSet id="sid-499dfba4-1449-4914-9e85-55b252800bad">
-         <lane id="Approver" name="Approver">
-            <extensionElements>
-               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
-               <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
-               <w4graph:graphStyle>
-                  <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-               </w4graph:graphStyle>
-            </extensionElements>
-            <flowNodeRef>approveInvoice</flowNodeRef>
-            <flowNodeRef>invoice_approved</flowNodeRef>
-         </lane>
-         <lane id="teamAssistant" name="Team Assistant">
-            <extensionElements>
-               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
-               <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
-               <w4graph:graphStyle>
-                  <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-               </w4graph:graphStyle>
-            </extensionElements>
-            <flowNodeRef>assignApprover</flowNodeRef>
-            <flowNodeRef>reviewInvoice</flowNodeRef>
-            <flowNodeRef>reviewSuccessful_gw</flowNodeRef>
-            <flowNodeRef>invoiceNotProcessed</flowNodeRef>
-            <flowNodeRef>StartEvent_1</flowNodeRef>
-         </lane>
-         <lane id="Accountant" name="Accountant">
-            <extensionElements>
-               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
-               <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
-               <w4graph:graphStyle>
-                  <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-               </w4graph:graphStyle>
-            </extensionElements>
-            <flowNodeRef>prepareBankTransfer</flowNodeRef>
-            <flowNodeRef>invoiceProcessed</flowNodeRef>
-            <flowNodeRef>archiveInvoice</flowNodeRef>
-         </lane>
-      </laneSet>
       <userTask id="approveInvoice" camunda:assignee="${approver}" camunda:formKey="app:approveInvoice.jsf" name="Approve Invoice" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="##unspecified">
          <extensionElements>
             <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
@@ -424,19 +385,7 @@
    <itemDefinition id="xsdString" isCollection="false" itemKind="Information" structureRef="xs:tString"/>
    <itemDefinition id="xsdBool" isCollection="false" itemKind="Information" structureRef="xs:tBool"/>
    <bpmndi:BPMNDiagram id="sid-78cf0368-c97e-4dea-885f-0e535c20d6c7" name="sid-78cf0368-c97e-4dea-885f-0e535c20d6c7">
-      <bpmndi:BPMNPlane id="sid-39085760-f7ff-4491-a241-483b340d6533" bpmnElement="sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3">
-         <bpmndi:BPMNShape id="Process_Engine_1_gui" bpmnElement="Process_Engine_1" isHorizontal="true">
-            <omgdc:Bounds height="488.0" width="1009.0" x="0.0" y="0.0"/>
-         </bpmndi:BPMNShape>
-         <bpmndi:BPMNShape id="Approver_gui" bpmnElement="Approver" isHorizontal="true">
-            <omgdc:Bounds height="161.0" width="979.0" x="30.0" y="183.0"/>
-         </bpmndi:BPMNShape>
-         <bpmndi:BPMNShape id="teamAssistant_gui" bpmnElement="teamAssistant" isHorizontal="true">
-            <omgdc:Bounds height="183.0" width="979.0" x="30.0" y="0.0"/>
-         </bpmndi:BPMNShape>
-         <bpmndi:BPMNShape id="Accountant_gui" bpmnElement="Accountant" isHorizontal="true">
-            <omgdc:Bounds height="144.0" width="979.0" x="30.0" y="344.0"/>
-         </bpmndi:BPMNShape>
+      <bpmndi:BPMNPlane id="sid-39085760-f7ff-4491-a241-483b340d6533" bpmnElement="bpmn-miwg-test-case-c.1.0">
          <bpmndi:BPMNShape id="approveInvoice_gui" bpmnElement="approveInvoice">
             <omgdc:Bounds height="80.0" width="100.0" x="353.0" y="225.0"/>
          </bpmndi:BPMNShape>
