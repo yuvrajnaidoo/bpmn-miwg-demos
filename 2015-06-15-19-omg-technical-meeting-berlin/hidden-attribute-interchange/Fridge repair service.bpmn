@@ -221,7 +221,7 @@
       </extensionElements>
       <incoming>_c5756bb9-6e6f-42d1-8799-c2d673499eb8</incoming>
     </endEvent>
-    <exclusiveGateway id="_604be023-654c-44df-a64c-365254a100cd" name="Service type" gatewayDirection="Diverging">
+    <exclusiveGateway id="_604be023-654c-44df-a64c-365254a100cd" name="Service type" gatewayDirection="Unspecified">
       <extensionElements>
         <itp:systemDefinedAttributes>
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
