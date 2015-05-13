@@ -64,71 +64,6 @@
         </w4graph:root>
       </w4graph:graphStyle>
     </extensionElements>
-    <laneSet id="Bpmn_LaneSet_jcmMsO_bEeSGoscwBjzAjw">
-      <lane id="_569d10fa-7074-48b3-9538-2c8ce2c23fe2" name="Standard repair">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Standard-Reparaturteam</itp:label>
-            <itp:label lang="en">Standard repair team</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <flowNodeRef>_2b6bc88e-d3be-4704-87d1-c264bf704589</flowNodeRef>
-        <flowNodeRef>_d034722f-751d-4f37-a3d7-47993822e979</flowNodeRef>
-        <flowNodeRef>_6a34496f-8cf7-42e5-88a9-d1af98cc3cba</flowNodeRef>
-        <flowNodeRef>_dcee5c64-3010-4ee5-b480-bce856e6f29c</flowNodeRef>
-      </lane>
-      <lane id="_99179f5a-ec32-4f3e-8458-cc8c233bfedf" name="Emergency repair">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Notfallrperatur-Team</itp:label>
-            <itp:label lang="en">Emergency repair team</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <flowNodeRef>_b3dc1906-d4d3-40c5-aaf6-5a74148ae887</flowNodeRef>
-        <flowNodeRef>_936c0bfa-5ebf-4546-8d1a-cce556148788</flowNodeRef>
-        <flowNodeRef>_cd6f230f-13c3-4027-aa3e-57de601a1ab2</flowNodeRef>
-      </lane>
-      <lane id="_a856e80e-d5d6-4947-86b6-eb53239254a5" name="Call center">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Call Center</itp:label>
-            <itp:label lang="en">Call center</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <flowNodeRef>_cc9778bd-edd8-4df2-ba15-56c310f90e62</flowNodeRef>
-        <flowNodeRef>_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a</flowNodeRef>
-        <flowNodeRef>_a92069f7-377b-4dbd-a1fd-1da071aabf6d</flowNodeRef>
-        <flowNodeRef>_177bd313-c6c9-4df5-8f82-313beb30d2eb</flowNodeRef>
-        <flowNodeRef>_604be023-654c-44df-a64c-365254a100cd</flowNodeRef>
-      </lane>
-    </laneSet>
     <startEvent id="_cc9778bd-edd8-4df2-ba15-56c310f90e62" name="Receive customer request" isInterrupting="true">
       <extensionElements>
         <itp:systemDefinedAttributes>
@@ -149,7 +84,7 @@
       <outgoing>_a5af06ae-bd69-464d-bbaf-3d7418702d77</outgoing>
       <messageEventDefinition id="Bpmn_MessageEventDefinition_jcmzwO_bEeSGoscwBjzAjw"/>
     </startEvent>
-    <userTask id="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" name="Analyse customer request" completionQuantity="1" isForCompensation="false" startQuantity="1">
+    <userTask id="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" name="Analyse customer request" completionQuantity="2" isForCompensation="false" startQuantity="2">
       <documentation id="Bpmn_Documentation_jcmzwe_bEeSGoscwBjzAjw" textFormat="text/plain">First contact with customer</documentation>
       <extensionElements>
         <itp:systemDefinedAttributes>
@@ -660,24 +595,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
   </message>
   <bpmndi:BPMNDiagram id="Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw" name="Fridge Repair Process (1)" resolution="72.0">
     <bpmndi:BPMNPlane id="_1" bpmnElement="_8170787a-3207-434d-9bea-4787059f444f">
-      <bpmndi:BPMNShape id="_2839B4B4-C30C-4E25-9ED3-4A26167E4102" itp:label="Standard repair team" itp:elementType="lane" color:border-color="#FF0000" bpmnElement="_569d10fa-7074-48b3-9538-2c8ce2c23fe2" isHorizontal="true">
-        <dc:Bounds height="196.0" width="775.0" x="48.0" y="245.0"/>
-        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxL0e_bEeSGoscwBjzAjw" color:color="#FF0000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="75.0" width="12.0" x="50.0" y="306.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_883E039B-762B-40E4-BB54-658473E59FE0" itp:label="Emergency repair team" itp:elementType="lane" color:border-color="#FF0000" bpmnElement="_99179f5a-ec32-4f3e-8458-cc8c233bfedf" isHorizontal="true">
-        <dc:Bounds height="97.0" width="775.0" x="48.0" y="149.0"/>
-        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxL0u_bEeSGoscwBjzAjw" color:color="#FF0000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="86.0" width="12.0" x="50.0" y="154.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_3DD5A736-A9F7-4875-AA70-04A5F84C9F97" itp:label="Call center" itp:elementType="lane" color:border-color="#FF0000" bpmnElement="_a856e80e-d5d6-4947-86b6-eb53239254a5" isHorizontal="true">
-        <dc:Bounds height="121.0" width="775.0" x="48.0" y="29.0"/>
-        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxL0-_bEeSGoscwBjzAjw" color:color="#FF0000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="56.0" width="12.0" x="50.0" y="61.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_1BF9B2F3-F30D-4FD6-A820-C247ADFA711C" itp:label="Receive customer request" itp:elementType="startEvent" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_cc9778bd-edd8-4df2-ba15-56c310f90e62">
         <dc:Bounds height="17.0" width="17.0" x="114.0" y="97.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxy4O_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
@@ -747,7 +664,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
       <bpmndi:BPMNShape id="_44EE9D7D-A31D-463D-8804-483D05C6CF42" itp:label="Perform emergency repair" itp:elementType="subProcess" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_cd6f230f-13c3-4027-aa3e-57de601a1ab2">
         <dc:Bounds height="59.0" width="121.0" x="445.0" y="164.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jczBA-_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="82.0" x="464.0" y="181.0"/>
+          <dc:Bounds height="24.0" width="82.0" x="459.0" y="168.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="_0F47EA76-94CD-4643-A488-490A89F16822" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_acb2aca3-8851-48f0-b127-7b3c9db5e18d">
