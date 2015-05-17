@@ -48,7 +48,6 @@
           <attribute name="ProcessSimulation" type="String" value="100"/>
         </attribute>
       </itp:systemDefinedAttributes>
-      
       <w4graph:graphStyle>
         <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -65,7 +64,6 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="109,183,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -87,7 +85,6 @@
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -109,7 +106,6 @@
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -124,7 +120,6 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -137,7 +132,6 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -153,7 +147,6 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -166,7 +159,6 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -190,7 +182,6 @@ Customers may decide to raise the service level to Premium while waiting for the
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSIxYWZkYWNjMS0zMDk4LTQ4YzAtOGUwNS1mYWQwZjZkMTg5OTAiIG1heC1jYXBhY2l0eT0iMjAwIiBjcml0aWNhbC1jYXBhY2l0eT0iMTgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -212,7 +203,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkOGIzZTMyZC1lMDRmLTRhYzgtOWYyMC0wZDkzMTI3YWZlYWUiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -226,7 +216,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -240,7 +229,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -262,7 +250,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -276,7 +263,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -289,7 +275,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -302,7 +287,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -315,7 +299,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -328,7 +311,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -341,7 +323,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -354,7 +335,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -367,7 +347,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -380,7 +359,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -393,7 +371,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -406,7 +383,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -419,7 +395,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -432,7 +407,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -446,7 +420,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
         <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
         <attribute name="ExternalId" type="String"/>
       </itp:systemDefinedAttributes>
-      
     </extensionElements>
   </message>
   <bpmndi:BPMNDiagram id="Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw" name="Fridge Repair Process (1)" resolution="72.0">
