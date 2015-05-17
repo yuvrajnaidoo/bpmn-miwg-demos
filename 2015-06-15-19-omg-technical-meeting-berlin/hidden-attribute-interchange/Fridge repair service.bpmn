@@ -48,12 +48,7 @@
           <attribute name="ProcessSimulation" type="String" value="100"/>
         </attribute>
       </itp:systemDefinedAttributes>
-      <itp:localization default="en">
-        <itp:label lang="unspecified">
-        </itp:label>
-        <itp:label lang="de">Kühlschrank-Reparaturprozess</itp:label>
-        <itp:label lang="en">Fridge Repair Process</itp:label>
-      </itp:localization>
+      
       <w4graph:graphStyle>
         <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -70,12 +65,7 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Störung</itp:label>
-          <itp:label lang="en">Receive customer request</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="109,183,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -97,12 +87,7 @@
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Kundenanfrage beantworten</itp:label>
-          <itp:label lang="en">Analyse customer request</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -124,12 +109,7 @@
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Garantiefall bearbeiten</itp:label>
-          <itp:label lang="en">Replace fridge</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -144,12 +124,7 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Grantiefall</itp:label>
-          <itp:label lang="en">Fridge replaced</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -162,13 +137,7 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">Service type</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -184,12 +153,7 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Notfall Reparatur</itp:label>
-          <itp:label lang="en">Emergency repair completed</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -202,12 +166,7 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Service Level</itp:label>
-          <itp:label lang="en">Service level</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -231,12 +190,7 @@ Customers may decide to raise the service level to Premium while waiting for the
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSIxYWZkYWNjMS0zMDk4LTQ4YzAtOGUwNS1mYWQwZjZkMTg5OTAiIG1heC1jYXBhY2l0eT0iMjAwIiBjcml0aWNhbC1jYXBhY2l0eT0iMTgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Reparatur ausführen (Standard Level)</itp:label>
-          <itp:label lang="en">Perform repair (standard level)</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -258,12 +212,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkOGIzZTMyZC1lMDRmLTRhYzgtOWYyMC0wZDkzMTI3YWZlYWUiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Reparatur ausführen (Premium Level)</itp:label>
-          <itp:label lang="en">Perform repair (premium level)</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -277,12 +226,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Reparatur</itp:label>
-          <itp:label lang="en">Repair completed</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -296,12 +240,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Erfolg?</itp:label>
-          <itp:label lang="en">Successful?</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -323,12 +262,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Notfallreparatur ausführen</itp:label>
-          <itp:label lang="en">Perform emergency repair</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -342,14 +276,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -362,12 +289,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Garantiefall</itp:label>
-          <itp:label lang="en">Warranty</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -380,12 +302,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Notfall</itp:label>
-          <itp:label lang="en">Emergency service</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -398,12 +315,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Reguläre Reparatur</itp:label>
-          <itp:label lang="en">Regular repair service</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -416,12 +328,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Standard</itp:label>
-          <itp:label lang="en">Standard</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -434,12 +341,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Premium</itp:label>
-          <itp:label lang="en">Premium</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -452,14 +354,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -472,14 +367,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -492,14 +380,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -512,14 +393,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -532,12 +406,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">ja</itp:label>
-          <itp:label lang="en">yes</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -550,12 +419,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">nein</itp:label>
-          <itp:label lang="en">no</itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
@@ -568,10 +432,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
+        
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -585,12 +446,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
         <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
         <attribute name="ExternalId" type="String"/>
       </itp:systemDefinedAttributes>
-      <itp:localization default="en">
-        <itp:label lang="unspecified">
-        </itp:label>
-        <itp:label lang="de">Servicelevel erhöhen</itp:label>
-        <itp:label lang="en"><![CDATA[<de>Servicelevel erhöhen]]></itp:label>
-      </itp:localization>
+      
     </extensionElements>
   </message>
   <bpmndi:BPMNDiagram id="Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw" name="Fridge Repair Process (1)" resolution="72.0">
