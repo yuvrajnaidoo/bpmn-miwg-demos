@@ -14,14 +14,19 @@ There are three demo scenarios:
 
 2. Hidden Attribute Interchange
 -------------------------------
+### Storyboard
+![Storyboard](hidden-attribute-interchange/Hidden attribute demo scenario.PNG)
+### Example
+![Example](hidden-attribute-interchange/Fridge Repair Service.png)
 
 3. Executable Model Interchange
 -------------------------------
 
+### Storyboard
 Here is the demo storyboard for the interchange of an executable model:
-
 ![Storyboard](execution-demo/storyboard.png)
-
+### Example
+![Example](execution-demo/handle-invoice.png)
 Participating Vendors & Tools
 -----------------------------
 [Vendors interested in participating](http://doodle.com/gqhudvs2ys96hazr)

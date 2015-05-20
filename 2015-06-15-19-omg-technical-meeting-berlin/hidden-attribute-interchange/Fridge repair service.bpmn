@@ -48,12 +48,6 @@
           <attribute name="ProcessSimulation" type="String" value="100"/>
         </attribute>
       </itp:systemDefinedAttributes>
-      <itp:localization default="en">
-        <itp:label lang="unspecified">
-        </itp:label>
-        <itp:label lang="de">Kühlschrank-Reparaturprozess</itp:label>
-        <itp:label lang="en">Fridge Repair Process</itp:label>
-      </itp:localization>
       <w4graph:graphStyle>
         <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -64,83 +58,12 @@
         </w4graph:root>
       </w4graph:graphStyle>
     </extensionElements>
-    <laneSet id="Bpmn_LaneSet_jcmMsO_bEeSGoscwBjzAjw">
-      <lane id="_569d10fa-7074-48b3-9538-2c8ce2c23fe2" name="Standard repair">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Standard-Reparaturteam</itp:label>
-            <itp:label lang="en">Standard repair team</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <flowNodeRef>_2b6bc88e-d3be-4704-87d1-c264bf704589</flowNodeRef>
-        <flowNodeRef>_d034722f-751d-4f37-a3d7-47993822e979</flowNodeRef>
-        <flowNodeRef>_6a34496f-8cf7-42e5-88a9-d1af98cc3cba</flowNodeRef>
-        <flowNodeRef>_dcee5c64-3010-4ee5-b480-bce856e6f29c</flowNodeRef>
-      </lane>
-      <lane id="_99179f5a-ec32-4f3e-8458-cc8c233bfedf" name="Emergency repair">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Notfallrperatur-Team</itp:label>
-            <itp:label lang="en">Emergency repair team</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <flowNodeRef>_b3dc1906-d4d3-40c5-aaf6-5a74148ae887</flowNodeRef>
-        <flowNodeRef>_936c0bfa-5ebf-4546-8d1a-cce556148788</flowNodeRef>
-        <flowNodeRef>_cd6f230f-13c3-4027-aa3e-57de601a1ab2</flowNodeRef>
-      </lane>
-      <lane id="_a856e80e-d5d6-4947-86b6-eb53239254a5" name="Call center">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Call Center</itp:label>
-            <itp:label lang="en">Call center</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <flowNodeRef>_cc9778bd-edd8-4df2-ba15-56c310f90e62</flowNodeRef>
-        <flowNodeRef>_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a</flowNodeRef>
-        <flowNodeRef>_a92069f7-377b-4dbd-a1fd-1da071aabf6d</flowNodeRef>
-        <flowNodeRef>_177bd313-c6c9-4df5-8f82-313beb30d2eb</flowNodeRef>
-        <flowNodeRef>_604be023-654c-44df-a64c-365254a100cd</flowNodeRef>
-      </lane>
-    </laneSet>
     <startEvent id="_cc9778bd-edd8-4df2-ba15-56c310f90e62" name="Receive customer request" isInterrupting="true">
       <extensionElements>
         <itp:systemDefinedAttributes>
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Störung</itp:label>
-          <itp:label lang="en">Receive customer request</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="109,183,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -149,7 +72,7 @@
       <outgoing>_a5af06ae-bd69-464d-bbaf-3d7418702d77</outgoing>
       <messageEventDefinition id="Bpmn_MessageEventDefinition_jcmzwO_bEeSGoscwBjzAjw"/>
     </startEvent>
-    <userTask id="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" name="Analyse customer request" completionQuantity="1" isForCompensation="false" startQuantity="1">
+    <userTask id="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" name="Analyse customer request" completionQuantity="2" isForCompensation="false" startQuantity="2">
       <documentation id="Bpmn_Documentation_jcmzwe_bEeSGoscwBjzAjw" textFormat="text/plain">First contact with customer</documentation>
       <extensionElements>
         <itp:systemDefinedAttributes>
@@ -162,12 +85,6 @@
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Kundenanfrage beantworten</itp:label>
-          <itp:label lang="en">Analyse customer request</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -189,12 +106,6 @@
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Garantiefall bearbeiten</itp:label>
-          <itp:label lang="en">Replace fridge</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -209,31 +120,18 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Grantiefall</itp:label>
-          <itp:label lang="en">Fridge replaced</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
       </extensionElements>
       <incoming>_c5756bb9-6e6f-42d1-8799-c2d673499eb8</incoming>
     </endEvent>
-    <exclusiveGateway id="_604be023-654c-44df-a64c-365254a100cd" name="Service type" gatewayDirection="Diverging">
+    <exclusiveGateway id="_604be023-654c-44df-a64c-365254a100cd" name="Service type" gatewayDirection="Unspecified">
       <extensionElements>
         <itp:systemDefinedAttributes>
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">Service type</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -249,12 +147,6 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Notfall Reparatur</itp:label>
-          <itp:label lang="en">Emergency repair completed</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -267,12 +159,6 @@
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Service Level</itp:label>
-          <itp:label lang="en">Service level</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -296,12 +182,6 @@ Customers may decide to raise the service level to Premium while waiting for the
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSIxYWZkYWNjMS0zMDk4LTQ4YzAtOGUwNS1mYWQwZjZkMTg5OTAiIG1heC1jYXBhY2l0eT0iMjAwIiBjcml0aWNhbC1jYXBhY2l0eT0iMTgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Reparatur ausführen (Standard Level)</itp:label>
-          <itp:label lang="en">Perform repair (standard level)</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -323,12 +203,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkOGIzZTMyZC1lMDRmLTRhYzgtOWYyMC0wZDkzMTI3YWZlYWUiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Reparatur ausführen (Premium Level)</itp:label>
-          <itp:label lang="en">Perform repair (premium level)</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -342,12 +216,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Reparatur</itp:label>
-          <itp:label lang="en">Repair completed</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -361,12 +229,6 @@ This service level guarantees less than two days to solve the issue.]]></documen
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Erfolg?</itp:label>
-          <itp:label lang="en">Successful?</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
@@ -388,328 +250,12 @@ This service level guarantees less than two days to solve the issue.]]></documen
           </attribute>
           <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Notfallreparatur ausführen</itp:label>
-          <itp:label lang="en">Perform emergency repair</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
         </w4graph:graphStyle>
       </extensionElements>
       <incoming>_437e5969-1e61-4cb9-aa76-4f8854f32eeb</incoming>
       <outgoing>_b22c01a4-1eef-4f52-9b16-a201a9621619</outgoing>
-      <startEvent id="_2d952f4b-8728-451b-8956-686e0cd2e073" isInterrupting="true">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">
-            </itp:label>
-            <itp:label lang="en">
-            </itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="109,183,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <outgoing>_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7</outgoing>
-      </startEvent>
-      <userTask id="_b3196388-e37a-4e2a-a05c-dc78957cc098" name="Identify problem" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="WebService">
-        <documentation id="Bpmn_Documentation_jcp3EO_bEeSGoscwBjzAjw" textFormat="text/plain"><![CDATA[A technician will call the customer to discuss the problem in more detail.
-The case will be qualified into either a 'trivial problem', which requires no professional intervention (eg. fridge has no power, light is broken, fridge must be defrosted), a 'common problem', which is easy to identify but still needs a technician to solve (eg. pump is broken) or 'total damage' (eg. end of life, broken main parts).]]></documentation>
-        <extensionElements>
-          <itp:userDefinedAttributes>
-            <attribute id="99ad3655-eb4a-48dc-af4c-a65ea4caab3e" name="Erweiterte Dokumentation" type="String" format="None"/>
-            <attribute id="0759e591-3723-473d-9e5a-0aba0644e541" name="Abteilung" type="String" format="None"/>
-          </itp:userDefinedAttributes>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-            <attribute name="KPICost" type="Float" value="1" format="Currency;Fr.;;KPI;2"/>
-            <attribute name="KPIDuration" type="Float" value="300" format="Duration;;;KPI;3">
-              <attribute name="KPIActiveTime" type="Float" value="300" format="Duration;;;KPI;3"/>
-              <attribute name="KPIWaitTime" type="Float" value="0" format="Duration;;;KPI;3"/>
-            </attribute>
-            <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Problem identifizieren</itp:label>
-            <itp:label lang="en">Identify problem</itp:label>
-            <itp:documentation lang="en"><![CDATA[A technician will call the customer to discuss the problem in more detail.
-The case will be qualified into either a 'trivial problem', which requires no professional intervention (eg. fridge has no power, light is broken, fridge must be defrosted), a 'common problem', which is easy to identify but still needs a technician to solve (eg. pump is broken) or 'total damage' (eg. end of life, broken main parts).]]></itp:documentation>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <incoming>_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7</incoming>
-        <outgoing>_35bd0f68-b0f8-43f6-9f1a-c5692d07464a</outgoing>
-      </userTask>
-      <exclusiveGateway id="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" name="Severity" gatewayDirection="Diverging">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">
-            </itp:label>
-            <itp:label lang="en">Severity</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="185,139,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <incoming>_35bd0f68-b0f8-43f6-9f1a-c5692d07464a</incoming>
-        <outgoing>_34cdc55a-8d4c-4abc-9a78-451549eceb34</outgoing>
-        <outgoing>_11e62df5-3541-4000-8635-ce8be57d532f</outgoing>
-        <outgoing>_831da0f3-1f2e-466f-b414-5c15b8837bee</outgoing>
-      </exclusiveGateway>
-      <userTask id="_f7b840ec-324b-4b94-b909-7b3965290a9f" name="Advice customer" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="WebService">
-        <documentation id="Bpmn_Documentation_jcqeIO_bEeSGoscwBjzAjw" textFormat="text/plain">Customer will get phone support to solve the problem directly.</documentation>
-        <extensionElements>
-          <itp:userDefinedAttributes>
-            <attribute id="803ef39e-c226-46f9-9c6c-cfa67419c057" name="Erweiterte Dokumentation" type="String" format="None"/>
-            <attribute id="a218ea70-cff6-45de-bf17-61f50668b149" name="Abteilung" type="String" format="None"/>
-          </itp:userDefinedAttributes>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-            <attribute name="KPICost" type="Float" value="0" format="Currency;Fr.;;KPI;2"/>
-            <attribute name="KPIDuration" type="Float" value="1800" format="Duration;;;KPI;3">
-              <attribute name="KPIActiveTime" type="Float" value="1500" format="Duration;;;KPI;3;0.25"/>
-              <attribute name="KPIWaitTime" type="Float" value="300" format="Duration;;;KPI;3"/>
-            </attribute>
-            <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Kunden beraten</itp:label>
-            <itp:label lang="en">Advice customer</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <incoming>_34cdc55a-8d4c-4abc-9a78-451549eceb34</incoming>
-        <outgoing>_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8</outgoing>
-      </userTask>
-      <userTask id="_c46eb9a6-dba6-404e-a749-0a188551106a" name="Appoint technician" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="WebService">
-        <documentation id="Bpmn_Documentation_jcrFMO_bEeSGoscwBjzAjw" textFormat="text/plain">Technician will be required to solve the problem.</documentation>
-        <extensionElements>
-          <itp:userDefinedAttributes>
-            <attribute id="6a5762af-91c3-43d9-8560-043964d15601" name="Erweiterte Dokumentation" type="String" format="None"/>
-            <attribute id="71863c3a-475a-4465-8099-b38ec51c6e06" name="Abteilung" type="String" format="None"/>
-          </itp:userDefinedAttributes>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-            <attribute name="KPICost" type="Float" value="25" format="Currency;Fr.;;KPI;2"/>
-            <attribute name="KPIDuration" type="Float" value="480" format="Duration;;;KPI;3">
-              <attribute name="KPIActiveTime" type="Float" value="180" format="Duration;;;KPI;3;0.3"/>
-              <attribute name="KPIWaitTime" type="Float" value="300" format="Duration;;;KPI;3"/>
-            </attribute>
-            <attribute name="Resource" type="String" value="PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSI4YjY4ZjIxOS1jOGU2LTQ5ODctYjAyMi1iNTgwMTYyM2YzOTciIG1heC1jYXBhY2l0eT0iMTAwIiBjcml0aWNhbC1jYXBhY2l0eT0iODAiIC8+DQo8L3BlcmZvcm1lci1hc3NpZ25tZW50cz4="/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Techniker einbinden</itp:label>
-            <itp:label lang="en">Appoint technician</itp:label>
-            <itp:documentation lang="en">Technician will be required to solve the problem.</itp:documentation>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="194,215,235" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <incoming>_11e62df5-3541-4000-8635-ce8be57d532f</incoming>
-        <outgoing>_752caf9f-4710-47da-98d8-744b4c5e5790</outgoing>
-      </userTask>
-      <endEvent id="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc" name="Successful">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Erfolg</itp:label>
-            <itp:label lang="en">Successful</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <incoming>_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8</incoming>
-        <incoming>_752caf9f-4710-47da-98d8-744b4c5e5790</incoming>
-      </endEvent>
-      <endEvent id="_13340b88-62d8-40da-a02f-59679d434f46" name="Unsuccessful">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Erfolglos</itp:label>
-            <itp:label lang="en">Unsuccessful</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="190,0,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <incoming>_831da0f3-1f2e-466f-b414-5c15b8837bee</incoming>
-      </endEvent>
-      <sequenceFlow id="_34cdc55a-8d4c-4abc-9a78-451549eceb34" name="Trivial problem" sourceRef="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" targetRef="_f7b840ec-324b-4b94-b909-7b3965290a9f">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Einfaches Problem</itp:label>
-            <itp:label lang="en">Trivial problem</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-            <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcrsQO_bEeSGoscwBjzAjw"/>
-      </sequenceFlow>
-      <sequenceFlow id="_11e62df5-3541-4000-8635-ce8be57d532f" name="Common problem" sourceRef="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" targetRef="_c46eb9a6-dba6-404e-a749-0a188551106a">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Bekanntes Problem</itp:label>
-            <itp:label lang="en">Common problem</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-            <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcrsQe_bEeSGoscwBjzAjw"/>
-      </sequenceFlow>
-      <sequenceFlow id="_831da0f3-1f2e-466f-b414-5c15b8837bee" name="Total damage" sourceRef="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c" targetRef="_13340b88-62d8-40da-a02f-59679d434f46">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">Reparatur unmöglich</itp:label>
-            <itp:label lang="en">Total damage</itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-            <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-        <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcsTUO_bEeSGoscwBjzAjw"/>
-      </sequenceFlow>
-      <sequenceFlow id="_d5a0d491-e6a8-4b1d-8ac6-9e74feaa59f8" sourceRef="_f7b840ec-324b-4b94-b909-7b3965290a9f" targetRef="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">
-            </itp:label>
-            <itp:label lang="en">
-            </itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-            <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-      </sequenceFlow>
-      <sequenceFlow id="_752caf9f-4710-47da-98d8-744b4c5e5790" sourceRef="_c46eb9a6-dba6-404e-a749-0a188551106a" targetRef="_64db434f-bcd7-4d3b-9e43-8db2ff8736dc">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">
-            </itp:label>
-            <itp:label lang="en">
-            </itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-            <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-      </sequenceFlow>
-      <sequenceFlow id="_9ff5f8c9-ac11-41d6-be69-0c42eba0e7b7" sourceRef="_2d952f4b-8728-451b-8956-686e0cd2e073" targetRef="_b3196388-e37a-4e2a-a05c-dc78957cc098">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">
-            </itp:label>
-            <itp:label lang="en">
-            </itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-            <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-      </sequenceFlow>
-      <sequenceFlow id="_35bd0f68-b0f8-43f6-9f1a-c5692d07464a" sourceRef="_b3196388-e37a-4e2a-a05c-dc78957cc098" targetRef="_0e7a4c64-c65e-464c-ac7c-68ecfe0cf68c">
-        <extensionElements>
-          <itp:systemDefinedAttributes>
-            <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
-            <attribute name="ExternalId" type="String"/>
-          </itp:systemDefinedAttributes>
-          <itp:localization default="en">
-            <itp:label lang="unspecified">
-            </itp:label>
-            <itp:label lang="de">
-            </itp:label>
-            <itp:label lang="en">
-            </itp:label>
-          </itp:localization>
-          <w4graph:graphStyle>
-            <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-            <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
-          </w4graph:graphStyle>
-        </extensionElements>
-      </sequenceFlow>
     </subProcess>
     <sequenceFlow id="_acb2aca3-8851-48f0-b127-7b3c9db5e18d" sourceRef="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" targetRef="_604be023-654c-44df-a64c-365254a100cd">
       <extensionElements>
@@ -717,14 +263,6 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -737,18 +275,11 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Garantiefall</itp:label>
-          <itp:label lang="en">Warranty</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
         </w4graph:graphStyle>
       </extensionElements>
-      <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcthce_bEeSGoscwBjzAjw"/>
     </sequenceFlow>
     <sequenceFlow id="_437e5969-1e61-4cb9-aa76-4f8854f32eeb" name="Emergency service" sourceRef="_604be023-654c-44df-a64c-365254a100cd" targetRef="_cd6f230f-13c3-4027-aa3e-57de601a1ab2">
       <extensionElements>
@@ -756,18 +287,11 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Notfall</itp:label>
-          <itp:label lang="en">Emergency service</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
         </w4graph:graphStyle>
       </extensionElements>
-      <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcuIgO_bEeSGoscwBjzAjw"/>
     </sequenceFlow>
     <sequenceFlow id="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee" name="Regular repair service" sourceRef="_604be023-654c-44df-a64c-365254a100cd" targetRef="_2b6bc88e-d3be-4704-87d1-c264bf704589">
       <extensionElements>
@@ -775,18 +299,11 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Reguläre Reparatur</itp:label>
-          <itp:label lang="en">Regular repair service</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
         </w4graph:graphStyle>
       </extensionElements>
-      <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcuIge_bEeSGoscwBjzAjw"/>
     </sequenceFlow>
     <sequenceFlow id="_cddf9325-a85b-4347-8c57-8b909fa77ae9" name="Standard" sourceRef="_2b6bc88e-d3be-4704-87d1-c264bf704589" targetRef="_d034722f-751d-4f37-a3d7-47993822e979">
       <extensionElements>
@@ -794,18 +311,11 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Standard</itp:label>
-          <itp:label lang="en">Standard</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
         </w4graph:graphStyle>
       </extensionElements>
-      <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcuIgu_bEeSGoscwBjzAjw"/>
     </sequenceFlow>
     <sequenceFlow id="_be893987-caec-4605-b078-bd96b7cd6c12" name="Premium" sourceRef="_2b6bc88e-d3be-4704-87d1-c264bf704589" targetRef="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba">
       <extensionElements>
@@ -813,18 +323,11 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">Premium</itp:label>
-          <itp:label lang="en">Premium</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
         </w4graph:graphStyle>
       </extensionElements>
-      <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcuIg-_bEeSGoscwBjzAjw"/>
     </sequenceFlow>
     <sequenceFlow id="_435d9320-bbf4-48ad-aa56-16cb5483e95b" sourceRef="_d034722f-751d-4f37-a3d7-47993822e979" targetRef="_dcee5c64-3010-4ee5-b480-bce856e6f29c">
       <extensionElements>
@@ -832,17 +335,9 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
-          <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
+          <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
         </w4graph:graphStyle>
       </extensionElements>
     </sequenceFlow>
@@ -852,14 +347,6 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -872,14 +359,6 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -892,14 +371,6 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">
-          </itp:label>
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -912,18 +383,11 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">ja</itp:label>
-          <itp:label lang="en">yes</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
         </w4graph:graphStyle>
       </extensionElements>
-      <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcvWoO_bEeSGoscwBjzAjw"/>
     </sequenceFlow>
     <sequenceFlow id="_3fb323d5-2c59-487a-af63-804208f6c5cb" name="no" sourceRef="_936c0bfa-5ebf-4546-8d1a-cce556148788" targetRef="_a92069f7-377b-4dbd-a1fd-1da071aabf6d">
       <extensionElements>
@@ -931,18 +395,11 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="unspecified">
-          </itp:label>
-          <itp:label lang="de">nein</itp:label>
-          <itp:label lang="en">no</itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
         </w4graph:graphStyle>
       </extensionElements>
-      <conditionExpression xsi:type="tExpression" id="Bpmn_Expression_jcvWoe_bEeSGoscwBjzAjw"/>
     </sequenceFlow>
     <sequenceFlow id="_a5af06ae-bd69-464d-bbaf-3d7418702d77" sourceRef="_cc9778bd-edd8-4df2-ba15-56c310f90e62" targetRef="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a">
       <extensionElements>
@@ -950,10 +407,6 @@ The case will be qualified into either a 'trivial problem', which requires no pr
           <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
           <attribute name="ExternalId" type="String"/>
         </itp:systemDefinedAttributes>
-        <itp:localization default="en">
-          <itp:label lang="en">
-          </itp:label>
-        </itp:localization>
         <w4graph:graphStyle>
           <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
           <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
@@ -967,197 +420,173 @@ The case will be qualified into either a 'trivial problem', which requires no pr
         <attribute name="Hyperlinks" type="String" value="0 Hyperlinks"/>
         <attribute name="ExternalId" type="String"/>
       </itp:systemDefinedAttributes>
-      <itp:localization default="en">
-        <itp:label lang="unspecified">
-        </itp:label>
-        <itp:label lang="de">Servicelevel erhöhen</itp:label>
-        <itp:label lang="en"><![CDATA[<de>Servicelevel erhöhen]]></itp:label>
-      </itp:localization>
     </extensionElements>
   </message>
   <bpmndi:BPMNDiagram id="Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw" name="Fridge Repair Process (1)" resolution="72.0">
     <bpmndi:BPMNPlane id="_1" bpmnElement="_8170787a-3207-434d-9bea-4787059f444f">
-      <bpmndi:BPMNShape id="_2839B4B4-C30C-4E25-9ED3-4A26167E4102" itp:label="Standard repair team" itp:elementType="lane" color:border-color="#FF0000" bpmnElement="_569d10fa-7074-48b3-9538-2c8ce2c23fe2" isHorizontal="true">
-        <dc:Bounds height="196.0" width="775.0" x="48.0" y="245.0"/>
-        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxL0e_bEeSGoscwBjzAjw" color:color="#FF0000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="75.0" width="12.0" x="50.0" y="306.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_883E039B-762B-40E4-BB54-658473E59FE0" itp:label="Emergency repair team" itp:elementType="lane" color:border-color="#FF0000" bpmnElement="_99179f5a-ec32-4f3e-8458-cc8c233bfedf" isHorizontal="true">
-        <dc:Bounds height="97.0" width="775.0" x="48.0" y="149.0"/>
-        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxL0u_bEeSGoscwBjzAjw" color:color="#FF0000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="86.0" width="12.0" x="50.0" y="154.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_3DD5A736-A9F7-4875-AA70-04A5F84C9F97" itp:label="Call center" itp:elementType="lane" color:border-color="#FF0000" bpmnElement="_a856e80e-d5d6-4947-86b6-eb53239254a5" isHorizontal="true">
-        <dc:Bounds height="121.0" width="775.0" x="48.0" y="29.0"/>
-        <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxL0-_bEeSGoscwBjzAjw" color:color="#FF0000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="56.0" width="12.0" x="50.0" y="61.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_1BF9B2F3-F30D-4FD6-A820-C247ADFA711C" itp:label="Receive customer request" itp:elementType="startEvent" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_cc9778bd-edd8-4df2-ba15-56c310f90e62">
-        <dc:Bounds height="17.0" width="17.0" x="114.0" y="97.0"/>
+        <dc:Bounds height="17.0" width="17.0" x="64.0" y="140.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxy4O_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="84.0" x="80.0" y="114.0"/>
+          <dc:Bounds height="24.0" width="84.0" x="30.0" y="157.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_E1F1DCD4-3EF3-4AE1-A299-CA9DD87394A9" itp:label="Analyse customer request" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a">
-        <dc:Bounds height="59.0" width="121.0" x="169.0" y="76.0"/>
+        <dc:Bounds height="59.0" width="121.0" x="164.0" y="119.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxy4e_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="81.0" x="189.0" y="93.0"/>
+          <dc:Bounds height="24.0" width="81.0" x="184.0" y="136.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_435CF240-46A5-42AD-BF44-42FFC0F07528" itp:label="Replace fridge" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_a92069f7-377b-4dbd-a1fd-1da071aabf6d">
-        <dc:Bounds height="59.0" width="121.0" x="599.0" y="38.0"/>
+        <dc:Bounds height="59.0" width="121.0" x="728.0" y="82.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxy4u_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="12.0" width="72.0" x="623.0" y="61.0"/>
+          <dc:Bounds height="12.0" width="72.0" x="752.0" y="105.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_EAB1A438-E5B0-499F-A12D-AF064D4E8CC0" itp:label="Fridge replaced" itp:elementType="endEvent" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_177bd313-c6c9-4df5-8f82-313beb30d2eb">
-        <dc:Bounds height="17.0" width="17.0" x="762.0" y="59.0"/>
+        <dc:Bounds height="17.0" width="17.0" x="968.0" y="102.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcxy4-_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="12.0" width="71.0" x="735.0" y="76.0"/>
+          <dc:Bounds height="12.0" width="71.0" x="941.0" y="119.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_E1E0CD2C-68F5-4FA5-8030-3EC58F72EA27" itp:label="Service type" itp:elementType="exclusiveGateway" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_604be023-654c-44df-a64c-365254a100cd">
-        <dc:Bounds height="31.0" width="31.0" x="310.0" y="90.0"/>
+        <dc:Bounds height="31.0" width="31.0" x="369.0" y="133.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcyZ8O_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="17.0" width="81.0" x="341.0" y="121.0"/>
+          <dc:Bounds height="12.0" width="61.0" x="400.0" y="164.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_76095EFE-FB8D-4DE6-814F-2270E01AD1B6" itp:label="Emergency repair completed" itp:elementType="endEvent" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_b3dc1906-d4d3-40c5-aaf6-5a74148ae887">
-        <dc:Bounds height="17.0" width="17.0" x="754.0" y="185.0"/>
+        <dc:Bounds height="17.0" width="17.0" x="960.0" y="252.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcyZ8e_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="82.0" x="721.0" y="202.0"/>
+          <dc:Bounds height="24.0" width="82.0" x="927.0" y="269.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_E906D9C4-7070-4E7D-AAFE-0465F605AA03" itp:label="Service level" itp:elementType="exclusiveGateway" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_2b6bc88e-d3be-4704-87d1-c264bf704589">
-        <dc:Bounds height="31.0" width="31.0" x="310.0" y="283.0"/>
+        <dc:Bounds height="31.0" width="31.0" x="369.0" y="430.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcyZ8u_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="12.0" width="62.0" x="248.0" y="314.0"/>
+          <dc:Bounds height="12.0" width="62.0" x="307.0" y="461.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_4DEC803E-A8C9-45DF-B46D-586C0E00B70D" itp:label="Perform repair (standard level)" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_d034722f-751d-4f37-a3d7-47993822e979">
-        <dc:Bounds height="59.0" width="121.0" x="445.0" y="365.0"/>
+        <dc:Bounds height="59.0" width="121.0" x="504.0" y="584.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jcyZ8-_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="74.0" x="468.0" y="382.0"/>
+          <dc:Bounds height="24.0" width="74.0" x="527.0" y="601.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_F97318A7-9E18-4D7D-89EC-3191F6897A72" itp:label="Perform repair (premium level)" itp:elementType="userTask" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_6a34496f-8cf7-42e5-88a9-d1af98cc3cba">
-        <dc:Bounds height="59.0" width="121.0" x="445.0" y="269.0"/>
+        <dc:Bounds height="59.0" width="121.0" x="504.0" y="416.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jczBAO_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="74.0" x="468.0" y="286.0"/>
+          <dc:Bounds height="24.0" width="74.0" x="527.0" y="433.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_A458F0A3-C866-435A-AA83-9EB586E9F159" itp:label="Repair completed" itp:elementType="endEvent" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_dcee5c64-3010-4ee5-b480-bce856e6f29c">
-        <dc:Bounds height="17.0" width="17.0" x="756.0" y="290.0"/>
+        <dc:Bounds height="17.0" width="17.0" x="962.0" y="437.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jczBAe_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="12.0" width="80.0" x="724.0" y="278.0"/>
+          <dc:Bounds height="12.0" width="80.0" x="930.0" y="425.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_C965CE25-28B4-4971-B66F-CBA0D6F291E0" itp:label="Successful?" itp:elementType="exclusiveGateway" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_936c0bfa-5ebf-4546-8d1a-cce556148788">
-        <dc:Bounds height="31.0" width="31.0" x="639.0" y="177.0"/>
+        <dc:Bounds height="31.0" width="31.0" x="768.0" y="245.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jczBAu_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="12.0" width="59.0" x="625.0" y="208.0"/>
+          <dc:Bounds height="12.0" width="59.0" x="754.0" y="276.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_44EE9D7D-A31D-463D-8804-483D05C6CF42" itp:label="Perform emergency repair" itp:elementType="subProcess" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_cd6f230f-13c3-4027-aa3e-57de601a1ab2">
-        <dc:Bounds height="59.0" width="121.0" x="445.0" y="164.0"/>
+        <dc:Bounds height="59.0" width="121.0" x="504.0" y="231.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jczBA-_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="82.0" x="447.0" y="166.0"/>
+          <dc:Bounds height="24.0" width="82.0" x="510.0" y="259.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="_0F47EA76-94CD-4643-A488-490A89F16822" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_acb2aca3-8851-48f0-b127-7b3c9db5e18d">
-        <di:waypoint xsi:type="dc:Point" x="290.0" y="106.0"/>
-        <di:waypoint xsi:type="dc:Point" x="310.0" y="106.0"/>
+        <di:waypoint xsi:type="dc:Point" x="285.0" y="149.0"/>
+        <di:waypoint xsi:type="dc:Point" x="369.0" y="149.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jczoEe_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="17.0" width="8.0" x="292.0" y="109.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_FF23DD77-941C-49B1-88AF-4847097E6B49" itp:label="Warranty" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_b99800c3-c340-460c-a43e-098014a365d0">
-        <di:waypoint xsi:type="dc:Point" x="331.0" y="90.0"/>
-        <di:waypoint xsi:type="dc:Point" x="331.0" y="68.0"/>
-        <di:waypoint xsi:type="dc:Point" x="599.0" y="68.0"/>
+        <di:waypoint xsi:type="dc:Point" x="385.0" y="133.0"/>
+        <di:waypoint xsi:type="dc:Point" x="385.0" y="111.0"/>
+        <di:waypoint xsi:type="dc:Point" x="728.0" y="111.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jczoEu_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="12.0" width="46.0" x="334.0" y="71.0"/>
+          <dc:Bounds height="12.0" width="46.0" x="331.0" y="73.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_619D999C-1964-4026-A196-FE0113FDADA8" itp:label="Emergency service" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_437e5969-1e61-4cb9-aa76-4f8854f32eeb">
-        <di:waypoint xsi:type="dc:Point" x="341.0" y="106.0"/>
-        <di:waypoint xsi:type="dc:Point" x="505.0" y="106.0"/>
-        <di:waypoint xsi:type="dc:Point" x="505.0" y="164.0"/>
+        <di:waypoint xsi:type="dc:Point" x="400.0" y="149.0"/>
+        <di:waypoint xsi:type="dc:Point" x="564.0" y="149.0"/>
+        <di:waypoint xsi:type="dc:Point" x="564.0" y="231.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc0PIO_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="24.0" width="55.0" x="522.0" y="109.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_8C0818ED-B4E7-46E6-BE2B-F3931A463889" itp:label="Regular repair service" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_ada039b6-94dd-4a15-a6b1-c7fe662c64ee">
-        <di:waypoint xsi:type="dc:Point" x="327.0" y="121.0"/>
-        <di:waypoint xsi:type="dc:Point" x="327.0" y="283.0"/>
+        <di:waypoint xsi:type="dc:Point" x="384.0" y="164.0"/>
+        <di:waypoint xsi:type="dc:Point" x="384.0" y="430.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc0PIe_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="66.0" x="332.0" y="190.0"/>
+          <dc:Bounds height="24.0" width="66.0" x="389.0" y="285.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_A456930F-0FE9-45B9-A4C0-EF465F0C9EC4" itp:label="Standard" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_cddf9325-a85b-4347-8c57-8b909fa77ae9">
-        <di:waypoint xsi:type="dc:Point" x="325.0" y="314.0"/>
-        <di:waypoint xsi:type="dc:Point" x="325.0" y="394.0"/>
-        <di:waypoint xsi:type="dc:Point" x="445.0" y="394.0"/>
+        <di:waypoint xsi:type="dc:Point" x="384.0" y="461.0"/>
+        <di:waypoint xsi:type="dc:Point" x="384.0" y="609.0"/>
+        <di:waypoint xsi:type="dc:Point" x="504.0" y="609.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc0PIu_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="12.0" width="44.0" x="330.0" y="399.0"/>
+          <dc:Bounds height="12.0" width="44.0" x="389.0" y="614.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_5FE8E799-C6D8-48A1-A9D1-9737073726D1" itp:label="Premium" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_be893987-caec-4605-b078-bd96b7cd6c12">
-        <di:waypoint xsi:type="dc:Point" x="341.0" y="299.0"/>
-        <di:waypoint xsi:type="dc:Point" x="445.0" y="299.0"/>
+        <di:waypoint xsi:type="dc:Point" x="400.0" y="446.0"/>
+        <di:waypoint xsi:type="dc:Point" x="504.0" y="446.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc0PI-_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="12.0" width="44.0" x="371.0" y="304.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_4A53C1A1-42C9-4475-B6A9-3798D9EEEEFB" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_435d9320-bbf4-48ad-aa56-16cb5483e95b">
-        <di:waypoint xsi:type="dc:Point" x="566.0" y="394.0"/>
-        <di:waypoint xsi:type="dc:Point" x="765.0" y="394.0"/>
-        <di:waypoint xsi:type="dc:Point" x="765.0" y="307.0"/>
+        <di:waypoint xsi:type="dc:Point" x="625.0" y="612.0"/>
+        <di:waypoint xsi:type="dc:Point" x="969.0" y="612.0"/>
+        <di:waypoint xsi:type="dc:Point" x="969.0" y="454.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc0PJO_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="17.0" width="8.0" x="770.0" y="399.0"/>
+          <dc:Bounds height="17.0" width="8.0" x="974.0" y="617.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_7DF74040-E9E3-4DD4-A637-207B563C697F" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_d54c5707-af7a-4b36-a059-46681bbf0004">
-        <di:waypoint xsi:type="dc:Point" x="566.0" y="299.0"/>
-        <di:waypoint xsi:type="dc:Point" x="756.0" y="299.0"/>
+        <di:waypoint xsi:type="dc:Point" x="625.0" y="446.0"/>
+        <di:waypoint xsi:type="dc:Point" x="962.0" y="446.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc02MO_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="17.0" width="8.0" x="657.0" y="304.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_1B6D3757-9455-4000-8CBF-162518262CC4" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_b22c01a4-1eef-4f52-9b16-a201a9621619">
-        <di:waypoint xsi:type="dc:Point" x="566.0" y="193.0"/>
-        <di:waypoint xsi:type="dc:Point" x="639.0" y="193.0"/>
+        <di:waypoint xsi:type="dc:Point" x="625.0" y="260.0"/>
+        <di:waypoint xsi:type="dc:Point" x="768.0" y="260.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc02Mu_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="17.0" width="8.0" x="598.0" y="198.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_BEF6DF3F-AA58-4F04-A04B-DEED916C0B5E" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_c5756bb9-6e6f-42d1-8799-c2d673499eb8">
-        <di:waypoint xsi:type="dc:Point" x="720.0" y="68.0"/>
-        <di:waypoint xsi:type="dc:Point" x="762.0" y="68.0"/>
+        <di:waypoint xsi:type="dc:Point" x="849.0" y="112.0"/>
+        <di:waypoint xsi:type="dc:Point" x="968.0" y="112.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc02M-_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="17.0" width="8.0" x="737.0" y="71.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_6E623C3D-0A6B-4933-935A-2941B81A4DAD" itp:label="yes" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_cf380e47-1401-4e7e-b710-193b626e49eb">
-        <di:waypoint xsi:type="dc:Point" x="670.0" y="193.0"/>
-        <di:waypoint xsi:type="dc:Point" x="754.0" y="193.0"/>
+        <di:waypoint xsi:type="dc:Point" x="799.0" y="261.0"/>
+        <di:waypoint xsi:type="dc:Point" x="960.0" y="261.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc1dQO_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="12.0" width="23.0" x="701.0" y="198.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_ED4E0978-EEA1-48D8-97A6-CDE203B6FB79" itp:label="no" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_3fb323d5-2c59-487a-af63-804208f6c5cb">
-        <di:waypoint xsi:type="dc:Point" x="654.0" y="177.0"/>
-        <di:waypoint xsi:type="dc:Point" x="654.0" y="97.0"/>
+        <di:waypoint xsi:type="dc:Point" x="783.0" y="245.0"/>
+        <di:waypoint xsi:type="dc:Point" x="783.0" y="141.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc1dQe_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="12.0" width="17.0" x="659.0" y="131.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_55E23507-9E27-4074-A5D7-FB4D8A0A5328" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_a5af06ae-bd69-464d-bbaf-3d7418702d77">
-        <di:waypoint xsi:type="dc:Point" x="131.0" y="106.0"/>
-        <di:waypoint xsi:type="dc:Point" x="169.0" y="106.0"/>
+        <di:waypoint xsi:type="dc:Point" x="81.0" y="149.0"/>
+        <di:waypoint xsi:type="dc:Point" x="164.0" y="149.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jc1dQu_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
           <dc:Bounds height="17.0" width="8.0" x="138.0" y="109.0"/>
         </bpmndi:BPMNLabel>
