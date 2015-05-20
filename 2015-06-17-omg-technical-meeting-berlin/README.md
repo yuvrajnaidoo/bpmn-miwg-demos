@@ -31,13 +31,14 @@ Participating Vendors & Tools
 -----------------------------
 [Vendors interested in participating](http://doodle.com/gqhudvs2ys96hazr)
 
-![Logo](press-kit/logos/Activiti.png)
-<img src="press-kit/logos/BOC.png" height="200" hspace="5"/>
+<img src="press-kit/logos/BOC.png" height="180" hspace="5"/>
 ![Logo](press-kit/logos/bpmn.io-horizontal.png)
 <img src="press-kit/logos/camunda.png" width="250" />
 <img src="press-kit/logos/itp-commerce.jpg" width="250" />
-![Logo](press-kit/logos/knowprocess.png)
+![Logo](press-kit/logos/OmnyLink.jpg)
 <img src="press-kit/logos/Signavio.jpg" width="250" />
+<img src="press-kit/logos/SAP.png" width="180" />
+<img src="press-kit/logos/SparxSystemsLogo.jpg" width="250" />
 <img src="press-kit/logos/Trisotech.png" width="250" vspace="20" />
 <img src="press-kit/logos/W4BPMN+.png" width="250" hspace="30" />
 ![Logo](press-kit/logos/yaoqiang-bpmn-editor.png)
