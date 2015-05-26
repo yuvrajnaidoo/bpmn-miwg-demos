@@ -70,7 +70,7 @@
         </w4graph:graphStyle>
       </extensionElements>
       <outgoing>_a5af06ae-bd69-464d-bbaf-3d7418702d77</outgoing>
-      <messageEventDefinition id="Bpmn_MessageEventDefinition_jcmzwO_bEeSGoscwBjzAjw"/>
+      <messageEventDefinition id="Bpmn_MessageEventDefinition_vaRFsAO9EeWi8fS3WiOizw" messageRef="_6840c92f-f02c-46b3-9565-f5e5b1792ba0"/>
     </startEvent>
     <userTask id="_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a" name="Analyse customer request" completionQuantity="2" isForCompensation="false" startQuantity="2">
       <documentation id="Bpmn_Documentation_jcmzwe_bEeSGoscwBjzAjw" textFormat="text/plain">First contact with customer</documentation>
@@ -493,7 +493,7 @@ This service level guarantees less than two days to solve the issue.]]></documen
       <bpmndi:BPMNShape id="_44EE9D7D-A31D-463D-8804-483D05C6CF42" itp:label="Perform emergency repair" itp:elementType="subProcess" color:background-color="#ECECFF" color:border-color="#000000" bpmnElement="_cd6f230f-13c3-4027-aa3e-57de601a1ab2">
         <dc:Bounds height="59.0" width="121.0" x="504.0" y="231.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_jczBA-_bEeSGoscwBjzAjw" color:color="#000000" labelStyle="_ea62b61f-473a-454a-a9bc-14475ce28686">
-          <dc:Bounds height="24.0" width="82.0" x="510.0" y="259.0"/>
+          <dc:Bounds height="24.0" width="82.0" x="510.0" y="235.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="_0F47EA76-94CD-4643-A488-490A89F16822" itp:label="(unnamed)" itp:elementType="sequenceFlow" color:border-color="#000000" bpmnElement="_acb2aca3-8851-48f0-b127-7b3c9db5e18d">
