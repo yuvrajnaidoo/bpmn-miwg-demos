@@ -11,6 +11,11 @@ There are three demo scenarios:
 
 1. Diagram Interchange
 ----------------------
+### Storyboard
+![Storyboard](diagram-interchange-demo/Diagram Interchange Scenario.jpg)
+
+### Example
+![Example](diagram-interchange-demo/Buying at Amazon Collaboration.png)
 
 2. Hidden Attribute Interchange
 -------------------------------
