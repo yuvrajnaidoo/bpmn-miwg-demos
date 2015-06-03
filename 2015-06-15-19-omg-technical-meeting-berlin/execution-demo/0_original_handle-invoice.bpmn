@@ -95,6 +95,32 @@
          </extensionElements>
          <incoming>SequenceFlow_1</incoming>
          <outgoing>sequenceFlow_178</outgoing>
+         <ioSpecification id="Bpmn_InputOutputSpecification_assignApprover">
+            <dataOutput id="Bpmn_DataOutput_assignApprover" itemSubjectRef="xsdString" isCollection="false" name="approver">
+               <extensionElements>
+                  <w4graph:graphStyle>
+                     <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+                  </w4graph:graphStyle>
+               </extensionElements>
+            </dataOutput>
+            <inputSet id="Bpmn_InputSet_assignApprover" name="default input set">
+               <outputSetRefs>Bpmn_OutputSet_assignApprover</outputSetRefs>
+            </inputSet>
+            <outputSet id="Bpmn_OutputSet_assignApprover" name="default output set">
+               <dataOutputRefs>Bpmn_DataOutput_assignApprover</dataOutputRefs>
+               <inputSetRefs>Bpmn_InputSet_assignApprover</inputSetRefs>
+            </outputSet>
+         </ioSpecification>
+         <dataOutputAssociation id="Bpmn_DataOutputAssociation_assignApprover">
+            <extensionElements>
+               <w4graph:graphStyle>
+                  <w4graph:basic background="255,255,255" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+                  <w4graph:line routerType="Rectilinear" automaticRoute="false" closestRoute="false" avoidObstacleRoute="false"/>
+               </w4graph:graphStyle>
+            </extensionElements>
+            <sourceRef>Bpmn_DataOutput_assignApprover</sourceRef>
+            <targetRef>Bpmn_DataObjectReference_assignApprover</targetRef>
+         </dataOutputAssociation>
          <potentialOwner id="Bpmn_ResourceRole_DSeNcLH0EeS1nbPdxxCzlg" name="Assign Approver Potential Owner">
             <resourceRef>Bpmn_Resource_6vVHsLHzEeS1nbPdxxCzlg</resourceRef>
          </potentialOwner>
@@ -350,6 +376,20 @@
             </w4graph:graphStyle>
          </extensionElements>
       </sequenceFlow>
+      <dataObject id="Bpmn_DataObject_approver" name="approver" itemSubjectRef="xsdString" isCollection="false">
+         <extensionElements>
+            <w4graph:graphStyle>
+               <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+            </w4graph:graphStyle>
+         </extensionElements>
+      </dataObject>
+      <dataObjectReference id="Bpmn_DataObjectReference_assignApprover" name="approver" dataObjectRef="Bpmn_DataObject_approver">
+         <extensionElements>
+            <w4graph:graphStyle>
+               <w4graph:basic background="153,153,153" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
+            </w4graph:graphStyle>
+         </extensionElements>
+      </dataObjectReference>
       <dataObject id="Bpmn_DataObject_WUfQYrH1EeSuDf0W70XLGw" name="approved" itemSubjectRef="xsdBool" isCollection="false">
          <extensionElements>
             <w4graph:graphStyle>
@@ -475,10 +515,21 @@
             <omgdi:waypoint xsi:type="omgdc:Point" x="125.0" y="92.0"/>
             <omgdi:waypoint xsi:type="omgdc:Point" x="180.0" y="92.0"/>
          </bpmndi:BPMNEdge>
+         <bpmndi:BPMNShape id="Bpmndi_BPMNShape_assignApprover" bpmnElement="Bpmn_DataObjectReference_assignApprover">
+            <omgdc:Bounds height="35.0" width="35.0" x="222.0" y="174.0"/>
+            <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_assignApprover" labelStyle="Bpmndi_BPMNLabelStyle_assignApprover">
+               <omgdc:Bounds height="18.0" width="63.0" x="208.0" y="229.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_assignApprover" bpmnElement="Bpmn_DataOutputAssociation_assignApprover">
+            <omgdi:waypoint xsi:type="omgdc:Point" x="548.0" y="74.0"/>
+            <omgdi:waypoint xsi:type="omgdc:Point" x="477.0" y="74.0"/>
+            <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_assignApprover2"/>
+         </bpmndi:BPMNEdge>
          <bpmndi:BPMNShape id="Bpmndi_BPMNShape_YGA4YbH1EeSuDf0W70XLGw" bpmnElement="Bpmn_DataObjectReference_YGA4YLH1EeSuDf0W70XLGw">
-            <omgdc:Bounds height="35.0" width="35.0" x="230.0" y="276.0"/>
+            <omgdc:Bounds height="35.0" width="35.0" x="390.0" y="350.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_YGA4YrH1EeSuDf0W70XLGw" labelStyle="Bpmndi_BPMNLabelStyle_YGO60LH1EeSuDf0W70XLGw">
-               <omgdc:Bounds height="18.0" width="59.0" x="218.0" y="311.0"/>
+               <omgdc:Bounds height="18.0" width="59.0" x="370.0" y="400.0"/>
             </bpmndi:BPMNLabel>
          </bpmndi:BPMNShape>
          <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_Y55MYLH1EeSuDf0W70XLGw" bpmnElement="Bpmn_DataOutputAssociation_Y55MYrH1EeSuDf0W70XLGw">
@@ -487,9 +538,9 @@
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_Y55MYbH1EeSuDf0W70XLGw"/>
          </bpmndi:BPMNEdge>
          <bpmndi:BPMNShape id="Bpmndi_BPMNShape_cdsDQbH1EeSuDf0W70XLGw" bpmnElement="Bpmn_DataObjectReference_cdsDQLH1EeSuDf0W70XLGw">
-            <omgdc:Bounds height="35.0" width="35.0" x="442.0" y="54.0"/>
+            <omgdc:Bounds height="35.0" width="35.0" x="580.0" y="174.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_cdsDQrH1EeSuDf0W70XLGw" labelStyle="Bpmndi_BPMNLabelStyle_cd6FsLH1EeSuDf0W70XLGw">
-               <omgdc:Bounds height="18.0" width="63.0" x="428.0" y="89.0"/>
+               <omgdc:Bounds height="18.0" width="63.0" x="550.0" y="229.0"/>
             </bpmndi:BPMNLabel>
          </bpmndi:BPMNShape>
          <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_dB6xsLH1EeSuDf0W70XLGw" bpmnElement="Bpmn_DataOutputAssociation_dB6xsrH1EeSuDf0W70XLGw">
