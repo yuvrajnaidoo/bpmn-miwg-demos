@@ -183,7 +183,7 @@
   <semantic:process id="_57bc9cb6-7535-4df4-9461-5157a1fccf06" />
   <semantic:process id="_90c5176b-8819-425b-ae8a-7f7c31f330c9" />
   <semantic:process id="_fa8d9923-79c1-4f0c-a488-b9d8ccd6ee07" />
-  <bpmndi:BPMNDiagram id="Page_1" di:name="Buying at Amazon Collaboration" di:documentation="">
+  <bpmndi:BPMNDiagram id="Page_1" name="Buying at Amazon Collaboration" documentation="">
     <bpmndi:BPMNPlane id="Page_1_plane" bpmnElement="C1404332496310">
       <bpmndi:BPMNShape id="_d156d69d-91b2-4d6e-a25f-034244e746f4" bpmnElement="__bb6766c5-51e3-4f04-aedc-6c9e4afe0582" isHorizontal="true">
         <dc:Bounds x="1102" y="639" width="586" height="150" />
