@@ -517,7 +517,7 @@
          </bpmndi:BPMNEdge>
          <bpmndi:BPMNShape id="Bpmndi_BPMNShape_assignApprover" bpmnElement="Bpmn_DataObjectReference_assignApprover">
             <omgdc:Bounds height="35.0" width="35.0" x="222.0" y="174.0"/>
-            <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_assignApprover" labelStyle="Bpmndi_BPMNLabelStyle_assignApprover">
+            <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_assignApprover" labelStyle="Bpmndi_BPMNLabelStyle_YGO60LH1EeSuDf0W70XLGw">
                <omgdc:Bounds height="18.0" width="63.0" x="208.0" y="229.0"/>
             </bpmndi:BPMNLabel>
          </bpmndi:BPMNShape>
