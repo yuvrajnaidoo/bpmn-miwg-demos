@@ -470,7 +470,7 @@
             <omgdi:waypoint xsi:type="omgdc:Point" x="508.0" y="92.0"/>
             <omgdi:waypoint xsi:type="omgdc:Point" x="548.0" y="92.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_TrJhgbHzEeS1nbPdxxCzlg" labelStyle="Bpmndi_BPMNLabelStyle_VPMuMLHzEeS1nbPdxxCzlg">
-               <omgdc:Bounds height="26.0" width="24.0" x="518.0" y="201.0"/>
+          <omgdc:Bounds height="22.0" width="20.0" x="520.0" y="201.0"/>
             </bpmndi:BPMNLabel>
          </bpmndi:BPMNEdge>
          <bpmndi:BPMNEdge id="reviewSuccessful_gui" bpmnElement="reviewSuccessful">
@@ -479,7 +479,7 @@
             <omgdi:waypoint xsi:type="omgdc:Point" x="403.0" y="35.0"/>
             <omgdi:waypoint xsi:type="omgdc:Point" x="403.0" y="225.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_TrJhgrHzEeS1nbPdxxCzlg" labelStyle="Bpmndi_BPMNLabelStyle_VNihUbHzEeS1nbPdxxCzlg">
-               <omgdc:Bounds height="26.0" width="32.0" x="717.0" y="28.0"/>
+          <omgdc:Bounds height="22.0" width="27.0" x="720.0" y="28.0"/>
             </bpmndi:BPMNLabel>
          </bpmndi:BPMNEdge>
          <bpmndi:BPMNEdge id="reviewNotSuccessful_gui" bpmnElement="reviewNotSuccessful">
@@ -516,36 +516,36 @@
             <omgdi:waypoint xsi:type="omgdc:Point" x="180.0" y="92.0"/>
          </bpmndi:BPMNEdge>
          <bpmndi:BPMNShape id="Bpmndi_BPMNShape_assignApprover" bpmnElement="Bpmn_DataObjectReference_assignApprover">
-            <omgdc:Bounds height="35.0" width="35.0" x="222.0" y="174.0"/>
+        <omgdc:Bounds height="35.0" width="35.0" x="212.0" y="174.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_assignApprover" labelStyle="Bpmndi_BPMNLabelStyle_YGO60LH1EeSuDf0W70XLGw">
-               <omgdc:Bounds height="18.0" width="63.0" x="208.0" y="229.0"/>
+          <omgdc:Bounds height="22.0" width="56.0" x="201.0" y="229.0"/>
             </bpmndi:BPMNLabel>
          </bpmndi:BPMNShape>
          <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_assignApprover" bpmnElement="Bpmn_DataOutputAssociation_assignApprover">
-            <omgdi:waypoint xsi:type="omgdc:Point" x="548.0" y="74.0"/>
-            <omgdi:waypoint xsi:type="omgdc:Point" x="477.0" y="74.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="230.0" y="132.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="229.0" y="174.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_assignApprover2"/>
          </bpmndi:BPMNEdge>
          <bpmndi:BPMNShape id="Bpmndi_BPMNShape_YGA4YbH1EeSuDf0W70XLGw" bpmnElement="Bpmn_DataObjectReference_YGA4YLH1EeSuDf0W70XLGw">
-            <omgdc:Bounds height="35.0" width="35.0" x="390.0" y="350.0"/>
+        <omgdc:Bounds height="35.0" width="35.0" x="385.0" y="350.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_YGA4YrH1EeSuDf0W70XLGw" labelStyle="Bpmndi_BPMNLabelStyle_YGO60LH1EeSuDf0W70XLGw">
-               <omgdc:Bounds height="18.0" width="59.0" x="370.0" y="400.0"/>
+          <omgdc:Bounds height="22.0" width="59.0" x="365.0" y="400.0"/>
             </bpmndi:BPMNLabel>
          </bpmndi:BPMNShape>
          <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_Y55MYLH1EeSuDf0W70XLGw" bpmnElement="Bpmn_DataOutputAssociation_Y55MYrH1EeSuDf0W70XLGw">
-            <omgdi:waypoint xsi:type="omgdc:Point" x="353.0" y="291.0"/>
-            <omgdi:waypoint xsi:type="omgdc:Point" x="265.0" y="291.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="403.0" y="305.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="402.0" y="350.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_Y55MYbH1EeSuDf0W70XLGw"/>
          </bpmndi:BPMNEdge>
          <bpmndi:BPMNShape id="Bpmndi_BPMNShape_cdsDQbH1EeSuDf0W70XLGw" bpmnElement="Bpmn_DataObjectReference_cdsDQLH1EeSuDf0W70XLGw">
             <omgdc:Bounds height="35.0" width="35.0" x="580.0" y="174.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_cdsDQrH1EeSuDf0W70XLGw" labelStyle="Bpmndi_BPMNLabelStyle_cd6FsLH1EeSuDf0W70XLGw">
-               <omgdc:Bounds height="18.0" width="63.0" x="550.0" y="229.0"/>
+          <omgdc:Bounds height="22.0" width="51.0" x="556.0" y="229.0"/>
             </bpmndi:BPMNLabel>
          </bpmndi:BPMNShape>
          <bpmndi:BPMNEdge id="Bpmndi_BPMNEdge_dB6xsLH1EeSuDf0W70XLGw" bpmnElement="Bpmn_DataOutputAssociation_dB6xsrH1EeSuDf0W70XLGw">
-            <omgdi:waypoint xsi:type="omgdc:Point" x="548.0" y="74.0"/>
-            <omgdi:waypoint xsi:type="omgdc:Point" x="477.0" y="74.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="598.0" y="132.0"/>
+        <omgdi:waypoint xsi:type="omgdc:Point" x="597.0" y="174.0"/>
             <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_dB6xsbH1EeSuDf0W70XLGw"/>
          </bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
