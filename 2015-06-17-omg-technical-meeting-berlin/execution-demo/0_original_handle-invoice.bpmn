@@ -200,7 +200,7 @@
          </extensionElements>
          <incoming>reviewNotSuccessful</incoming>
       </endEvent>
-      <startEvent id="StartEvent_1" camunda:formKey="app:startProcess.jsf" name="Invoice&#xA;received" isInterrupting="true">
+      <startEvent id="StartEvent_1" camunda:formKey="app:startProcess.jsf" name="Invoice&#xA;received">
          <extensionElements>
             <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
             <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
