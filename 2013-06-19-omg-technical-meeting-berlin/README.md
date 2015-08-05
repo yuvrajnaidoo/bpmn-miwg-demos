@@ -3,6 +3,8 @@ BPMN MIWG Demo at OMG Technical Meeting in Berlin (2013-06-19)
 
 In June 2013 at the OMG Technical Meeting in Berlin, the BPMN Model Interchange Working Group demonstrated successful interchange of a BPMN process model between eight different tools of six different BPM vendors. This presentation summarizes the results with photos and screenshots of the demonstration.
 
+![OMG Technical Meeting Berlin](omg-technical-meeting-berlin-2013.jpg)
+
 Additional Material:
 
 * [OMG’s Official Press Release](http://www.omg.org/news/releases/pr2013/07-23-13.htm)
