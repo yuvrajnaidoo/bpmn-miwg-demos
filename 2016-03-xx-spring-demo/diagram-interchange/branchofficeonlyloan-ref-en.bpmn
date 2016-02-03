@@ -269,7 +269,7 @@
         <bpmn2:flowNodeRef>Bpmn2_ScriptTask_5yYawZpCEeOaLPEr7parPA</bpmn2:flowNodeRef>
       </bpmn2:lane>
     </bpmn2:laneSet>
-    <bpmn2:startEvent id="Bpmn2_StartEvent_u-hGApo2EeO1WrMpxYFn7Q" name="" isInterrupting="true">
+    <bpmn2:startEvent id="Bpmn2_StartEvent_u-hGApo2EeO1WrMpxYFn7Q" name="Manual start" isInterrupting="true">
       <bpmn2:extensionElements>
         <w4graph:graphStyle>
           <w4graph:basic background="109,183,0" foreground="0,0,0" autoResize="false" borderColor="100,100,100" collapsed="false"/>
@@ -960,7 +960,7 @@ Bonjour,
       <bpmndi:BPMNShape id="Bpmndi_BPMNShape_u_qVgJo2EeO1WrMpxYFn7Q" bpmnElement="Bpmn2_StartEvent_u-hGApo2EeO1WrMpxYFn7Q" isHorizontal="true" isMarkerVisible="true" isMessageVisible="true">
         <dc:Bounds height="32.0" width="32.0" x="122.0" y="368.0"/>
         <bpmndi:BPMNLabel id="Bpmndi_BPMNLabel_u_qVgZo2EeO1WrMpxYFn7Q" labelStyle="Bpmndi_BPMNLabelStyle_u_qVgpo2EeO1WrMpxYFn7Q">
-          <dc:Bounds height="16.0" width="1.0" x="138.0" y="400.0"/>
+          <dc:Bounds height="17.0" width="82.0" x="97.0" y="400.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Bpmndi_BPMNShape_vtKUsJo2EeO1WrMpxYFn7Q" bpmnElement="Bpmn2_UserTask_GARKYZo3EeO1WrMpxYFn7Q" isHorizontal="true" isMarkerVisible="true" isMessageVisible="true">
