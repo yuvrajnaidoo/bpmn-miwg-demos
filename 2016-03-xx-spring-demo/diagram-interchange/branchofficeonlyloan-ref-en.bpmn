@@ -176,9 +176,9 @@
         <w4graph:basic background="0,0,0" foreground="0,0,0" autoResize="false" borderColor="255,255,255" collapsed="false"/>
         <w4graph:line routerType="Rectilinear" automaticRoute="true" closestRoute="false" avoidObstacleRoute="false"/>
         <w4graph:root gridVisible="true" snapToGrid="true" rulerVisible="true" snapToGuide="true" rulerUnit="Pixels">
-          <Grid spacing="15" color="230,230,230"/>
-          <VerticalRuler/>
-          <HorizontalRuler/>
+          <w4graph:Grid spacing="15" color="230,230,230"/>
+          <w4graph:VerticalRuler/>
+          <w4graph:HorizontalRuler/>
         </w4graph:root>
       </w4graph:graphStyle>
     </bpmn2:extensionElements>
