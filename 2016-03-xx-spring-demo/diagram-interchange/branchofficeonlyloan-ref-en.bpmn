@@ -442,7 +442,7 @@
       </bpmn2:extensionElements>
       <bpmn2:outgoing>Bpmn2_SequenceFlow_V9s3cZo3EeO1WrMpxYFn7Q</bpmn2:outgoing>
       <bpmn2:timerEventDefinition id="Bpmn2_TimerEventDefinition_DO7o4LQaEeOoBvTrFaspCA">
-        <bpmn2:timeCycle xsi:type="bpmn2:tFormalExpression" id="Bpmn2_FormalExpression_DCRF4LQaEeOoBvTrFaspCA" language="http://www.w4.eu/spec/EL/20110701"><![CDATA[R2/PT10M]]></bpmn2:timeCycle>
+        <bpmn2:timeCycle xsi:type="bpmn2:tFormalExpression" id="Bpmn2_FormalExpression_DCRF4LQaEeOoBvTrFaspCA" language="http://www.w4.eu/spec/EL/20110701"><![CDATA[R2/P10D]]></bpmn2:timeCycle>
       </bpmn2:timerEventDefinition>
     </bpmn2:boundaryEvent>
     <bpmn2:userTask id="Bpmn2_UserTask_4m2bwJpCEeOaLPEr7parPA" name="Revive customer" completionQuantity="1" isForCompensation="false" startQuantity="1">
