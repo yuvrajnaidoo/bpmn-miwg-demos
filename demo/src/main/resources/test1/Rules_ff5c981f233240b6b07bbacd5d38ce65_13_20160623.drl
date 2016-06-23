@@ -1,0 +1,209 @@
+package null.determineinterestrate 
+
+import java.time.OffsetTime
+import java.util.Arrays
+import org.slf4j.Logger
+import java.text.DecimalFormat
+import org.slf4j.LoggerFactory
+import com.signavio.dmn.formulae.v2.DmnFormulae
+import java.util.ArrayList
+import java.util.HashSet
+import java.math.BigDecimal
+import java.util.List
+import java.time.OffsetDateTime
+import com.signavio.dmn.formulae.v2.DmnHierarchyFormulae
+import java.time.LocalDate
+import java.util.Collections
+import java.math.RoundingMode
+
+global String modelId
+global Integer revisionNumber
+global List $allMessages
+global Logger $logger
+
+declare  DmnFormulae 
+end
+
+declare  DmnFormulaeLocal  extends  DmnFormulae  
+end
+
+declare  DmnHierarchyFormulae 
+end
+
+declare  Input 
+    fico : BigDecimal  
+end
+
+declare  DecideCreditScoreAndInterestRate_Output 
+    creditRating : String  
+    interestRate : BigDecimal  
+end
+
+declare  AnnotationItem 
+    decision : String  
+    annotationName : String  
+    ruleName : String  
+    category : AnnotationCategory  
+    message : String  
+    timestamp : OffsetDateTime  
+end
+
+declare enum AnnotationCategory
+	INFO,CRITICAL,REGULATION,POLICY;
+end
+
+rule "initialize_version_info"
+    salience 1000
+    ruleflow-group 'determineinterestrate'
+when
+then
+	drools.getWorkingMemory().setGlobal("modelId", "ff5c981f233240b6b07bbacd5d38ce65");
+	drools.getWorkingMemory().setGlobal("revisionNumber", 13);
+end
+
+rule "initialize_annotations_list"
+    salience 1000
+    ruleflow-group 'determineinterestrate'
+when
+then
+	drools.getWorkingMemory().setGlobal("$allMessages", new ArrayList());
+end
+
+rule "add_formulae_to_memory"
+    salience 1000
+    ruleflow-group 'determineinterestrate'
+when
+then
+	insert(new DmnFormulaeLocal());
+	insert(new DmnHierarchyFormulae());
+end
+
+rule "init_logger"
+    salience 1000
+    ruleflow-group 'determineinterestrate'
+when
+then
+	drools.getWorkingMemory().setGlobal("$logger", LoggerFactory.getLogger("DroolsExecution"));
+end
+
+rule "log_input_rule"
+    salience 999
+    ruleflow-group 'determineinterestrate'
+when
+    $input : Input(  )  
+then
+	$logger.info($input.toString());
+end
+
+rule "decideCreditScoreAndInterestRate_rule_1"
+    no-loop true
+    //decision:  decideCreditScoreAndInterestRate
+    salience 1
+    ruleflow-group 'determineinterestrate'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DecideCreditScoreAndInterestRate_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval(($F.lessThanOrEqualTo($input.getFico(), BigDecimal.valueOf(579.0)))) ) 
+then
+	DecideCreditScoreAndInterestRate_Output $decideCreditScoreAndInterestRate_Output = new DecideCreditScoreAndInterestRate_Output();
+	$decideCreditScoreAndInterestRate_Output.setCreditRating("Poor");
+	$decideCreditScoreAndInterestRate_Output.setInterestRate(BigDecimal.valueOf(0.99));
+	insert($decideCreditScoreAndInterestRate_Output);
+end
+
+rule "decideCreditScoreAndInterestRate_rule_2"
+    no-loop true
+    //decision:  decideCreditScoreAndInterestRate
+    salience 1
+    ruleflow-group 'determineinterestrate'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DecideCreditScoreAndInterestRate_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.and($F.lessThan(BigDecimal.valueOf(579.0), $input.getFico()), $F.lessThanOrEqualTo($input.getFico(), BigDecimal.valueOf(669.0)))) ) 
+then
+	DecideCreditScoreAndInterestRate_Output $decideCreditScoreAndInterestRate_Output = new DecideCreditScoreAndInterestRate_Output();
+	$decideCreditScoreAndInterestRate_Output.setCreditRating("Not Good");
+	$decideCreditScoreAndInterestRate_Output.setInterestRate(BigDecimal.valueOf(0.99));
+	insert($decideCreditScoreAndInterestRate_Output);
+end
+
+rule "decideCreditScoreAndInterestRate_rule_3"
+    no-loop true
+    //decision:  decideCreditScoreAndInterestRate
+    salience 1
+    ruleflow-group 'determineinterestrate'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DecideCreditScoreAndInterestRate_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.and($F.lessThan(BigDecimal.valueOf(669.0), $input.getFico()), $F.lessThanOrEqualTo($input.getFico(), BigDecimal.valueOf(739.0)))) ) 
+then
+	DecideCreditScoreAndInterestRate_Output $decideCreditScoreAndInterestRate_Output = new DecideCreditScoreAndInterestRate_Output();
+	$decideCreditScoreAndInterestRate_Output.setCreditRating("Good");
+	$decideCreditScoreAndInterestRate_Output.setInterestRate(BigDecimal.valueOf(0.2));
+	insert($decideCreditScoreAndInterestRate_Output);
+end
+
+rule "decideCreditScoreAndInterestRate_rule_4"
+    no-loop true
+    //decision:  decideCreditScoreAndInterestRate
+    salience 1
+    ruleflow-group 'determineinterestrate'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DecideCreditScoreAndInterestRate_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.and($F.lessThan(BigDecimal.valueOf(739.0), $input.getFico()), $F.lessThanOrEqualTo($input.getFico(), BigDecimal.valueOf(799.0)))) ) 
+then
+	DecideCreditScoreAndInterestRate_Output $decideCreditScoreAndInterestRate_Output = new DecideCreditScoreAndInterestRate_Output();
+	$decideCreditScoreAndInterestRate_Output.setCreditRating("Very Good");
+	$decideCreditScoreAndInterestRate_Output.setInterestRate(BigDecimal.valueOf(0.15));
+	insert($decideCreditScoreAndInterestRate_Output);
+end
+
+rule "decideCreditScoreAndInterestRate_rule_5"
+    no-loop true
+    //decision:  decideCreditScoreAndInterestRate
+    salience 1
+    ruleflow-group 'determineinterestrate'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DecideCreditScoreAndInterestRate_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval(($F.greaterThan($input.getFico(), BigDecimal.valueOf(799.0)))) ) 
+then
+	DecideCreditScoreAndInterestRate_Output $decideCreditScoreAndInterestRate_Output = new DecideCreditScoreAndInterestRate_Output();
+	$decideCreditScoreAndInterestRate_Output.setCreditRating("Excellent");
+	$decideCreditScoreAndInterestRate_Output.setInterestRate(BigDecimal.valueOf(0.1));
+	insert($decideCreditScoreAndInterestRate_Output);
+end
+
+rule "decideCreditScoreAndInterestRate_emptyResultFallBack"
+    no-loop true
+    //decision:  decideCreditScoreAndInterestRate
+    salience -1
+    ruleflow-group 'determineinterestrate'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DecideCreditScoreAndInterestRate_Output(  )   ) 
+    $input : Input(  )  
+then
+	DecideCreditScoreAndInterestRate_Output $decideCreditScoreAndInterestRate_Output = new DecideCreditScoreAndInterestRate_Output();
+	$decideCreditScoreAndInterestRate_Output.setInterestRate(null);
+	$decideCreditScoreAndInterestRate_Output.setCreditRating(null);
+	insert($decideCreditScoreAndInterestRate_Output);
+end
