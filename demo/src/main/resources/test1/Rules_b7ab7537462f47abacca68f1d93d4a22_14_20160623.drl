@@ -1,0 +1,431 @@
+package null.determineapproval 
+
+import java.time.OffsetTime
+import java.util.Arrays
+import org.slf4j.Logger
+import java.text.DecimalFormat
+import org.slf4j.LoggerFactory
+import com.signavio.dmn.formulae.v2.DmnFormulae
+import java.util.ArrayList
+import java.util.HashSet
+import java.math.BigDecimal
+import java.util.List
+import java.time.OffsetDateTime
+import com.signavio.dmn.formulae.v2.DmnHierarchyFormulae
+import java.time.LocalDate
+import java.util.Collections
+import java.math.RoundingMode
+
+global String modelId
+global Integer revisionNumber
+global List $allMessages
+global Logger $logger
+
+declare  DmnFormulae 
+end
+
+declare  DmnFormulaeLocal  extends  DmnFormulae  
+end
+
+declare  DmnHierarchyFormulae 
+end
+
+declare  Input 
+    income : BigDecimal  
+    bankruptcies : Boolean  
+    settlements : Boolean  
+    defaults : Boolean  
+    consumerDebt : BigDecimal  
+    rentOrMortgage : BigDecimal  
+    medical : BigDecimal  
+end
+
+declare  ScoreCreditRisk_Rule_Output 
+    scoreCreditRisk : BigDecimal  
+end
+
+declare  ScoreCreditRisk_Output 
+    scoreCreditRisk : BigDecimal  
+end
+
+declare  ComputeExpenseRatio_Output 
+    computeExpenseRatio : BigDecimal  
+end
+
+declare  DetermineApproval_Output 
+    determineApproval : Boolean  
+end
+
+declare  AnnotationItem 
+    decision : String  
+    annotationName : String  
+    ruleName : String  
+    category : AnnotationCategory  
+    message : String  
+    timestamp : OffsetDateTime  
+end
+
+declare enum AnnotationCategory
+	INFO,CRITICAL,REGULATION,POLICY;
+end
+
+rule "initialize_version_info"
+    salience 1000
+    ruleflow-group 'determineapproval'
+when
+then
+	drools.getWorkingMemory().setGlobal("modelId", "b7ab7537462f47abacca68f1d93d4a22");
+	drools.getWorkingMemory().setGlobal("revisionNumber", 14);
+end
+
+rule "initialize_annotations_list"
+    salience 1000
+    ruleflow-group 'determineapproval'
+when
+then
+	drools.getWorkingMemory().setGlobal("$allMessages", new ArrayList());
+end
+
+rule "add_formulae_to_memory"
+    salience 1000
+    ruleflow-group 'determineapproval'
+when
+then
+	insert(new DmnFormulaeLocal());
+	insert(new DmnHierarchyFormulae());
+end
+
+rule "init_logger"
+    salience 1000
+    ruleflow-group 'determineapproval'
+when
+then
+	drools.getWorkingMemory().setGlobal("$logger", LoggerFactory.getLogger("DroolsExecution"));
+end
+
+rule "log_input_rule"
+    salience 999
+    ruleflow-group 'determineapproval'
+when
+    $input : Input(  )  
+then
+	$logger.info($input.toString());
+end
+
+rule "scoreCreditRisk_rule_1"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.equals($input.getSettlements(), false)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getDefaults(), false)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getBankruptcies(), false)) ) 
+then
+	ScoreCreditRisk_Rule_Output $scoreCreditRisk_Rule_Output = new ScoreCreditRisk_Rule_Output();
+	$scoreCreditRisk_Rule_Output.setScoreCreditRisk(BigDecimal.valueOf(0.0));
+	insert($scoreCreditRisk_Rule_Output);
+end
+
+rule "scoreCreditRisk_rule_2"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.equals($input.getSettlements(), false)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getDefaults(), false)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getBankruptcies(), true)) ) 
+then
+	ScoreCreditRisk_Rule_Output $scoreCreditRisk_Rule_Output = new ScoreCreditRisk_Rule_Output();
+	$scoreCreditRisk_Rule_Output.setScoreCreditRisk(BigDecimal.valueOf(1.0));
+	insert($scoreCreditRisk_Rule_Output);
+end
+
+rule "scoreCreditRisk_rule_3"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.equals($input.getSettlements(), false)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getDefaults(), true)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getBankruptcies(), false)) ) 
+then
+	ScoreCreditRisk_Rule_Output $scoreCreditRisk_Rule_Output = new ScoreCreditRisk_Rule_Output();
+	$scoreCreditRisk_Rule_Output.setScoreCreditRisk(BigDecimal.valueOf(2.0));
+	insert($scoreCreditRisk_Rule_Output);
+end
+
+rule "scoreCreditRisk_rule_4"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.equals($input.getSettlements(), false)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getDefaults(), true)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getBankruptcies(), true)) ) 
+then
+	ScoreCreditRisk_Rule_Output $scoreCreditRisk_Rule_Output = new ScoreCreditRisk_Rule_Output();
+	$scoreCreditRisk_Rule_Output.setScoreCreditRisk(BigDecimal.valueOf(3.0));
+	insert($scoreCreditRisk_Rule_Output);
+end
+
+rule "scoreCreditRisk_rule_5"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.equals($input.getSettlements(), true)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getDefaults(), false)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getBankruptcies(), false)) ) 
+then
+	ScoreCreditRisk_Rule_Output $scoreCreditRisk_Rule_Output = new ScoreCreditRisk_Rule_Output();
+	$scoreCreditRisk_Rule_Output.setScoreCreditRisk(BigDecimal.valueOf(4.0));
+	insert($scoreCreditRisk_Rule_Output);
+end
+
+rule "scoreCreditRisk_rule_6"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.equals($input.getSettlements(), true)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getDefaults(), false)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getBankruptcies(), true)) ) 
+then
+	ScoreCreditRisk_Rule_Output $scoreCreditRisk_Rule_Output = new ScoreCreditRisk_Rule_Output();
+	$scoreCreditRisk_Rule_Output.setScoreCreditRisk(BigDecimal.valueOf(5.0));
+	insert($scoreCreditRisk_Rule_Output);
+end
+
+rule "scoreCreditRisk_rule_7"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.equals($input.getSettlements(), true)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getDefaults(), true)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getBankruptcies(), false)) ) 
+then
+	ScoreCreditRisk_Rule_Output $scoreCreditRisk_Rule_Output = new ScoreCreditRisk_Rule_Output();
+	$scoreCreditRisk_Rule_Output.setScoreCreditRisk(BigDecimal.valueOf(6.0));
+	insert($scoreCreditRisk_Rule_Output);
+end
+
+rule "scoreCreditRisk_rule_8"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    eval( $F.nullSafeEval($F.equals($input.getSettlements(), true)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getDefaults(), true)) ) 
+    eval( $F.nullSafeEval($F.equals($input.getBankruptcies(), true)) ) 
+then
+	ScoreCreditRisk_Rule_Output $scoreCreditRisk_Rule_Output = new ScoreCreditRisk_Rule_Output();
+	$scoreCreditRisk_Rule_Output.setScoreCreditRisk(BigDecimal.valueOf(7.0));
+	insert($scoreCreditRisk_Rule_Output);
+end
+
+rule "scoreCreditRisk_aggregation"
+    no-loop true
+    //decision:  scoreCreditRisk
+    salience -1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ScoreCreditRisk_Output(  )   ) 
+    $input : Input(  )  
+    $all_scoreCreditRisk : List(  ) from accumulate(     
+    ScoreCreditRisk_Rule_Output( $each : scoreCreditRisk )  ,
+        collectList( $each ) )
+ 
+then
+	ScoreCreditRisk_Output $scoreCreditRisk_Output = new ScoreCreditRisk_Output();
+	$scoreCreditRisk_Output.setScoreCreditRisk($F.sum($all_scoreCreditRisk));
+	insert($scoreCreditRisk_Output);
+end
+
+rule "computeExpenseRatio_rule_1"
+    no-loop true
+    //decision:  computeExpenseRatio
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ComputeExpenseRatio_Output(  )   ) 
+    $input : Input(  )  
+then
+	ComputeExpenseRatio_Output $computeExpenseRatio_Output = new ComputeExpenseRatio_Output();
+	$computeExpenseRatio_Output.setComputeExpenseRatio(($F.divide(($F.plus(($F.plus($input.getConsumerDebt(), $input.getMedical())), $input.getRentOrMortgage())), $input.getIncome())));
+	insert($computeExpenseRatio_Output);
+end
+
+rule "computeExpenseRatio_emptyResultFallBack"
+    no-loop true
+    //decision:  computeExpenseRatio
+    salience -1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    ComputeExpenseRatio_Output(  )   ) 
+    $input : Input(  )  
+then
+	ComputeExpenseRatio_Output $computeExpenseRatio_Output = new ComputeExpenseRatio_Output();
+	$computeExpenseRatio_Output.setComputeExpenseRatio(null);
+	insert($computeExpenseRatio_Output);
+end
+
+rule "determineApproval_rule_1"
+    no-loop true
+    //decision:  determineApproval
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DetermineApproval_Output(  )   ) 
+    $input : Input(  )  
+    $scoreCreditRisk_Output : ScoreCreditRisk_Output(  )  
+    $computeExpenseRatio_Output : ComputeExpenseRatio_Output(  )  
+    eval( $F.nullSafeEval(($F.greaterThanOrEqualTo($computeExpenseRatio_Output.getComputeExpenseRatio(), BigDecimal.valueOf(1.0)))) ) 
+    eval( $F.nullSafeEval(($F.greaterThan($scoreCreditRisk_Output.getScoreCreditRisk(), BigDecimal.valueOf(4.0)))) ) 
+then
+	DetermineApproval_Output $determineApproval_Output = new DetermineApproval_Output();
+	$determineApproval_Output.setDetermineApproval(false);
+	insert($determineApproval_Output);
+end
+
+rule "determineApproval_rule_2"
+    no-loop true
+    //decision:  determineApproval
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DetermineApproval_Output(  )   ) 
+    $input : Input(  )  
+    $scoreCreditRisk_Output : ScoreCreditRisk_Output(  )  
+    $computeExpenseRatio_Output : ComputeExpenseRatio_Output(  )  
+    eval( $F.nullSafeEval(($F.greaterThanOrEqualTo($computeExpenseRatio_Output.getComputeExpenseRatio(), BigDecimal.valueOf(1.0)))) ) 
+    eval( $F.nullSafeEval(($F.lessThanOrEqualTo($scoreCreditRisk_Output.getScoreCreditRisk(), BigDecimal.valueOf(4.0)))) ) 
+then
+	DetermineApproval_Output $determineApproval_Output = new DetermineApproval_Output();
+	$determineApproval_Output.setDetermineApproval(false);
+	insert($determineApproval_Output);
+end
+
+rule "determineApproval_rule_3"
+    no-loop true
+    //decision:  determineApproval
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DetermineApproval_Output(  )   ) 
+    $input : Input(  )  
+    $scoreCreditRisk_Output : ScoreCreditRisk_Output(  )  
+    $computeExpenseRatio_Output : ComputeExpenseRatio_Output(  )  
+    eval( $F.nullSafeEval(($F.lessThan($computeExpenseRatio_Output.getComputeExpenseRatio(), BigDecimal.valueOf(1.0)))) ) 
+    eval( $F.nullSafeEval(($F.greaterThan($scoreCreditRisk_Output.getScoreCreditRisk(), BigDecimal.valueOf(4.0)))) ) 
+then
+	DetermineApproval_Output $determineApproval_Output = new DetermineApproval_Output();
+	$determineApproval_Output.setDetermineApproval(false);
+	insert($determineApproval_Output);
+end
+
+rule "determineApproval_rule_4"
+    no-loop true
+    //decision:  determineApproval
+    salience 1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DetermineApproval_Output(  )   ) 
+    $input : Input(  )  
+    $scoreCreditRisk_Output : ScoreCreditRisk_Output(  )  
+    $computeExpenseRatio_Output : ComputeExpenseRatio_Output(  )  
+    eval( $F.nullSafeEval(($F.lessThan($computeExpenseRatio_Output.getComputeExpenseRatio(), BigDecimal.valueOf(1.0)))) ) 
+    eval( $F.nullSafeEval(($F.lessThanOrEqualTo($scoreCreditRisk_Output.getScoreCreditRisk(), BigDecimal.valueOf(4.0)))) ) 
+then
+	DetermineApproval_Output $determineApproval_Output = new DetermineApproval_Output();
+	$determineApproval_Output.setDetermineApproval(true);
+	insert($determineApproval_Output);
+end
+
+rule "determineApproval_emptyResultFallBack"
+    no-loop true
+    //decision:  determineApproval
+    salience -1
+    ruleflow-group 'determineapproval'
+when
+    $F : DmnFormulaeLocal(  )  
+    $H : DmnHierarchyFormulae(  )  
+    not( 
+    DetermineApproval_Output(  )   ) 
+    $input : Input(  )  
+    $scoreCreditRisk_Output : ScoreCreditRisk_Output(  )  
+    $computeExpenseRatio_Output : ComputeExpenseRatio_Output(  )  
+then
+	DetermineApproval_Output $determineApproval_Output = new DetermineApproval_Output();
+	$determineApproval_Output.setDetermineApproval(null);
+	insert($determineApproval_Output);
+end
