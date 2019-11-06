@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+  targetNamespace="sample1.main" xmlns:main="sample1.main" xmlns:s1="sample1.semantic1">
+  <bpmn:import location="semantic1.bpmn" namespace="sample1.semantic1"
+    importType="http://www.omg.org/spec/BPMN/20100524/MODEL" />
+  <bpmn:import location="diagram1.bpmn" namespace="sample1.diagram1"
+    importType="http://www.omg.org/spec/BPMN/20100524/MODEL" />
+  <bpmn:collaboration>
+    <bpmn:participant processRef="s1:process1" id="collaboration1"></bpmn:participant>
+    <!--more content here -->
+  </bpmn:collaboration>
+</bpmn:definitions>

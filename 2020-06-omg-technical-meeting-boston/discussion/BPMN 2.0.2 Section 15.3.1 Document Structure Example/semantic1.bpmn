@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+  targetNamespace="sample1.semantic1"
+  xmlns:s1="sample1.semantic1">
+  <bpmn:process id="process1">
+  <!-- content here -->
+  </bpmn:process>
+</bpmn:definitions>
