@@ -4,8 +4,8 @@
   xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
   xmlns:d1="sample1.diagram1" xmlns:s1="sample1.semantic1"
   xmlns:main="sample1.main">
-  <bpmndi:BPMNDiagram scale="1.0" unit="Pixel">
-    <bpmndi:BPMNPlane element="main:collaboration1">
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="main:collaboration1">
       <!-- content here -->
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
