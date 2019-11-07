@@ -2,7 +2,7 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_1s2etdz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.1.2">
   
   <!-- see also BPMN 2.0.2 p.61 (PDF 91) Table 8.16 – Reengineer XML schema -->
-  <import importType="http://www.omg.org/spec/BPMN/20100524/MODEL"
+  <bpmn:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL"
           location="child-process.bpmn"
           namespace="http://bpmn.io/schema/bpmn"/>
   
